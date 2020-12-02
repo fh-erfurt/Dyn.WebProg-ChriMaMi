@@ -1,0 +1,72 @@
+:root
+{
+    --headcolor: #1960B8;
+    --headsize: 150px;
+    --headlogosize: 80px;
+}
+
+body {
+    margin: unset;
+    padding: unset;
+    font-family: "Roboto";
+}
+
+.box {
+    background-color: var(--headcolor);
+    position: relative;
+    width: 100%;
+    height: 95%;
+}
+
+.circle
+{
+    background-color: var(--headcolor);
+    position: relative;
+    bottom: 5%;
+    border-radius: 50%;
+    width: 100%;
+    height: 10%;
+}
+
+
+header{
+    height: var(--headsize);
+    font-size: 24px;
+}
+
+nav {
+    margin: unset;
+    display: flex;
+    align-items: center;
+}
+nav .navigation {
+    display: flex;
+    align-items: center;
+}
+
+nav .navigation .item{
+    margin: 5px;
+}
+
+
+nav .navigation .item.logo {
+    background-color: white;
+    border-radius: 50%;
+    height: var(--headlogosize);
+    width: var(--headlogosize);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .navigation .item a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+img{
+    width: 80%;
+}
+
+
