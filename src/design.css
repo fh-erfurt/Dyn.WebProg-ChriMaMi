@@ -39,17 +39,14 @@ nav {
     display: flex;
     align-items: center;
 }
+
 nav .navigation {
     display: flex;
     align-items: center;
-}
-
-nav .navigation .item{
     margin: 5px;
 }
 
-
-nav .navigation .item.logo {
+nav .navigation .logo {
     background-color: white;
     border-radius: 50%;
     height: var(--headlogosize);
@@ -59,10 +56,13 @@ nav .navigation .item.logo {
     justify-content: center;
 }
 
-nav .navigation .item a {
+nav .navigation li {
+    list-style-type: none;
+}
+
+nav .navigation a {
     color: white;
     padding: 14px 16px;
-    text-decoration: none;
 }
 
 img{
