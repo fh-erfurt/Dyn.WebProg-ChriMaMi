@@ -3,6 +3,11 @@ h1
     color: #004FB1;
 }
 
+body
+{
+    width: 100%;
+}
+
 *
 {
     box-sizing: border-box;
@@ -12,13 +17,36 @@ h1
 .login_window
 {
     width: 669px;
-    height: 536px;
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
     padding: 0px 114.5px 0px 114.5px;
     align-items: center;
     flex-direction: column;
     display: flex;
+}
+
+.login_window_img
+{
+    position: absolute;
+    width: 134px;
+    height: 134px;
+    left: 261px;
+    top: 34px;
+
+    background: url(../logo/login_icon.png);
+}
+
+.login_window_head
+{
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    left: 261px;
+    top: 21px;
+
+    background: #004FB1;
+    border: 11px solid #FFFFFF;
 }
 
 .login_form
@@ -51,8 +79,8 @@ h1
 
 .form_col_space
 {
-    width: 420px;
-    height: 33px;
+    width: 420px /*26.25em*/;
+    height: 33px /*2.063em*/;
 }
 
 
