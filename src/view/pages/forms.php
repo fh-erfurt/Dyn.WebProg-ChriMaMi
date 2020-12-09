@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <title>IB-Patrick Horsch</title>
-    <link href="../assets/roboto/font.css" rel="stylesheet">
-    <link href="../assets/design/design-form.css" rel="stylesheet">
-</head>
-<body>
-<header>
-    <ul>
-        <li>
-            <a href="./forms.html">Kontaktformular</a>
-        </li>
-        <li>
-            <a href="../index.html">Home</a>
-        </li>
-    </ul>
-</header>
+<link href="<?=ROOTPATH.'/assets/design/design-form.css'?>" rel="stylesheet">
 <h1>Form Page</h1>
 <form method="post">
     <fieldset>
@@ -127,6 +109,3 @@
         <input type="submit" name="sendForm" value="Senden">
     </fieldset>
 </form>
-
-</body>
-</html>
