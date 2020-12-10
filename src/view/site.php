@@ -32,5 +32,32 @@
 
 </main>
 <footer>
-
+    <div id = "footerbox">
+    <section>
+        <ul>
+            <h2>IB Horsch Patrick</h2>
+        </ul>
+        <ul>
+            <li><img src="<?=ROOTPATH.'/assets/icons/marker.png'?>" /></li>
+            <li>Musterweg 01</li>
+            <li>00000 Musterhausen</li>
+        </ul>
+        <ul>
+            <li><img src="<?=ROOTPATH.'/assets/icons/phone.png'?>" /></li>
+            <li> 09973 / 38 90 96-0</li>
+            <li> 09973 / 38 55 98 0</li>
+        </ul>
+        <ul>
+            <li><img src="<?=ROOTPATH.'/assets/icons/printer.png'?>" /></li>
+            <li> 09843 / 38 90 96-96</li>
+            <li> 09843 / 38 55 98 1</li>
+        </ul>
+        <ul>
+            <li><img src="<?=ROOTPATH.'/assets/icons/mail.png'?>" /></li>
+            <li>
+                info@patrick-horsch.de
+            </li>
+        </ul>
+    </section>
+    </div>
 </footer>
