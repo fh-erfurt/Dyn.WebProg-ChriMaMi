@@ -69,4 +69,28 @@ img{
     width: 80%;
 }
 
+.submitLogout
+{
+    display: flex;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: var(--background-color);
+    border: 0;
+    right: 0;
+    top: 0;
+    margin: 30px 60px 0px 0px;
+    padding: 0px 0px;
+    font-size: 100%;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.submitLogout:hover
+{
+    border-bottom: #FFFFFF;
+    border-style: solid;
+    transition:background 2s;
+    -webkit-transition:background 2s;
+}
+
 
