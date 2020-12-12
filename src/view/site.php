@@ -32,8 +32,7 @@
 
 </main>
 <footer>
-    <div id = "footerbox">
-    <section>
+    <div class="left">
         <ul>
             <h2>IB Horsch Patrick</h2>
         </ul>
@@ -58,6 +57,10 @@
                 info@patrick-horsch.de
             </li>
         </ul>
-    </section>
+    </div>
+    <div class="right">
+        <ul>
+            <li><img src="<?=ROOTPATH.'/assets/images/googleMaps.png'?>" /></li>
+        </ul>
     </div>
 </footer>

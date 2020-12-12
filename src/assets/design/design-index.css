@@ -95,15 +95,23 @@ img{
 
 footer{
     display:block;
-    background:#1960B8;
+    position: absolute;
+    width:100%;
+    height: 280px;
+    background:var(--headcolor);
+    opacity: 0.7;
     text-align:left;
+    bottom: 0;
+    padding: 0;
+
 }
 footer ul{
     display:flex;
     width:100%;
-    max-width:980px;
+    max-width:1440px;
     text-align:left;
     margin: 0px auto;
+
 }
 footer ul li{
     display:flex;
@@ -119,9 +127,42 @@ footer ul h2{
 }
 footer ul li img{
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     float: left;
     padding-right: 10px;
 }
+#map {
+    height: 200px;
+    width: 400px;
+}
+
+.left{
+    width: 32%;
+    float: left;
+    background:var(--headcolor);
+    margin-left: 100px;
+    margin-top: 35px;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.right {
+    width: 20%;
+    float: left;
+    background:var(--headcolor);
+    margin-left: 90px;
+    margin-top: 50px;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.right img{
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    float: left;
+}
+
+
 
