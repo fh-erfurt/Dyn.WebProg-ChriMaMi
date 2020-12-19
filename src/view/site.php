@@ -32,6 +32,7 @@
 
 </main>
 <footer>
+    <section>
     <div class="left">
         <ul>
             <h2>IB Horsch Patrick</h2>
@@ -63,4 +64,5 @@
             <li><img src="<?=ROOTPATH.'/assets/images/googleMaps.png'?>" /></li>
         </ul>
     </div>
+    </section>
 </footer>
