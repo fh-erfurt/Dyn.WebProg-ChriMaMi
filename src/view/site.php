@@ -12,7 +12,7 @@
     <div class="circle"></div>
 </header>
 <main>
-
+<div id="content-wrap">
     <?
     switch($page)
     {
@@ -33,7 +33,7 @@
             break;
     }
     ?>
-
+</div>
 </main>
 <footer>
     <section>

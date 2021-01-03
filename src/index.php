@@ -44,6 +44,7 @@ $page = isset($_GET['p']) ? $_GET['p'] : 'main';
     <link href="<? ROOTPATH.'/assets/design/design-members.css' ?>" rel="stylesheet">
 </head>
 <body>
+<div id="page-container">
 <?
     if($loggedIn)
     {
@@ -59,6 +60,7 @@ $page = isset($_GET['p']) ? $_GET['p'] : 'main';
     }
 
 ?>
+</div>
 </body>
 </html>
 
