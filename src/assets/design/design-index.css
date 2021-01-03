@@ -9,6 +9,9 @@ body {
     margin: unset;
     padding: unset;
     font-family: "Roboto";
+    background-image: url("../images/background.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
 .box {
@@ -20,6 +23,7 @@ body {
 
 .circle
 {
+/*    display: none;*/
     background-color: var(--headcolor);
     position: relative;
     bottom: 5%;
@@ -35,6 +39,8 @@ body {
 
 #content-wrap{
     padding-bottom: 280px;
+    padding-right: 60px;
+    padding-left: 60px;
 }
 
 header{
@@ -45,6 +51,7 @@ header{
 nav {
     margin: unset;
     display: flex;
+/*    display: none;*/
     align-items: center;
 }
 
@@ -179,8 +186,28 @@ footer ul li img{
     margin: 15px;
     border-style: solid;
     border-radius: 20px;
-    background: #1960B8;
+/*    background: #1960B8;*/
 
+}
+
+#brandschutz{
+    background: #FF8F8F;
+    border-color: #8E0000;
+}
+
+#waermeschutz{
+    background: #FFF6A6;
+    border-color: #8E8900;
+}
+
+#tragwerkplanung{
+    background: #CCEBCF;
+    border-color: #154300;
+}
+
+#eingabeplanung{
+    background: #E2F0FF;
+    border-color: #00418E;
 }
 
 .mainArticle img

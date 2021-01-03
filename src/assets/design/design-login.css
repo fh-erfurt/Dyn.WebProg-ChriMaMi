@@ -6,6 +6,7 @@ h1
 body
 {
     width: 100%;
+
 }
 
 *
@@ -21,14 +22,18 @@ body
 
 .login_window
 {
-    width: 669px;
-    height: 300px;
+    width: 640px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0px 114.5px 0px 114.5px;
+    padding: 50px 100px 50px 100px;
     align-items: center;
     flex-direction: column;
     display: flex;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border-color: var(--headcolor);
+    border: solid 3px;
 }
 
 .login_window_img

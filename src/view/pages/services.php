@@ -1,6 +1,6 @@
 <link href="<?= ROOTPATH . '/assets/design/design-index.css' ?>" rel="stylesheet">
 
-<section class="mainArticle picFloatLeft">
+<section class="mainArticle picFloatLeft" id="brandschutz">
     <article>
         <img src="<?= ROOTPATH . 'assets/images/services/brandschutz.jpg' ?>">
         <h2>Brandschutz</h2>
@@ -13,7 +13,7 @@
         sed d.
     </article>
 </section>
-    <section class="mainArticle picFloatRight">
+    <section class="mainArticle picFloatRight" id="waermeschutz">
         <article>
             <img src="<?= ROOTPATH . 'assets/images/services/wärmeschutz.jpg' ?>">
             <h2>Wärmeschutzt</h2>
@@ -27,7 +27,7 @@
             <h2></h2>
         </article>
     </section>
-<section class="mainArticle picFloatLeft">
+<section class="mainArticle picFloatLeft" id="tragwerkplanung">
     <article>
         <img src="<?= ROOTPATH . 'assets/images/services/tragwerkplanung.jpg' ?>">
         <h2>Tragwerkplanung</h2>
@@ -40,7 +40,7 @@
         sed d.
     </article>
 </section>
-<section class="mainArticle picFloatRight">
+<section class="mainArticle picFloatRight" id="eingabeplanung">
     <article>
         <img src="<?= ROOTPATH . 'assets/images/services/eingabeplanung.jpg' ?>">
         <h2>Eingabeplanung</h2>
