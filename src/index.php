@@ -51,7 +51,7 @@ $page = isset($_GET['p']) ? $_GET['p'] : 'main';
     }
 /*    else if(isset($_POST['submit_login']) && $error == true)
     {
-        include VIEWPATH.'pages/site.php';
+        include VIEWPATH.'pages/login.php';
     }*/
     else
     {

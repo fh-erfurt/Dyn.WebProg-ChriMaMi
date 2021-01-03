@@ -6,6 +6,7 @@
             <li><a href="<?=$_SERVER['SCRIPT_NAME']?>/?p=main">Home</a></li>
             <li><a href="<?=$_SERVER['SCRIPT_NAME']?>/?p=login" class="submitLogout">Login</a></li>
             <li><a href="<?=$_SERVER['SCRIPT_NAME']?>/?p=forms">Kontaktformular</a></li>
+            <li><a href="<?=$_SERVER['SCRIPT_NAME']?>/?p=services">Dienstleistungen</a></li>
         </ul>
     </nav>
     <div class="circle"></div>
@@ -15,6 +16,9 @@
     <?
     switch($page)
     {
+        case 'services':
+            include (VIEWPATH.'/pages/services.php');
+            break;
         case 'forms':
             include (VIEWPATH.'/pages/forms.php');
             break;
