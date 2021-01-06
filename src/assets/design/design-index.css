@@ -23,7 +23,7 @@ body {
 
 .circle
 {
-/*    display: none;*/
+    display: none;
     background-color: var(--headcolor);
     position: relative;
     bottom: 5%;
@@ -38,11 +38,12 @@ body {
 }
 
 #content-wrap{
-    padding-bottom: 280px;
-    padding-right: 60px;
-    padding-left: 60px;
+    padding: 90px 60px 280px;
 }
 
+#firstHead{
+    display: none;
+}
 header{
     height: var(--headsize);
     font-size: 24px;
@@ -71,6 +72,10 @@ nav .navigation .logo {
     justify-content: center;
 }
 
+nav .navigation .logo img {
+    width: 80%;
+}
+
 nav .navigation li {
     list-style-type: none;
 }
@@ -80,9 +85,9 @@ nav .navigation a {
     padding: 14px 16px;
 }
 
-img{
+/*img{          Größe in "nav .navigation .logo img" ausschließlich für dieses Img definiert
     width: 80%;
-}
+}*/
 
 .submitLogout
 {
@@ -182,7 +187,7 @@ footer ul li img{
 .mainArticle
 {
     display: flex;
-    padding: 20px;
+    padding: 15px;
     margin: 15px;
     border-style: solid;
     border-radius: 20px;

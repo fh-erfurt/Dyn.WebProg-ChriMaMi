@@ -1,14 +1,18 @@
 nav {
-
     margin: unset;
-    display: flex;
+    display: block;
     align-items: center;
+    height: 5px;
+}
+
+nav ul{
+    margin: 0px;
 }
 
 nav .navigation-sek {
     display: flex;
     align-items: center;
-    margin: 5px;
+    margin: 50px 0px 15px -60px;
 }
 
 nav .navigation-sek .logo {
@@ -27,11 +31,68 @@ nav .navigation-sek a {
     text-decoration: none;
 }
 
-img{
-    width: 80%;
+
+/*.sek-box {
+    position: fixed;
+    background: #FFFFFF;
+    opacity: 90%;
+    width: 100%;
+    border-bottom-style: ridge;
+    border-size: 15px;
+    border-color: var(--headcolor);
+!*    box-shadow: 5px 5px 5px 2px var(--headcolor);*!
+}*/
+
+#head_container {
+/*    display: none;*/
+    background: #FFFFFF;
+    position: absolute;
+    opacity: 90%;
+    width: 100%;
+    border-bottom-style: solid;
+    border-size: 15px;
+    border-color: var(--headcolor);
+    display: inline-grid;
+    grid-template-columns: 330px 500px 500px 50px;
+    grid-template-rows: auto;
+    gap: 0px 0px;
+    grid-template-areas:
+    "logo sekcontent sekcontent ."
+    ". . . ."
+    ". . . .";
 }
 
-.sek-box {
-    position: relative;
-    width: 100%;
+#sek-head-logo img{
+    width: 280px;
+    padding: 7px 0px 25px 50px;
+    grid-area: logo;
 }
+
+#sek-headcontent{
+    grid-area: sekcontent;
+    margin-left: 70px;
+}
+
+#sek-headcontent h1{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#sek-headcontent h2{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#sek-nav-container{
+
+    padding: 20px;
+}
+
+.sek-box img{
+    opacity: unset;
+}
+
+#sek-break-line{
+    background-color: var(--headcolor);
+}
+

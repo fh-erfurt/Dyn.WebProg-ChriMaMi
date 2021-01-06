@@ -41,7 +41,9 @@ $page = isset($_GET['p']) ? $_GET['p'] : 'main';
     <title>IB-Patrick Horsch</title>
     <link href="<?=ROOTPATH.'/assets/roboto/font.css'?>" rel="stylesheet">
     <link href="<?=ROOTPATH.'/assets/design/design-index.css'?>" rel="stylesheet">
+    <link href="<?=ROOTPATH.'/assets/design/design-sek-header.css'?>" rel="stylesheet">
     <link href="<? ROOTPATH.'/assets/design/design-members.css' ?>" rel="stylesheet">
+    <script language="JavaScript" type="text/javascript" src="assets/javascripts/header.js"></script>
 </head>
 <body>
 <div id="page-container">
