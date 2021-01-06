@@ -1,16 +1,16 @@
 <header>
-    <div id="firstHead">
+<!--    <div id="firstHead">
         <nav class="box">
             <ul class="navigation">
-                <li class="logo"><img src="<?= ROOTPATH . '/assets/logo/logo.png' ?>" alt="Logo"></li>
-                <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=main">Home</a></li>
-                <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=login" class="submitLogout">Login</a></li>
-                <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=forms">Kontaktformular</a></li>
-                <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=services">Dienstleistungen</a></li>
+                <li class="logo"><img src="<?/*= ROOTPATH . '/assets/logo/logo.png' */?>" alt="Logo"></li>
+                <li><a href="<?/*= $_SERVER['SCRIPT_NAME'] */?>/?p=main">Home</a></li>
+                <li><a href="<?/*= $_SERVER['SCRIPT_NAME'] */?>/?p=login" class="submitLogout">Login</a></li>
+                <li><a href="<?/*= $_SERVER['SCRIPT_NAME'] */?>/?p=forms">Kontaktformular</a></li>
+                <li><a href="<?/*= $_SERVER['SCRIPT_NAME'] */?>/?p=services">Dienstleistungen</a></li>
             </ul>
         </nav>
         <div class="circle"></div>
-    </div>
+    </div>-->
     <div id="head_container">
         <div id="sek-head-logo">
             <img src="<?= ROOTPATH . '/assets/logo/logo.png' ?>" alt="Logo">
@@ -19,11 +19,17 @@
             <h1>Ingenieurbüro</h1>
             <h2>Patrick Horsch</h2>
             <nav>
-                <ul class="navigation-sek">
+                <ul class="navigation">
                     <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=main">Home</a></li>
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=products">Produkte</a></li>
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=shop">Shop</a></li>
+                    <!--                    <ul id="dropdown">
+                        <li><a href="<?/*= $_SERVER['SCRIPT_NAME'] */?>/?p=shoppingcard">Warenkorb</a></li>
+                    </ul>-->
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=administration">Administration</a></li>
                     <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=login" class="submitLogout">Login</a></li>
-                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=forms">Kontaktformular</a></li>
-                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=services">Dienstleistungen</a></li>
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=impressum">Impressum</a></li>
+                    <!--<li><a href="<?/*= $_SERVER['SCRIPT_NAME'] */?>/?p=forms">Kontaktformular</a></li>-->
                 </ul>
             </nav>
         </div>
@@ -34,9 +40,6 @@
     <div id="content-wrap">
         <?
         switch ($page) {
-            case 'services':
-                include(VIEWPATH . '/pages/services.php');
-                break;
             case 'forms':
                 include(VIEWPATH . '/pages/forms.php');
                 break;
