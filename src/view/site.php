@@ -31,7 +31,7 @@
 <!--                    <ul id="dropdown">      //Registration und Profil ist als unterpunkt von Login geplant
                         <li><a href="<?/*= $_SERVER['SCRIPT_NAME'] */?>/?p=registration">Registration</a></li>
                     </ul>-->
-                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=impressum">Impressum</a></li>
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=imprint">Impressum</a></li>
                     <!--<li><a href="<? /*= $_SERVER['SCRIPT_NAME'] */ ?>/?p=forms">Kontaktformular</a></li>-->
                 </ul>
             </nav>
