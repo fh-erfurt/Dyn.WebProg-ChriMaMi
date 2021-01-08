@@ -1,4 +1,4 @@
-<link href="<?= ROOTPATH . '/assets/designs/designs-login.css' ?>" rel="stylesheet">
+<link href="<?= ASSETSPATH . 'designs'.DIRECTORY_SEPARATOR.'design-login.css' ?>" rel="stylesheet">
 <div class="headspace">
     <form action="" method="post" class="registration_window" ;>
         <h1>Registration</h1>

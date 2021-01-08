@@ -1,3 +1,6 @@
+
+/* ------------------------------ RANDOM SHIT ------------------------------- */
+
 :root
 {
     --headcolor: #1960B8;
@@ -51,6 +54,7 @@ header{
     font-size: 24px;
 }
 
+/* ------------------------------ NAVIGATION BAR ------------------------------- */
 nav {
     margin: unset;
     display: block;
@@ -79,13 +83,10 @@ nav .navigation li {
 }
 
 nav .navigation a {
-    background:
-        linear-gradient(
-        to bottom, #FFFFFF 80%,
-        #1960B8 100%
-        );
-    background-repeat: repeat-x;
-    background-position: 0 100%;
+    background: linear-gradient(
+            to bottom, #FFFFFF 80%,
+            #1960B8 100%
+    ) repeat-x 0 100%;
     border: solid 0px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 8px;
@@ -197,7 +198,7 @@ nav a:hover{
     transition:background 2s;
     -webkit-transition:background 2s;
 }*/
-
+/* ------------------------------ FOOTER ------------------------------- */
 footer{
     display:flex;
     justify-content: center;
@@ -246,25 +247,19 @@ footer ul li img{
     padding-right: 10px;
 }
 
-.left{
+footer .left{
     float: left;
     background:var(--headcolor);
     margin-top: 25px;
 }
 
-.right {
+footer .right {
     float: right;
     background:var(--headcolor);
     margin-top: 50px;
 }
 
-.right img{
-    display: inline-block;
-    width: 300px;
-    height: 200px;
-}
-
-
+/* ------------------------------ MAIN PAGE ------------------------------- */
 #mainImage {
     display: flex;
     margin-top: 40px;
@@ -350,4 +345,69 @@ article
     float: right;
 }
 
+/* ------------------------------ IMPRINT ------------------------------- */
+#imprintImage {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 
+#imprintImage img {
+    background: #FFFFFF;
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    border: solid 0px;
+    border-radius: 10px;
+}
+#address {
+    line-height: 5px;
+    font-size: 14px;
+
+}
+#imprintTable {
+    display:flex;
+    justify-content: flex-start;
+    width:70%;
+    flex-direction: column;
+    text-align:left;
+    padding-top: 0px;
+    line-height: 17px;
+}
+
+#imprintTable .white{
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: flex-start;
+    background:#FFFFFF;
+    float: left;
+}
+#imprintTable .gray{
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: flex-start;
+    background:#D3D3D3;
+    float: left;
+}
+
+#imprintTable ul {
+    padding-left: 0px;
+    list-style-type: none;
+
+}
+
+#imprintTable .left{
+    float: left;
+    width: 40%;
+    /*padding-right: 165px;*/
+}
+
+#imprintTable .right {
+    float: left;
+
+
+
+
+}
