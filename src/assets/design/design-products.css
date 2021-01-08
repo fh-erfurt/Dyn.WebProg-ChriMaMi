@@ -101,7 +101,7 @@ nav .secondNavigation a {
     background-size: 0px 0px;
     color: #FFFFFF;
     margin: 0px 16px;
-    padding: 0px 15px;
+    padding: 0px 12px;
     text-decoration: none;
     transition: background-size .2s;
 }
@@ -193,12 +193,16 @@ nav a:hover{
 
 #itemDisplay {
     display:flex;
-    justify-content: center; /*space-around*/
+    justify-content: space-around;
     align-items: flex-start;
-    padding-top: 40px;
+    flex-wrap: wrap;
+
 }
 
 .item {
-    width: 30%;
-    float: left;
+    border: 1px solid ;
+    margin-top: 70px;
+    width: 300px;
+    height: 300px;
+
 }
