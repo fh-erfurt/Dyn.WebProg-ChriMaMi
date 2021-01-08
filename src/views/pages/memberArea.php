@@ -45,7 +45,7 @@
     <title> </title>
 </head>
 <!--    <body>
-    <?/* include VIEWPATH.'site.php'; */?>
+    <?/* include VIEWPATH.'index.php'; */?>
         <div style="text-align: center">
             <h1>This is a TestPage for the LoggedId - Area</h1>
             <p>

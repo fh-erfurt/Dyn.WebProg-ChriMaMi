@@ -1,4 +1,4 @@
-<link href="<?=ROOTPATH.'/assets/design/design-form.css'?>" rel="stylesheet">
+<link href="<?=ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'designs-form.css'?>" rel="stylesheet">
 <h1>Form Page</h1>
 <form method="post">
     <fieldset>
