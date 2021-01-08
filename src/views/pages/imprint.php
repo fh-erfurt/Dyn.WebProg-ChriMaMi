@@ -1,8 +1,7 @@
 <link href="<?= ROOTPATH . '/assets/design/design-index.css' ?>" rel="stylesheet">
 <section id="imprintImage">
-    <img src="<?= ROOTPATH . 'assets/images/imprint_picture2.png'?>" alt="photo of a museum upside down">
+    <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR .'imprint_picture2.png' ?>" alt="photo of a museum upside down">
 </section>
-
 <section>
     <h1>Impressum </h1> <hr/>
 </section>
