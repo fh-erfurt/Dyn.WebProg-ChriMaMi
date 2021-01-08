@@ -1,4 +1,6 @@
 #ignores idea projectdirectory
 .idea
 *.iml
+/src/data/
+
 *.zip
