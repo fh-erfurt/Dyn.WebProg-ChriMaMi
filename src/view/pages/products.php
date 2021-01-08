@@ -55,13 +55,13 @@
             et ea rebum. Stet clita kasd gubergren,
         </article>
     </div>
+    <div class="break-column"></div>
     <div class="item">
         <article>
             <img src="<?= ROOTPATH . 'assets/images/products/item6.jpg' ?>" alt="item6">
             <h2>Item 6</h2>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren,
+            labore et dolore magna aliquyam
         </article>
     </div>
     <div class="item">
@@ -69,6 +69,8 @@
             <img src="<?= ROOTPATH . 'assets/images/products/item7.jpg' ?>" alt="item7">
             <h2>Item 7</h2>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
             et ea rebum. Stet clita kasd gubergren,
         </article>
@@ -88,16 +90,23 @@
             <h2>Item 9</h2>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren,
+            et ea rebum. Stet clita kasd gubergren,Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliqLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliq
         </article>
     </div>
+    <div class="break-column"></div>
     <div class="item">
         <article>
             <img src="<?= ROOTPATH . 'assets/images/products/item10.jpg' ?>" alt="item10">
             <h2>Item 10</h2>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren,
+            et ea rebum. Stet clita kasd gubergren,Stet clita kasd gubergren,Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliqLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliqStet clita kasd gubergren,Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliqLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliq
         </article>
     </div>
     <div class="item">
@@ -114,8 +123,7 @@
             <img src="<?= ROOTPATH . 'assets/images/products/item12.jpg' ?>" alt="item12">
             <h2>Item 12</h2>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren,
+            labore et
         </article>
     </div>
 </div>
