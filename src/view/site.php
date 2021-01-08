@@ -28,7 +28,7 @@
                     </ul>-->
                     <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=administration">Administration</a></li>
                     <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=login" class="submitLogout">Login</a></li>
-                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=impressum">Impressum</a></li>
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=imprint">Impressum</a></li>
                     <!--<li><a href="<?/*= $_SERVER['SCRIPT_NAME'] */?>/?p=forms">Kontaktformular</a></li>-->
                 </ul>
             </nav>
@@ -48,6 +48,9 @@
                 break;
             case 'main':
                 include(VIEWPATH . '/pages/main.php');
+                break;
+            case 'imprint':
+                include(VIEWPATH . '/pages/imprint.php');
                 break;
             default:
                 echo 'Error 404';
