@@ -1,4 +1,4 @@
-<link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'designs-index.css' ?>" rel="stylesheet">
+<link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-index.css' ?>" rel="stylesheet">
 <section id="mainImage">
     <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'landing_text.png'?>" alt="photo of a tower under construction">
 </section>

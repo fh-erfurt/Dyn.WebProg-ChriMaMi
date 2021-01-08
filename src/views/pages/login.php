@@ -1,6 +1,6 @@
-<link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'designs-login.css' ?>" rel="stylesheet">
+<link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-login.css' ?>" rel="stylesheet">
 <div class="headspace">
-    <form action="<?= $_SERVER['SCRIPT_NAME'] . '?c=pages&a=main'; ?>" class="login_window" method="post">
+    <form action="<?= $_SERVER['SCRIPT_NAME'].'?c=pages&a=main'; ?>" class="login_window" method="post">
 
         <h1>Login</h1>
         <label for="email_username">Email oder Benutzername<br>

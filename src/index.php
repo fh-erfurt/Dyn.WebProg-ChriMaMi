@@ -95,7 +95,7 @@ else
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IB-Patrick Horsch</title>
     <link href="<?=ASSETSPATH.'roboto' .DIRECTORY_SEPARATOR.'font.css'?>" rel="stylesheet">
-    <link href="<?=ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'designs-index.css'?>" rel="stylesheet">
+    <link href="<?=ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-index.css'?>" rel="stylesheet">
     <script language="JavaScript" type="text/javascript" src="assets/javascripts/header.js"></script>
 </head>
 <body>
@@ -109,12 +109,12 @@ else
                 <h2>Patrick Horsch</h2>
                 <nav>
                     <ul class="navigation">
-                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?c=pages&a=main">Home</a></li>
-                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?c=pages&a=produkte">Produkte</a></li>
-                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?c=pages&a=shop">Shop</a></li>
-                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?c=pages&a=administration">Administration</a></li>
-                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?c=pages&a=login" class="submitLogout">Login</a></li>
-                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?c=pages&a=impressum">Impressum</a></li>
+                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=main">Home</a></li>
+                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=produkte">Produkte</a></li>
+                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=shop">Shop</a></li>
+                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=administration">Administration</a></li>
+                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=login" class="submitLogout">Login</a></li>
+                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=impressum">Impressum</a></li>
                     </ul>
                 </nav>
             </div>
