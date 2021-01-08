@@ -259,12 +259,6 @@ footer .right {
     margin-top: 50px;
 }
 
-footer .right img{
-    display: inline-block;
-    width: 300px;
-    height: 200px;
-}
-
 /* ------------------------------ MAIN PAGE ------------------------------- */
 #mainImage {
     display: flex;
