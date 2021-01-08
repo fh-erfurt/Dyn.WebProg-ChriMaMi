@@ -22,7 +22,7 @@
                 <ul class="navigation">
                     <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=main">Home</a></li>
                     <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=products">Produkte</a></li>
-                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=shop">Shop</a></li>
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=shop">Warenkorb</a></li>
                     <!--                    <ul id="dropdown">
                         <li><a href="<? /*= $_SERVER['SCRIPT_NAME'] */ ?>/?p=shoppingcard">Warenkorb</a></li>
                     </ul>-->
@@ -54,6 +54,9 @@
                 break;
             case 'main':
                 include(VIEWPATH . '/pages/main.php');
+                break;
+            case 'products':
+                include(VIEWPATH . '/pages/products.php');
                 break;
             case 'imprint':
                 include(VIEWPATH . '/pages/imprint.php');

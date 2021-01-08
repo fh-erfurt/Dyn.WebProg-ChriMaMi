@@ -83,13 +83,10 @@ nav .navigation li {
 }
 
 nav .navigation a {
-    background:
-        linear-gradient(
-        to bottom, #FFFFFF 80%,
-        #1960B8 100%
-        );
-    background-repeat: repeat-x;
-    background-position: 0 100%;
+    background: linear-gradient(
+            to bottom, #FFFFFF 80%,
+            #1960B8 100%
+    ) repeat-x 0 100%;
     border: solid 0px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 8px;
