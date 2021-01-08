@@ -13,10 +13,11 @@
         </label>
         <input class="submit_button" id="submit_login" name="submit_login" type="submit" value="anmelden">
         <span class="login_check">
-    <input id="check" name="rememberMe" type="checkbox">
+    <input id="rememberMe" name="rememberMe" type="checkbox">
     <?= isset($_POST['rememberMe']) ? 'checked' : '' ?>
     <label for="rememberMe">Angemeldet bleiben?</label>
             <!--    <a href="./signup.html">Noch kein Konto?</a>-->
     </span>
+        <a href="<?= $_SERVER['SCRIPT_NAME'] ?>/?p=registration">Noch kein Konto?</a>
     </form>
 </div>
