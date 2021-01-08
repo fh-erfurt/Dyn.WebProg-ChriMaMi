@@ -1,11 +1,11 @@
-<link href="<?= ROOTPATH . '/assets/design/design-index.css' ?>" rel="stylesheet">
+<link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-index.css' ?>" rel="stylesheet">
 <section id="mainImage">
-    <img src="<?= ROOTPATH . 'assets/images/landing_text.png'?>" alt="photo of a tower under construction">
+    <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'landing_text.png'?>" alt="photo of a tower under construction">
 </section>
 
 <section class="mainArticle picFloatLeft" id="brandschutz">
     <article>
-        <img src="<?= ROOTPATH . 'assets/images/services/brandschutz.jpg' ?>" alt="brandschutz">
+        <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'brandschutz.jpg' ?>" alt="brandschutz">
         <h2>Brandschutz</h2>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
         labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -18,7 +18,7 @@
 </section>
     <section class="mainArticle picFloatRight" id="waermeschutz" alt="wärmeschutz">
         <article>
-            <img src="<?= ROOTPATH . 'assets/images/services/wärmeschutz.jpg' ?>">
+            <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'wärmeschutz.jpg' ?>">
             <h2>Wärmeschutzt</h2>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
             labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -32,7 +32,7 @@
     </section>
 <section class="mainArticle picFloatLeft" id="tragwerkplanung" alt="Tragwerkplanung">
     <article>
-        <img src="<?= ROOTPATH . 'assets/images/services/tragwerkplanung.jpg' ?>">
+        <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'tragwerkplanung.jpg' ?>">
         <h2>Tragwerkplanung</h2>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
         labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -45,7 +45,7 @@
 </section>
 <section class="mainArticle picFloatRight" id="eingabeplanung" alt="Eingabeplanung">
     <article>
-        <img src="<?= ROOTPATH . 'assets/images/services/eingabeplanung.jpg' ?>">
+        <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'eingabeplanung.jpg' ?>">
         <h2>Eingabeplanung</h2>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
         labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
