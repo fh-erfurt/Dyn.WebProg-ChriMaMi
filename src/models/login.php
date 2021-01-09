@@ -16,19 +16,23 @@ class Login extends \dwp\core\Model
     protected $schema = [
         'id' => [
             'type' => parent::TYPE_UINTEGER,
-            'null' => false
+            'validate' => [
+                'null' => false
+                ],
             ],
         'passwordHash' => [
             'type' => parent::TYPE_STRING,
-            'null' => false
+                'validate' => [
+                    'null' => false
+                ],
             ],
         'email' => [
             'type' => parent::TYPE_STRING,
             'validate' => [
                 'min' => 2,
                 'max' => 25,
-                'null' => false,
+                'null' => false
+                ],
             ],
-        ],
     ];
 }
