@@ -44,11 +44,6 @@ class PagesController extends \dwp\core\Controller
 
     }
 
-    public function actionMemberArea()
-    {
-
-    }
-
     public function actionProducts()
     {
 
@@ -59,12 +54,7 @@ class PagesController extends \dwp\core\Controller
 
     }
 
-    public function actionRegisterView()
-    {
-
-    }
-
-    public function actionWelcomeHome()
+    public function actionSignup()
     {
 
     }
@@ -112,7 +102,7 @@ class PagesController extends \dwp\core\Controller
         $this->setParam('test', 'Hello World!');
     }
 
-    public function actionSignup()
+/*    public function actionSignup()
     {
         // store error message
         $errMsg = null;
@@ -138,7 +128,7 @@ class PagesController extends \dwp\core\Controller
 
         // TODO: Set params for account
 
-    }
+    }*/
 
     public function actionLogout()
     {
