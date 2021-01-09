@@ -19,6 +19,6 @@
     <label for="rememberMe">Angemeldet bleiben?</label>
             <!--    <a href="./signup.html">Noch kein Konto?</a>-->
     </span>
-        <a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=registerView">Noch kein Konto?</a>
+        <a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=signup">Noch kein Konto?</a>
     </form>
 </div>
