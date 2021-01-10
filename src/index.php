@@ -8,7 +8,7 @@
 
 // load needed variables/defines/configs
 require_once 'config/init.php';
-//require_once 'config/database.php';
+require_once 'config/database.php';
 
 // load core stuff
 require_once COREPATH . 'functions.php';
