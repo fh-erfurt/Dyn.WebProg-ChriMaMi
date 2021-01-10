@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @author Matthias Gabel<matthias.gabel@fh-erfurt.de>
+ * @copyright Since 2021 by Matthias Gabel
+ * @version 1.0.0
+ */
+
+
+namespace dwp\model;
+
+class Orders extends \dwp\core\Model
+{
+    const TABLENAME = 'orders';
+
+    protected $schema = [
+        'id' => [
+            'type' => parent::TYPE_UINTEGER,
+            'validate' => [
+                'null' => false
+            ],
+        ],
+        'status' => [
+            'type' => parent::TYPE_STRING,
+            'validate' => [
+                'min' => 2,
+                'max' => 15,
+                'null' => false
+            ],
+        ],
+        'datetime' => [
+            'type' => parent::TYPE_DATE,
+            'validate' => [
+                'null' => false
+            ],
+        ],
+        'amount' => [
+            'type' => parent::TYPE_INTEGER,
+            'validate' => [
+                'min' => 1,
+                'null' => false
+            ],
+        ],
+    ];
+}
