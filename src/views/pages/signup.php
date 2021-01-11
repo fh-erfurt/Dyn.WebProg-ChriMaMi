@@ -11,11 +11,11 @@
                 </select>
             </label>
             <label for="firstName">Vorname:
-                <input type="text" class="form_col_space" id="firstName" name="register_firstName"
+                <input type="text" class="form_col_space" id="firstName" name="register_firstname" value="<?$register_firstname?>"
                        autocomplete="on" required>
             </label>
             <label for="lastName">Nachname:
-                <input type="text" class="form_col_space" id="lastName" name="register_lastName"
+                <input type="text" class="form_col_space" id="lastName" name="register_lastname"
                        autocomplete="on" required>
             </label>
             <label for="mail">Email:

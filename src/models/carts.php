@@ -9,30 +9,23 @@
 
 namespace dwp\model;
 
-class Login extends \dwp\core\Model
+class Carts extends \dwp\core\Model
 {
-    const TABLENAME = 'login';
+    const TABLENAME = 'carts';
 
     protected $schema = [
         'id' => [
             'type' => parent::TYPE_UINTEGER,
             'validate' => [
                 'null' => false
-                ],
             ],
-        'passwordHash' => [
-            'type' => parent::TYPE_STRING,
-                'validate' => [
-                    'null' => false
-                ],
-            ],
-        'email' => [
-            'type' => parent::TYPE_STRING,
+        ],
+        'amount' => [
+            'type' => TYPE_UINTEGER,
             'validate' => [
-                'min' => 2,
-                'max' => 25,
+                'minValue' => 1,
                 'null' => false
-                ],
             ],
+        ],
     ];
 }

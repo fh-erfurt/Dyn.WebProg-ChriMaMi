@@ -7,7 +7,7 @@
  */
 
 
-$dbName = 'DBHorsch';
+$dbName = 'horsch_db';
 
 $dns   = 'mysql:dbname='.$dbName.';host=localhost';
 $user  = 'root';

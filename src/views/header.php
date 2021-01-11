@@ -1,0 +1,21 @@
+<header>
+    <div id="head_container">
+        <div id="sek-head-logo">
+            <img src="<?= ASSETSPATH . 'logo/logo.png' ?>" alt="Logo">
+        </div>
+        <div id="sek-headcontent">
+            <h1>Ingenieurbüro</h1>
+            <h2>Patrick Horsch</h2>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=main">Home</a></li>
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=products">Produkte</a></li>
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=shop">Shop</a></li>
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=administration">Administration</a></li>
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=login" class="submitLogout">Login</a></li>
+                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=imprint">Impressum</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

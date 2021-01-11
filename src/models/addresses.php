@@ -9,50 +9,56 @@
 
 namespace dwp\model;
 
-class Customer extends \dwp\core\Model
+class Addresses extends \dwp\core\Model
 {
-    const TABLENAME = 'customer';
+    const TABLENAME = 'addresses';
 
     protected $schema = [
         'id' => [
             'type' => parent::TYPE_UINTEGER,
             'validate' => [
                 'null' => false
-                ],
             ],
-        'createdAt' => [
-            'type' => parent::TYPE_STRING,
-            'validate' => [
-                'null' => false
-                ],
-            ],
-        'fname' => [
+        ],
+        'street' => [
             'type' => parent::TYPE_STRING,
             'validate' => [
                 'min' => 2,
-                'max' => 45,
+                'max' => 64,
                 'null' => false
-                ],
             ],
-        'lname' => [
+        ],
+        'streetnumber' => [
             'type' => parent::TYPE_STRING,
             'validate' => [
                 'min' => 2,
-                'max' => 45,
+                'max' => 10,
                 'null' => false
-                ],
             ],
-        'gender' => [
+        ],
+        'city' => [
             'type' => parent::TYPE_STRING,
             'validate' => [
+                'min' => 2,
+                'max' => 64,
                 'null' => false
-                ],
             ],
-        'phone' => [
+        ],
+        'zip' => [
             'type' => parent::TYPE_STRING,
             'validate' => [
-                'null' => true
-                ],
+                'min' => 5,
+                'max' => 5,
+                'null' => false
             ],
+        ],
+        'receiver' => [
+            'type' => parent::TYPE_STRING,
+            'validate' => [
+                'min' => 2,
+                'max' => 255,
+                'null' => false
+            ],
+        ],
     ];
 }
