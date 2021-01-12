@@ -98,6 +98,14 @@ nav .navigation a {
     transition: background-size .2s;
 }
 
+nav .navigation a:hover{
+    color: var(--headcolor);
+}
+
+nav .navigation a:after{
+    color: var(--headcolor);
+}
+
 nav .submenu {
     visibility: hidden;
     display: block;
@@ -366,9 +374,12 @@ article
     flex-wrap: wrap;
 }
 
+.certification {
+}
+
 .certification img{
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     border: solid #000000;
     border-radius: 50%;
     margin: 10px;
