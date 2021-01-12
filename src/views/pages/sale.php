@@ -2,11 +2,10 @@
 <div class="secondNavigation">
     <!--    <nav class="secondNavigation">>-->
     <ul class="secondNavigation">
-        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=sale">Shop</a></li>
-        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=sale">Aktuelle Angebote</a></li>
-        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=categories">Kategorien</a></li>
+        <li><div class="text"><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=categories">Shop</a></div></li>
+        <li><div class="text"><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=sale">Aktuelle Angebote</a></div></li>
         <li><label for="suche"></label><input type="search" id="suche" placeholder="  Suche"></li>
-        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=cart">Warenkorb</a></li>
+        <li><div class="icon"><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=cart"><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'checkoutCart.png' ?>"/></a></div></li>
     </ul>
 </div>
 <h1>Neue Produkte</h1>
@@ -78,13 +77,13 @@
 <h1>Sparangebote</h1>
 <div class="PagesSlider">
     <div class="PagesSlider-slides">
-        <div class="PagesSlider-slide"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/138822/mdn-min.jpg"/></div>
-        <div class="PagesSlider-slide"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/138822/csstricks-min.jpg"/></div>
-        <div class="PagesSlider-slide"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/138822/codepen-min.jpg"/></div>
-        <div class="PagesSlider-slide"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/138822/upperquad-min.jpg"/></div>
-        <div class="PagesSlider-slide"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/138822/aranja-min.jpg"/></div>
-        <div class="PagesSlider-slide"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/138822/obama-min.jpg"/></div>
-        <div class="PagesSlider-slide"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/138822/who-min.jpg"/></div>
-        <div class="PagesSlider-slide"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/138822/projectsabroad-min.jpg"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale1.png' ?>"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale2.png' ?>"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale3.png' ?>"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale4.png' ?>"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale5.png' ?>"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale6.png' ?>"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale7.png' ?>"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale8.png' ?>"/></div>
     </div>
 </div>

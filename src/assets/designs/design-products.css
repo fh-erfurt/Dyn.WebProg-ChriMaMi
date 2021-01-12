@@ -20,6 +20,14 @@
 }
 
 .secondNavigation a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.secondNavigation .text {
+    display: flex;
+    align-items: center;
+    min-height: 24px;
     border-left: solid 1px;
     border-right: solid 1px;
     background-size: 0px 0px;
@@ -30,10 +38,30 @@
     transition: background-color 0.5s ease-out;
 }
 
-.secondNavigation a:hover{
+.secondNavigation .text:hover{
     background-color: #818080;
 
 }
+.secondNavigation ul li img:hover{
+    background-color: #818080;
+
+}
+
+.secondNavigation ul li img{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    float: left;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    background-size: 0px 0px;
+    color: #FFFFFF;
+    margin: 0px 16px;
+    padding: 0px 12px;
+    text-decoration: none;
+    transition: background-color 0.5s ease-out;
+}
+
 
 /* ------------------------------ Search button -------------------------------*/
 
@@ -98,12 +126,20 @@
         font-size: 14px;
     }
 }
+@media screen and (max-width:1120px) {
+    #suche {
+        width:100px;
+    }
+}
 
 @media screen and (max-width:1220px) {
     #itemDisplay {
         max-height: 4000px;
     }
     #itemDisplay {
+        min-width: 400px;
+    }
+    .secondNavigation {
         min-width: 400px;
     }
 }
@@ -376,7 +412,7 @@
 
 .PagesSlider-slide {
     position: absolute;
-    padding-left: 0.625em;
+    padding-left: 1em;
     top: 3.5625em;
     width: 20em;
     height: 16.9375em;
