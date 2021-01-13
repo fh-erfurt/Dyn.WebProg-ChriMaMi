@@ -72,7 +72,7 @@ class Controller
     }
 
 
-    public function redirect($url)
+    public static function redirect($url)
     {
         header('Location: '.$url);
         exit(0);
