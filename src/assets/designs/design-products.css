@@ -387,14 +387,6 @@
 }
 
 /* ------------------------------ Second Carousel-------------------------------*/
-/*.content-wrap{
-    padding: 15px 200px 300px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    background: rgba(255,255,255, 0.92);
-}*/
-
 .PagesSlider img {
     width: 100%;
 }
@@ -451,61 +443,25 @@
 }
 
 @-webkit-keyframes PagesSlider-animation {
-    0%, 10% {
-        transform: translateX(500%);
-    }
-    12.5%, 22.5% {
-        transform: translateX(400%);
-    }
-    25%, 35% {
-        transform: translateX(300%);
-    }
-    37.5%, 47.5% {
-        transform: translateX(200%);
-    }
-    50%, 60% {
-        transform: translateX(100%);
-    }
-    62.5%, 72.5% {
-        transform: translateX(0%);
-    }
-    75%, 85% {
-        transform: translateX(-100%);
-    }
-    87.5%, 97.5% {
-        transform: translateX(-200%);
-    }
-    100%, 100% {
-        transform: translateX(-300%);
-    }
+    0%, 10%      {transform: translateX(500%);}
+    12.5%, 22.5% {transform: translateX(400%);}
+    25%, 35%     {transform: translateX(300%);}
+    37.5%, 47.5% {transform: translateX(200%);}
+    50%, 60%     {transform: translateX(100%);}
+    62.5%, 72.5% {transform: translateX(0%);}
+    75%, 85%     {transform: translateX(-100%);}
+    87.5%, 97.5% {transform: translateX(-200%);}
+    100%, 100%   {transform: translateX(-300%);}
 }
 
 @keyframes PagesSlider-animation {
-    0%, 10% {
-        transform: translateX(500%);
-    }
-    12.5%, 22.5% {
-        transform: translateX(400%);
-    }
-    25%, 35% {
-        transform: translateX(300%);
-    }
-    37.5%, 47.5% {
-        transform: translateX(200%);
-    }
-    50%, 60% {
-        transform: translateX(100%);
-    }
-    62.5%, 72.5% {
-        transform: translateX(0%);
-    }
-    75%, 85% {
-        transform: translateX(-100%);
-    }
-    87.5%, 97.5% {
-        transform: translateX(-200%);
-    }
-    100%, 100% {
-        transform: translateX(-300%);
-    }
+    0%, 10%      {transform: translateX(500%);}
+    12.5%, 22.5% {transform: translateX(400%);}
+    25%, 35%     {transform: translateX(300%);}
+    37.5%, 47.5% {transform: translateX(200%);}
+    50%, 60%     {transform: translateX(100%);}
+    62.5%, 72.5% {transform: translateX(0%);}
+    75%, 85%     {transform: translateX(-100%);}
+    87.5%, 97.5% {transform: translateX(-200%)}
+    100%, 100%   {transform: translateX(-300%);}
 }
