@@ -94,8 +94,7 @@ if (file_exists(CONTROLLERSPATH . $controllerName . 'Controller.php')) {
     $actionMethod = 'action' . ucfirst($actionName);
     if (!method_exists($controller, $actionMethod)) {
         // redirect to error page 404 because not found
-        header('Location: index.php?c=errors&a=error404');
-        exit(0);
+        redirect('index.php?c=errors&a=error404&error=nonaction');
     } else {
         // call the action method to do the job
         // so the action cann fill the params for the views which will be used
@@ -104,8 +103,7 @@ if (file_exists(CONTROLLERSPATH . $controllerName . 'Controller.php')) {
     }
 } else {
     // redirect to error page 404 because not found
-    header('Location: index.php?c=errors&a=error404&error=nocontroller');
-    exit(0);
+    redirect('index.php?c=errors&a=error404&error=nocontroller');
 }
 
 
@@ -124,7 +122,7 @@ if (file_exists(CONTROLLERSPATH . $controllerName . 'Controller.php')) {
     </head>
     <body>
         <div id="page-container">
-            <?require VIEWSPATH."header.php"?>
+            <? require_once SHAREDPATH . "header.php" ?>
             <div id="content-wrap">
                 <?php
 
@@ -133,7 +131,7 @@ if (file_exists(CONTROLLERSPATH . $controllerName . 'Controller.php')) {
                 $controller->render();
                 ?>
             </div>
-            <?require VIEWSPATH."footer.php"?>
+            <? require_once SHAREDPATH .  "footer.php" ?>
         </div>
     </body>
 </html>

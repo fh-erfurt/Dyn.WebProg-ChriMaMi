@@ -35,3 +35,9 @@ function localDateTimeString($lang, $date)
 
     return $result;
 }
+
+function redirect($url)
+{
+    header('Location: '.$url);
+    exit(0);
+}
