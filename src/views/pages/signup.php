@@ -54,7 +54,7 @@
             </label>
         </div>
         <div id="submitSection">
-            <input type="submit" class="submit_button" name="signUp_submit" value="registrieren">
+            <input type="submit" class="submit_button" name="signUp_submit" value="signUp">
         </div>
     </form>
 </div>
