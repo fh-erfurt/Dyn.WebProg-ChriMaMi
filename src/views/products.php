@@ -1,4 +1,3 @@
-<link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-products.css' ?>" rel="stylesheet">
 <div class="secondNavigation">
     <!--    <nav class="secondNavigation">>-->
     <ul class="secondNavigation">

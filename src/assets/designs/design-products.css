@@ -80,7 +80,7 @@
     display:flex;
     justify-content: center;
     flex-direction: column;
-    max-height: 1400px;
+    max-height: 1600px;
     align-items: flex-start;
     flex-wrap: wrap;
     background-color: #1960B8;
@@ -110,6 +110,28 @@
     margin: 10px;
     border-radius: 20px;
     float: right;
+}
+
+.item .button {
+    margin-top: 10px;
+    margin-right: 15px;
+    border: 2px solid ;
+    display: flex;
+    float: right;
+    color: #4b4c4f;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    min-width: 100px;
+
+    border-radius: 25px;
+    transition: background-color 0.2s ease-out;
+}
+
+.item .button:focus {
+    border: 2px solid black;
+    color: #ffffff;
 }
 
 .break-column {

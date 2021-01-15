@@ -1,14 +1,6 @@
 <link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-products.css' ?>" rel="stylesheet">
-<div class="secondNavigation">
-    <!--    <nav class="secondNavigation">>-->
-    <ul class="secondNavigation">
-        <li><div class="text"><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=categories">Shop</a></div></li>
-        <li><div class="text"><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=sale">Aktuelle Angebote</a></div></li>
-        <li><label for="suche"></label><input type="search" id="suche" placeholder="  Suche"></li>
-        <li><div class="icon"><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=cart"><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'checkoutCart.png' ?>"/></a></div></li>
-    </ul>
-</div>
-<h1>Neue Produkte</h1>
+<?require VIEWSPATH."products.php";?>
+<h1>Sparangebote</h1>
 <section class="carousel" aria-label="Gallery">
     <ol class="carousel__viewport">
         <li id="carousel__slide1"
@@ -74,7 +66,7 @@
     </aside>
 </section>
 
-<h1>Sparangebote</h1>
+<h1>Neues</h1>
 <div class="PagesSlider">
     <div class="PagesSlider-slides">
         <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale1.png' ?>"/></div>
