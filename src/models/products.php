@@ -44,7 +44,7 @@ class Products extends \dwp\core\Model
                 'null' => false
             ],
         ],
-        'stdPrice' => [
+        'std_price' => [
             'type' => parent::TYPE_DECIMAL,
             'validate' => [
                 'maxValue' => 99999999.99,

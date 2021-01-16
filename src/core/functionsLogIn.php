@@ -1,9 +1,11 @@
 <?php
 
+
+/*
 function getAllUsers()
 {
     $dbString = file_get_contents(DATABASE);
-    $usersArray = json_decode($dbString, true);/*assoc == true return as as associative array*/
+    $usersArray = json_decode($dbString, true);assoc == true return as as associative array
     return $usersArray['users'];
 }
 
@@ -27,7 +29,7 @@ function logIn(&$error, $rememberMe = false)
 
     $userId = null;
 
-    /* If the checked the rememberMe at last logIn, check the cookies an logIn automatically*/
+    If the checked the rememberMe at last logIn, check the cookies an logIn automatically
     if($rememberMe === true && empty($_POST['validationEmail']) && empty($_POST['validationPassword']))
     {
         $userId = $_POST['userId'];
@@ -78,5 +80,81 @@ function rememberMe($id, $password)
     setcookie('password', $password, $duration, '/');
 
 }
+*/
 
+
+
+use dwp\model\Accounts as Accounts;
+
+function uIdExists($email) {
+    $db = $GLOBALS['db'];
+    $sql = "email=".$db->quote($email);
+    $stmt = Accounts::findOne($sql);
+/*    echo "<pre>", var_dump($stmt), "</pre>";*/
+
+    if(!$stmt){
+        header("Location: ../signup.php?error=stmtfailed");
+        exit();
+    }
+    return $stmt;
+}
+
+function emptyInputLogin($uId, $password){
+    if(empty($uId) || empty($password)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function loginUser($uId, $password) {
+
+    $account = uIdExists($uId);
+/*    echo "Variable account";
+    echo "<pre>", var_dump($account), "</pre>";
+    exit();*/
+
+    if ($account === false) {
+        header("Location: ../signup.php?error=stmtfailed");
+        exit();
+    }
+    $passwordHashed = $account['passwordHash'];
+
+
+   //Its the final Version for already hashed passwords stored in database
+    //The following function is only running if the password in db was hashed before
+    /*$checkPassword = password_verify($password, $passwordHashed);
+    if($checkPassword === false) {
+        header("Location: ../signup.php?error=wronglogin");
+        exit();
+    }
+    else if($checkPassword === true) {
+        session_start();
+        $_SESSION["id"] = $uidExists['id'];
+        header("Location: ../index.php");
+        exit();
+    }*/
+
+
+
+    $unhashedPassword = false;
+    if($passwordHashed === $password) {
+        $unhashedPassword = true;
+    }
+
+    if($unhashedPassword === false) {
+        header("Location: ../signup.php?error=wronglogin");
+        exit();
+    }
+    // TODO: Store useful variables into the session like account and also set loggedIn = true
+    else if($unhashedPassword === true) {
+        session_start();
+        $_SESSION['email'] = $account['email'];
+        header("Location: ../index.php");
+        exit();
+    }
+}
 ?>
+
+

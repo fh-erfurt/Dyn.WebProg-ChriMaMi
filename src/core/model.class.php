@@ -153,6 +153,17 @@ abstract class Model
             {
                 //TODO: string von variable abhängig. bei string brauchen wir " bein integer nicht
                 //      wird so bald wie möglich gefixt
+                //check which data type $key belongs and choose the type of updating it
+/*                switch (isset($key))
+                {
+                    case is_string($key): $valuesStr.= $key.' = "'.$this->values[$key].'", ';
+                    break;
+                    case is_int($key): $valuesStr.= $key.' = '.$this->values[$key].', ';
+                    break;
+                    case is_float($key): $valuesStr.= $key.' = '.$this->values[$key].', ';
+                    default: $valuesStr.= $key.' = "'.$this->values[$key].'", ';
+                }*/
+                //Funktioniert mit allen Datentypen
                 $valuesStr.= $key.' = "'.$this->values[$key].'", ';
             }
         }
