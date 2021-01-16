@@ -71,13 +71,6 @@ class Controller
         $this->params[$key] = $value;
     }
 
-
-    public static function redirect($url)
-    {
-        header('Location: '.$url);
-        exit(0);
-    }
-
     public function __destruct()
     {
         $this->controller = null;

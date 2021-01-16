@@ -9,27 +9,29 @@
 
 namespace dwp\model;
 
+use \dwp\core\Model as M;
+
 class Accounts extends \dwp\core\Model
 {
     const TABLENAME = 'accounts';
 
     protected $schema = [
         'id' => [
-            'type' => parent::TYPE_UINTEGER,
+            'type' => M::TYPE_UINTEGER,
             'validate' => [
                 'null' => false
             ],
         ],
         'email' => [
-            'type' => parent::TYPE_STRING,
+            'type' => M::TYPE_STRING,
             'validate' => [
                 'min' => 2,
                 'max' => 255,
                 'null' => false
             ],
         ],
-        'passwordHash' => [
-            'type' => parent::TYPE_STRING,
+        'password_hash' => [
+            'type' => M::TYPE_STRING,
             'validate' => [
                 'min' => 8,
                 'max' => 255,

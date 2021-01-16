@@ -19,6 +19,9 @@ class ErrorsController extends \dwp\core\Controller
         {
             switch($_GET['error'])
             {
+                case 'nonaction':
+                    $errorMessage = 'Action konnte nicht gefunden werden.';
+                    break;
                 case 'nocontroller':
                     $errorMessage = 'Controller konnte nicht gefunden werden.';
                     break;
