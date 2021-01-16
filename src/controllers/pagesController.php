@@ -60,7 +60,7 @@ class PagesController extends \dwp\core\Controller
 
     }
 
-    public function actionSale()
+    public function actionNews()
     {
 
     }
