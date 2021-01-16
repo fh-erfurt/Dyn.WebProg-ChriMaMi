@@ -15,22 +15,22 @@ class PagesController extends \dwp\core\Controller
     public function actionIndex()
     {
 
-/*        if($this->loggedIn())
-        {
-            // TODO: Retrieve account which is logged in
+        /*        if($this->loggedIn())
+                {
+                    // TODO: Retrieve account which is logged in
 
-            // TODO: Set the correct name of the current user here
-            $this->setParam('name', 'unkown');
+                    // TODO: Set the correct name of the current user here
+                    $this->setParam('name', 'unkown');
 
-            // TODO: retrieve and set the marks of the current user
-            $this->setParam('marks', []);
+                    // TODO: retrieve and set the marks of the current user
+                    $this->setParam('marks', []);
 
-        }
-        else
-        {
-            header('Location: index.php?c=pages&a=login');
-            exit(0);
-        }*/
+                }
+                else
+                {
+                    header('Location: index.php?c=pages&a=login');
+                    exit(0);
+                }*/
 
     }
 
@@ -51,8 +51,8 @@ class PagesController extends \dwp\core\Controller
 
     public function actionSignup()
     {
-/*        echo "<pre>", var_dump($_POST), "</pre>";
-        $this->setParam("register_firstname", $_POST["register_firstname"]);*/
+        /*        echo "<pre>", var_dump($_POST), "</pre>";
+                $this->setParam("register_firstname", $_POST["register_firstname"]);*/
     }
 
     public function actionCategories()
@@ -70,50 +70,42 @@ class PagesController extends \dwp\core\Controller
 
     }
 
+    public function administration()
+    {
+
+    }
+
     public function actionLogin()
     {
+
         // store error message
         $errMsg = null;
 
-        // retrieve inputs
-        $username = isset($_POST['username']) ? $_POST['username'] : '';
-        $password = isset($_POST['password']) ? $_POST['password'] : '';
-
         // check user send login field
-        if(isset($_POST['submit']))
-        {
+        if (isset($_POST['submit'])) {
+
+            // retrieve inputs
+            $email = isset($_POST['email']) ? $_POST['email'] : '';
+            $password = isset($_POST['password']) ? $_POST['password'] : '';
+
+            require_once COREPATH . 'functionsLogin.php';
 
             // TODO: Validate input first
+
+            if (emptyInputLogin($email, $password) !== false) {
+                header("Location: ../login.php?error=emptyinput");
+                exit();
+                echo "Du bist dumm, Geb richtig ein";
+            }
             // TODO: Check login values with database accounts
-            // TODO: Store useful variables into the session like account and also set loggedIn = true
-            $db = $GLOBALS['db'];
-
-            $login = \dwp\model\Login::findOne('username = '.$db->quote($username));
-
-            if($login !== null && password_verify($password, $login->passwordHash))
-            {
-                echo "login success";
-            }
-            else
-            {
-                $errMsg = 'Nutzer oder Passwort nicht korrekt.';
-            }
-
-            // if there is no error reset mail
-            if($errMsg === null)
-            {
-                $username = '';
-            }
-
+            loginUser($email, $password);
+        } else {
         }
-
-        // set param email to prefill login input field
-        $this->setParam('username', $username);
-        $this->setParam('errMsg', $errMsg);
-        $this->setParam('test', 'Hello World!');
     }
+}
 
-/*    public function actionSignup()
+
+    /*public function actionSignup()
     {
         // store error message
         $errMsg = null;
@@ -141,9 +133,9 @@ class PagesController extends \dwp\core\Controller
 
     }*/
 
-    public function actionLogout()
+    /*public function actionLogout()
     {
         session_destroy();
         header('Location: index.php?c=pages&a=login');
-    }
-}
+    }*/
+/*}*/

@@ -24,13 +24,13 @@ foreach (glob(MODELSPATH . '*.php') as $modelfiles) {
 
 /*$values1 = ['id' => 10, 'email' => 'newmagil@home.de', 'passwordHash' => 'test'];
 $account = new \dwp\model\Accounts($values1);
-$account->insert();*/
+$account->insert();
 
-/*$values2 = ['id' => 10, 'email' => 'update@home.de', 'passwordHash' => '123456'];
+$values2 = ['id' => 10, 'email' => 'update@home.de', 'passwordHash' => '123456'];
 $account = new \dwp\model\Accounts($values2);
-$account->update();*/
+$account->update();
 
-/*$values3 = ['id' => 10, 'email' => 'update@home.de', 'passwordHash' => '123456'];
+$values3 = ['id' => 10, 'email' => 'update@home.de', 'passwordHash' => '123456'];
 $account = new \dwp\model\Accounts($values3);
 $account->destroy();
 
@@ -40,7 +40,33 @@ echo '<pre>', var_dump($account), '</pre>';
 $account = null;
 exit(0);*/
 
+/*//New Update-Tests w. INT, DATE, etc
+$value4 = ['id' => 5, 'street' => "Nordstraße", 'house_number' => 12, 'city' => "Erfurt", 'zip' => 99089, 'name' => "Frau Mustermann"];
+$address = new \dwp\model\Addresses($value4);
+$address->update();
 
+echo '<pre>', var_dump($address), '</pre>';
+
+$account = null;
+exit(0);*/
+
+/*$value11 = ['id' => 0, 'name' => "Item 6", 'description' => "TestTestTest", 'category' => "Eingabeplanung", 'std_price' => 400.00, 'images_id' => 6];
+$product = new \dwp\model\products($value11);
+$product->insert();*/
+
+/*$value12 = ['id' => 1, 'name' => "Item 1", 'description' => "TestTestTest", 'category' => "Eingabeplanung", 'std_price' => 800, 'images_id' => 1];
+$value12 = ['id' => 1, 'std_price' => 800.00];
+$product = new \dwp\model\products($value12);
+$product->update();*/
+
+/*$value13 = ['id' => 6, 'name' => "Item 6", 'description' => "TestTestTest", 'category' => "Eingabeplanung", 'std_price' => 500.00, 'images_id' => 6];
+$product = new \dwp\model\products($value13);
+$product->destroy();*/
+
+/*echo '<pre>', var_dump($product), '</pre>';
+
+$account = null;
+exit(0);*/
 
 /*
 //example for DB query
@@ -58,8 +84,14 @@ catch(\PDOException$e) {
 echo "<pre>", var_dump($result), "</pre>";
 exit(0);
 */
+require_once 'core/functionsLogIn.php';
+
+/*uIdExists('matthias.gabel@fh-email.de');*/
+/*loginUser('matthias.gabel@fh-email.de', 12345);
+exit();*/
 
 // start session to handle login
+session_save_path('data/sessions');
 session_start();
 
 // check which controller should be loaded
@@ -107,7 +139,6 @@ if (file_exists(CONTROLLERSPATH . $controllerName . 'Controller.php')) {
     header('Location: index.php?c=errors&a=error404&error=nocontroller');
     exit(0);
 }
-
 
 ?>
 

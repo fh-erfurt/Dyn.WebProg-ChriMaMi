@@ -28,7 +28,7 @@ class Addresses extends \dwp\core\Model
                 'null' => false
             ],
         ],
-        'streetnumber' => [
+        'house_number' => [
             'type' => parent::TYPE_STRING,
             'validate' => [
                 'min' => 2,
@@ -52,7 +52,7 @@ class Addresses extends \dwp\core\Model
                 'null' => false
             ],
         ],
-        'receiver' => [
+        'name' => [
             'type' => parent::TYPE_STRING,
             'validate' => [
                 'min' => 2,
@@ -61,4 +61,6 @@ class Addresses extends \dwp\core\Model
             ],
         ],
     ];
+
+
 }
