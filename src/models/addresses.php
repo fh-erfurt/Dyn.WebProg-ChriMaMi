@@ -9,27 +9,29 @@
 
 namespace dwp\model;
 
+use \dwp\core\Model as M;
+
 class Addresses extends \dwp\core\Model
 {
     const TABLENAME = 'addresses';
 
     protected $schema = [
         'id' => [
-            'type' => parent::TYPE_UINTEGER,
+            'type' => M::TYPE_UINTEGER,
             'validate' => [
                 'null' => false
             ],
         ],
         'street' => [
-            'type' => parent::TYPE_STRING,
+            'type' => M::TYPE_STRING,
             'validate' => [
                 'min' => 2,
                 'max' => 64,
                 'null' => false
             ],
         ],
-        'streetnumber' => [
-            'type' => parent::TYPE_STRING,
+        'house_number' => [
+            'type' => M::TYPE_STRING,
             'validate' => [
                 'min' => 2,
                 'max' => 10,
@@ -37,7 +39,7 @@ class Addresses extends \dwp\core\Model
             ],
         ],
         'city' => [
-            'type' => parent::TYPE_STRING,
+            'type' => M::TYPE_STRING,
             'validate' => [
                 'min' => 2,
                 'max' => 64,
@@ -45,18 +47,10 @@ class Addresses extends \dwp\core\Model
             ],
         ],
         'zip' => [
-            'type' => parent::TYPE_STRING,
+            'type' => M::TYPE_STRING,
             'validate' => [
                 'min' => 5,
                 'max' => 5,
-                'null' => false
-            ],
-        ],
-        'receiver' => [
-            'type' => parent::TYPE_STRING,
-            'validate' => [
-                'min' => 2,
-                'max' => 255,
                 'null' => false
             ],
         ],

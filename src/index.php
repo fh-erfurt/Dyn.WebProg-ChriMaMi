@@ -21,23 +21,24 @@ foreach (glob(MODELSPATH . '*.php') as $modelfiles) {
     require_once $modelfiles;
 }
 
+//echo var_dump(\dwp\model\Addresses::find());
 
 /*$values1 = ['id' => 10, 'email' => 'newmagil@home.de', 'passwordHash' => 'test'];
-$account = new \dwp\model\Accounts($values1);
-$account->insert();*/
+$accounts = new \dwp\model\Accounts($values1);
+$accounts->insert();*/
 
 /*$values2 = ['id' => 10, 'email' => 'update@home.de', 'passwordHash' => '123456'];
-$account = new \dwp\model\Accounts($values2);
-$account->update();*/
+$accounts = new \dwp\model\Accounts($values2);
+$accounts->update();*/
 
 /*$values3 = ['id' => 10, 'email' => 'update@home.de', 'passwordHash' => '123456'];
-$account = new \dwp\model\Accounts($values3);
-$account->destroy();
+$accounts = new \dwp\model\Accounts($values3);
+$accounts->destroy();
 
 
-echo '<pre>', var_dump($account), '</pre>';
+echo '<pre>', var_dump($accounts), '</pre>';
 
-$account = null;
+$accounts = null;
 exit(0);*/
 
 
@@ -125,6 +126,7 @@ if (file_exists(CONTROLLERSPATH . $controllerName . 'Controller.php')) {
             <? require_once SHAREDPATH . "header.php" ?>
             <div id="content-wrap">
                 <?php
+
 
                 // this method will render the views of the called action
                 // for this the the file in the views directory will be included

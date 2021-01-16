@@ -9,24 +9,34 @@
 
 namespace dwp\model;
 
+use \dwp\core\Model as M;
+
 class Administrators extends \dwp\core\Model
 {
     const TABLENAME = 'administrators';
 
     protected $schema = [
         'id' => [
-            'type' => parent::TYPE_UINTEGER,
+            'type' => M::TYPE_UINTEGER,
             'validate' => [
                 'null' => false
             ],
         ],
-        'username' => [
-            'type' => parent::TYPE_STRING,
+        'name' => [
+            'type' => M::TYPE_STRING,
             'validate' => [
                 'min' => 2,
                 'max' => 255,
                 'null' => false
             ],
         ],
+        'accounts_id' => [
+            'type' => M::TYPE_INTEGER,
+            'validate' => [
+                'min' => 2,
+                'max' => 255,
+                'null' => false
+            ]
+        ]
     ];
 }
