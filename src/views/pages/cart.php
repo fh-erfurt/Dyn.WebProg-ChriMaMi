@@ -1,5 +1,5 @@
 <link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-products.css' ?>" rel="stylesheet">
-<?require VIEWSPATH."products.php";?>
+<?require SHAREDPATH."subnav.php";?>
 
 <section class="cartDisplay">
     <article>
