@@ -21,20 +21,43 @@ foreach (glob(MODELSPATH . '*.php') as $modelfiles) {
     require_once $modelfiles;
 }
 
-/*example for DB query
+
+/*$values1 = ['id' => 10, 'email' => 'newmagil@home.de', 'passwordHash' => 'test'];
+$account = new \dwp\model\Accounts($values1);
+$account->insert();*/
+
+/*$values2 = ['id' => 10, 'email' => 'update@home.de', 'passwordHash' => '123456'];
+$account = new \dwp\model\Accounts($values2);
+$account->update();*/
+
+/*$values3 = ['id' => 10, 'email' => 'update@home.de', 'passwordHash' => '123456'];
+$account = new \dwp\model\Accounts($values3);
+$account->destroy();
+
+
+echo '<pre>', var_dump($account), '</pre>';
+
+$account = null;
+exit(0);*/
+
+
+
+/*
+//example for DB query
 $result=null;
 try{
     // escaped database param
-    $escapedReceiver=$db->quote('Max Mustermann');
+    $escapedReceiver=$db->quote('Hannes');
     // Execute the SQL Statement and fetch data
-    $result=$db->query('SELECT * FROM addresses WHERE receiver = '.$escapedReceiver)->fetchAll();
+    $result=$db->query('SELECT * FROM customers WHERE firstname = '.$escapedReceiver)->fetchAll();
 }
 catch(\PDOException$e) {
     die( 'Query Error: '.$e->getMessage() );
 }
 
 echo "<pre>", var_dump($result), "</pre>";
-exit(0);*/
+exit(0);
+*/
 
 // start session to handle login
 session_start();

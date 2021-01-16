@@ -35,6 +35,165 @@ abstract class Model
         return null;
     }
 
+    public function __construct($values)
+    {
+        try
+        {
+            foreach($this->schema as $key => $value)
+            {
+                if(isset($values[$key]))
+                {
+                    $this->$key = $values[$key];
+                }
+                else
+                {
+                    $this->$key = null;
+                }
+            }
+        }
+        catch(\Exception $error)
+        {
+            print_r($error);
+            exit(1);
+        }
+    }
+
+    public function __destruct()
+    {
+        foreach($this->schema as $key => $value)
+        {
+            if(isset($values[$key]))
+            {
+                $this->$key = null;
+            }
+        }
+        $this->schema = null;
+
+        foreach($this->values as $key => $value)
+        {
+            if(isset($values[$key]))
+            {
+                $this->$key = null;
+            }
+        }
+        $this->values = null;
+    }
+
+    public function __set($key, $value)
+    {
+        // key available?
+        if(isset($this->schema[$key]))
+        {
+            $this->values[$key] = $value;
+        }
+        else
+        {
+            $className = get_called_class();
+            throw new \Exception(`${key} does not exists in this class ${className}`);
+        }
+    }
+
+    public function __get($key)
+    {
+        // Check is the key in the schema
+        // If so return the value in values if not exists return default value from schema or null
+        // key available?
+        if(isset($this->schema[$key]))
+        {
+            return $this->values[$key];
+        }
+        else
+        {
+            $className = get_called_class();
+            throw new \Exception(`${key} does not exists in this class ${className}`);
+        }
+    }
+
+    public function insert()
+    {
+        // Implement insert
+        $db = $GLOBALS['db'];
+        $tableName = self::tablename();
+        $sqlStr = "INSERT INTO `${tableName}` (";
+        $valuesStr = "(";
+        foreach($this->schema as $key => $value)
+        {
+            $sqlStr.=$key.',';
+            $valuesStr.=':'.$key.',';
+        }
+
+        $sqlStr = rtrim($sqlStr, ',');
+        $valuesStr = rtrim($valuesStr, ',');
+
+        $sqlStr = $sqlStr.') VALUES '.$valuesStr.');';
+
+
+        try
+        {
+            $stmt=$db->prepare($sqlStr);
+            $stmt->execute($this->values);
+            $this->id = $db->lastInsertId();
+        }
+        catch(\PDOException $e)
+        {
+            print_r($e);
+        }
+    }
+
+    public function update()
+    {
+        // Implement update
+        $db = $GLOBALS['db'];
+        $tableName = self::tablename();
+        $sqlStr = "UPDATE `${tableName}` SET ";
+        $valuesStr = "";
+        foreach($this->schema as $key => $value)
+        {
+            if($key != 'id')
+            {
+                //TODO: string von variable abhängig. bei string brauchen wir " bein integer nicht
+                //      wird so bald wie möglich gefixt
+                $valuesStr.= $key.' = "'.$this->values[$key].'", ';
+            }
+        }
+
+        $valuesStr = rtrim($valuesStr, ', ');
+
+        $sqlStr .= $valuesStr.' WHERE id = '.$this->values['id'].';';
+
+/*        echo $sqlStr;
+        exit(0);*/
+
+        try
+        {
+            $stmt=$db->prepare($sqlStr);
+            $stmt->execute($this->values);
+            $this->id = $db->lastInsertId();
+        }
+        catch(\PDOException $e)
+        {
+            print_r($e);
+        }
+    }
+
+    public function destroy()
+    {
+        $db = $GLOBALS['db'];
+        $tableName = self::tablename();
+        $sqlStr = 'DELETE FROM ' . $tableName . ' WHERE id = ' . $this->values['id'];
+
+        try
+        {
+            $stmt=$db->prepare($sqlStr);
+            $stmt->execute($this->values);
+            $this->id = $db->lastInsertId();
+        }
+        catch(\PDOException $e)
+        {
+            print_r($e);
+        }
+    }
+
     public static function find($whereStr = '1')
     {
         $db = $GLOBALS['db'];
@@ -69,106 +228,5 @@ abstract class Model
         }
 
         return null;
-    }
-
-
-    public function __construct($values)
-    {
-        try
-        {
-            foreach($this->schema as $key => $value)
-            {
-                if(isset($values[$key]))
-                {
-                    $this->$key = $values[$key];
-                }
-                else
-                {
-                    $this->$key = null;
-                }
-            }
-
-        }
-        catch(\Exception $error)
-        {
-            print_r($error);
-            exit(1);
-        }
-
-    }
-
-    public function __set($key, $value)
-    {
-        // key available?
-        if(isset($this->schema[$key]))
-        {
-            $this->values[$key] = $value;
-        }
-        else
-        {
-            $className = get_called_class();
-            throw new \Exception(`${key} does not exists in this class ${className}`);
-        }
-    }
-
-    public function __get($key)
-    {
-        // TODO: Check is the key in the schema?
-        //       If so return the value in values if not exists return default value from schema or null
-        // key available?
-        if(isset($this->schema[$key]))
-        {
-            return $this->values[$key];
-        }
-        else
-        {
-            $className = get_called_class();
-            throw new \Exception(`${key} does not exists in this class ${className}`);
-        }
-    }
-
-    public function __destruct()
-    {
-        // TODO: Free memory here
-    }
-
-    public function insert()
-    {
-        // TODO: Implement insert
-        $db = $GLOBALS['db'];
-        $tableName = self::tablename();
-        $sqlStr = "INSERT INTO `${tableName}` (";
-        $valuesStr = "(";
-        foreach($this->schema as $key => $value)
-        {
-            $sqlStr.=$key.',';
-            $valuesStr.=':'.$key.',';
-        }
-
-        $sqlStr = rtrim($sqlStr, ',');
-        $valuesStr = rtrim($valuesStr, ',');
-
-        $sqlStr = $sqlStr.') VALUES '.$valuesStr.');';
-
-        try
-        {
-            $stmt=$db->prepare($sqlStr);
-            $stmt->execute($this->values);
-            $this->id = $db->lastInsertId();
-        }
-        catch(\PDOException $e)
-        {
-            print_r($e);
-        }
-    }
-
-    public function update()
-    {
-        // TODO: Implement update
-    }
-
-    public function destroy()
-    {
-        // TODO: Implement destroy / delete
     }
 }
