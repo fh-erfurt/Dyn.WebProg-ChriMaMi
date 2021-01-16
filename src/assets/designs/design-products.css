@@ -207,7 +207,7 @@
 .PagesSlider {
     position: relative;
     width: 100%;
-    height: 25.5625em;
+    height: 200px;
     margin: 2.1875em auto 0 auto;
 }
 
@@ -217,8 +217,8 @@
 
 .PagesSlider-slide {
     position: absolute;
+    bottom: -50px;
     padding-left: 1em;
-    top: 3.5625em;
     width: 20em;
     height: 16.9375em;
 }
@@ -434,16 +434,9 @@
     text-align: justify;
 }
 
-.cartDisplay img {
-    width: 95%;
-    height: auto;
-    max-width: 100%;
-}
-
 .cartDisplay a {
     text-decoration: none;
 }
-
 
 .cartDisplay {
     background: #1960B8;
@@ -457,22 +450,16 @@
 
 .cartDisplay article {
     display: inline-block;
-    width: 65.3%;
+    width: 60%;
     background: #FFFFFF;
     vertical-align: top;
     margin: 0em;
     text-align: center;
 }
 
-.cartDisplay article img {
-    max-width: 560px;
-    box-shadow: 0px 0px 10px -5px #4c4948;
-    border-radius: 5px;
-}
-
 .cartDisplay aside {
     display: inline-block;
-    width: 30.6%;
+    width: 36%;
     margin-left: 3%;
     padding: 0em;
     vertical-align: top;

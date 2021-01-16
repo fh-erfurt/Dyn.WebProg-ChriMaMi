@@ -19,7 +19,7 @@ foreach (glob(ASSETSPATH . 'images'. DIRECTORY_SEPARATOR .'products'. DIRECTORY_
     ?><div class="item">
     <article>
         <?  $itemNumber++ ?>
-        <img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR. 'products'. DIRECTORY_SEPARATOR. 'item'. $itemNumber.'.jpg' ?>" alt="item">
+        <img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR. 'products'. DIRECTORY_SEPARATOR. 'item'. $itemNumber.'.jpg' ?>" width=200" height="100" alt="item">
         <? require ASSETSPATH . 'texts' . DIRECTORY_SEPARATOR. 'item'.$itemNumber.'.php'?>
         <div>
             <button class="button">Add to Cart</button>
