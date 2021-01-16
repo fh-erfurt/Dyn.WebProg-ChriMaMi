@@ -1,5 +1,8 @@
 <link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-products.css' ?>" rel="stylesheet">
-<?require VIEWSPATH."products.php";?>
+<div class="secondNavigation">
+    <!--    <nav class="secondNavigation">>-->
+    <? require_once SHAREDPATH.'subnav.php' ?>
+</div>
 <section>
     <h1>Filterung nach Kategorien</h1>
 </section>

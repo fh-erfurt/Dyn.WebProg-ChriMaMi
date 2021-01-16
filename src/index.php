@@ -21,23 +21,24 @@ foreach (glob(MODELSPATH . '*.php') as $modelfiles) {
     require_once $modelfiles;
 }
 
+//echo var_dump(\dwp\model\Addresses::find());
 
 /*$values1 = ['id' => 10, 'email' => 'newmagil@home.de', 'passwordHash' => 'test'];
-$account = new \dwp\model\Accounts($values1);
-$account->insert();*/
+$accounts = new \dwp\model\Accounts($values1);
+$accounts->insert();*/
 
 /*$values2 = ['id' => 10, 'email' => 'update@home.de', 'passwordHash' => '123456'];
-$account = new \dwp\model\Accounts($values2);
-$account->update();*/
+$accounts = new \dwp\model\Accounts($values2);
+$accounts->update();*/
 
 /*$values3 = ['id' => 10, 'email' => 'update@home.de', 'passwordHash' => '123456'];
-$account = new \dwp\model\Accounts($values3);
-$account->destroy();
+$accounts = new \dwp\model\Accounts($values3);
+$accounts->destroy();
 
 
-echo '<pre>', var_dump($account), '</pre>';
+echo '<pre>', var_dump($accounts), '</pre>';
 
-$account = null;
+$accounts = null;
 exit(0);*/
 
 
@@ -94,8 +95,7 @@ if (file_exists(CONTROLLERSPATH . $controllerName . 'Controller.php')) {
     $actionMethod = 'action' . ucfirst($actionName);
     if (!method_exists($controller, $actionMethod)) {
         // redirect to error page 404 because not found
-        header('Location: index.php?c=errors&a=error404');
-        exit(0);
+        redirect('index.php?c=errors&a=error404&error=nonaction');
     } else {
         // call the action method to do the job
         // so the action cann fill the params for the views which will be used
@@ -104,8 +104,7 @@ if (file_exists(CONTROLLERSPATH . $controllerName . 'Controller.php')) {
     }
 } else {
     // redirect to error page 404 because not found
-    header('Location: index.php?c=errors&a=error404&error=nocontroller');
-    exit(0);
+    redirect('index.php?c=errors&a=error404&error=nocontroller');
 }
 
 
@@ -124,16 +123,17 @@ if (file_exists(CONTROLLERSPATH . $controllerName . 'Controller.php')) {
     </head>
     <body>
         <div id="page-container">
-            <?require VIEWSPATH."header.php"?>
+            <? require_once SHAREDPATH . "header.php" ?>
             <div id="content-wrap">
                 <?php
+
 
                 // this method will render the views of the called action
                 // for this the the file in the views directory will be included
                 $controller->render();
                 ?>
             </div>
-            <?require VIEWSPATH."footer.php"?>
+            <? require_once SHAREDPATH .  "footer.php" ?>
         </div>
     </body>
 </html>
