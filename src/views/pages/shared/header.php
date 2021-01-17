@@ -14,12 +14,12 @@
                     <?php
                     if (isset($_SESSION['id']))
                     {
-                        echo '<li><a href="'.$_SERVER['SCRIPT_NAME'].'?c=pages&a=administration">Administration</a></li>';
-                        echo '<li><a href="'.$_SERVER['SCRIPT_NAME'].'?c=pages&a=logout" class=\'submitLogout\'>Logout</a></li>';
+                        echo '<li><a href="'.$_SERVER['SCRIPT_NAME'].'?c=accounts&a=administration">Administration</a></li>';
+                        echo '<li><a href="'.$_SERVER['SCRIPT_NAME'].'?c=accounts&a=logout" class=\'submitLogout\'>Logout</a></li>';
                     }
                     else
                     {
-                        echo '<li><a href="'.$_SERVER['SCRIPT_NAME'].'?c=pages&a=login" class=\'submitLogout\'>Login</a></li>';
+                        echo '<li><a href="'.$_SERVER['SCRIPT_NAME'].'?c=accounts&a=login" class=\'submitLogout\'>Login</a></li>';
                     }
                     ?>
                     <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=imprint">Impressum</a></li>
