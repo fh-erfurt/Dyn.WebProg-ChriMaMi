@@ -13,42 +13,41 @@ body
 
 .headspace
 {
-    padding-top: 20px;
+    padding-top: 1.25em;  /*20px;*/
 }
 
 .login_window
 {
-    max-width: 580px;
-    min-width: 400px;
+    max-width: 36.25em;   /*580px;*/
+    min-width: 25em;      /*400px;*/
     /*    height: 400px;*/
     margin-left: auto;
     margin-right: auto;
-    padding: 50px 0px 50px 0px;
+    padding: 3.125em 0 3.125em 0; /*50px 0px 50px 0px;*/
     align-items: center;
     flex-direction: column;
     display: flex;
     background: #FFFFFF;
-    border-radius: 20px;
+    border-radius: 1.25em;  /*20px*/
     border-color: var(--headcolor);
-    border: solid 3px;
-
+    border: solid 0.1875em;  /*3px;*/
     box-sizing: border-box;
 }
 
 .registration_window
 {
-    max-width: 900px;
-    min-width: 400px;
+    max-width: 56.25em;   /*900px;*/
+    min-width: 25em;   /*400px*/
     margin-left: auto;
     margin-right: auto;
-    padding: 50px 0px 50px 0px;
+    padding: 3.125em 0 3.125em 0; /*50px 0px 50px 0px;*/
     align-items: center;
     flex-direction: column;
     display: flex;
     background: #FFFFFF;
-    border-radius: 20px;
+    border-radius: 1.25em;    /*20px*/
     border-color: var(--headcolor);
-    border: solid 3px;
+    border: solid 0.1875em; /*3px*/
 
     box-sizing: border-box;
 }
@@ -60,10 +59,10 @@ body
 .login_window_img
 {
     position: absolute;
-    width: 134px;
-    height: 134px;
-    left: 261px;
-    top: 34px;
+    width: 8.375em;   /*134px;*/
+    height: 8.375em;   /*134px;*/
+    left: 16.3125em;    /*261px;*/
+    top: 2.125em;  /*34px;*/
 
     background: url(../logo/login_icon.png);
 }
@@ -89,7 +88,7 @@ body
 
 .login_window > *
 {
-    margin-top: 12px;
+    margin-top: 0.75em;   /*12px;*/
 }
 
 .login_window label {
@@ -105,8 +104,8 @@ body
 {
     border: 0;
     font-size: large;
-    width: 300px;
-    height: 40px;
+    width: 18.75em;   /*300px;*/
+    height: 2.5em;   /*40px;*/
     background-color: var(--headcolor);
     color: #FFFFFF;
 }
@@ -118,15 +117,15 @@ body
 
 .form_col_space
 {
-    width: 300px /*26.25em*/;
-    height: 25px /*2.063em*/;
+    width: 18.75em; /*300px*/
+    height: 1.5625em; /*25px*/
 }
 
 
 .form_col_space_small
 {
     /*    width: 420px !*26.25em*!;*/
-    height: 25px /*2.063em*/;
+    height: 1.5625em; /*25px*/
 }
 
 .registration_window label {
@@ -138,17 +137,17 @@ body
 }
 
 .registration_window div {
-    padding-bottom: 30px;
+    padding-bottom: 1.875em;   /*30px*/
 }
 
 .registration_window h1 {
     color: var(--headcolor);
-    padding-bottom: 30px;
+    padding-bottom: 1.875em;   /*30px*/
     text-decoration: underline;
 }
 
 .registration_window .form_col_numbers {
-    width: 40px;
-    height: 20px
+    width: 2.5em;    /*40px*/
+    height: 1.25em;    /*20px*/
 }
 

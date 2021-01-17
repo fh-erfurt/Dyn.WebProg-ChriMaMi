@@ -354,9 +354,9 @@ article
 }
 
 .certification img{
-    width: 21.875em;   /*350px;*/
-    height: 21.875em;  /*350px;*/
-    border: solid #000000;
+    width: 12.5em;   /*200px;*/
+    height: 12.5em;  /*200px;*/
+    border: solid #000000 0.1875em; /* 3px;*/
     border-radius: 50%;
     margin: 0.625em;   /*10px;*/
 }
