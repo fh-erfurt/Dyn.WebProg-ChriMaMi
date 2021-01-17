@@ -1,11 +1,9 @@
-
-/* ------------------------------ RANDOM SHIT ------------------------------- */
-
+/* ------------------------------ GENERAL LAYOUT ------------------------------- */
 :root
 {
-    --headcolor: #1960B8;
-    --headsize: 185px;
-    --headlogosize: 60px;
+    --maincolor: #1960B8;
+    --headsize: 7.825em; /*185px*/
+    /*--headlogosize: 10.75em;*/
 }
 
 body {
@@ -17,32 +15,14 @@ body {
     background-attachment: fixed;
 }
 
-.box {
-    background-color: var(--headcolor);
-    position: relative;
-    width: 100%;
-    height: 95%;
-}
-
-.circle
-{
-    display: none;
-    background-color: var(--headcolor);
-    position: relative;
-    bottom: 5%;
-    border-radius: 50%;
-    width: 100%;
-    height: 10%;
-}
-
 #page-container{
     position: relative;
     min-height: 100vh;
 }
 
 #content-wrap{
-    padding: 15px 200px 300px;
-    max-width: 1200px;
+    padding: 0.9375em 12.5em 18.75em; /*15px 200px 300px;*/
+    max-width: 75em;                  /*1200px;*/
     margin-left: auto;
     margin-right: auto;
 /*    margin-top: 30px;*/
@@ -59,17 +39,13 @@ nav {
     margin: unset;
     display: block;
     align-items: center;
-    height: 5px;
-}
-
-nav ul{
-    margin: 0px;
+    height: 0.20833333333333334em; /*5px*/
 }
 
 nav .navigation {
     display: flex;
     align-items: center;
-    margin: 10px 0px 15px -130px;
+    margin: 0.417em 0px 0.625em -5.625em;  /*10px 0 15px -135px*/
 }
 
 nav .navigation .logo {
@@ -87,23 +63,23 @@ nav .navigation a {
             to bottom, #FFFFFF 80%,
             #1960B8 100%
     ) repeat-x 0 100%;
-    border: solid 0px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 8px;
-    background-size: 0px 0px;
+    border: solid 0;
+    border-bottom-left-radius: 0.2084em; /*5px*/
+    border-bottom-right-radius: 0.3333em; /*8px*/
+    background-size: 0 0;
     color: #414141;
-    margin: 0px 16px;
-    padding: 0px 4px;
+    margin: 0 0.6667em;     /*16px*/
+    padding: 0 0.1667em;        /*4px*/
     text-decoration: none;
     transition: background-size .2s;
 }
 
 nav .navigation a:hover{
-    color: var(--headcolor);
+    color: var(--maincolor);
 }
 
 nav .navigation a:after{
-    color: var(--headcolor);
+    color: var(--maincolor);
 }
 
 nav .submenu {
@@ -130,7 +106,7 @@ nav .submenu a:hover {
 nav .submenu li {
     display: block;
     width: 0;
-    background-color: var(--headcolor);
+    background-color: var(--maincolor);
     text-align: center;
 }
 
@@ -147,9 +123,9 @@ nav ul:hover .submenu
 }
 
 nav a:hover{
-    background-size: 4px 50px;
+    background-size: 0.1667em 2.0835em; /*4px   50px*/
 /*    border-bottom: solid;
-    border-color: var(--headcolor);
+    border-color: var(--maincolor);
     transition-duration: 0.6s;*/
 
 }
@@ -164,8 +140,8 @@ nav a:hover{
     margin-right: auto;
     margin-left: auto;
     border-bottom-style: solid;
-    border-size: 15px;
-    border-color: var(--headcolor);
+    border-size: 0.625em;  /*15px*/
+    border-color: var(--maincolor);
     display: grid;
     grid-template-columns: min-content auto auto auto;
     grid-template-rows: auto;
@@ -177,29 +153,29 @@ nav a:hover{
 }
 
 #sek-head-logo img{
-    width: 230px;
-    padding: 15px 0px 25px 50px;
+    width: 9.5834em;       /*230px;*/
+    padding: 0.625em 0 25px 50px;    /*15px 0px 25px 50px;*/
     grid-area: logo;
 }
 
 #sek-headcontent{
     grid-area: content;
-    margin-left: 70px;
+    margin-left: 2.9167em;      /*70px;*/
 }
 
 #sek-headcontent h1{
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin-top: 0.2917em;    /*7px;*/
+    margin-bottom: 0.2917em; /*7px;*/
 }
 
 #sek-headcontent h2{
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin-top: 0.2917em;   /*7px;*/
+    margin-bottom: 0.2917em;    /*7px;*/
 }
 
 #sek-nav-container{
 
-    padding: 0px;
+    padding: 0;
 }
 
 /*.sek-box img{
@@ -207,7 +183,7 @@ nav a:hover{
 }*/
 
 #sek-break-line{
-    background-color: var(--headcolor);
+    background-color: var(--maincolor);
 }
 
 
@@ -240,8 +216,8 @@ footer{
     justify-content: center;
     position: absolute;
     width:100%;
-    height: 280px;
-    background:var(--headcolor);
+    height: 17.5em;      /*280px;*/
+    background:var(--maincolor);
     opacity: 0.7;
     text-align:left;
     bottom: 0;
@@ -250,7 +226,7 @@ footer{
 }
 
 footer section{
-    width: 750px;
+    width: 46.875em;       /*750px;*/
     justify-content: space-around;
 }
 
@@ -258,48 +234,48 @@ footer section{
 footer ul{
     width:100%;
     list-style-type: none;
-    max-width:1440px;
-    padding-bottom: 12px;
+    max-width:  90em;       /*1440px;*/
+    padding-bottom: 0.75em;   /*12px;*/
     text-align:left;
-    margin: 0px auto;
+    margin: 0 auto;
 
 }
 footer ul li{
-    font-size:0.8em;
-    line-height:15px;
+    font-size: 0.8em;
+    line-height:1.171875em;       /*15px;*/
     color:#E2DBDB;
-    padding:0em 0.625em 0em 0.625em;
+    padding:0 0.625em 0 0.625em; /* 0 8px 0 8px*/
 
 }
 footer ul h2{
     color:#FFFFFF;
-    padding-left: 10px;
+    padding-left: 0.3725em; /*10px*/
 }
 footer ul li img{
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 1.25em;    /* 20px*/
+    height: 1.25em;   /* 20px*/
     float: left;
-    padding-right: 10px;
+    padding-right: 0.625em;    /* 10px*/
 }
 
 footer .left{
     float: left;
-    background:var(--headcolor);
-    margin-top: 25px;
+    background:var(--maincolor);
+    margin-top: 1.5625em;   /* 25px*/
 }
 
 footer .right {
     float: right;
-    background:var(--headcolor);
-    margin-top: 50px;
+    background:var(--maincolor);
+    margin-top: 3.125em;   /*50px*/
 }
 
 /* ------------------------------ MAIN PAGE ------------------------------- */
 #mainImage {
     display: flex;
-    margin-top: 40px;
-    margin-bottom: 50px;
+    margin-top: 2.5em;       /*40px*/
+    margin-bottom: 3.125em;   /*50px*/
 }
 
 #mainImage img {
@@ -307,18 +283,18 @@ footer .right {
     display: flex;
     max-width: 100%;
     margin: auto;
-    border: solid 0px;
-    border-radius: 20px;
+    border: solid 0;
+    border-radius: 1.25em;    /*20px*/
 }
 
 
 .mainArticle
 {
     display: flex;
-    padding: 15px;
-    margin:  15px;
+    padding: 0.9375em;  /*15px*/
+    margin:  0.9375em;  /*15px*/
     border-style: solid;
-    border-radius: 20px;
+    border-radius: 1.25em;    /*20px*/
 /*    background: #1960B8;*/
 /*
 .mainArticle .picFloatLeft img {
@@ -337,10 +313,10 @@ footer .right {
     display: flex;
     border-style: solid;
     border-color: black;
-    max-width: 200px;
+    max-width: 12.5em;   /*200px*/
 /*    padding:10px;*/
-    margin: 10px;
-    border-radius: 20px;
+    margin: 0.625em;       /*10px*/
+    border-radius: 1.25em;    /*20px*/
 }
 
 article
@@ -378,11 +354,11 @@ article
 }
 
 .certification img{
-    width: 350px;
-    height: 350px;
+    width: 21.875em;   /*350px;*/
+    height: 21.875em;  /*350px;*/
     border: solid #000000;
     border-radius: 50%;
-    margin: 10px;
+    margin: 0.625em;   /*10px;*/
 }
 
 .picFloatLeft img
@@ -398,8 +374,8 @@ article
 /* ------------------------------ IMPRINT ------------------------------- */
 #imprintImage {
     display: flex;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 1.25em;   /*20px;*/
+    margin-bottom: 1.875em;    /*30px;*/
 }
 
 #imprintImage img {
@@ -407,12 +383,12 @@ article
     display: flex;
     max-width: 100%;
     margin: auto;
-    border: solid 0px;
-    border-radius: 10px;
+    border: solid 0;
+    border-radius: 0.625em;    /*10px;*/
 }
 #address {
-    line-height: 5px;
-    font-size: 14px;
+    line-height: 0.3571em;   /*5px;*/
+    font-size: 14px;    /*14px;*/
 
 }
 #imprintTable {
@@ -421,14 +397,14 @@ article
     width:70%;
     flex-direction: column;
     text-align:left;
-    padding-top: 0px;
-    line-height: 17px;
+    padding-top: 0;
+    line-height: 1.0625em;  /*17px;*/
 }
 
 #imprintTable .white{
     align-items: center;
     display: flex;
-    height: 50px;
+    height: 3.125em;   /*50px;*/
     justify-content: flex-start;
     background:#FFFFFF;
     float: left;
@@ -436,14 +412,14 @@ article
 #imprintTable .gray{
     align-items: center;
     display: flex;
-    height: 50px;
+    height: 3.125em;   /*50px;*/
     justify-content: flex-start;
     background:#D3D3D3;
     float: left;
 }
 
 #imprintTable ul {
-    padding-left: 0px;
+    padding-left: 0;
     list-style-type: none;
 
 }

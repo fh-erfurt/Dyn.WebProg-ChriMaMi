@@ -4,7 +4,7 @@
 .secondNavigation {
     font-size: 16px;
     background-color: #504E4E;
-    height: 60px;
+    height: 3.75em;   /*60px;*/
     width: 100%;
     margin: 0 auto;
     padding: 0px;
@@ -27,10 +27,10 @@
 .secondNavigation .text {
     display: flex;
     align-items: center;
-    min-height: 24px;
+    min-height: 1.5em;   /*24px;*/
     border-left: solid 1px;
     border-right: solid 1px;
-    background-size: 0px 0px;
+    background-size: 0 0;
     color: #FFFFFF;
     margin: 0px 16px;
     padding: 0px 12px;
@@ -81,7 +81,7 @@
     display:flex;
     justify-content: center;
     flex-direction: column;
-    max-height: 1600px;
+    max-height: 1650px;
     align-items: flex-start;
     flex-wrap: wrap;
     background-color: #1960B8;
