@@ -59,7 +59,7 @@
 <section>
     <div id="certifications">
         <div class="certification">
-            <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'certifications'. DIRECTORY_SEPARATOR.'cert_fireSafety.jpg' ?>">
+            <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'certifications'. DIRECTORY_SEPARATOR.'cert_firesafety.jpg' ?>">
         </div>
         <div class="certification">
             <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'certifications'. DIRECTORY_SEPARATOR.'cert_processing.jpg' ?>">
