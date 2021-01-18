@@ -64,7 +64,7 @@ body
     left: 16.3125em;    /*261px;*/
     top: 2.125em;  /*34px;*/
 
-    background: url(../logo/login_icon.png);
+/*    background: url(../logo/login_icon.png);*/
 }
 
 /*.login_window_head
@@ -103,7 +103,7 @@ body
 .submit_button
 {
     border: 0;
-    font-size: large;
+/*    font-size: large;*/
     width: 18.75em;   /*300px;*/
     height: 2.5em;   /*40px;*/
     background-color: var(--headcolor);
@@ -124,7 +124,7 @@ body
 
 .form_col_space_small
 {
-    /*    width: 420px !*26.25em*!;*/
+/*        width: 420px !*26.25em*!;*/
     height: 1.5625em; /*25px*/
 }
 
