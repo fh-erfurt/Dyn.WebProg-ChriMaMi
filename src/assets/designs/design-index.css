@@ -476,3 +476,204 @@ article {
 
 
 }
+
+/*---------------------------- Media Qureies for Responsive ---------------------------*/
+
+@media only screen and (max-width: 992px) {
+    :root {
+        --headsize: 100px;
+    }
+
+    #page-container {
+        position: relative;
+        min-height: 100vh;
+    }
+
+    #content-wrap {
+        padding: 15px 0 300px;
+        max-width: 992px;
+        margin-left: auto;
+        margin-right: auto;
+        /*    margin-top: 30px;*/
+        background: rgba(255, 255, 255, 0.92);
+    }
+
+    nav {
+        margin: unset;
+        /*    display: block;*/
+        /*    align-items: center;*/
+        height: 5px;
+
+    }
+
+    nav ul {
+        margin: 0px;
+    }
+
+    nav .navigation {
+        display: flex;
+        align-items: center;
+        margin: 10px 0px 15px -130px;
+    }
+
+    nav .navigation .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav .navigation li {
+        list-style-type: none;
+    }
+
+    nav .navigation a {
+        background: linear-gradient(
+                to bottom, #a4dbff 20%,
+                #FFFFFF 100%
+        ) repeat-x 0 100%;
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        background-size: 0px 0px;
+        color: #414141;
+        margin: 0px 0px;
+        padding: 0px 15px;
+        text-decoration: none;
+        transition: background-size .2s;
+    }
+
+    nav .navigation a:hover {
+        color: var(--headcolor);
+        border-bottom: solid 2px;
+        transition-delay: 5ms;
+        transition-duration: 9ms;
+    }
+
+    nav .navigation a:after {
+        color: var(--headcolor);
+    }
+
+
+    nav a:hover {
+        background-size: 4px 50px;
+        /*    border-bottom: solid;
+            border-color: var(--headcolor);
+            transition-duration: 0.6s;*/
+    }
+
+    .submenu {
+        display: flex;
+        position: absolute;
+        visibility: hidden;
+        height: 0;
+        width: 100px;
+        justify-content: center;
+
+    }
+
+    .submenu .bigger li {
+        width: 200px;
+    }
+
+    .submenu .bigger:hover {
+        transition-delay: 1.2s;
+    }
+
+    .submenu li {
+
+        float: left;
+        width: 100px;
+        /* width: 15em; */
+        list-style-type: none;
+        transition-duration: 9ms;
+
+    }
+
+    .submenu a {
+        font-size: 21px !important;
+        /*    border-radius: 0 !important;*/
+        /*    transition: background-size 2s !important;*/
+        /*    border-bottom: solid 2px !important;*/
+
+    }
+
+    /**     Show the submenu on hover, focus     **/
+
+    nav li:hover .submenu,
+    nav li:active .submenu,
+    nav li:focus .submenu {
+        visibility: visible;
+        transform-style: preserve-3d;
+        transition-delay: 9ms;
+        height: auto;
+    }
+
+    nav .navigation .submenu .a{
+        color: black;
+    }
+
+    nav li:focus-within .submenu {
+        visibility: visible;
+        height: auto;
+    }
+
+    #head_container {
+        background: #FFFFFF;
+        position: relative;
+        justify-items: center;
+        justify-content: center;
+        opacity: 90%;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        border-bottom-style: solid;
+        border-size: 15px;
+        border-color: var(--headcolor);
+        display: grid;
+        grid-template-columns: min-content auto auto auto;
+        grid-template-rows: auto;
+        gap: 0px 0px;
+        grid-template-areas:
+    "logo content content ."
+    ". . . ."
+    ". . . .";
+    }
+
+    #sek-head-logo img {
+        width: 115px;
+        padding: 15px 0px 25px 50px;
+        grid-area: logo;
+    }
+
+    #sek-headcontent {
+        grid-area: content;
+        margin-left: 70px;
+    }
+
+    #sek-headcontent h1 {
+        margin-top: 7px;
+        margin-bottom: 7px;
+        font-size: 1em;
+    }
+
+    #sek-headcontent h2 {
+        margin-top: 7px;
+        margin-bottom: 7px;
+        font-size: 0.75em;
+    }
+
+    #sek-nav-container {
+
+        padding: 0px;
+    }
+
+    /*.sek-box img{
+        opacity: unset;
+    }*/
+
+    #sek-break-line {
+        background-color: var(--headcolor);
+    }
+
+
+
+}
