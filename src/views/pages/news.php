@@ -37,13 +37,13 @@
 
 <div class="PagesSlider">
     <div class="PagesSlider-slides">
-        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale1.png' ?>" width="400" height="230"/></div>
-        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale2.png' ?>" width="400" height="230"/></div>
-        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale3.png' ?>" width="400" height="230"/></div>
-        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale4.png' ?>" width="400" height="230"/></div>
-        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale5.png' ?>" width="400" height="230"/></div>
-        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale6.png' ?>" width="400" height="230"/></div>
-        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale7.png' ?>" width="400" height="230"/></div>
-        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale8.png' ?>" width="400" height="230"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale1.png' ?>" width="10000" height="230"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale2.png' ?>" width="500" height="230"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale3.png' ?>" width="500" height="230"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale4.png' ?>" width="500" height="230"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale5.png' ?>" width="500" height="230"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale6.png' ?>" width="500" height="230"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale7.png' ?>" width="500" height="230"/></div>
+        <div class="PagesSlider-slide"><img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'sales' . DIRECTORY_SEPARATOR . 'sale8.png' ?>" width="500" height="230"/></div>
     </div>
 </div>
