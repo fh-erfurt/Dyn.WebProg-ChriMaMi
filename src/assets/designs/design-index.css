@@ -180,7 +180,7 @@ nav li:focus-within .submenu {
     margin-right: auto;
     margin-left: auto;
     border-bottom-style: solid;
-    border-size: 15px;
+    border: 15px;
     border-color: var(--headcolor);
     display: grid;
     grid-template-columns: min-content auto auto auto;
@@ -348,6 +348,14 @@ footer .right {
     }
     */
 
+}
+
+@media screen and (max-width:62em /*992px*/) {
+    .mainArticle {
+        width: 45%;
+        justify-content: center;
+        flex-direction:   row;
+    }
 }
 
 .mainArticle img {

@@ -70,6 +70,16 @@ class PagesController extends \dwp\core\Controller
 
     }
 
+    public function actionAboutUs()
+    {
+
+    }
+
+    public function actionContact()
+    {
+
+    }
+
     public function administration()
     {
 

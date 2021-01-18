@@ -7,11 +7,11 @@
     <h1>Filterung nach Kategorien</h1>
 </section>
 <div class="categories">
-    <button class="button">Alle</button>
-    <button class="button">Brandschutz</button>
-    <button class="button">Wärmeschutz</button>
-    <button class="button">Tragewerksplanung</button>
-    <button class="button">Eingabeplanung</button>
+    <button class="btn">Alle</button>
+    <button class="btn">Brandschutz</button>
+    <button class="btn">Wärmeschutz</button>
+    <button class="btn">Tragewerksplanung</button>
+    <button class="btn">Eingabeplanung</button>
 </div>
 
 <div id="itemDisplay">
