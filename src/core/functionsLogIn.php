@@ -132,28 +132,28 @@ function emptyInputLogin($email, $password)
     return $result;
 }
 
-function loginUser($email, $password)
+function loginUser(&$errorMsg,$email, $password)
 {
     $account = getAccount($email);
     $isAdmin = isAdmin($account);
 
     if ($account === false) {
-        header("Location: ../signup.php?error=stmtfailed");
+        header("Location: index.php?c=accounts&a=login.php?error=accfailed");
         exit();
     }
     $password_hashed = $account->password_hash;
 
     $checkPassword = password_verify($password, $password_hashed);
     if ($checkPassword === false) {
-        header("Location: index.php");
-        echo "Error: Bei verifizierung gescheitert";
+        header("Location: index.php?c=accounts&a=login.php?error=stmtfailed");
+        $errorMsg = "Wrong email or password";
 
     } else if ($checkPassword === true) {
         $_SESSION['email'] = $account->email; /*__get('email')*/
         $_SESSION['isAdmin'] = $isAdmin;
 
 /*        echo $checkPassword;*/
-        var_dump($_SESSION);
+/*        var_dump($_SESSION);*/
         header("Location: index.php?c=pages&a=main");
 
     }

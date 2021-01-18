@@ -22,15 +22,5 @@
         <a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=accounts&a=signup">Noch kein Konto?</a>
     </form>
 
-    <?php
-        if(isset($_GET["error"])) {
-            if($_GET["error"] == "emptyinput") {
-                echo "<p>Fill in all fields!</p>";
-            }
-            else if($_GET["error"] == "wronglogin")
-            {
-                echo "<p>Incorrect login information!</p>";
-            }
-        }
-    ?>
+<!--    --><?/*=$errorLoginMessage*/?>
 </div>

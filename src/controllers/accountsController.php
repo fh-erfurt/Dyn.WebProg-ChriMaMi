@@ -170,11 +170,12 @@ class AccountsController extends \dwp\core\Controller
             // TODO: Validate input first
 
             if (emptyInputLogin($email, $password) !== false) {
- /*               header("Location: ../login.php?error=emptyinput");*/
+                header("Location: index.php?c=accounts&a=login.php?error=emptyinput");
+                $errMsg = "Please input username and password";
                 exit();
             }
             // TODO: Check login values with database accounts
-            loginUser($email, $password);
+            loginUser($errMsg,$email, $password);
         }
     }
 
