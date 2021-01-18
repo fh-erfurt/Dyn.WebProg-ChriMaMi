@@ -12,14 +12,28 @@
                     <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=categories">Produkte</a></li>
                     <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=cart">Warenkorb</a></li>
                     <?php
-                    if (isset($_SESSION['id']))
-                    {
-                        echo '<li><a href="'.$_SERVER['SCRIPT_NAME'].'?c=accounts&a=administration">Administration</a></li>';
-                        echo '<li><a href="'.$_SERVER['SCRIPT_NAME'].'?c=accounts&a=logout" class=\'submitLogout\'>Logout</a></li>';
-                    }
-                    else
-                    {
-                        echo '<li><a href="'.$_SERVER['SCRIPT_NAME'].'?c=accounts&a=login" class=\'submitLogout\'>Login</a></li>';
+                    if (isset($_SESSION['email'])) {
+                        echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=logout" class=\'submitLogout\'>Logout</a></li>';
+
+                        if (isset($_SESSION['email']) && $_SESSION['isAdmin'] == 1) {
+                            echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=administration">Administration</a></li>';
+
+                        } else if (isset($_SESSION['email']) && $_SESSION['isAdmin'] == 0) {
+                            echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=userInterface">Account</a>';
+                            echo '<ul>';
+                            echo '<div class="submenu">';
+                                echo '<div>';
+                                echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=logout">Logout</a></li>';
+                            echo '</div>';
+                            echo '<div class="bigger">';
+                                echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=logout">Daten ändern</a></li>';
+                            echo '</div>';
+                            echo '</ul>';
+                            echo '</li>';
+                        }
+                    } else {
+                        /*                        echo '<li><a href="'.$_SERVER['SCRIPT_NAME'].'?c=pages&a=imprint">Impressum</a></li>';*/
+                        echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=login" class=\'submitLogout\'>Login</a></li>';
                     }
                     ?>
                     <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=imprint">Impressum</a></li>

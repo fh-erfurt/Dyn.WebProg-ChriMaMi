@@ -75,33 +75,6 @@ class PagesController extends \dwp\core\Controller
 
     }
 
-    public function actionLogin()
-    {
-
-        // store error message
-        $errMsg = null;
-
-        // check user send login field
-        if (isset($_POST['submit'])) {
-
-            // retrieve inputs
-            $email = isset($_POST['email']) ? $_POST['email'] : '';
-            $password = isset($_POST['password']) ? $_POST['password'] : '';
-
-            require_once COREPATH . 'functionsLogin.php';
-
-            // TODO: Validate input first
-
-            if (emptyInputLogin($email, $password) !== false) {
-                header("Location: ../login.php?error=emptyinput");
-                exit();
-                echo "Du bist dumm, Geb richtig ein";
-            }
-            // TODO: Check login values with database accounts
-            loginUser($email, $password);
-        } else {
-        }
-    }
 }
 
 

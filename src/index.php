@@ -51,12 +51,11 @@ echo '<pre>', var_dump($address), '</pre>';
 $account = null;
 exit(0);*/
 
-/*$value11 = ['id' => 0, 'name' => "Item 6", 'description' => "TestTestTest", 'category' => "Eingabeplanung", 'std_price' => 400.00, 'images_id' => 6];
+/*$value11 = ['name' => "Item 6", 'description' => "TestTestTest", 'category' => "Eingabeplanung", 'std_price' => 400.00, 'images_id' => 5];
 $product = new \dwp\model\products($value11);
 $product->insert();*/
 
-/*$value12 = ['id' => 1, 'name' => "Item 1", 'description' => "TestTestTest", 'category' => "Eingabeplanung", 'std_price' => 800, 'images_id' => 1];
-$value12 = ['id' => 1, 'std_price' => 800.00];
+/*$value12 = ['id' => 5, 'name' => "Item 5", 'description' => "TestTestTest", 'category' => "Eingabeplanung", 'std_price' => 800.00, 'images_id' => 5];
 $product = new \dwp\model\products($value12);
 $product->update();*/
 
@@ -65,7 +64,6 @@ $product = new \dwp\model\products($value13);
 $product->destroy();*/
 
 /*echo '<pre>', var_dump($product), '</pre>';
-
 $account = null;
 exit(0);*/
 
@@ -87,9 +85,16 @@ exit(0);
 */
 require_once 'core/functionsLogIn.php';
 
-/*uIdExists('matthias.gabel@fh-email.de');*/
-/*loginUser('matthias.gabel@fh-email.de', 12345);
+/*getAccount('christoph.frischmuth@fh-erfurt.de');*/
+/*isAdmin(getAccount('christoph.frischmuth@fh-erfurt.de'));*/
+//functions_should_return_boolean; Saskia(false), Christoph(true);
+/*var_dump(isAdmin(getAccount('saskia.wohlers@fh-erfurt.de')));*/
+/*var_dump(isAdmin(getAccount('christoph.frischmuth@fh-erfurt.de')));*/
+/*loginUser('christoph.frischmuth@fh-erfurt.de', "wonderland15");
+var_dump($_SESSION);
+echo
 exit();*/
+
 
 // start session to handle login
 session_save_path('data/sessions');
@@ -98,6 +103,7 @@ session_start();
 // check which controller should be loaded
 $controllerName = 'pages';
 $actionName = 'main';
+
 
 // check a controller is given
 if (isset($_GET['c'])) {

@@ -109,9 +109,9 @@ class AccountsController extends \dwp\core\Controller
 
     }
 
-    public function actionLogin()
-    {
-        // store error message
+    /*public function actionLogin()
+    {*/
+       /* // store error message
         $errMsg = null;
 
         // retrieve inputs
@@ -150,6 +150,32 @@ class AccountsController extends \dwp\core\Controller
         $this->setParam('username', $username);
         $this->setParam('errMsg', $errMsg);
         $this->setParam('test', 'Hello World!');
+    }*/
+
+        public function actionLogin()
+    {
+
+        // store error message
+        $errMsg = null;
+
+        // check user send login field
+        if (isset($_POST['submit_login'])) {
+
+            // retrieve( inputs
+            $email = isset($_POST['email']) ? $_POST['email'] : '';
+            $password = isset($_POST['password']) ? $_POST['password'] : '';
+
+            require_once COREPATH . 'functionsLogin.php';
+
+            // TODO: Validate input first
+
+            if (emptyInputLogin($email, $password) !== false) {
+ /*               header("Location: ../login.php?error=emptyinput");*/
+                exit();
+            }
+            // TODO: Check login values with database accounts
+            loginUser($email, $password);
+        }
     }
 
     /*    public function actionSignup()
@@ -183,6 +209,6 @@ class AccountsController extends \dwp\core\Controller
     public function actionLogout()
     {
         session_destroy();
-        header('Location: index.php?c=pages&a=login');
+/*        header("Location: index.php?c=pages&a=main");*/
     }
 }

@@ -83,24 +83,48 @@ function rememberMe($id, $password)
 */
 
 
-
 use dwp\model\Accounts as Accounts;
+use dwp\model\Administrators as Administrators;
 
-function uIdExists($email) {
+function getAccount($email)
+{
     $db = $GLOBALS['db'];
-    $sql = "email=".$db->quote($email);
-    $stmt = Accounts::findOne($sql);
-/*    echo "<pre>", var_dump($stmt), "</pre>";*/
+/*    $sql = "email=" . $db->quote($email);*/
+    $sql = "email=" . $db->quote($email);
+    $entry = Accounts::findOne($sql);
+/*    $id = $entry->id;
+    echo $id;*/
 
-    if(!$stmt){
-        header("Location: ../signup.php?error=stmtfailed");
-        exit();
+    if (!isset($entry)) {
+    header("Location: ../signup.php?error=stmtfailed");
+    exit();
     }
-    return $stmt;
+    return $entry; //Gibt Zeile des accounts mit übergebener email zurück
 }
 
-function emptyInputLogin($uId, $password){
-    if(empty($uId) || empty($password)) {
+function isAdmin($account){
+    $db = $GLOBALS['db'];
+/*    $admin = false;*/
+    $userId = $account->id;
+/*    echo $userId; //Aproved!*/
+    $sql = "accounts_id=". $db->quote($userId);
+    $adminId = Administrators::findOne($sql);
+/*    echo $adminId->accounts_id;
+    echo $userId;*/
+    if(isset($adminId)){
+        if($userId === $adminId->accounts_id) {
+/*            echo "User ist Admin";*/
+            return true;
+        }
+    } else {
+/*        echo "User ist kein fucking Admin";*/
+        return false;
+    }
+}
+
+function emptyInputLogin($email, $password)
+{
+    if (empty($email) || empty($password)) {
         $result = true;
     } else {
         $result = false;
@@ -108,53 +132,33 @@ function emptyInputLogin($uId, $password){
     return $result;
 }
 
-function loginUser($uId, $password) {
-
-    $account = uIdExists($uId);
-/*    echo "Variable account";
-    echo "<pre>", var_dump($account), "</pre>";
-    exit();*/
+function loginUser($email, $password)
+{
+    $account = getAccount($email);
+    $isAdmin = isAdmin($account);
 
     if ($account === false) {
         header("Location: ../signup.php?error=stmtfailed");
         exit();
     }
-    $passwordHashed = $account['passwordHash'];
+    $password_hashed = $account->password_hash;
 
+    $checkPassword = password_verify($password, $password_hashed);
+    if ($checkPassword === false) {
+        header("Location: index.php");
+        echo "Error: Bei verifizierung gescheitert";
 
-   //Its the final Version for already hashed passwords stored in database
-    //The following function is only running if the password in db was hashed before
-    /*$checkPassword = password_verify($password, $passwordHashed);
-    if($checkPassword === false) {
-        header("Location: ../signup.php?error=wronglogin");
-        exit();
-    }
-    else if($checkPassword === true) {
-        session_start();
-        $_SESSION["id"] = $uidExists['id'];
-        header("Location: ../index.php");
-        exit();
-    }*/
+    } else if ($checkPassword === true) {
+        $_SESSION['email'] = $account->email; /*__get('email')*/
+        $_SESSION['isAdmin'] = $isAdmin;
 
+/*        echo $checkPassword;*/
+        var_dump($_SESSION);
+        header("Location: index.php?c=pages&a=main");
 
-
-    $unhashedPassword = false;
-    if($passwordHashed === $password) {
-        $unhashedPassword = true;
-    }
-
-    if($unhashedPassword === false) {
-        header("Location: ../signup.php?error=wronglogin");
-        exit();
-    }
-    // TODO: Store useful variables into the session like account and also set loggedIn = true
-    else if($unhashedPassword === true) {
-        session_start();
-        $_SESSION['email'] = $account['email'];
-        header("Location: ../index.php");
-        exit();
     }
 }
+
 ?>
 
 
