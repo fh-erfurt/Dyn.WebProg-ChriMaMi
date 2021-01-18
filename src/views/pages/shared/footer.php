@@ -6,18 +6,18 @@
             </ul>
             <ul>
                 <li><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'marker.png' ?>"/></li>
-                <li>Musterweg 01</li>
-                <li>00000 Musterhausen</li>
+                <li>Ingolstädter Str. 39</li>
+                <li>85098 Großmehring</li>
             </ul>
             <ul>
                 <li><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'phone.png' ?>"/></li>
-                <li> 09973 / 38 90 96-0</li>
-                <li> 09973 / 38 55 98 0</li>
+                <li>08407 / 9 39 37 76</li>
+                <li>08407 / 9 39 37 76</li>
             </ul>
             <ul>
                 <li><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'printer.png' ?>"/></li>
-                <li> 09843 / 38 90 96-96</li>
-                <li> 09843 / 38 55 98 1</li>
+                <li>09843 / 38 90 96-96</li>
+                <li>09843 / 38 55 98 1</li>
             </ul>
             <ul>
                 <li><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'mail.png' ?>"/></li>
