@@ -330,7 +330,12 @@ footer .right {
     border-radius: 20px;
 }
 
-
+.allArticles {
+    display: flex;
+    width:100%;
+    flex-wrap:        wrap;
+    justify-content: center;
+}
 .mainArticle {
     display: flex;
     padding: 15px;
@@ -352,9 +357,13 @@ footer .right {
 
 @media screen and (max-width:62em /*992px*/) {
     .mainArticle {
-        width: 45%;
+        width: 40%;
         justify-content: center;
         flex-direction:   row;
+    }
+    .mainArticle img {
+        min-width:93%;
+        max-height: 25%;
     }
 }
 

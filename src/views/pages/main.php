@@ -2,10 +2,10 @@
 <section id="mainImage">
     <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'landing_text.png'?>" alt="photo of a tower under construction">
 </section>
-
+<div class="allArticles">
 <section class="mainArticle picFloatLeft" id="brandschutz">
     <article>
-        <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'brandschutz.jpg' ?>" alt="brandschutz">
+        <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'brandschutz2.jpg' ?>" alt="brandschutz">
         <h2>Brandschutz</h2>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
         labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
@@ -56,6 +56,7 @@
         sed d.
     </article>
 </section>
+</div>
 <section>
     <div id="certifications">
         <div class="certification">
