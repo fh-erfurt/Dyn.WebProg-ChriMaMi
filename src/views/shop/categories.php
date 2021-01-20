@@ -7,11 +7,16 @@
     <h1>Filterung nach Kategorien</h1>
 </section>
 <div class="categories">
-    <button class="button">Alle</button>
-    <button class="button">Brandschutz</button>
-    <button class="button">Wärmeschutz</button>
-    <button class="button">Tragewerksplanung</button>
-    <button class="button">Eingabeplanung</button>
+    <form method="get">
+        <input type="hidden" name="c" value="shop" />
+        <input type="hidden" name="a" value="categories" />
+
+        <button class="button" type="submit">Alle</button>
+        <button class="button" type="submit" name="cat" value="fire_protection">Brandschutz</button>
+        <button class="button" type="submit" name="cat" value="heat_protection">Wärmeschutz</button>
+        <button class="button" type="submit" name="cat" value="structural_planning">Tragewerksplanung</button>
+        <button class="button" type="submit" name="cat" value="input_planning">Eingabeplanung</button>
+    </form>
 </div>
 
 <div id="itemDisplay">
