@@ -13,8 +13,8 @@
                 <nav>
                     <ul class="navigation">
                         <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=main">Home</a></li>
-                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=categories">Produkte</a></li>
-                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=cart">Warenkorb</a></li>
+                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=shop&a=categories">Produkte</a></li>
+                        <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=shop&a=cart">Warenkorb</a></li>
                         <?php
                         if (isset($_SESSION['email'])) {
                             echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=logout" class=\'submitLogout\'>Logout</a></li>';
