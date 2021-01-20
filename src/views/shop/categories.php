@@ -21,14 +21,16 @@
 
 <div id="itemDisplay">
 <?php
-$itemNumber = 0;
 
-foreach (glob(ASSETSPATH . 'images'. DIRECTORY_SEPARATOR .'products'. DIRECTORY_SEPARATOR. '*.jpg') as $img) {
+$products = $products ?? array(); // products are initiated in action
+
+foreach ($products as $product) {
     ?><div class="item">
     <article>
-        <?  $itemNumber++ ?>
-        <img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR. 'products'. DIRECTORY_SEPARATOR. 'item'. $itemNumber.'.jpg' ?>" width=200" height="100" alt="item">
-        <? require ASSETSPATH . 'texts' . DIRECTORY_SEPARATOR. 'item'.$itemNumber.'.php'?>
+        <img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR. 'products'. DIRECTORY_SEPARATOR. $product->filename ?>" width=200" height="100" alt="item">
+        <b><?= $product->name;?></b>
+        <?=$product->description; ?>
+
         <div>
             <button class="btn">Add to Cart</button>
         </div>
