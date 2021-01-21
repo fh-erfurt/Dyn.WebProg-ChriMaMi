@@ -5,7 +5,7 @@
 <div class="allArticles">
 <section class="mainArticle picFloatLeft" id="brandschutz">
     <article>
-        <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'brandschutz2.jpg' ?>" alt="brandschutz">
+        <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'brandschutz3.jpg' ?>" alt="brandschutz">
         <h2>Brandschutz</h2>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
         labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores

@@ -11,11 +11,11 @@
         <input type="hidden" name="c" value="shop" />
         <input type="hidden" name="a" value="categories" />
 
-        <button class="button" type="submit">Alle</button>
-        <button class="button" type="submit" name="cat" value="fire_protection">Brandschutz</button>
-        <button class="button" type="submit" name="cat" value="heat_protection">Wärmeschutz</button>
-        <button class="button" type="submit" name="cat" value="structural_planning">Tragewerksplanung</button>
-        <button class="button" type="submit" name="cat" value="input_planning">Eingabeplanung</button>
+        <button class="btn" type="submit">Alle</button>
+        <button class="btn" type="submit" name="cat" value="fire_protection">Brandschutz</button>
+        <button class="btn" type="submit" name="cat" value="heat_protection">Wärmeschutz</button>
+        <button class="btn" type="submit" name="cat" value="structural_planning">Tragewerksplanung</button>
+        <button class="btn" type="submit" name="cat" value="input_planning">Eingabeplanung</button>
     </form>
 </div>
 
