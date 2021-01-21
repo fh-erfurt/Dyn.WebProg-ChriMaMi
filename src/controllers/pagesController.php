@@ -55,17 +55,13 @@ class PagesController extends \dwp\core\Controller
                 $this->setParam("register_firstname", $_POST["register_firstname"]);*/
     }
 
-    public function actionCategories()
+
+    public function actionAboutUs()
     {
 
     }
 
-    public function actionNews()
-    {
-
-    }
-
-    public function actionCart()
+    public function actionContact()
     {
 
     }
