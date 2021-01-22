@@ -400,11 +400,12 @@
 
 }
 /* ------------------------------ END SHOPPING CART-------------------------------*/
+/*
 
-/* ------------------------------ Responsive Design(>992px)) -------------------------------*/
-@media screen and (max-width:1120px /*1120px*/) {
+!* ------------------------------ Responsive Design(>992px)) -------------------------------*!
+@media screen and (max-width:1120px !*1120px*!) {
     #search {
-        width:6.25em;    /*100px;*/
+        width:6.25em;    !*100px;*!
     }
 }
 
@@ -416,14 +417,15 @@
         margin: 0.625em 0 0.625em 0;
     }
 }
-/* ------------------------------ Tablet Design(<992px)  -------------------------------*/
-@media screen and (max-width:62em /*992px*/) {
+!* ------------------------------ Tablet Design(<992px)  -------------------------------*!
+@media screen and (max-width:62em !*992px*!) {
     #search {
-        width:17.5em;    /*280px;*/
+        width:17.5em;    !*280px;*!
     }
     .secondNavigation {
         font-size: 14px;
     }
 }
+*/
 
 
