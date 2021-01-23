@@ -31,7 +31,7 @@ nav ul {
     position: absolute;
     display: block;
     background: rgba(25, 96, 184, 0.98);
-    background: rgba(25, 96, 184, 0.98);
+/*    background: rgba(25, 96, 184, 0.98);*/
     top: 145px;
     left: 0;
     width: 100%;
@@ -70,6 +70,7 @@ nav a {
     text-align: center;
     background: rgba(25, 96, 184, 0.90);
 
+
     /*    background-color: var(--headcolor);*/
 
     /*    background: rgb(25,96,184);
@@ -93,71 +94,33 @@ nav a {
     border-bottom: solid #3e70ad;
 }
 
+
 #respSubNav label {
     display: block;
     width: 100%;
     height: 100%;
+
+    font-size: 21px;
+    color: #FFFFFF;
     text-align: center;
+
     background: rgba(25, 96, 184, 0.90);
 
 }
 
-#raspSubNav 
+#respSubNavHome label {
+    display: block;
+    width: 100%;
+    height: 100%;
 
-.submenu {
-    display: flex;
-    position: absolute;
-    visibility: hidden;
-    height: 0;
-    width: 100px;
-    justify-content: center;
+    font-size: 21px;
+    color: #FFFFFF;
+    text-align: center;
 
-}
-
-.submenu .bigger li {
-    width: 200px;
-}
-
-.submenu .bigger:hover {
-    transition-delay: 1.2s;
-}
-
-.submenu li {
-
-    float: left;
-    width: 100px;
-    /* width: 15em; */
-    list-style-type: none;
-    transition-duration: 9ms;
+    background: rgba(25, 96, 184, 0.90);
 
 }
 
-.submenu a {
-    font-size: 21px !important;
-    /*    border-radius: 0 !important;*/
-    /*    transition: background-size 2s !important;*/
-    /*    border-bottom: solid 2px !important;*/
-
-}
-
-/**     Show the submenu on hover, focus     **/
-nav li:hover .submenu,
-nav li:active .submenu,
-nav li:focus .submenu {
-    visibility: visible;
-    transform-style: preserve-3d;
-    transition-delay: 9ms;
-    height: auto;
-}
-
-nav .navigation .submenu .a {
-    color: black;
-}
-
-nav li:focus-within .submenu {
-    visibility: visible;
-    height: auto;
-}
 
 #head_container {
     display: flex;
@@ -205,8 +168,28 @@ nav li:focus-within .submenu {
     display: none;
 }
 
-.subMenuToggle:checked + .subNavigation li {
+.subMenuToggle:checked + .subNavigation {
     display: block /*!important*/;
+    position: relative;
+}
+
+.subNavigation {
+    position: absolute;
+    display: none;
+    top: 14px;
+
+
+    background-color: rgba(96, 140, 188, 0.92);
+}
+
+.subNavigation a
+{
+    font-size: 18px;
+}
+
+.subNavigation ul li {
+    border-top: 0;
+    border-bottom: 0;
 }
 
 /*-------------- content --------------*/
@@ -480,7 +463,86 @@ ul li a:hover + .hidden, .hidden:hover {
     /*---------------------- clear mobile ------------------*/
     #respNav {
         display: none;
+
     }
+
+    #respSubNav label {
+        display: inline-flex;
+        width: inherit;
+        height: inherit;
+        font-size: inherit;
+        color: #414141;
+        background: inherit;
+
+    }
+
+    #respSubNavHome label {
+        background: none;
+        position: relative;
+        display: inline-flex;
+        color: #414141;
+        font-size: inherit;
+    }
+
+
+    .subMenuToggle {
+        display: none;
+    }
+
+/*    #respSubNav {
+        display: none;
+    }
+
+    #respSubNavHome label {
+        display: none;
+    }*/
+
+
+
+    .menuToggle:checked + .navigation li {
+        display: none /*!important*/;
+    }
+
+
+    .subMenuToggle:checked + .subNavigation {
+        display: none /*!important*/;
+    }
+
+    .subNavigation {
+        display: none;
+        position: absolute;
+        top: 38px;
+        flex-direction: row;
+    }
+
+
+/*    nav ul {
+        display: block;
+
+    }*/
+
+/*    #respSubNavHome label span :hover .subNavigation ul,
+    #respSubNavHome label span :active .subNavigation ul,
+    #respSubNavHome label span :focus .subNavigation ul {
+        visibility: visible;
+        display: block;
+        transform-style: preserve-3d;
+        transition-delay: 9ms;
+        height: auto;
+    }*/
+
+/*    nav .subNavigation,
+        nav input[type="checkbox"]:checked+.subNavigation {
+        display: none;
+    }*/
+
+    #respSubNavHome li:hover>input[type="checkbox"]+.subNavigation {
+        display: block;
+    }
+
+
+
+    /*--------------------------------------------------*/
 
 
     body {
@@ -520,7 +582,7 @@ ul li a:hover + .hidden, .hidden:hover {
 
     /* ------------------------------ NAVIGATION BAR ------------------------------- */
     nav {
-        display: flex;
+        display: flex !important;
         /*        margin: unset;*/
         /*            display: block;
                     align-items: center;*/
@@ -546,6 +608,7 @@ ul li a:hover + .hidden, .hidden:hover {
 
     nav ul li {
         display: flex;
+        position: relative;
         max-width: inherit;
         list-style-type: none;
         border-top: 0;
@@ -587,6 +650,23 @@ ul li a:hover + .hidden, .hidden:hover {
         transition: background-size .2s;
     }
 
+    nav .navigation label {
+        background: linear-gradient(
+                to bottom, #a4dbff 20%,
+                #FFFFFF 100%
+        ) repeat-x 0 100%;
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        background-size: 0 0;
+        color: #414141;
+        font-size: 24px;
+        margin: 0 0;
+        padding: 0 15px;
+        text-decoration: none;
+        transition: background-size .2s;
+        cursor: pointer;
+    }
+
     nav .navigation a:hover {
         color: var(--headcolor);
         border-bottom: solid 2px;
@@ -600,6 +680,25 @@ ul li a:hover + .hidden, .hidden:hover {
 
 
     nav a:hover {
+        background-size: 4px 50px;
+        /*    border-bottom: solid;
+            border-color: var(--headcolor);
+            transition-duration: 0.6s;*/
+    }
+
+    nav .navigation label:hover {
+        color: var(--headcolor);
+        border-bottom: solid 2px;
+        transition-delay: 5ms;
+        transition-duration: 9ms;
+    }
+
+    nav .navigation label span:after {
+        color: var(--headcolor);
+    }
+
+
+    nav label span:hover {
         background-size: 4px 50px;
         /*    border-bottom: solid;
             border-color: var(--headcolor);
