@@ -31,6 +31,7 @@ nav ul {
     position: absolute;
     display: block;
     background: rgba(25, 96, 184, 0.98);
+    background: rgba(25, 96, 184, 0.98);
     top: 145px;
     left: 0;
     width: 100%;
@@ -91,6 +92,17 @@ nav a {
     border-top: solid #3e70ad;
     border-bottom: solid #3e70ad;
 }
+
+#respSubNav label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(25, 96, 184, 0.90);
+
+}
+
+#raspSubNav 
 
 .submenu {
     display: flex;
@@ -186,6 +198,14 @@ nav li:focus-within .submenu {
 }
 
 .menuToggle:checked + .navigation li {
+    display: block /*!important*/;
+}
+
+.subMenuToggle {
+    display: none;
+}
+
+.subMenuToggle:checked + .subNavigation li {
     display: block /*!important*/;
 }
 

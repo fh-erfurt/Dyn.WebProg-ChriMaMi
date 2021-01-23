@@ -17,7 +17,14 @@
                         echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=logout" class=\'submitLogout\'>Logout</a></li>';
 
                         if (isset($_SESSION['email']) && $_SESSION['isAdmin'] == 1) {
-                            echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=administration">Administration</a></li>';
+/*                            echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=administration">Administration</a></li>';*/
+                            echo'<div id="respSubNav" for="subToggle">';
+                            echo '<li><label for="subToggle" class="navigation">Administration</label></li>';
+                            echo '<input class="subMenuToggle" type="checkbox" id="subToggle">';
+                            echo '</div>';
+                            echo '<ul class="subNavigation">';
+                                echo '<li><a href="#">Benutzerverwaltung</a></li>';
+                            echo '</ul>';
 
                         } else if (isset($_SESSION['email']) && $_SESSION['isAdmin'] == 0) {
                             echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=userInterface">Account</a>';
