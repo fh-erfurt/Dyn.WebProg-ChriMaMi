@@ -106,7 +106,6 @@
     font-size:        inherit;
     cursor:           pointer;
     padding:          0.9375em 1.25em;
-    margin-top:       1.875em;
     margin-right:     0.3125em;
     text-transform:   uppercase;
     letter-spacing:   0.0625em;
@@ -399,13 +398,61 @@
 .cartDisplay .btn {
 
 }
+.counter .box {
+    margin-top: 10px;
+    width:25px;
+    height:30px;
+    background-color: #1960B8;
+    float:left;
+    text-align:center;
+    color: #FFFFFF;
+    font-size:20px;
+    line-height: 30px;
+    align-items: end;
+}
+#leftBox {
+    margin-left: 40px;
+    background-color: #ABAFB5;
+    border-top: solid 1px;
+    border-left: solid 1px;
+    border-bottom: solid 1px;
+    border-color: #2F2D2C;
+    cursor: pointer;
+}
+#rightBox {
+    background-color: #ABAFB5;
+    border-top: solid 1px;
+    border-right: solid 1px;
+    border-bottom: solid 1px;
+    border-color: #2F2D2C;
+    cursor: pointer;
+}
+#centerBox {
+    width: 35px;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-color: #2F2D2C;
+}
+#leftBox:hover {
+    background: #b55757;
+}
+#leftBox:active {
+    background: #8a0619;
+    top:              0.125em;
+}
+#rightBox:hover {
+    background:       #27ae60;
+}
+#rightBox:active {
+    background: #028039;
+    top:              0.125em;
+}
 /* ------------------------------ END SHOPPING CART-------------------------------*/
-/*
 
-!* ------------------------------ Responsive Design(>992px)) -------------------------------*!
-@media screen and (max-width:1120px !*1120px*!) {
+/* ------------------------------ Responsive Design(>992px)) -------------------------------*/
+@media screen and (max-width:1120px /*1120px*/) {
     #search {
-        width:6.25em;    !*100px;*!
+        width:6.25em;    /*100px;*/
     }
 }
 
@@ -417,15 +464,14 @@
         margin: 0.625em 0 0.625em 0;
     }
 }
-!* ------------------------------ Tablet Design(<992px)  -------------------------------*!
-@media screen and (max-width:62em !*992px*!) {
+/* ------------------------------ Tablet Design(<992px)  -------------------------------*/
+@media screen and (max-width:62em /*992px*/) {
     #search {
-        width:17.5em;    !*280px;*!
+        width:17.5em;    /*280px;*/
     }
     .secondNavigation {
         font-size: 14px;
     }
 }
-*/
 
 

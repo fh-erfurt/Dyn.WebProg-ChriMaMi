@@ -66,7 +66,7 @@ class PagesController extends \dwp\core\Controller
 
     }
 
-    public function administration()
+    public function actionAdministration()
     {
 
     }
