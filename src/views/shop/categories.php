@@ -28,7 +28,27 @@
         <b><?= $product->name;?></b><br>
         <?=$product->description; ?>
         <div>
-            <p>Kategorie: <?=$product->category; ?></p>
+            <p>Kategorie: <?php
+                switch ($product->category)
+                {
+                    case "fire_protection":
+                        echo "Brandschutz";
+                        break;
+                    case "heat_protection":
+                        echo "Wärmeschutz";
+                        break;
+                    case "structural_planning":
+                        echo "Tragewerksplanung";
+                        break;
+                    case "input_planning":
+                        echo "Eingabeplanung";
+                        break;
+                    default:
+                        echo "Unbekannte Kategorie";
+                        break;
+                }
+
+                ?></p>
         </div>
         <div>
             <p>Preis: <?=$product->std_price; ?>€</p>
