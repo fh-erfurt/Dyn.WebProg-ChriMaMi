@@ -14,8 +14,17 @@ class ShopController extends \dwp\core\Controller
 {
     public function actionCategories()
     {
-        $products = Products::find();
-        $this->setParam('products', $products);
+        if (isset($_GET['cat']))
+        {
+            $products = Products::find('category = \''.$_GET['cat'].'\'');
+            $this->setParam('products', $products);
+
+        }
+        else
+        {
+            $products = Products::find();
+            $this->setParam('products', $products);
+        }
     }
 
     public function actionNews()
