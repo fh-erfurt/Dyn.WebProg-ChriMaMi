@@ -21,15 +21,11 @@
 </div>
 
 <div id="itemDisplay">
-<?php
-
-$products = $products ?? array(); // products are initiated in action
-
-foreach ($products as $product) {
-    ?><div class="item">
+<?php foreach ($products as $product) : ?>
+    <div class="item">
     <article>
         <img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR. 'products'. DIRECTORY_SEPARATOR. $product->filename ?>" width=200" height="100" alt="item">
-        <b><?= $product->name;?></b>
+        <b><?= $product->name;?></b><br>
         <?=$product->description; ?>
         <div>
             <p>Kategorie: <?=$product->category; ?></p>
@@ -47,9 +43,7 @@ foreach ($products as $product) {
         </div>
     </article>
     </div>
-    <?php
-}
-?>
+    <?php endforeach;?>
 </div>
 
 
