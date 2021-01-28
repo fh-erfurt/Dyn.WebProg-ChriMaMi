@@ -1,4 +1,5 @@
 <link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-products.css' ?>" rel="stylesheet">
+<link href="<?= ASSETSPATH.'javascripts'.DIRECTORY_SEPARATOR.'counterForShop.js' ?>" rel="function">
 <div class="secondNavigation">
     <!--    <nav class="secondNavigation">>-->
     <? require_once SHAREDPATH.'subnav.php' ?>
@@ -20,25 +21,49 @@
 </div>
 
 <div id="itemDisplay">
-<?php
-
-$products = $products ?? array(); // products are initiated in action
-
-foreach ($products as $product) {
-    ?><div class="item">
+<?php foreach ($products as $product) : ?>
+    <div class="item">
     <article>
         <img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR. 'products'. DIRECTORY_SEPARATOR. $product->filename ?>" width=200" height="100" alt="item">
-        <b><?= $product->name;?></b>
+        <b><?= $product->name;?></b><br>
         <?=$product->description; ?>
+        <div>
+            <p>Kategorie: <?php
+                switch ($product->category)
+                {
+                    case "fire_protection":
+                        echo "Brandschutz";
+                        break;
+                    case "heat_protection":
+                        echo "Wärmeschutz";
+                        break;
+                    case "structural_planning":
+                        echo "Tragewerksplanung";
+                        break;
+                    case "input_planning":
+                        echo "Eingabeplanung";
+                        break;
+                    default:
+                        echo "Unbekannte Kategorie";
+                        break;
+                }
 
+                ?></p>
+        </div>
+        <div>
+            <p>Preis: <?=$product->std_price; ?>€</p>
+        </div>
+        <div class="counter">
+            <div class="box" id="leftBox"><a>-</a></div>
+            <div class="box" id="centerBox"><a>0</a></div>
+            <div class="box" id="rightBox"><a>+</a></div>
+        </div>
         <div>
             <button class="btn">Add to Cart</button>
         </div>
     </article>
     </div>
-    <?php
-}
-?>
+    <?php endforeach;?>
 </div>
 
 

@@ -7,26 +7,14 @@
     <article>
         <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'brandschutz3.jpg' ?>" alt="brandschutz">
         <h2>Brandschutz</h2>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-        gubergren, no sea takimata sanctus est Lorem Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-        sed d.
+        Unter Brandschutz oder Feuerschutzwesen versteht man alle Maßnahmen, die der Entstehung und Ausbreitung eines Brandes (Feuer und Rauch)[1] vorbeugen (Brandverhütung durch vorbeugenden und baulichen Brandschutz) und die Rettung von Menschen und Tieren sowie wirksame Löscharbeiten bei einem Brand ermöglichen.
     </article>
 </section>
     <section class="mainArticle picFloatRight" id="waermeschutz" alt="wärmeschutz">
         <article>
             <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'wärmeschutz.jpg' ?>">
             <h2>Wärmeschutzt</h2>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem Lorem ipsum dolor sit amet,
-            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-            gubergren, no sea takimata sanctus est Lorem Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-            sed d.
+            Der winterliche Wärmeschutz dient dazu, während der Heizperiode an den Innenoberflächen der Bauteile eine ausreichend hohe Oberflächentemperatur zu gewährleisten und damit Oberflächenkondensat und Schimmelwachstum bei in Wohnräumen üblichem Raumklima auszuschließen. Oberflächenkondensat entsteht, wenn die Temperatur der Wandoberfläche unter der Taupunkttemperatur liegt.
             <h2></h2>
         </article>
     </section>
@@ -34,26 +22,14 @@
     <article>
         <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'tragwerkplanung.jpg' ?>">
         <h2>Tragwerkplanung</h2>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-        gubergren, no sea takimata sanctus est Lorem Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-        sed d.
+        Der Tragwerksplaner (umgangssprachlich auch Statiker) entwirft das Tragwerk von Gebäuden, Ingenieurbauwerken und anderen baulichen Anlagen. Er gehört zu den Projektanten eines Bauvorhabens. Meist erstellt er den nach dem Bauordnungsrecht erforderlichen Standsicherheitsnachweis. Grundlage seiner statischen Berechnungen sind Last- und Tragfähigkeitsannahmen sowie Berechnungsmodelle.
     </article>
 </section>
 <section class="mainArticle picFloatRight" id="eingabeplanung" alt="Eingabeplanung">
     <article>
         <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'eingabeplanung.jpg' ?>">
         <h2>Eingabeplanung</h2>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-        gubergren, no sea takimata sanctus est Lorem Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-        sed d.
+        Die Genehmigungsplanung, auch Eingabeplanung oder Einreichplanung genannt, ist ein Teil der Bauplanung zur Realisierung von Bauwerken. In den Leistungsbildern der Objekt- und Fachplanung der HOAI nach § 34,39,43,47,51,55 wird die Genehmigungsplanung als vierte Leistungsphase (LP 4) genannt.
     </article>
 </section>
 </div>
