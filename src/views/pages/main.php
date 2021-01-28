@@ -13,7 +13,7 @@
     <section class="mainArticle picFloatRight" id="waermeschutz" alt="wärmeschutz">
         <article>
             <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'wärmeschutz.jpg' ?>">
-            <h2>Wärmeschutzt</h2>
+            <h2>Wärmeschutz</h2>
             Der winterliche Wärmeschutz dient dazu, während der Heizperiode an den Innenoberflächen der Bauteile eine ausreichend hohe Oberflächentemperatur zu gewährleisten und damit Oberflächenkondensat und Schimmelwachstum bei in Wohnräumen üblichem Raumklima auszuschließen. Oberflächenkondensat entsteht, wenn die Temperatur der Wandoberfläche unter der Taupunkttemperatur liegt.
             <h2></h2>
         </article>
