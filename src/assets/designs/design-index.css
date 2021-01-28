@@ -166,7 +166,7 @@ nav a {
     background: rgba(25, 96, 184, 0.90);
 
 }
-
+/*Only for mobile navigation*/
 @media screen and (max-width: 992px) {
     .subMenuToggle:checked + .subNavigation {
         display: block /*!important*/;
