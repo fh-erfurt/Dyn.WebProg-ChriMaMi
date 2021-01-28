@@ -17,7 +17,7 @@
 /*--------------------- general setup ---------------------*/
 :root {
     --headsize: 144px;
-    --headcolor: #1960B8;
+    --headcolor: #b8193e;
 }
 
 #page-container {
@@ -69,7 +69,7 @@ nav ul {
 nav ul li {
     display: none;
     max-width: 991px;
-    /*    list-style-type: none;*/
+/*    list-style-type: none;*/
 
     border-top: solid 1px;
     border-bottom: solid 1px;
@@ -82,7 +82,7 @@ nav ul li {
 }
 
 nav a {
-    /*    font-family: Roboto;*/
+/*    font-family: Roboto;*/
     font-size: 21px;
     color: #FFFFFF;
     text-decoration: none;
@@ -94,10 +94,8 @@ nav a {
     display: none;
 }
 
-@media screen and (max-width: 992px) {
-    .menuToggle:checked + .navigation li {
-        display: block /*!important*/;
-    }
+.menuToggle:checked + .navigation li {
+    display: block /*!important*/;
 }
 
 #respNav {
@@ -116,7 +114,6 @@ nav a {
     text-align: center;
     background: rgba(25, 96, 184, 0.90);
 }
-
 #respNav label img {
     height: 70%;
     /*    margin-top: auto;
@@ -139,7 +136,8 @@ nav a {
     background-color: rgba(96, 140, 188, 0.92);
 }
 
-.subNavigation a {
+.subNavigation a
+{
     font-size: 18px;
 }
 
@@ -166,12 +164,10 @@ nav a {
     background: rgba(25, 96, 184, 0.90);
 
 }
-/*Only for mobile navigation*/
-@media screen and (max-width: 992px) {
-    .subMenuToggle:checked + .subNavigation {
-        display: block /*!important*/;
-        position: relative;
-    }
+
+.subMenuToggle:checked + .subNavigation {
+    display: block /*!important*/;
+    position: relative;
 }
 
 /*====================== end of submenu ====================*/
@@ -314,7 +310,8 @@ footer .right {
 /*============ end of general layout properties ==============*/
 
 
-/* ----------------- main page properties ------------------- */
+
+/* ------------ MAIN PAGE ------------ */
 
 #mainImage {
     display: none;
@@ -331,37 +328,36 @@ footer .right {
     border-radius: 20px;
 }
 
-.mainArticle {
-    width: 40%;
-
-    justify-content: center;
-    flex-direction: row;
-}
-
 .mainArticle img {
-    min-width: 93%;
+    min-width:93%;
     max-height: 33%;
-}
-
-#mainImage img {
-    display: none;
 }
 
 .mainArticle {
     display: flex;
     padding: 15px;
     margin: 15px;
+    height: auto;
     border-style: solid;
     border-radius: 20px;
-    width: 40%;
+    max-width: 40%;
     /*        height: 500px;*/
 
     justify-content: center;
-    flex-direction: row;
+    min-width:350px;
+
+}
+
+.allArticles {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .mainArticle img {
     display: flex;
+    justify-content: center;
     border-style: solid;
     border-color: black;
     max-width: 200px;
@@ -400,6 +396,9 @@ article {
     flex-wrap: wrap;
 }
 
+.certification {
+}
+
 .certification img {
     width: 200px;
     height: 200px;
@@ -409,16 +408,16 @@ article {
 }
 
 .picFloatLeft img {
-    float: left;
+    float: unset;
 }
 
 .picFloatRight img {
-    float: right;
+    float: unset;
 }
 
-/*================= end of main page properties ===============*/
 
-/*------------------ imprint style properties ----------------*/
+
+/* ------------------------------ IMPRINT ------------------------------- */
 #imprintImage {
     display: flex;
     margin-top: 20px;
@@ -530,13 +529,16 @@ ul li a:hover + .hidden, .hidden:hover {
         display: none;
     }
 
-    /*    #respSubNav {
-            display: none;
-        }
+/*    #respSubNav {
+        display: none;
+    }
 
-        #respSubNavHome label {
-            display: none;
-        }*/
+    #respSubNavHome label {
+        display: none;
+    }*/
+
+
+
     .menuToggle:checked + .navigation li {
         display: none /*!important*/;
     }
@@ -554,16 +556,39 @@ ul li a:hover + .hidden, .hidden:hover {
     }
 
 
-    #respSubNavHome li:hover > input[type="checkbox"] + .subNavigation {
+/*    nav ul {
+        display: block;
+
+    }*/
+
+/*    #respSubNavHome label span :hover .subNavigation ul,
+    #respSubNavHome label span :active .subNavigation ul,
+    #respSubNavHome label span :focus .subNavigation ul {
+        visibility: visible;
+        display: block;
+        transform-style: preserve-3d;
+        transition-delay: 9ms;
+        height: auto;
+    }*/
+
+/*    nav .subNavigation,
+        nav input[type="checkbox"]:checked+.subNavigation {
+        display: none;
+    }*/
+
+    #respSubNavHome li:hover>input[type="checkbox"]+.subNavigation {
         display: block;
     }
 
 
+
     /*--------------------------------------------------*/
+
+
     body {
         margin: unset;
         padding: unset;
-        /*        font-family: "Roboto";*/
+/*        font-family: "Roboto";*/
         background-image: url("../images/background.jpg");
         background-size: 100%;
         background-attachment: fixed;
@@ -617,8 +642,8 @@ ul li a:hover + .hidden, .hidden:hover {
         list-style: none;
         z-index: inherit;
         transform-style: inherit;
-        /*        margin: 0;
-                padding: 0;*/
+/*        margin: 0;
+        padding: 0;*/
     }
 
     nav ul li {
@@ -925,15 +950,13 @@ ul li a:hover + .hidden, .hidden:hover {
         margin: 15px;
         border-style: solid;
         border-radius: 20px;
-    }
+        width:100%;
+        justify-content: center;
+        max-width:900px;
 
-    .mainArticle img {
-        min-width: 93%;
-        max-height: 33%;
     }
-
-    #mainImage img {
-        display: none;
+    .mainArticle h2{
+        margin-bottom: 7px;
     }
 
     .mainArticle img {
@@ -942,12 +965,17 @@ ul li a:hover + .hidden, .hidden:hover {
         border-color: black;
         max-width: 200px;
         /*    padding:10px;*/
-        margin: 10px;
+        margin: 20px 20px 5px 20px;
         border-radius: 20px;
+        min-width: 200px;
+        min-height: 120px;
+        align-items: center;
+
     }
 
     article {
         display: inline-block;
+        text-align: justify;
     }
 
     #brandschutz {
@@ -1123,4 +1151,62 @@ ul li a:hover + .hidden, .hidden:hover {
         margin-bottom: 0;
     }
 }
-/*----------------------------------------/*
+/*---------------------------- ADMINISTRATION PAGE ---------------------------*/
+.adm_menu{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    height:700px;
+    width: 95%;
+}
+.adm_menu h2{
+    padding-left: 30%;
+    padding-right: 30%;
+}
+.menubar {
+    vertical-align:   top;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+    border: 2px solid #1b63b8;
+    background-color: #1960B8;
+    border-radius: 10px;
+    width: 70%;
+    margin-bottom: 10px;
+    max-width:800px;
+    min-width: 100px;
+    padding: 0 50px 0 50px;
+}
+.menubar li {
+    list-style:       sqaure;
+    font-weight:      100;
+    color:            #2F2D2C;
+    line-height:      1.25em;
+    padding:          0;
+    margin:           0.313em 0 0.313em 0;
+    text-align:       justify;
+}
+.menubar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.adm_menu aside {
+    display:          flex;
+    width:            80%;
+    min-height: 70%;
+    margin-left:      0;
+    text-decoration: none;
+    list-style: none;
+    border: 2px solid #1b63b8;
+    background-color: #ddedfd;
+    border-radius: 10px;
+    padding: 20px;
+    vertical-align:   top;
+}
+
+
