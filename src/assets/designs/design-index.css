@@ -1,11 +1,34 @@
-/* ------------------------------ RANDOM SHIT ------------------------------- */
+/*--------------- CSS - Document IBHorsch ----------------*/
 
+/*-------------- general layout properties ---------------*/
+/*
 
-/*---------------------------- Media Qureies for Responsive ---------------------------*/
+1. General setup
+2. head properties
+3. navigation properties
+4. main menu dropdown
+5. general submenu properties
+6. first submenu properties
+7. second submenu properties
+8. general content properties
+9. footer properties
+ */
+
+/*--------------------- general setup ---------------------*/
 :root {
     --headsize: 144px;
     --headcolor: #1960B8;
 }
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/*=================== end of general setup ================*/
+
+
+/*-------------------- head properties --------------------*/
 
 header {
     height: var(--headsize);
@@ -21,7 +44,10 @@ body {
     background-attachment: fixed;
 }
 
-/*-------------- navbar --------------*/
+/*================= end of head properties =================*/
+
+
+/*------------------ navigation properties -----------------*/
 
 nav {
     width: 100%;
@@ -31,13 +57,10 @@ nav ul {
     position: absolute;
     display: block;
     background: rgba(25, 96, 184, 0.98);
-    background: rgba(25, 96, 184, 0.98);
     top: 145px;
     left: 0;
     width: 100%;
-    list-style: none;
     z-index: 1;
-    transform-style: preserve-3d;
     margin: 0;
     padding: 0;
 }
@@ -46,10 +69,12 @@ nav ul {
 nav ul li {
     display: none;
     max-width: 991px;
-    list-style-type: none;
+/*    list-style-type: none;*/
+
     border-top: solid 1px;
     border-bottom: solid 1px;
     border-color: #FFFFFF;
+
     text-align: center;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -63,26 +88,14 @@ nav a {
     text-decoration: none;
 }
 
-#respNav label {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background: rgba(25, 96, 184, 0.90);
+/* ----------------- main menu dropdown-----------------*/
 
-    /*    background-color: var(--headcolor);*/
-
-    /*    background: rgb(25,96,184);
-        background: -moz-linear-gradient(0deg, rgba(25,96,184,0.8) 10%, rgba(3,80,150,0.8) 50%, rgba(25,96,184,0.8) 90%);
-        background: -webkit-linear-gradient(0deg, rgba(25,96,184,0.8) 10%, rgba(3,80,150,0.8) 50%, rgba(25,96,184,0.8) 90%);
-        background: linear-gradient(0deg, rgba(25,96,184,0.8) 10%, rgba(3,80,150,0.8) 50%, rgba(25,96,184,0.8) 90%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1960b8",endColorstr="#1960b8",GradientType=1);*/
+.menuToggle {
+    display: none;
 }
 
-#respNav label img {
-    height: 70%;
-    margin-top: auto;
-    margin-bottom: auto;
+.menuToggle:checked + .navigation li {
+    display: block /*!important*/;
 }
 
 #respNav {
@@ -93,71 +106,92 @@ nav a {
     border-bottom: solid #3e70ad;
 }
 
-#respSubNav label {
+
+#respNav label {
     display: block;
     width: 100%;
     height: 100%;
     text-align: center;
     background: rgba(25, 96, 184, 0.90);
-
+}
+#respNav label img {
+    height: 70%;
+    /*    margin-top: auto;
+        margin-bottom: auto;*/
 }
 
-#raspSubNav 
+/*=============== end of main menu dropdown =============*/
 
-.submenu {
-    display: flex;
+
+/* -------------- general submenu properties -------------*/
+
+.subMenuToggle {
+    display: none;
+}
+
+.subNavigation {
     position: absolute;
-    visibility: hidden;
-    height: 0;
-    width: 100px;
-    justify-content: center;
+    display: none;
+    top: 14px;
+    background-color: rgba(96, 140, 188, 0.92);
+}
+
+.subNavigation a
+{
+    font-size: 18px;
+}
+
+.subNavigation ul li {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+
+/*================= end of general submenu =================*/
+
+
+/*---------------- first submenu properties -----------------*/
+
+#respSubNavHome label {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    font-size: 21px;
+    color: #FFFFFF;
+    text-align: center;
+
+    background: rgba(25, 96, 184, 0.90);
 
 }
 
-.submenu .bigger li {
-    width: 200px;
+.subMenuToggle:checked + .subNavigation {
+    display: block /*!important*/;
+    position: relative;
 }
 
-.submenu .bigger:hover {
-    transition-delay: 1.2s;
-}
+/*====================== end of submenu ====================*/
 
-.submenu li {
 
-    float: left;
-    width: 100px;
-    /* width: 15em; */
-    list-style-type: none;
-    transition-duration: 9ms;
+/* --------------- second submenu properties ---------------*/
 
-}
+#respSubNav label {
+    display: block;
+    width: 100%;
+    height: 100%;
 
-.submenu a {
-    font-size: 21px !important;
-    /*    border-radius: 0 !important;*/
-    /*    transition: background-size 2s !important;*/
-    /*    border-bottom: solid 2px !important;*/
+    font-size: 21px;
+    color: #FFFFFF;
+    text-align: center;
+
+    background: rgba(25, 96, 184, 0.90);
 
 }
 
-/**     Show the submenu on hover, focus     **/
-nav li:hover .submenu,
-nav li:active .submenu,
-nav li:focus .submenu {
-    visibility: visible;
-    transform-style: preserve-3d;
-    transition-delay: 9ms;
-    height: auto;
-}
+/*====================== end of submenu =====================*/
 
-nav .navigation .submenu .a {
-    color: black;
-}
 
-nav li:focus-within .submenu {
-    visibility: visible;
-    height: auto;
-}
+/*===================== end of navigation ===================*/
 
 #head_container {
     display: flex;
@@ -193,28 +227,9 @@ nav li:focus-within .submenu {
     margin-top: 0;
 }
 
-.menuToggle {
-    display: none;
-}
+/*======================= end of head =======================*/
 
-.menuToggle:checked + .navigation li {
-    display: block /*!important*/;
-}
-
-.subMenuToggle {
-    display: none;
-}
-
-.subMenuToggle:checked + .subNavigation li {
-    display: block /*!important*/;
-}
-
-/*-------------- content --------------*/
-
-#page-container {
-    position: relative;
-    min-height: 100vh;
-}
+/*---------------- general content properties ---------------*/
 
 #content-wrap {
     padding: 15px 0 300px;
@@ -224,6 +239,77 @@ nav li:focus-within .submenu {
     /*    margin-top: 30px;*/
     background: rgba(255, 255, 255, 0.92);
 }
+
+/*================== end of general properties ===============*/
+
+/*---------------------- footer properties ------------------ */
+footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    background: var(--headcolor);
+    opacity: 0.7;
+    text-align: left;
+    bottom: 0;
+    padding: 0;
+
+}
+
+footer section {
+    width: 750px;
+    justify-content: space-around;
+}
+
+
+footer ul {
+    width: 100%;
+    list-style-type: none;
+    max-width: 1440px;
+    padding-bottom: 12px;
+    text-align: left;
+    margin: 0 auto;
+
+}
+
+footer ul li {
+    font-size: 0.8em;
+    line-height: 15px;
+    color: #E2DBDB;
+    padding: 0 0.625em 0 0.625em;
+
+}
+
+footer ul h2 {
+    color: #FFFFFF;
+    padding-left: 10px;
+}
+
+footer ul li img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    padding-right: 10px;
+}
+
+footer .left {
+    float: left;
+    background: var(--headcolor);
+    margin-top: 25px;
+}
+
+footer .right {
+    float: right;
+    background: var(--headcolor);
+    margin-top: 50px;
+}
+
+/*============================================================*/
+/*============ end of general layout properties ==============*/
+
+
 
 /* ------------ MAIN PAGE ------------ */
 
@@ -329,69 +415,6 @@ article {
     float: unset;
 }
 
-/* ------------------------------ FOOTER ------------------------------- */
-footer {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 280px;
-    background: var(--headcolor);
-    opacity: 0.7;
-    text-align: left;
-    bottom: 0;
-    padding: 0;
-
-}
-
-footer section {
-    width: 750px;
-    justify-content: space-around;
-}
-
-
-footer ul {
-    width: 100%;
-    list-style-type: none;
-    max-width: 1440px;
-    padding-bottom: 12px;
-    text-align: left;
-    margin: 0 auto;
-
-}
-
-footer ul li {
-    font-size: 0.8em;
-    line-height: 15px;
-    color: #E2DBDB;
-    padding: 0 0.625em 0 0.625em;
-
-}
-
-footer ul h2 {
-    color: #FFFFFF;
-    padding-left: 10px;
-}
-
-footer ul li img {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    float: left;
-    padding-right: 10px;
-}
-
-footer .left {
-    float: left;
-    background: var(--headcolor);
-    margin-top: 25px;
-}
-
-footer .right {
-    float: right;
-    background: var(--headcolor);
-    margin-top: 50px;
-}
 
 
 /* ------------------------------ IMPRINT ------------------------------- */
@@ -480,7 +503,86 @@ ul li a:hover + .hidden, .hidden:hover {
     /*---------------------- clear mobile ------------------*/
     #respNav {
         display: none;
+
     }
+
+    #respSubNav label {
+        display: inline-flex;
+        width: inherit;
+        height: inherit;
+        font-size: inherit;
+        color: #414141;
+        background: inherit;
+
+    }
+
+    #respSubNavHome label {
+        background: none;
+        position: relative;
+        display: inline-flex;
+        color: #414141;
+        font-size: inherit;
+    }
+
+
+    .subMenuToggle {
+        display: none;
+    }
+
+/*    #respSubNav {
+        display: none;
+    }
+
+    #respSubNavHome label {
+        display: none;
+    }*/
+
+
+
+    .menuToggle:checked + .navigation li {
+        display: none /*!important*/;
+    }
+
+
+    .subMenuToggle:checked + .subNavigation {
+        display: none /*!important*/;
+    }
+
+    .subNavigation {
+        display: none;
+        position: absolute;
+        top: 38px;
+        flex-direction: row;
+    }
+
+
+/*    nav ul {
+        display: block;
+
+    }*/
+
+/*    #respSubNavHome label span :hover .subNavigation ul,
+    #respSubNavHome label span :active .subNavigation ul,
+    #respSubNavHome label span :focus .subNavigation ul {
+        visibility: visible;
+        display: block;
+        transform-style: preserve-3d;
+        transition-delay: 9ms;
+        height: auto;
+    }*/
+
+/*    nav .subNavigation,
+        nav input[type="checkbox"]:checked+.subNavigation {
+        display: none;
+    }*/
+
+    #respSubNavHome li:hover>input[type="checkbox"]+.subNavigation {
+        display: block;
+    }
+
+
+
+    /*--------------------------------------------------*/
 
 
     body {
@@ -520,7 +622,7 @@ ul li a:hover + .hidden, .hidden:hover {
 
     /* ------------------------------ NAVIGATION BAR ------------------------------- */
     nav {
-        display: flex;
+        display: flex !important;
         /*        margin: unset;*/
         /*            display: block;
                     align-items: center;*/
@@ -546,6 +648,7 @@ ul li a:hover + .hidden, .hidden:hover {
 
     nav ul li {
         display: flex;
+        position: relative;
         max-width: inherit;
         list-style-type: none;
         border-top: 0;
@@ -587,6 +690,23 @@ ul li a:hover + .hidden, .hidden:hover {
         transition: background-size .2s;
     }
 
+    nav .navigation label {
+        background: linear-gradient(
+                to bottom, #a4dbff 20%,
+                #FFFFFF 100%
+        ) repeat-x 0 100%;
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        background-size: 0 0;
+        color: #414141;
+        font-size: 24px;
+        margin: 0 0;
+        padding: 0 15px;
+        text-decoration: none;
+        transition: background-size .2s;
+        cursor: pointer;
+    }
+
     nav .navigation a:hover {
         color: var(--headcolor);
         border-bottom: solid 2px;
@@ -600,6 +720,25 @@ ul li a:hover + .hidden, .hidden:hover {
 
 
     nav a:hover {
+        background-size: 4px 50px;
+        /*    border-bottom: solid;
+            border-color: var(--headcolor);
+            transition-duration: 0.6s;*/
+    }
+
+    nav .navigation label:hover {
+        color: var(--headcolor);
+        border-bottom: solid 2px;
+        transition-delay: 5ms;
+        transition-duration: 9ms;
+    }
+
+    nav .navigation label span:after {
+        color: var(--headcolor);
+    }
+
+
+    nav label span:hover {
         background-size: 4px 50px;
         /*    border-bottom: solid;
             border-color: var(--headcolor);
