@@ -15,8 +15,8 @@
                             <input class="subMenuToggle" type="checkbox" id="homeSubToggle">
                             <ul class="subNavigation" >
                                 <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=main">Startseite</a></li>
-                                <li><a href="#">Über uns</a></li>
-                                <li><a href="#">Aktuelle Projekte</a></li>
+                                <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=aboutUs">Über Uns</a></li>
+                                <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=news">Aktuelle Projekte</a></li>
                             </ul>
                         </li>
                     </div>

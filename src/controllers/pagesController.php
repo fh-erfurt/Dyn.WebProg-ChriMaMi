@@ -61,12 +61,12 @@ class PagesController extends \dwp\core\Controller
 
     }
 
-    public function actionContact()
+    public function actionAdministration()
     {
 
     }
 
-    public function actionAdministration()
+    public function actionNews()
     {
 
     }

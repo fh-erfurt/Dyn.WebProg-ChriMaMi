@@ -27,12 +27,12 @@ class ShopController extends \dwp\core\Controller
         }
     }
 
-    public function actionNews()
+    public function actionCart()
     {
 
     }
 
-    public function actionCart()
+    public function actionContact()
     {
 
     }
