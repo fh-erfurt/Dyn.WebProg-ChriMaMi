@@ -79,24 +79,23 @@
     opacity:            0.7;
 }
 .item {
-    border:             0.1875em solid ;      /*3px*/
+    border:             0.02em solid ;      /*3px*/
     margin:             0.625em;              /*10px*/
     padding:            0.75em;               /*12px*/
     width:              21.875em;             /*350px*/
     height:             auto;
-    border-radius:      0.625em;              /*10px*/
-    background-color:   #eae8e8;
+    border-radius:      0;              /*10px*/
+    background-color:   #FFFFFF;
 
 }
 .item img
 {
     display:            flex;
-    border-style:       solid;
-    border-color:       black;
+    border:             0.1em solid black;
     max-width:          9.375em;              /*150px;*/
     max-height:         12.5em;               /*200px;*/
     margin:             0.625em;              /*10px;*/
-    border-radius:      0.625em;              /*10px*/
+    border-radius:      0.2em;              /*10px*/
     float:              right;
 }
 .item .btn {
