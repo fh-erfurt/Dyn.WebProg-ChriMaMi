@@ -497,9 +497,7 @@ ul li a:hover + .hidden, .hidden:hover {
 
 @media screen and (min-width: 992px) {
     :root {
-        --headcolor: #1960B8;
-        --headsize: 185px;
-        --headlogosize: 60px;
+        --headsize: 152px;
     }
 
     /*---------------------- clear mobile ------------------*/
@@ -590,7 +588,7 @@ ul li a:hover + .hidden, .hidden:hover {
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
-        /*    margin-top: 30px;*/
+        margin-top: 30px;
         background: rgba(255, 255, 255, 0.92);
     }
 
