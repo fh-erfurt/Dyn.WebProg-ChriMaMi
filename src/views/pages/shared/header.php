@@ -34,22 +34,19 @@
                             echo '<li><label for="subToggle" class="navigation"><span>Administration</span></label>';
                             echo '<input class="subMenuToggle" type="checkbox" id="subToggle">';
                             echo '<ul class="subNavigation">';
-                                echo '<li><a href="#">Benutzerverwaltung</a></li>';
+                                echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=pages&a=administration">Benutzerverwaltung</a>';
                             echo '</ul></li>';
                             echo '</div>';
 
                         } else if (isset($_SESSION['email']) && $_SESSION['isAdmin'] == 0) {
-                            echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=userInterface">Account</a>';
-                            echo '<ul>';
-                            echo '<div class="submenu">';
-                         /*   echo '<div>';*/
+                            echo'<div id="respSubNav" for="subToggle">';
+                            echo '<li><label for="subToggle" class="navigation"><span>Account</span></label>';
+                            echo '<input class="subMenuToggle" type="checkbox" id="subToggle">';
+                            echo '<ul class="subNavigation">';
                             echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=logout">Logout</a></li>';
-                            echo '</div>';
-                            echo '<div class="bigger">';
                             echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=logout">Daten ändern</a></li>';
+                            echo '</ul></li>';
                             echo '</div>';
-                            echo '</ul>';
-                            echo '</li>';
                         }
                     } else {
                         /*                        echo '<li><a href="'.$_SERVER['SCRIPT_NAME'].'?c=pages&a=imprint">Impressum</a></li>';*/

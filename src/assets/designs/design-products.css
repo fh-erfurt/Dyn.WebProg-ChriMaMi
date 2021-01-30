@@ -362,7 +362,7 @@
     text-align:         justify;
 }
 .cartDisplay {
-    background:         #1960B8;
+    background: rgba(25, 96, 184, 0.98);
     opacity:            70%;
     display:            block;
     width:              95%;
