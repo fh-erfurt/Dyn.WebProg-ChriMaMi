@@ -149,6 +149,7 @@ function loginUser(&$errorMsg,$email, $password)
         $errorMsg = "Wrong email or password";
 
     } else if ($checkPassword === true) {
+        $_SESSION['id'] = $account->id;
         $_SESSION['email'] = $account->email; /*__get('email')*/
         $_SESSION['isAdmin'] = $isAdmin;
 

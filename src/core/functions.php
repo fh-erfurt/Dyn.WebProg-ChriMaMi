@@ -6,6 +6,8 @@
  * @version 1.0.0
  */
 
+use dwp\model\Customers as Customers;
+use dwp\model\Addresses as Addresses;
 
 // TODO: Add useful helper functions here
 function localDateString($lang, $date)
@@ -40,4 +42,28 @@ function redirect($url)
 {
     header('Location: '.$url);
     exit(0);
+}
+
+function getCustomer($id)
+{
+    $db = $GLOBALS['db'];
+    $sql = "id=" . $db->quote($id);
+    $entry = Customers::findOne($sql);
+/*    if (!isset($entry)) {
+        header("Location: ../signup.php?error=stmtfailed");
+        exit();
+    }*/
+    return $entry; //Gibt Zeile des accounts mit übergebener email zurück
+}
+
+function getAddress($addressid)
+{
+    $db = $GLOBALS['db'];
+    $sql = "id=" . $db->quote($addressid);
+    $entry = Addresses::findOne($sql);
+    /*    if (!isset($entry)) {
+            header("Location: ../signup.php?error=stmtfailed");
+            exit();
+        }*/
+    return $entry; //Gibt Zeile des accounts mit übergebener email zurück
 }

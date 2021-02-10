@@ -240,6 +240,7 @@ nav a {
     /*    margin-left: auto;
         margin-right: auto;*/
     /*    margin-top: 30px;*/
+    z-index: -1;
     background: rgba(255, 255, 255, 0.92);
 }
 
@@ -492,6 +493,13 @@ ul li a:hover + .hidden, .hidden:hover {
     display: block;
 }
 
+/*---------------------- administration ------------------*/
+
+.changeDataForm label {
+    display: block;
+    margin-right: 20px;
+}
+
 
 /*------------------------ Responsive > 992 px ----------------------------*/
 
@@ -589,6 +597,7 @@ ul li a:hover + .hidden, .hidden:hover {
         margin-left: auto;
         margin-right: auto;
         margin-top: 30px;
+        z-index: -1;
     }
 
     header {
@@ -879,26 +888,39 @@ ul li a:hover + .hidden, .hidden:hover {
         text-align: justify;
     }
 
+
     #brandschutz {
         /*background: #FF8F8F;*/
-        background-image: url("../images/services/brandschutzBg.jpg");
-        background-repeat: no-repeat;
+        background-image: url("../images/services/backgrounds/brandschutz.png");
+        background-repeat: space;
         background-position: center;
-        border-color: #8E0000;
+        border:0;
+
+/*        border-color: #8E0000;*/
+
     }
 
     #waermeschutz {
-        background: #FFF6A6;
+/*        background: #FFF6A6;*/
+        background-image: url("../images/services/backgrounds/waermeschutz.png");
+        background-repeat: no-repeat;
+        background-position: center;
         border-color: #8E8900;
     }
 
     #tragwerkplanung {
-        background: #CCEBCF;
+/*        background: #CCEBCF;*/
+        background-image: url("../images/services/backgrounds/tragwerkplanung.png");
+        background-repeat: no-repeat;
+        background-position: center;
         border-color: #154300;
     }
 
     #eingabeplanung {
-        background: #E2F0FF;
+/*        background: #E2F0FF;*/
+        background-image: url("../images/services/backgrounds/eingabeplanung.png");
+        background-repeat: no-repeat;
+        background-position: center;
         border-color: #00418E;
     }
 
@@ -1056,19 +1078,22 @@ ul li a:hover + .hidden, .hidden:hover {
     }
 }
 /*---------------------------- ADMINISTRATION PAGE ---------------------------*/
-.adm_menu{
+#administration-wraper {
     display:flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-left: 2.5%;
     margin-right: 2.5%;
-    height:700px;
+    /*    height:700px;*/
     width: 95%;
 }
-.adm_menu h2{
-    padding-left: 30%;
-    padding-right: 30%;
+
+#administration-wraper h2 {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 20%;
 }
+
 .menubar {
     vertical-align:   top;
     flex-wrap: wrap;
@@ -1094,12 +1119,13 @@ ul li a:hover + .hidden, .hidden:hover {
     padding:          0;
     margin:           0.313em 0 0.313em 0;
     text-align:       justify;
+    list-style:       none;
 }
 .menubar a {
     text-decoration: none;
     color: #ffffff;
 }
-.adm_menu aside {
+#administration-wraper main {
     display:          flex;
     width:            80%;
     min-height: 70%;
