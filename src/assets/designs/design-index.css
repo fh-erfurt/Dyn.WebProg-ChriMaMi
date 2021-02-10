@@ -373,7 +373,7 @@ article {
 }
 
 #brandschutz {
-    background: #FF8F8F;
+/*    background: #FF8F8F;*/
     border-color: #8E0000;
 }
 
@@ -880,7 +880,10 @@ ul li a:hover + .hidden, .hidden:hover {
     }
 
     #brandschutz {
-        background: #FF8F8F;
+        /*background: #FF8F8F;*/
+        background-image: url("../images/services/brandschutzBg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
         border-color: #8E0000;
     }
 

@@ -34,7 +34,7 @@
                             echo '<li><label for="subToggle" class="navigation"><span>Administration</span></label>';
                             echo '<input class="subMenuToggle" type="checkbox" id="subToggle">';
                             echo '<ul class="subNavigation">';
-                                echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=pages&a=administration">Benutzerverwaltung</a>';
+                                echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=pages&a=administration">Verwaltung</a>';
                             echo '</ul></li>';
                             echo '</div>';
 
