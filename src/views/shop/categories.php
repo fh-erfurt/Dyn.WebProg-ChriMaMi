@@ -1,5 +1,5 @@
 <link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-products.css' ?>" rel="stylesheet">
-<link href="<?= ASSETSPATH.'javascripts'.DIRECTORY_SEPARATOR.'counterForShop.js' ?>" rel="function">
+<script src="<?= ASSETSPATH.'javascripts'.DIRECTORY_SEPARATOR.'counterForShop.js' ?>" type="text/javascript"></script>
 <div class="secondNavigation">
     <!--    <nav class="secondNavigation">>-->
     <? require_once SHAREDPATH.'subnav.php' ?>
@@ -54,12 +54,12 @@
             <p>Preis: <?=$product->std_price; ?>€</p>
         </div>
         <div class="counter">
-            <div class="box" id="leftBox"><a>-</a></div>
-            <div class="box" id="centerBox"><a>0</a></div>
-            <div class="box" id="rightBox"><a>+</a></div>
+            <div class="box" data-type="decrease" id="leftBox"><a>-</a></div>
+            <div class="box" data-type="amount"   id="centerBox"><a>0</a></div>
+            <div class="box" data-type="increase" id="rightBox"><a>+</a></div>
         </div>
         <div>
-            <button class="btn">Add to Cart</button>
+            <button class="btn" data-id="<?= $product->id ?>">Add to Cart</button>
         </div>
     </article>
     </div>
