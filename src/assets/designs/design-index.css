@@ -434,21 +434,26 @@ article {
     border: solid 0;
     border-radius: 10px;
 }
-
+#imprintTitle{
+    margin-left: 5%;
+    margin-right: 5%;
+}
 #address {
     line-height: 5px;
     font-size: 14px;
+    margin-left: 5%;
 
 }
 
 #imprintTable {
     display: flex;
     justify-content: flex-start;
-    width: 70%;
+    width: 90%;
     flex-direction: column;
     text-align: left;
     padding-top: 0;
     line-height: 17px;
+    margin-left: 5%;
 }
 
 #imprintTable .white {
@@ -492,6 +497,66 @@ ul li a:hover + .hidden, .hidden:hover {
     display: block;
 }
 
+/*------------------------ AboutUs Page ----------------------------*/
+
+.textWithPicture {
+    display: flex;
+}
+
+.textWithPicture img {
+    float: right;
+    width: 400px;
+    display: flex;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    padding-top: 19px;
+
+}
+
+.textWithPicture article {
+    display: inline-block;
+    text-align: justify;
+}
+
+.enumeration ul {
+    list-style-type: disc;
+}
+
+.enumeration li {
+    line-height: 25px;
+}
+
+.textbox {
+    width: 74%;
+    border-radius: 20px;
+    background: #cfcdcd;
+    border: 1px solid #949494;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.aboutUs {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#maintext {
+    text-align: justify;
+
+}
+
+.aboutUsImage img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.aboutUs h1 {
+    margin-bottom: 0;
+}
 
 /*------------------------ Responsive > 992 px ----------------------------*/
 
@@ -881,7 +946,7 @@ ul li a:hover + .hidden, .hidden:hover {
 
     #brandschutz {
         /*background: #FF8F8F;*/
-        background-image: url("../images/services/brandschutzBg.jpg");
+        background-image: url("../images/services/brandschutz3.jpg");
         background-repeat: no-repeat;
         background-position: center;
         border-color: #8E0000;
@@ -927,7 +992,7 @@ ul li a:hover + .hidden, .hidden:hover {
         float: right;
     }
 
-    /*    !* ------------------------------ IMPRINT ------------------------------- *!
+    /*------------------------------ IMPRINT ------------------------------- *!
         #imprintImage {
             display: flex;
             margin-top: 20px;
@@ -996,64 +1061,11 @@ ul li a:hover + .hidden, .hidden:hover {
         }
         */
     /*---------------------------- ABOUTUS PAGE ---------------------------*/
-    .textWithPicture {
-        display: flex;
-    }
-
-    .textWithPicture img {
-        float: right;
-        width: 400px;
-        display: flex;
-        margin-left: 15px;
-        margin-bottom: 20px;
-        padding-top: 19px;
-
-    }
-
-    .textWithPicture article {
-        display: inline-block;
-        text-align: justify;
-    }
-
-    .enumeration ul {
-        list-style-type: disc;
-    }
-
-    .enumeration li {
-        line-height: 25px;
-    }
-
-    .textbox {
-        width: 60%;
-        border-radius: 20px;
-        background: #cfcdcd;
-        border: 1px solid #949494;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
 
     .aboutUs {
-        display: flex;
-        width: 70%;
-        flex-direction: column;
-        justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
+        min-width: 700px;
     }
 
-    #maintext {
-        text-align: justify;
-
-    }
-
-    .aboutUsImage img {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .aboutUs h1 {
-        margin-bottom: 0;
-    }
 }
 /*---------------------------- ADMINISTRATION PAGE ---------------------------*/
 .adm_menu{
