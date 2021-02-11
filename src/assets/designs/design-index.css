@@ -32,7 +32,7 @@
 
 header {
     height: var(--headsize);
-    font-size: 24px;
+    font-size: 22px;
 }
 
 body {
@@ -214,7 +214,7 @@ nav a {
 }
 
 #sek-headcontent {
-    margin-left: 70px;
+    margin-left: 57px;
 }
 
 #sek-headcontent h1 {
@@ -518,7 +518,7 @@ ul li a:hover + .hidden, .hidden:hover {
         display: inline-flex;
         width: inherit;
         height: inherit;
-        font-size: inherit;
+        font-size: 20px;
         color: #414141;
         background: inherit;
 
@@ -529,7 +529,7 @@ ul li a:hover + .hidden, .hidden:hover {
         position: relative;
         display: inline-flex;
         color: #414141;
-        font-size: inherit;
+        font-size: 20px;
     }
 
 
@@ -592,11 +592,11 @@ ul li a:hover + .hidden, .hidden:hover {
     }
 
     #content-wrap {
-        padding: 15px 200px 300px;
+        padding: 15px 150px 300px;
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 30px;
+        margin-top: 0;
         z-index: -1;
     }
 
@@ -646,7 +646,7 @@ ul li a:hover + .hidden, .hidden:hover {
     nav .navigation {
         display: flex;
         align-items: center;
-        margin: 10px 0 15px -100px;
+        margin: 10px 0 15px -15px;
     }
 
     nav .navigation .logo {
@@ -664,7 +664,7 @@ ul li a:hover + .hidden, .hidden:hover {
         border-bottom-right-radius: 4px;
         background-size: 0 0;
         color: #414141;
-        font-size: 24px;
+        font-size: 20px;
         margin: 0 0;
         padding: 0 15px;
         text-decoration: none;
@@ -799,27 +799,27 @@ ul li a:hover + .hidden, .hidden:hover {
     }
 
     #sek-head-logo img {
-        width: 230px;
-        padding: 15px 0 25px 50px;
+        width: 185px;
+        padding: 15px 0 15px 24px;
         grid-area: logo;
     }
 
     #sek-headcontent {
-        margin-left: 70px;
+        margin-left: 57px;
         grid-area: content;
     }
 
     #sek-headcontent h1 {
         margin-top: 15px;
         margin-bottom: 7px;
-        font-size: 40px !important;
+        font-size: 30px !important;
     }
 
     #sek-headcontent h2 {
         margin-top: 7px;
         margin-bottom: 7px;
         margin-left: 0;
-        font-size: 30px;
+        font-size: 20px;
     }
 
     #sek-nav-container {
@@ -895,6 +895,8 @@ ul li a:hover + .hidden, .hidden:hover {
         background-repeat: space;
         background-position: center;
         border:0;
+        overflow-x: visible;
+        overflow: visible;
 
 /*        border-color: #8E0000;*/
 
