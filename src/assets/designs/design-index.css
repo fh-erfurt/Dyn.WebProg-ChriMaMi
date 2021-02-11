@@ -38,7 +38,7 @@ header {
 body {
     margin: unset;
     padding: unset;
-    font-family: "Roboto";
+    font-family: 'Raleway', sans-serif;
     background-image: url("../images/background.jpg");
     background-size: 100%;
     background-attachment: fixed;
@@ -76,13 +76,12 @@ nav ul li {
     border-color: #FFFFFF;
 
     text-align: center;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 
 }
 
 nav a {
-/*    font-family: Roboto;*/
     font-size: 21px;
     color: #FFFFFF;
     text-decoration: none;
@@ -219,6 +218,7 @@ nav a {
 
 #sek-headcontent h1 {
     font-size: 20px;
+    font-family: 'ubunturegular';
     margin-top: 30px;
     margin-bottom: 7px;
 }
@@ -226,6 +226,7 @@ nav a {
 #sek-headcontent h2 {
     display: flex;
     font-size: 24px;
+    font-family: 'ubuntuitalic';
     margin-left: 20px;
     margin-top: 0;
 }
@@ -549,7 +550,7 @@ ul li a:hover + .hidden, .hidden:hover {
     .subNavigation {
         display: none;
         position: absolute;
-        top: 53px;
+        top: 40px;
         flex-direction: row;
     }
 
@@ -573,9 +574,9 @@ ul li a:hover + .hidden, .hidden:hover {
     body {
         margin: unset;
         padding: unset;
-/*        font-family: "Roboto";*/
         background-image: url("../images/background.jpg");
         background-size: 100%;
+        background-repeat: no-repeat;
         background-attachment: fixed;
     }
 
@@ -810,7 +811,7 @@ ul li a:hover + .hidden, .hidden:hover {
     }
 
     #sek-headcontent h1 {
-        margin-top: 15px;
+        margin-top: 21px;
         margin-bottom: 7px;
         font-size: 30px !important;
     }
@@ -886,6 +887,7 @@ ul li a:hover + .hidden, .hidden:hover {
     article {
         display: inline-block;
         text-align: justify;
+        font-family: 'vollkornitalic';
     }
 
 
