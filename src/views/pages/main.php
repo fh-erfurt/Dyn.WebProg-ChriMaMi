@@ -1,6 +1,14 @@
 <link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-index.css' ?>" rel="stylesheet">
 <section id="mainImage">
-<img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'landing_text.png'?>" alt="photo of a tower under construction">
+    <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'landing2.jpg'?>" alt="photo of a tower under construction">
+    <div id="mainPicOverlay">
+        <div class="welcome_text"><h1>Willkommen</h1>
+            <p>informieren Sie sich über unser breit gefächertes Angebot und
+                <a href="#" id="contact">kontaktieren</a> Sie uns gerne bei Fragen, wir freuen uns, Sie beraten zu dürfen.</p></div>
+        <div id="welcome_sign">Ihr Ingenieurbüro Horsch
+            <p> <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'sign.png'?>" alt="handwritten sign"></p>
+        </div>
+    </div>
 </section>
 <div class="allArticles">
 <section class="mainArticle picFloatLeft" id="brandschutz">
@@ -35,20 +43,26 @@
 </div>
 <section>
     <div id="certifications">
-        <div class="certification">
+        <div class="certification" id="cert">
             <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'certifications'. DIRECTORY_SEPARATOR.'cert_firesafety.jpg' ?>">
         </div>
-        <div class="certification">
+        <div class="certification" id="cert">
             <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'certifications'. DIRECTORY_SEPARATOR.'cert_processing.jpg' ?>">
         </div>
-        <div class="certification">
+        <div class="certification" id="cert">
             <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'certifications'. DIRECTORY_SEPARATOR.'cert_renovation.jpg' ?>">
         </div>
-        <div class="certification">
+        <div class="certification" id="cert">
             <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'certifications'. DIRECTORY_SEPARATOR.'cert_safety.jpg' ?>">
         </div>
-        <div class="certification">
+        <div class="certification" id="cert">
             <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'certifications'. DIRECTORY_SEPARATOR.'cert_sustainability.jpg' ?>">
         </div>
     </div>
 </section>
+
+<script>
+    function throwAlert() {alert("Suprise!! This link is under construction!")};
+    var articles = document.getElementById("contact");
+    articles.addEventListener("click", throwAlert);
+</script>

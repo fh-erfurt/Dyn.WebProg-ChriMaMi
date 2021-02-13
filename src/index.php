@@ -155,20 +155,10 @@ if (file_exists(CONTROLLERSPATH . $controllerName . 'Controller.php')) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>IB-Patrick Horsch</title>
-        <link href="<?= ASSETSPATH . 'roboto' . DIRECTORY_SEPARATOR . 'font.css' ?>" rel="stylesheet">
-        <link href="<?= ASSETSPATH . 'merriweather' . DIRECTORY_SEPARATOR . 'stylesheet.css' ?>" rel="stylesheet">
-        <link href="<?= ASSETSPATH . 'neuton' . DIRECTORY_SEPARATOR . 'stylesheet.css' ?>" rel="stylesheet">
-        <link href="<?= ASSETSPATH . 'nixie_one' . DIRECTORY_SEPARATOR . 'stylesheet.css' ?>" rel="stylesheet">
+
         <link href="<?= ASSETSPATH . 'ubuntu' . DIRECTORY_SEPARATOR . 'stylesheet.css' ?>" rel="stylesheet">
         <link href="<?= ASSETSPATH . 'vollkorn' . DIRECTORY_SEPARATOR . 'stylesheet.css' ?>" rel="stylesheet">
-        <link href="<?= ASSETSPATH . 'abril_fatface' . DIRECTORY_SEPARATOR . 'stylesheet.css' ?>" rel="stylesheet">
-        <link href="<?= ASSETSPATH . 'exo2' . DIRECTORY_SEPARATOR . 'stylesheet.css' ?>" rel="stylesheet">
         <link href="<?= ASSETSPATH . 'designs' . DIRECTORY_SEPARATOR . 'design-index.css' ?>" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;500;600;700&family=Raleway:wght@300&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
