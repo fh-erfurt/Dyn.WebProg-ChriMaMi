@@ -1,6 +1,6 @@
 <link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-index.css' ?>" rel="stylesheet">
 <section id="mainImage">
-    <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'landing_text.png'?>" alt="photo of a tower under construction">
+<img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'landing_text.png'?>" alt="photo of a tower under construction">
 </section>
 <div class="allArticles">
 <section class="mainArticle picFloatLeft" id="brandschutz">
@@ -20,7 +20,7 @@
     </section>
 <section class="mainArticle picFloatLeft" id="tragwerkplanung" alt="Tragwerkplanung">
     <article>
-        <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'tragwerkplanung.jpg' ?>">
+        <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'services'. DIRECTORY_SEPARATOR.'tragwerkplanung1.jpg' ?>">
         <h2>Tragwerkplanung</h2>
         Der Tragwerksplaner (umgangssprachlich auch Statiker) entwirft das Tragwerk von Gebäuden, Ingenieurbauwerken und anderen baulichen Anlagen. Er gehört zu den Projektanten eines Bauvorhabens. Meist erstellt er den nach dem Bauordnungsrecht erforderlichen Standsicherheitsnachweis. Grundlage seiner statischen Berechnungen sind Last- und Tragfähigkeitsannahmen sowie Berechnungsmodelle.
     </article>

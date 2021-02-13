@@ -1,4 +1,4 @@
-<link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-products.css' ?>" rel="stylesheet">
+<link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-index.css' ?>" rel="stylesheet">
 
 <section class="newsContent">
     <article>

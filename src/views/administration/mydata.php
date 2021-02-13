@@ -9,38 +9,34 @@
 
     <main>
         <section>
-            <div class="dataFormLeft"
-            <li><label for="firstname"> Vorname:
+            <label for="firstname"> Vorname:</label>
                     <input type="text" name="firstname" id="firstname" value='<? echo $customer->firstname ?>'>
-                </label>
-                <label for="lastname"> Nachname:
+
+                <label for="lastname"> Nachname:</label>
                     <input type="text" name="lastname" id="lastname" value='<? echo $customer->lastname ?>'>
-                </label>
-            </li>
-            <li>
-                <label for="city"> email:
+
+
+                <label for="city"> email:</label>
                     <input type="text" name="email" id="email" style="width: 200px"
                            value='<? echo $_SESSION['email'] ?>'>
-                </label>
-            </li>
-            <label for="phone"> Telefonnummer:
+
+            <label for="phone"> Telefonnummer: </label>
                 <input type="text" name="phone" id="phone" value='<? echo $customer->phone ?>'>
-            </label>
-            <label for="street"> Straße:
-                <input type="text" name="street" id="street" value='<? echo $address->street ?>'>
-            </label>
-            <label for="house_number"> Nummer:
+
+                    <label for="street"> Straße: </label>
+                        <input type="text" name="street" id="street" value='<? echo $address->street ?>'>
+
+
+            <label for="house_number"> Nummer:</label>
                 <input type="text" name="house_number" id="house_number" value='<? echo $address->house_number ?>'>
-            </label>
-            <label for="city"> Stadt:
+
+            <label for="city"> Stadt:</label>
                 <input type="text" name="city" id="city" value='<? echo $address->city ?>'>
-            </label>
-            <label for="zip"> zip:
+
+            <label for="zip"> zip:</label>
                 <input type="text" name="zip" id="zip" value='<? echo $address->zip ?>'>
-            </label>
             </form>
-
-
+        <p>
             <button class="btn" type="submit" name="override" value="input_changeAccountDetails">Änderungen
                 übernemen
             </button>
@@ -48,6 +44,7 @@
                 anfordern
             </button>
             <button class="btn" type="submit" name="delete" value="input_deleteAccount">Account löschen</button>
+        </p>
         </section>
     </main>
 </div>
