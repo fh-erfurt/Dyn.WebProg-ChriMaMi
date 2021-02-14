@@ -25,6 +25,10 @@
                     info@patrick-horsch.de
                 </li>
             </ul>
+            <ul id="impres">
+                <li><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'impres.png' ?>"/></li>
+                <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=imprint">Zum Impressum</a></li>
+            </ul>
         </div>
         <div class="right">
             <ul>

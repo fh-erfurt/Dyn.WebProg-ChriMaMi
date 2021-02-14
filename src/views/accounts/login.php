@@ -17,7 +17,6 @@
     <input id="rememberMe" name="rememberMe" type="checkbox">
     <?= isset($_POST['rememberMe']) ? 'checked' : '' ?>
     <label for="rememberMe">Angemeldet bleiben?</label>
-            <!--    <a href="./signup.html">Noch kein Konto?</a>-->
     </span>
         <a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=accounts&a=signup">Noch kein Konto?</a>
     </form>
