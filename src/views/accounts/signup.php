@@ -1,6 +1,6 @@
 <link href="<?= ASSETSPATH . 'designs' . DIRECTORY_SEPARATOR . 'design-login.css' ?>" rel="stylesheet">
 <div class="headspace">
-    <form action="index.php?c=pages&a=redirecttimeout" method="post" class="registration_window" ;>
+    <form action="" method="post" class="registration_window";>
         <div class="title"><h2>Registration</h2></div>
         <div id="personalSection">
             <label style="padding-bottom: 10px" for="gender">Geschlecht:
@@ -62,8 +62,17 @@
                        autocomplete="on" required>
             </label>
             <div id="submitSection" style="margin-top: 21px">
-                <input type="submit" class="submit_button" name="signUp" value="registrieren">
+                <input id="submitLogin" type="submit" class="submit_button" name="signUp" value="registrieren">
             </div>
         </div>
     </form>
 </div>
+<!--
+<script>
+    var refRedirect = document.getElementById("submitLogin");
+    refRedirect.addEventListener("submit", redirectTimeOut);
+    function redirectTimeOut () {
+        window.open("index.php?c=pages&a=redirecttimeout");
+        alert("huhu");
+    }
+</script>-->
