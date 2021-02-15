@@ -100,13 +100,6 @@ class AccountsController extends \dwp\core\Controller
             }
             $values['id'] = $customer->id;
         }
-
-        //echo '<pre>', var_dump($_POST), '</pre>';
-
-        //$address = \dwp\model\Address::findOne("street=".$db->quote($street)." AND houseNumber=".$db->quote($houseNumber). " AND city=".$db->quote($city)." AND zip=".$db->quote($zip));
-        //echo '<pre>', var_dump($account), '</pre>';
-        //echo '<pre>', var_dump($address), '</pre>';
-
     }
 
     public function actionLogin()
@@ -123,14 +116,10 @@ class AccountsController extends \dwp\core\Controller
 
             require_once COREPATH . 'functionsLogin.php';
 
-            // TODO: Validate input first
-
             if (emptyInputLogin($email, $password) !== false) {
-                header("Location: index.php?c=errors&a=errorLogin&error=emptyInput");
-                exit();
+                redirect("index.php?c=errors&a=errorLogin&error=emptyInput");
             }
-            // TODO: Check login values with database accounts
-            loginUser($errMsg,$email, $password);
+            loginUser($errMsg, $email, $password);
         }
     }
 

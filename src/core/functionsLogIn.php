@@ -57,10 +57,8 @@ function loginUser(&$errorMsg,$email, $password)
         $_SESSION['isAdmin'] = $isAdmin;
 
         header("Location: index.php?c=pages&a=main");
-
     }
 }
-
 ?>
 
 
