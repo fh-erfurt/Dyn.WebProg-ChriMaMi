@@ -51,8 +51,7 @@ class PagesController extends \dwp\core\Controller
 
     public function actionSignup()
     {
-        /*        echo "<pre>", var_dump($_POST), "</pre>";
-                $this->setParam("register_firstname", $_POST["register_firstname"]);*/
+
     }
 
 

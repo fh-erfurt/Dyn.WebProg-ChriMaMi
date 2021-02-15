@@ -46,10 +46,10 @@ class ErrorsController extends \dwp\core\Controller
                 case 'emptyinput':
                     $errorLoginMessage = "Please input username and password!";
                     break;
-                case 'stmtfailed':
+                case 'stmtFailed':
                     $errorLoginMessage = "Wrong email or password!";
                     break;
-                case 'accfailed':
+                case 'accFailed':
                     $errorLoginMessage = "No user found! Please sign up!";
             }
         }
