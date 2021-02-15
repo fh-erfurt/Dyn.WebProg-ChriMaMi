@@ -28,7 +28,7 @@ body
     flex-direction: column;
     display: flex;
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 3px;
     border-bottom: 5px var(--headcolor) solid;
     box-sizing: border-box;
     filter: drop-shadow(0px 0px 10px #C4C4C4);
@@ -118,9 +118,11 @@ body
 }
 
 .login_window a {
-    /*    text-decoration: none;*/
+    font-size: 14px !important;
+    text-decoration: none;
     color: var(--headcolor);
 }
+
 
 .submit_button
 {

@@ -4,9 +4,6 @@
     <!--    <nav class="secondNavigation">>-->
     <? require_once SHAREDPATH.'subnav.php' ?>
 </div>
-<section>
-    <h1>Filterung nach Kategorien</h1>
-</section>
 <div class="categories">
     <form method="get">
         <input type="hidden" name="c" value="shop" />

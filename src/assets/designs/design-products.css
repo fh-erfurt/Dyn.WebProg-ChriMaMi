@@ -75,16 +75,18 @@
     flex-direction:     row;
     align-items:        stretch;
     flex-wrap:          wrap;
-    background-color:   #1960B8;
-    opacity:            0.7;
+/*    background-color:   #1960B8;
+    opacity:            0.7;*/
+    background: linear-gradient(rgba(179, 179, 179, 0.51), rgba(255, 255, 255, 0));
 }
+
 .item {
-    border:             0.02em solid ;      /*3px*/
+    border-bottom:      4px var(--headcolor) solid;
     margin:             0.625em;              /*10px*/
     padding:            0.75em;               /*12px*/
     width:              21.875em;             /*350px*/
     height:             auto;
-    border-radius:      0;              /*10px*/
+    border-radius:      2px;              /*10px*/
     background-color:   #FFFFFF;
 
 }
@@ -99,7 +101,7 @@
     float:              right;
 }
 .item .btn {
-    background:         #04c15b;
+    background:         #5cca8e;
     color:              #fff;
     float:              right;
     font-size:          inherit;
@@ -127,14 +129,17 @@
 
 .categories {
     display:            flex;
-    justify-content:    flex-start;
+    justify-content:    center;
     flex-wrap:          wrap;
     flex-direction:     row;
+    padding-top:        8px;
+    background-color:   #cacaca;
 
 }
 .categories form {
     display:            flex;
     flex-wrap:          wrap;
+    justify-content:    center;
 }
 .categories .btn {
     cursor:             pointer;
@@ -203,12 +208,10 @@
     text-align:         justify;
 }
 .cartDisplay {
-    background: rgba(25, 96, 184, 0.98);
-    opacity:            70%;
+    background: linear-gradient(rgba(179, 179, 179, 0.51), rgba(255, 255, 255, 0));
     display:            block;
-    width:              95%;
-    margin:             1.25em auto;
-    padding:            1.875em;
+    width:              94%;
+    padding:            3%;
 }
 .cartDisplay article {
     display:            inline-block;
@@ -217,6 +220,7 @@
     vertical-align:     top;
     margin:             0;
     text-align:         center;
+    border-bottom:      4px var(--headcolor) solid;
 }
 .cartDisplay aside {
     display:            inline-block;
@@ -226,8 +230,9 @@
     vertical-align:     top;
 }
 .cartDisplay aside section {
-    margin-bottom:      1.563em;
+    padding-bottom:     20px;
     background:         #FFFFFF;
+    border-bottom:      4px var(--headcolor) solid;
 }
 .cartDisplay article h2 {
     padding:            0.5em 0 0 1.8em;

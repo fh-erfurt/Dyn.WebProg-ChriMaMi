@@ -209,7 +209,6 @@ class AccountsController extends \dwp\core\Controller
 
     public function actionLogout()
     {
-        header("Location: index.php?c=pages&a=main");
         session_destroy();
     }
 }
