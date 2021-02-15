@@ -1109,14 +1109,14 @@ ul li a:hover + .hidden, .hidden:hover {
     }
 
     .welcome_text {
-        width: 280px;
+        width: 260px;
         line-height: 1.875em;
         color: white;
         font-size: 14px;
         position: absolute;
         overflow: hidden;
-        bottom: 35px;
-        right: -111px;
+        bottom: 15px;
+        right: -100px;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         text-align: right;
@@ -1137,7 +1137,7 @@ ul li a:hover + .hidden, .hidden:hover {
     position: absolute;
     font-family: 'Raleway', sans-serif;
     color: #dbdbdb;
-    bottom: 5px;
+    bottom: 10px;
     right: 30px;
     font-size: 14px;
 }
@@ -1154,13 +1154,14 @@ ul li a:hover + .hidden, .hidden:hover {
         width: 300px;
         line-height: 25px;
         font-size: 16px;
-        bottom: 65px;
+        bottom: 34px;
         right: -121px;
     }
 
     #welcome_sign {
         font-size: 16px;
     !important;
+        bottom: 16px;
     }
 
     #welcome_sign img {
@@ -1170,7 +1171,7 @@ ul li a:hover + .hidden, .hidden:hover {
 
 @media screen and (min-width: 1130px) {
     .welcome_text {
-        bottom: 80px;
+        bottom: 44px;
     }
 }
 
@@ -1179,7 +1180,7 @@ ul li a:hover + .hidden, .hidden:hover {
         max-width: 400px;
         line-height: 25px;
         font-size: 16px;
-        bottom: 86px;
+        bottom: 54px;
         right: -102px;
     }
 
@@ -1187,6 +1188,7 @@ ul li a:hover + .hidden, .hidden:hover {
         font-size: 16px;
     !important;
         right: 48px;
+        bottom: 38px;
     }
 
     #welcome_sign img {
@@ -1198,70 +1200,68 @@ ul li a:hover + .hidden, .hidden:hover {
 
 @media screen and (min-width: 1200px) {
     .welcome_text {
-        bottom: 100px;
+        bottom: 70px;
         right: -93px;
     }
 
     #welcome_sign {
         right: 58px;
+        bottom: 50px;
     }
 }
 
+
 @media screen and (min-width: 1245px) {
     .welcome_text {
-        bottom: 126px;
+        bottom: 95px;
         right: -86px;
     }
 
     #welcome_sign {
-        right: 63px;
-    }
-}
-
-@media screen and (min-width: 1245px) {
-    .welcome_text {
-        bottom: 126px;
-        right: -86px;
-    }
-
-    #welcome_sign {
-        right: 63px;
+        right: 64px;
+        bottom: 60px
     }
 }
 
 @media screen and (min-width: 1320px) {
     .welcome_text {
-        bottom: 142px;
-        right: -62px;
+        bottom: 121px;
+        right: -70px;
     }
 
     #welcome_sign {
-        right: 88px;
-        bottom: 50px;
+        right: 81px;
+        bottom: 56px;
     }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1390px) {
     .welcome_text {
-        bottom: 165px;
-        right: -40px;
+        bottom: 149px;
+        right: -104px;
+        font-size: 17px;
+        width: 368px;
     }
 
     #welcome_sign {
-        right: 110px;
-        bottom: 91px;
+        right: 80px;
+        bottom: 107px;
+        font-size: 17px;
     }
 }
 
 @media screen and (min-width: 1480px) {
     .welcome_text {
-        bottom: 188px;
-        right: -40px;
+        bottom: 195px;
+        right: -111px;
+        font-size: 17px;
+        width: 383px;
     }
 
     #welcome_sign {
-        right: 110px;
-        bottom: 107px;
+        right: 80px;
+        bottom: 127px;
+        font-size: 17px;
     }
 }
 
