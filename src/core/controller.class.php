@@ -19,8 +19,8 @@ class Controller
 
     public function __construct($controller, $action)
     {
-        $this->controller = $controller; // errors
-        $this->action = $action; // error404
+        $this->controller = $controller;
+        $this->action = $action;
 
         if($this->loggedIn())
         {
@@ -50,8 +50,7 @@ class Controller
         if(!file_exists($viewPath))
         {
             // redirect to error page 404 because not found
-            header('Location: index.php?c=errors&a=error404&error=viewpath');
-            exit(0);
+            redirect('index.php?c=errors&a=error404&error=viewpath');
         }
 
         // extract the params array to get all needed variables for the views
