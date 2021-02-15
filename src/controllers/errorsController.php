@@ -43,13 +43,13 @@ class ErrorsController extends \dwp\core\Controller
         {
             switch ($_GET['error'])
             {
-                case 'emptyInput':
+                case 'emptyinput':
                     $errorLoginMessage = "Please input username and password!";
                     break;
-                case 'stmtFailed':
+                case 'stmtfailed':
                     $errorLoginMessage = "Wrong email or password!";
                     break;
-                case 'accFailed':
+                case 'accfailed':
                     $errorLoginMessage = "No user found! Please sign up!";
             }
         }

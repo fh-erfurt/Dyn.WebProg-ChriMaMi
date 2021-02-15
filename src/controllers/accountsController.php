@@ -22,7 +22,7 @@ class AccountsController extends \dwp\core\Controller
         'gender'         => isset($_POST['gender']) ? $_POST['gender'] : "",
         'firstname'      => isset($_POST['firstname']) ? $_POST['firstname'] : "",
         'lastname'       => isset($_POST['lastname']) ? $_POST['lastname'] : "",
-        'email'          => isset($_POST['email']) ? $_POST['email'] : "",
+        'email'           => isset($_POST['email']) ? $_POST['email'] : "",
         'birthday'       => isset($_POST['birthday']) ? $_POST['birthday'] : "",
         'street'         => isset($_POST['street']) ? $_POST['street'] : "",
         'houseNumber'    => isset($_POST['houseNumber']) ? $_POST['houseNumber'] : "",
@@ -36,16 +36,16 @@ class AccountsController extends \dwp\core\Controller
         $db = $GLOBALS['db'];
 
 
-        $allRequiredValuesSet = true;
+        $allRequiredValuesSet = TRUE;
         foreach ($values as $key => $value)
         {
             if($value === "")
             {
-                $allRequiredValuesSet = false;
+                $allRequiredValuesSet = FALSE;
             }
         }
 
-        if($allRequiredValuesSet === true)
+        if($allRequiredValuesSet === TRUE)
         {
             $account = Accounts::findOne("email=".$db->quote($values['email']));
             if (!isset($account))
@@ -59,9 +59,9 @@ class AccountsController extends \dwp\core\Controller
             }
             else
             {
-                echo '<script type="text/javascript"> alert("Account mit dieser Emailadresse existiert bereits!!!"); </script>';
+                echo 'Account mit dieser Emailadresse existiert bereits!!!';
             }
-            $values['accounts_id'] = $account->id;
+            $values['accounts_id'] = $account->__get('id');
 
             $address = Addresses::findOne("street=".$db->quote($values['street'])
                                             ." AND house_number=".$db->quote($values['houseNumber'])
@@ -78,7 +78,7 @@ class AccountsController extends \dwp\core\Controller
                 $address = new Addresses($addressData);
                 $address->insert();
             }
-            $values['addresses_id'] = $address->id;
+            $values['addresses_id'] = $address->__get('id');
 
            $customer = Customers::findOne("firstname=".$db->quote($values['firstname'])
                                                 ." AND lastname=".$db->quote($values['lastname'])
@@ -98,12 +98,63 @@ class AccountsController extends \dwp\core\Controller
                 $customer = new Customers($customerData);
                 $customer->insert();
             }
-            $values['id'] = $customer->id;
+            $values['id'] = $customer->__get('id');
         }
+
+        //echo '<pre>', var_dump($_POST), '</pre>';
+
+        //$address = \dwp\model\Address::findOne("street=".$db->quote($street)." AND houseNumber=".$db->quote($houseNumber). " AND city=".$db->quote($city)." AND zip=".$db->quote($zip));
+        //echo '<pre>', var_dump($account), '</pre>';
+        //echo '<pre>', var_dump($address), '</pre>';
+
     }
 
-    public function actionLogin()
+    /*public function actionLogin()
+    {*/
+       /* // store error message
+        $errMsg = null;
+
+        // retrieve inputs
+        $username = isset($_POST['username']) ? $_POST['username'] : '';
+        $password = isset($_POST['password']) ? $_POST['password'] : '';
+
+        // check user send login field
+        if(isset($_POST['submit']))
         {
+
+            // TODO: Validate input first
+            // TODO: Check login values with database accounts
+            // TODO: Store useful variables into the session like accounts and also set loggedIn = true
+            $db = $GLOBALS['db'];
+
+            $login = \dwp\model\Login::findOne('username = '.$db->quote($username));
+
+            if($login !== null && password_verify($password, $login->passwordHash))
+            {
+                echo "login success";
+            }
+            else
+            {
+                $errMsg = 'Nutzer oder Passwort nicht korrekt.';
+            }
+
+            // if there is no error reset mail
+            if($errMsg === null)
+            {
+                $username = '';
+            }
+
+        }
+
+        // set param email to prefill login input field
+        $this->setParam('username', $username);
+        $this->setParam('errMsg', $errMsg);
+        $this->setParam('test', 'Hello World!');
+    }*/
+
+        public function actionLogin()
+    {
+
         // store error message
         $errMsg = null;
 
@@ -116,12 +167,45 @@ class AccountsController extends \dwp\core\Controller
 
             require_once COREPATH . 'functionsLogin.php';
 
+            // TODO: Validate input first
+
             if (emptyInputLogin($email, $password) !== false) {
-                redirect("index.php?c=errors&a=errorLogin&error=emptyInput");
+                header("Location: index.php?c=accounts&a=login.php?error=emptyinput");
+                $errMsg = "Please input username and password";
+                exit();
             }
-            loginUser($errMsg, $email, $password);
+            // TODO: Check login values with database accounts
+            loginUser($errMsg,$email, $password);
         }
     }
+
+    /*    public function actionSignup()
+        {
+            // store error message
+            $errMsg = null;
+
+            // TODO: Handle Inputfields for accounts
+
+            // check user send login field
+            if(isset($_POST['submit']))
+            {
+
+                // TODO: Validate and create accounts in database if possible
+
+
+                // if there is no error reset mail
+                if($errMsg === null)
+                {
+                    // TODO: Redirect to login
+                }
+
+            }
+
+            $this->setParam('errMsg', $errMsg);
+
+            // TODO: Set params for accounts
+
+        }*/
 
     public function actionLogout()
     {

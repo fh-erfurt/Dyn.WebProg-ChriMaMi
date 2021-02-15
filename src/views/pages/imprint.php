@@ -2,8 +2,10 @@
 <section id="imprintImage">
     <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR .'imprint_picture2.png' ?>" alt="photo of a museum upside down">
 </section>
-<section id="imprintTitle">
+<section>
     <h1>Impressum </h1> <hr/>
+</section>
+<section>
     <h3>Angaben gemäß § 5 TMG: </h3>
 </section>
 <section id="address">
