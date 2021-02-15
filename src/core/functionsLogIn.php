@@ -89,35 +89,25 @@ use dwp\model\Administrators as Administrators;
 function getAccount($email)
 {
     $db = $GLOBALS['db'];
-/*    $sql = "email=" . $db->quote($email);*/
     $sql = "email=" . $db->quote($email);
     $entry = Accounts::findOne($sql);
-/*    $id = $entry->id;
-    echo $id;*/
 
     if (!isset($entry)) {
-    header("Location: ../signup.php?error=stmtfailed");
-    exit();
+        redirect("index.php?c=errors&a=errorLogin&error=stmtFailed");
     }
-    return $entry; //Gibt Zeile des accounts mit übergebener email zurück
+    return $entry;
 }
 
 function isAdmin($account){
     $db = $GLOBALS['db'];
-/*    $admin = false;*/
     $userId = $account->id;
-/*    echo $userId; //Aproved!*/
     $sql = "accounts_id=". $db->quote($userId);
     $adminId = Administrators::findOne($sql);
-/*    echo $adminId->accounts_id;
-    echo $userId;*/
     if(isset($adminId)){
         if($userId === $adminId->accounts_id) {
-/*            echo "User ist Admin";*/
             return true;
         }
     } else {
-/*        echo "User ist kein fucking Admin";*/
         return false;
     }
 }
@@ -138,28 +128,23 @@ function loginUser(&$errorMsg,$email, $password)
     $isAdmin = isAdmin($account);
 
     if ($account === false) {
-        header("Location: index.php?c=accounts&a=login.php?error=accfailed");
-        exit();
+        redirect("index.php?c=errors&a=errorLogin&error=accFailed");
     }
     $password_hashed = $account->password_hash;
 
     $checkPassword = password_verify($password, $password_hashed);
     if ($checkPassword === false) {
-        header("Location: index.php?c=accounts&a=login.php?error=stmtfailed");
+        redirect("index.php?c=errors&a=errorLogin&error=stmtFailed");
         $errorMsg = "Wrong email or password";
 
     } else if ($checkPassword === true) {
         $_SESSION['id'] = $account->id;
-        $_SESSION['email'] = $account->email; /*__get('email')*/
+        $_SESSION['email'] = $account->email;
         $_SESSION['isAdmin'] = $isAdmin;
 
-/*        echo $checkPassword;*/
-/*        var_dump($_SESSION);*/
         header("Location: index.php?c=pages&a=main");
-
     }
 }
-
 ?>
 
 
