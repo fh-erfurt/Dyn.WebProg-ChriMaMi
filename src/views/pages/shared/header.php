@@ -6,8 +6,10 @@
             </a>
         </div>
         <div id="sek-headcontent">
+            <a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=main">
             <h1>Ingenieurbüro</h1>
             <h2>Patrick Horsch</h2>
+            </a>
             <nav>
                <!--Only for Mobile Version-->
                 <input class="menuToggle" type="checkbox" id="toggle">
