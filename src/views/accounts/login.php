@@ -5,7 +5,7 @@
         <h1>Login</h1>
         <label for="email_username">Email oder Benutzername<br>
             <input class="form_col_space" id="email_username" name="email"
-                   value="<?= $email ?>"
+                   value="<?= htmlspecialchars($email) ?>"
                    placeholder="ihre@mail.de"
                    type="text" required>
         </label>
