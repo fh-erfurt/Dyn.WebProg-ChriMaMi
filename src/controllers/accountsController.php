@@ -125,9 +125,8 @@ class AccountsController extends \dwp\core\Controller
 
             require_once COREPATH . 'functionsLogin.php';
 
-            if (emptyInputLogin($email, $password) !== false) {
-                header("Location: index.php?c=error&a=errorLogin&error=emptyInput");
-                exit();
+            if (emptyInputLogin($email, $password)) {
+                header("Location: index.php?c=accounts&a=login&e=invalid");
             }
             loginUser($email, $password);
         }
