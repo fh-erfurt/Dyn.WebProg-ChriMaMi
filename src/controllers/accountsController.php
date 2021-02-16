@@ -115,21 +115,30 @@ class AccountsController extends \dwp\core\Controller
 
         // store error message
         $errMsg = null;
+        $email = $_POST['email'] ?? '';
 
         // check user send login field
         if (isset($_POST['submit_login'])) {
 
             // retrieve( inputs
-            $email = isset($_POST['email']) ? $_POST['email'] : '';
             $password = isset($_POST['password']) ? $_POST['password'] : '';
 
             require_once COREPATH . 'functionsLogin.php';
 
             if (emptyInputLogin($email, $password)) {
-                header("Location: index.php?c=accounts&a=login&e=invalid");
+                $errMsg = 'invalid';
+                /*header("Location: index.php?c=accounts&a=login&e=invalid");*/
             }
-            loginUser($email, $password);
+            else {
+                if (loginUser($email, $password) === false)
+                {
+                    $errMsg = 'invalid';
+                }
+
+            }
         }
+        $this->setParam('errMsg', $errMsg);
+        $this->setParam('email', $email);
     }
 
     public function actionLogout()

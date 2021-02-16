@@ -5,16 +5,15 @@
         <h1>Login</h1>
         <label for="email_username">Email oder Benutzername<br>
             <input class="form_col_space" id="email_username" name="email"
-                   value="<?= htmlspecialchars($_POST['email'] ?? '') ?>"
+                   value="<?= $email ?>"
                    placeholder="ihre@mail.de"
                    type="text" required>
         </label>
         <label for="password">Passwort<br>
             <input class="form_col_space" id="password" name="password" placeholder="Passwort"
-                   value="<?= htmlspecialchars($_POST['password'] ?? '') ?>"
                    type="password" required>
         </label>
-        <? if (isset($_GET['e']) && $_GET['e'] === "invalid"): ?>
+        <? if (!is_null($errMsg) && $errMsg === 'invalid'): ?>
         <label style="color: red">Falsches Passwort oder falsche Emailadresse!</label>
         <? endif ?>
         <input class="submit_button" id="submit_login" name="submit_login" type="submit" value="anmelden">

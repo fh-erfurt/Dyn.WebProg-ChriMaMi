@@ -53,9 +53,8 @@ function loginUser($email, $password)
             header("Location: index.php?c=pages&a=main");
         }
     }
-    else {
-        header("Location: index.php?c=accounts&a=login&e=invalid");
-    }
+/*        header("Location: index.php?c=accounts&a=login&e=invalid");*/
+    return false;
 }
 
 
