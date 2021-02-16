@@ -19,13 +19,13 @@ class ErrorsController extends \dwp\core\Controller
         {
             switch($_GET['error'])
             {
-                case 'nonaction':
+                case 'noAction':
                     $errorMessage = 'Action konnte nicht gefunden werden.';
                     break;
-                case 'nocontroller':
+                case 'noController':
                     $errorMessage = 'Controller konnte nicht gefunden werden.';
                     break;
-                case 'viewpath':
+                case 'noViewPath':
                     $errorMessage = 'View konnte nicht gefunden werden.';
                     break;
             }
@@ -43,7 +43,7 @@ class ErrorsController extends \dwp\core\Controller
         {
             switch ($_GET['error'])
             {
-                case 'emptyinput':
+                case 'emptyInput':
                     $errorLoginMessage = "Please input username and password!";
                     break;
                 case 'stmtFailed':
@@ -51,8 +51,10 @@ class ErrorsController extends \dwp\core\Controller
                     break;
                 case 'accFailed':
                     $errorLoginMessage = "No user found! Please sign up!";
+                    break;
             }
         }
+        // though the error message variable to the view, so we can show it to our customers
         $this->setParam('errorLoginMessage', $errorLoginMessage);
     }
 }

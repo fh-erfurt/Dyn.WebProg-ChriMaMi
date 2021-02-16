@@ -86,16 +86,15 @@ function rememberMe($id, $password)
 use dwp\model\Accounts as Accounts;
 use dwp\model\Administrators as Administrators;
 
+/**
+ * @param $email expects an email-address from user as string
+ * @return mixed|null return Account by email
+ */
 function getAccount($email)
 {
     $db = $GLOBALS['db'];
     $sql = "email=" . $db->quote($email);
-    $entry = Accounts::findOne($sql);
-
-    if (!isset($entry)) {
-        redirect("index.php?c=errors&a=errorLogin&error=stmtFailed");
-    }
-    return $entry;
+    return Accounts::findOne($sql);
 }
 
 function isAdmin($account){
@@ -122,29 +121,25 @@ function emptyInputLogin($email, $password)
     return $result;
 }
 
-function loginUser(&$errorMsg,$email, $password)
+function loginUser($email, $password)
 {
     $account = getAccount($email);
-    $isAdmin = isAdmin($account);
+    if (isset($account)) {
+        $isAdmin = isAdmin($account);
+        $password_hashed = $account->password_hash;
 
-    if ($account === false) {
-        redirect("index.php?c=errors&a=errorLogin&error=accFailed");
+        $isPasswordCorrect = password_verify($password, $password_hashed);
+        if ($isPasswordCorrect) {
+            $_SESSION['id'] = $account->id;
+            $_SESSION['email'] = $account->email;
+            $_SESSION['isAdmin'] = $isAdmin;
+            header("Location: index.php?c=pages&a=main");
+        }
     }
-    $password_hashed = $account->password_hash;
-
-    $checkPassword = password_verify($password, $password_hashed);
-    if ($checkPassword === false) {
-        redirect("index.php?c=errors&a=errorLogin&error=stmtFailed");
-        $errorMsg = "Wrong email or password";
-
-    } else if ($checkPassword === true) {
-        $_SESSION['id'] = $account->id;
-        $_SESSION['email'] = $account->email;
-        $_SESSION['isAdmin'] = $isAdmin;
-
-        header("Location: index.php?c=pages&a=main");
+    else {
+        header("Location: index.php?c=errors&a=errorLogin&error=stmtFailed");
     }
 }
-?>
+
 
 

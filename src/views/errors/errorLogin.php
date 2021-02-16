@@ -1,7 +1,32 @@
-<h1>Error Login</h1>
-<div class="error-message">
-    <?=$errorLoginMessage?>
-</div>
-<div class="webmaster">
-    Kontakt an Webmaster <a href="mailto:kristof.friess@fh-erfurt.de">Mail schreiben</a>
-</div>
+<script type="text/javascript" language="JavaScript">
+    window.location = "Location: index.php?c=accounts&a=login"
+    var tag = document.querySelector("form");
+    tag.
+</script>
+
+<noscript>
+    <link href="<?= ASSETSPATH.'designs'.DIRECTORY_SEPARATOR.'design-login.css' ?>" rel="stylesheet">
+    <div class="headspace">
+        <form  class="login_window" method="post">
+
+            <h1>Login</h1>
+            <label for="email_username">Email oder Benutzername<br>
+                <input class="form_col_space" id="email_username" name="email"
+                       placeholder="ihre@mail.de"
+                       type="text" required>
+            </label>
+            <label for="password">Passwort<br>
+                <input class="form_col_space" id="password" name="password" placeholder="Passwort"
+                       type="password" required>
+            </label>
+            <label style="color: red"><?=$errorLoginMessage?></label>
+            <input class="submit_button" id="submit_login" name="submit_login" type="submit" value="anmelden">
+            <span class="login_check">
+                <input id="rememberMe" name="rememberMe" type="checkbox">
+                <?= isset($_POST['rememberMe']) ? 'checked' : '' ?>
+                <label for="rememberMe">Angemeldet bleiben?</label>
+            </span>
+            <a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=accounts&a=signup">Noch kein Konto?</a>
+        </form>
+    </div>
+</noscript>

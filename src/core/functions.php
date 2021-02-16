@@ -20,7 +20,6 @@ function localDateString($lang, $date)
             $result = $date->format('d.m.Y');
             break;
     }
-
     return $result;
 }
 
@@ -34,7 +33,6 @@ function localDateTimeString($lang, $date)
             $result = $date->format('d.m.Y H:i').'Uhr';
             break;
     }
-
     return $result;
 }
 
@@ -48,8 +46,7 @@ function getCustomer($id)
 {
     $db = $GLOBALS['db'];
     $sql = "id=" . $db->quote($id);
-    $entry = Customers::findOne($sql);
-    return $entry;
+    return Customers::findOne($sql);
 }
 
 
@@ -57,6 +54,5 @@ function getAddress($addressid)
 {
     $db = $GLOBALS['db'];
     $sql = "id=" . $db->quote($addressid);
-    $entry = Addresses::findOne($sql);
-    return $entry;
+    return Addresses::findOne($sql);
 }
