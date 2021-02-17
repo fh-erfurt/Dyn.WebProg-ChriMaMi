@@ -223,7 +223,7 @@ nav a {
 
 #sek-headcontent a {
     text-decoration: none;
-    color: inherit;
+    color: #FFFFFF;
 }
 
 #sek-headcontent h1 {
@@ -809,7 +809,7 @@ ul li a:hover + .hidden, .hidden:hover {
         background: none;
         position: relative;
         display: inline-flex;
-        color: #414141;
+        color: var(--overheadGrey);
         font-size: 20px;
     }
 
@@ -1087,6 +1087,10 @@ ul li a:hover + .hidden, .hidden:hover {
     #sek-headcontent {
         margin-left: 57px;
         grid-area: content;
+    }
+
+    #sek-headcontent a {
+        color: var(--overheadGrey);
     }
 
     #sek-headcontent h1 {
