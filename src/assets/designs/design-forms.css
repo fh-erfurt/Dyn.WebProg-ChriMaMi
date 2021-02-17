@@ -34,6 +34,34 @@ body
     filter: drop-shadow(0px 0px 10px #C4C4C4);
 }
 
+.login_window h1{
+    color: #000000;
+}
+
+.login_window_img
+{
+    position: absolute;
+    width: 8.375em;   /*134px;*/
+    height: 8.375em;   /*134px;*/
+    left: 16.3125em;    /*261px;*/
+    top: 2.125em;  /*34px;*/
+
+    /*    background: url(../logo/login_icon.png);*/
+}
+
+.form_window
+{
+    flex-wrap: wrap;
+width: 100%;  /*900px;*/
+justify-content: center;
+padding: 1.125em 0 3.125em 0; /*50px 0px 50px 0px;*/
+display: flex;
+    background: #FFFFFF;
+border-bottom: 5px var(--headcolor) solid; /*3px*/
+box-sizing: border-box;
+    filter: drop-shadow(0px 0px 10px #C4C4C4);
+}
+
 #personalSection {
     margin: 10px;
     display: flex;
@@ -60,33 +88,6 @@ body
     color: #2f2f2fde;
     max-width: 40%;
     min-width:80%;
-}
-.registration_window
-{
-    flex-wrap: wrap;
-    width: 100%;  /*900px;*/
-    justify-content: center;
-    padding: 1.125em 0 3.125em 0; /*50px 0px 50px 0px;*/
-    display: flex;
-    background: #FFFFFF;
-    border-bottom: 5px var(--headcolor) solid; /*3px*/
-    box-sizing: border-box;
-    filter: drop-shadow(0px 0px 10px #C4C4C4);
-}
-
-.login_window h1{
-    color: #000000;
-}
-
-.login_window_img
-{
-    position: absolute;
-    width: 8.375em;   /*134px;*/
-    height: 8.375em;   /*134px;*/
-    left: 16.3125em;    /*261px;*/
-    top: 2.125em;  /*34px;*/
-
-    /*    background: url(../logo/login_icon.png);*/
 }
 
 /*.login_window_head
@@ -155,25 +156,25 @@ body
 }
 */
 
-.registration_window label {
+.form_window label {
     padding-top: 6px;
 }
 
-.registration_window .form_col_space {
+.form_window .form_col_space {
     display: block;
 }
 
-.registration_window div {
+.form_window div {
     padding-bottom: 1.875em;   /*30px*/
 }
 
-.registration_window h1 {
+.form_window h1 {
     color: var(--headcolor);
     padding-bottom: 1.875em;   /*30px*/
     text-decoration: underline;
 }
 
-.registration_window .form_col_numbers {
+.form_window .form_col_numbers {
     width: 2.5em;    /*40px*/
     height: 20px;    /*20px*/
 }
