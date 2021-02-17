@@ -720,13 +720,19 @@ article {
 #address {
     line-height: 5px;
     font-size: 14px;
+    margin-left: 5%;
+}
 
+#legalTitle {
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #imprintTable {
     display: flex;
     justify-content: flex-start;
-    width: 70%;
+    width:90%;
+    margin-left: 5%;
     flex-direction: column;
     text-align: left;
     padding-top: 0;
@@ -1391,8 +1397,20 @@ ul li a:hover + .hidden, .hidden:hover {
     .picFloatRight img {
         float: right;
     }
+    /*    !* ------------------------------ IMPRINT ------------------------------- *! */
+    #imprintTable {
+        width: 80%;
+        min-width: 672px;
+        margin-left: 0;
+    }
+    #address {
+        margin-left: 0;
+    }
+    #legalTitle {
+        margin-left: 0;
+    }
 }
-/*    !* ------------------------------ IMPRINT ------------------------------- *!
+/*
     #imprintImage {
         display: flex;
         margin-top: 20px;
@@ -1491,7 +1509,7 @@ ul li a:hover + .hidden, .hidden:hover {
 .textbox {
     width: 60%;
     border-radius: 20px;
-    background: #cfcdcd;
+    background: #e5e4e4;
     border: 1px solid #949494;
     padding-left: 10px;
     padding-right: 10px;
