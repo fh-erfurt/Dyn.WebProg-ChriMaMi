@@ -133,7 +133,7 @@ if (file_exists(CONTROLLERSPATH . $controllerName . 'Controller.php')) {
     $actionMethod = 'action' . ucfirst($actionName);
     if (!method_exists($controller, $actionMethod)) {
         // redirect to error page 404 because not found
-        redirect('index.php?c=errors&a=error404&error=nonaction');
+        redirect('index.php?c=errors&a=error404&error=noAction');
     } else {
         // call the action method to do the job
         // so the action cann fill the params for the views which will be used
@@ -142,7 +142,7 @@ if (file_exists(CONTROLLERSPATH . $controllerName . 'Controller.php')) {
     }
 } else {
     // redirect to error page 404 because not found
-    redirect('index.php?c=errors&a=error404&error=nocontroller');
+    redirect('index.php?c=errors&a=error404&error=noController');
 }
 
 

@@ -4,10 +4,10 @@
         <div class="title"><h2>Registration</h2></div>
         <div id="personalSection">
             <label style="padding-bottom: 10px" for="gender">Geschlecht:
-                <select id="gender" name="gender" value="<?= htmlspecialchars($_POST['firstname'] ?? '') ?>>
-                    <option value=" u">divers</option>
-                <option value="m">männlich</option>
-                <option value="f">weiblich</option>
+                <select id="gender" name="gender" value=<?= htmlspecialchars($_POST['firstname'] ?? '') ?>>
+                    <option value="u">divers</option>
+                    <option value="m">männlich</option>
+                    <option value="f">weiblich</option>
                 </select>
             </label>
             <label for="firstname">Vorname

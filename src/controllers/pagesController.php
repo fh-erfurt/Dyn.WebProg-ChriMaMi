@@ -105,37 +105,3 @@ class PagesController extends \dwp\core\Controller
 }
 
 
-/*public function actionSignup()
-{
-    // store error message
-    $errMsg = null;
-
-    // TODO: Handle Inputfields for account
-
-    // check user send login field
-    if(isset($_POST["submit']))
-    {
-
-        // TODO: Validate and create account in database if possible
-
-
-        // if there is no error reset mail
-        if($errMsg === null)
-        {
-            // TODO: Redirect to login
-        }
-
-    }
-
-    $this->setParam('errMsg', $errMsg);
-
-    // TODO: Set params for account
-
-}*/
-
-/*public function actionLogout()
-{
-    session_destroy();
-    header('Location: index.php?c=pages&a=login');
-}*/
-/*}*/

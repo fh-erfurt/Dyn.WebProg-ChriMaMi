@@ -19,13 +19,13 @@ class ErrorsController extends \dwp\core\Controller
         {
             switch($_GET['error'])
             {
-                case 'nonaction':
+                case 'noAction':
                     $errorMessage = 'Action konnte nicht gefunden werden.';
                     break;
-                case 'nocontroller':
+                case 'noController':
                     $errorMessage = 'Controller konnte nicht gefunden werden.';
                     break;
-                case 'viewpath':
+                case 'noViewPath':
                     $errorMessage = 'View konnte nicht gefunden werden.';
                     break;
             }
@@ -33,26 +33,5 @@ class ErrorsController extends \dwp\core\Controller
 
         // though the error message variable to the view, so we can show it to our customers
         $this->setParam('errorMessage', $errorMessage);
-    }
-
-    public function actionErrorLogin ()
-    {
-        $errorLoginMessage = 'Unknown error, please check your code!';
-
-        if(isset($_GET['error']))
-        {
-            switch ($_GET['error'])
-            {
-                case 'emptyinput':
-                    $errorLoginMessage = "Please input username and password!";
-                    break;
-                case 'stmtFailed':
-                    $errorLoginMessage = "Wrong email or password!";
-                    break;
-                case 'accFailed':
-                    $errorLoginMessage = "No user found! Please sign up!";
-            }
-        }
-        $this->setParam('errorLoginMessage', $errorLoginMessage);
     }
 }

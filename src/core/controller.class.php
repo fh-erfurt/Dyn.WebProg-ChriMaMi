@@ -50,7 +50,7 @@ class Controller
         if(!file_exists($viewPath))
         {
             // redirect to error page 404 because not found
-            redirect('index.php?c=errors&a=error404&error=viewpath');
+            redirect('index.php?c=errors&a=error404&error=noViewPath');
         }
 
         // extract the params array to get all needed variables for the views

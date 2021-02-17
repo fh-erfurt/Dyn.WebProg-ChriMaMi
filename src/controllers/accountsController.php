@@ -112,103 +112,37 @@ class AccountsController extends \dwp\core\Controller
         }
     }
 
-    /*public function actionLogin()
-    {*/
-       /* // store error message
-        $errMsg = null;
 
-        // retrieve inputs
-        $username = isset($_POST['username']) ? $_POST['username'] : '';
-        $password = isset($_POST['password']) ? $_POST['password'] : '';
-
-        // check user send login field
-        if(isset($_POST['submit']))
-        {
-
-            // TODO: Validate input first
-            // TODO: Check login values with database accounts
-            // TODO: Store useful variables into the session like accounts and also set loggedIn = true
-            $db = $GLOBALS['db'];
-
-            $login = \dwp\model\Login::findOne('username = '.$db->quote($username));
-
-            if($login !== null && password_verify($password, $login->passwordHash))
-            {
-                echo "login success";
-            }
-            else
-            {
-                $errMsg = 'Nutzer oder Passwort nicht korrekt.';
-            }
-
-            // if there is no error reset mail
-            if($errMsg === null)
-            {
-                $username = '';
-            }
-
-        }
-
-        // set param email to prefill login input field
-        $this->setParam('username', $username);
-        $this->setParam('errMsg', $errMsg);
-        $this->setParam('test', 'Hello World!');
-    }*/
-
-        public function actionLogin()
+    public function actionLogin()
     {
 
         // store error message
         $errMsg = null;
+        $email = $_POST['email'] ?? '';
 
         // check user send login field
         if (isset($_POST['submit_login'])) {
 
             // retrieve( inputs
-            $email = isset($_POST['email']) ? $_POST['email'] : '';
             $password = isset($_POST['password']) ? $_POST['password'] : '';
 
             require_once COREPATH . 'functionsLogin.php';
 
-            // TODO: Validate input first
-
-            if (emptyInputLogin($email, $password) !== false) {
-                header("Location: index.php?c=accounts&a=login.php?error=emptyinput");
-                $errMsg = "Please input username and password";
-                exit();
+            if (emptyInputLogin($email, $password)) {
+                $errMsg = 'invalid';
+                /*header("Location: index.php?c=accounts&a=login&e=invalid");*/
             }
-            // TODO: Check login values with database accounts
-            loginUser($errMsg,$email, $password);
-        }
-    }
-
-    /*    public function actionSignup()
-        {
-            // store error message
-            $errMsg = null;
-
-            // TODO: Handle Inputfields for accounts
-
-            // check user send login field
-            if(isset($_POST['submit']))
-            {
-
-                // TODO: Validate and create accounts in database if possible
-
-
-                // if there is no error reset mail
-                if($errMsg === null)
+            else {
+                if (loginUser($email, $password) === false)
                 {
-                    // TODO: Redirect to login
+                    $errMsg = 'invalid';
                 }
 
             }
-
-            $this->setParam('errMsg', $errMsg);
-
-            // TODO: Set params for accounts
-
-        }*/
+        }
+        $this->setParam('errMsg', $errMsg);
+        $this->setParam('email', $email);
+    }
 
     public function actionLogout()
     {

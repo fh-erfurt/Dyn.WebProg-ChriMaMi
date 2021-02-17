@@ -1307,94 +1307,95 @@ ul li a:hover + .hidden, .hidden:hover {
 }
 
 /*------------------------- End of Main Image Properties -----------------------*/
+@media screen and (min-width: 992px) {
 
-.mainArticle {
-    display: flex;
-    padding: 15px;
-    margin: 15px;
-    border-radius: 5px;
-    width: 100%;
-    justify-content: center;
-    max-width: 900px;
+    .mainArticle {
+        display: flex;
+        padding: 15px;
+        margin: 15px;
+        border-radius: 5px;
+        width: 100%;
+        justify-content: center;
+        max-width: 900px;
+    }
+
+    .mainArticle h2 {
+        margin-bottom: 7px;
+        text-align: left;
+    !important;
+    }
+
+    .mainArticle img {
+        display: flex;
+        border-style: none;
+        border-color: black;
+        max-width: 200px;
+        padding: 10px;
+        margin: 20px 20px 5px 0px;
+        border-radius: 2px;
+        min-width: 200px;
+        min-height: 120px;
+        align-items: center;
+
+    }
+
+    article {
+        display: inline-block;
+        text-align: justify;
+        font-family: 'vollkornitalic';
+    }
+
+
+    #brandschutz {
+        /*        background: #FFFFFF;*/
+    }
+
+    #waermeschutz h2 {
+        text-align: right;
+    }
+
+    #waermeschutz img {
+        /*        margin-left: 20px;
+                margin-right: 0px*/
+    }
+
+    #tragwerkplanung {
+        /*        background: #CCEBCF;*/
+        /*        background-image: url("../images/services/backgrounds/tragwerkplanung.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                border-color: #154300;*/
+    }
+
+    #eingabeplanung h2 {
+        text-align: right;
+    }
+
+    #certifications {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .certification {
+    }
+
+    .certification img {
+        width: 200px;
+        height: 200px;
+        border: solid #000000;
+        border-radius: 50%;
+        margin: 10px;
+    }
+
+    .picFloatLeft img {
+        float: left;
+    }
+
+    .picFloatRight img {
+        float: right;
+    }
 }
-
-.mainArticle h2 {
-    margin-bottom: 7px;
-    text-align: left;
-!important;
-}
-
-.mainArticle img {
-    display: flex;
-    border-style: none;
-    border-color: black;
-    max-width: 200px;
-    padding: 10px;
-    margin: 20px 20px 5px 0px;
-    border-radius: 2px;
-    min-width: 200px;
-    min-height: 120px;
-    align-items: center;
-
-}
-
-article {
-    display: inline-block;
-    text-align: justify;
-    font-family: 'vollkornitalic';
-}
-
-
-#brandschutz {
-    /*        background: #FFFFFF;*/
-}
-
-#waermeschutz h2 {
-    text-align: right;
-}
-
-#waermeschutz img {
-    /*        margin-left: 20px;
-            margin-right: 0px*/
-}
-
-#tragwerkplanung {
-    /*        background: #CCEBCF;*/
-    /*        background-image: url("../images/services/backgrounds/tragwerkplanung.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            border-color: #154300;*/
-}
-
-#eingabeplanung h2 {
-    text-align: right;
-}
-
-#certifications {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.certification {
-}
-
-.certification img {
-    width: 200px;
-    height: 200px;
-    border: solid #000000;
-    border-radius: 50%;
-    margin: 10px;
-}
-
-.picFloatLeft img {
-    float: left;
-}
-
-.picFloatRight img {
-    float: right;
-}
-
 /*    !* ------------------------------ IMPRINT ------------------------------- *!
     #imprintImage {
         display: flex;

@@ -28,7 +28,7 @@ class Images extends \dwp\core\Model
                 'null' => false
             ],
         ],
-        'altText' => [
+        'alt_text' => [
             'type' => parent::TYPE_STRING,
             'validate' => [
                 'min' => 2,
