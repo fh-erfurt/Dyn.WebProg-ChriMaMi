@@ -107,6 +107,9 @@ class AccountsController extends \dwp\core\Controller
         //echo '<pre>', var_dump($account), '</pre>';
         //echo '<pre>', var_dump($address), '</pre>';
 
+        if (isset($_POST['signUp'])) {
+            redirect("index.php?c=pages&a=redirecttimeout&o=signup");
+        }
     }
 
 

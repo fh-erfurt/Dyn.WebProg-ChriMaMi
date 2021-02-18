@@ -4,7 +4,7 @@
     <div id="mainPicOverlay">
         <div class="welcome_text"><h1>Willkommen</h1>
             <p>informieren Sie sich über unser breit gefächertes Angebot und
-                <a href="#" id="contact">kontaktieren</a> Sie uns gerne bei Fragen, wir freuen uns, Sie beraten zu dürfen.</p></div>
+                <a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=pages&a=contact" id="contact">kontaktieren</a> Sie uns gerne bei Fragen, wir freuen uns, Sie beraten zu dürfen.</p></div>
         <div id="welcome_sign">Ihr Ingenieurbüro Horsch
             <p> <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR.'sign.png'?>" alt="handwritten sign"></p>
         </div>
@@ -61,8 +61,8 @@
     </div>
 </section>
 
-<script>
+<!--<script>
     function throwAlert() {alert("Suprise!! This link is under construction!")};
     var articles = document.getElementById("contact");
     articles.addEventListener("click", throwAlert);
-</script>
+</script>-->

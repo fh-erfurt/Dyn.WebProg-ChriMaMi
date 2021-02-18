@@ -75,6 +75,33 @@ class PagesController extends \dwp\core\Controller
 
     }
 
+    public function actionContact()
+    {
+        $values = array(
+            'name' => isset($_POST['name']) ? $_POST['name'] : "",
+            'email' => isset($_POST['email']) ? $_POST['email'] : "",
+            'reason' => isset($_POST['reason']) ? $_POST['reason'] : "",
+            'description' => isset($_POST['description']) ? $_POST['description'] : ""
+        );
+
+
+        /*        $reciever = 'ibhorsch@web.de';
+                $betreff = $values->reason;
+                $nachricht = $values->description;
+                $header = array(
+                    'From' => 'webmaster@ibhorsch.de',
+                    'x-mailer' => 'PHP/' . phpversion()
+                );
+
+                mail($reciever, $betreff, $nachricht, $header);*/
+        /** Für das verwenden existiert noch kein SMTP-Server, dieser Folgt später */
+        if (isset($_POST['send'])) {
+            redirect("index.php?c=pages&a=redirecttimeout&o=mail");
+        }
+
+    }
+
+
 }
 
 
