@@ -170,38 +170,36 @@
 /* ------------------------------ END PRODUCTS -------------------------------*/
 /* ------------------------------ START SHOPPING CART-------------------------------*/
 
+
 .cartDisplay h1 {
-    font-size:          2.5em;
-    line-height:        3.8em;
-    font-weight:        100;
-    color:              #E2DBDB;
-    margin:             0;
+    font-size: 2.5em;
+    line-height: 3.8em;
+
 }
+
 .cartDisplay h2 {
     font-size:          1.563em;
     line-height:        1.8em;
-    font-weight:        100;
-    color:              #2F2D2C;
+
     margin:             0;
-    padding:            1em;
+    padding-left:       0.5em;
+    padding-top:       0.5em;
     text-align:         left;
 }
 .cartDisplay p {
     line-height:        1.25em;
-    font-weight:        100;
-    color:              #2F2D2C;
-    margin:             0;
-    padding:            1.25em;
+
     text-align:         justify;
 }
 .cartDisplay ul {
     margin:             0;
+
     padding:            0;
 }
 .cartDisplay li {
     list-style:         sqaure;
-    font-weight:        100;
-    color:              #2F2D2C;
+
+
     line-height:        1.25em;
     padding:            0;
     margin:             0.313em 0 0.313em 0;
@@ -213,7 +211,7 @@
     width:              94%;
     padding:            3%;
 }
-.cartDisplay article {
+.wholeCart {
     display:            inline-block;
     width:              60%;
     background:         #FFFFFF;
@@ -292,6 +290,47 @@
 #rightBox:active {
     background:         #028039;
     top:                0.125em;
+}
+
+.cartItem {
+    display:flex;
+    margin-bottom: 0px;
+    width:90%;
+    height:120px;
+}
+
+.cartItem .counter{
+    padding-left: 20px;
+    padding-top: 40px;
+    float:right;
+}
+.cartItem img {
+    margin-left: 6px;
+    border: black 1px solid;
+    align-items: center;
+    width: 150px;
+
+}
+.descriptionAll {
+    padding-left: 5px;
+}
+.descriptionAll li{
+
+    list-style: none;
+
+}
+
+.descriptionAll p{
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+.iconImg img {
+    padding-left: 20px;
+    padding-top: 45px;
+    width: 32px;
+    height:32px;
+    float: right;
+    border: 0;
 }
 /* ------------------------------ END SHOPPING CART-------------------------------*/
 
