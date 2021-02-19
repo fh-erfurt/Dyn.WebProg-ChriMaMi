@@ -14,12 +14,12 @@
                 <section class="cartItem">
                     <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR. 'products'. DIRECTORY_SEPARATOR.$ware->filename?>" alt="<?=$ware->alt_text?>">
                     <div class="descriptionAll">
-                        <p>Item_01</p>
+                        <p><?=$ware->p_name?></p>
                             <ul>
 <!--                                <li>Stk.-Preis: src="<?/*= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'trash.png' */?></li>
 -->
-                                <li>Stk.-Preis: "<?=$ware->std_price?></li>
-                                <li>Gesamtpreis: <?=$ware->total_price?></li>
+                                <li>Stk.-Preis: <?=$ware->std_price?>€</li>
+                                <li>Gesamtpreis: <?=$ware->total_price?>€</li>
                             </ul>
                     </div>
                     <div class="counter">
