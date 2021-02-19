@@ -8,8 +8,8 @@
 
 namespace dwp\controller;
 
-use dwp\model\CartView;
-use dwp\model\Customers;
+use dwp\model\CartView as CartView;
+use dwp\model\members as Members;
 use dwp\model\products as Products;
 use dwp\model\cart as Cart;
 
@@ -32,7 +32,7 @@ class ShopController extends \dwp\core\Controller
 
     public function actionCart()
     {
-        $cart_view = CartView::find('cust_id = \''.$_SESSION['id'].'\'');
+        $cart_view = CartView::find('mem_id = \''.$_SESSION['id'].'\'');
         $this->setParam('cart_view', $cart_view);
     }
 
@@ -51,17 +51,19 @@ class ShopController extends \dwp\core\Controller
                 die("Produkt existiert nicht!");
             }
 
-            $customer = Customers::findOne('id = \''.$_SESSION['id'].'\'');
-            if($customer == null)
+
+
+            $member = Members::findOne('id = \''.$_SESSION['id'].'\'');
+            if($member == null)
             {
-                die("Kunde existiert nicht!");
+                die("Mitglied existiert nicht!");
             }
-            $cart = Cart::findOne('customers_id = '.$customer->id.' and products_id = '.$product->id);
+            $cart = Cart::findOne('customers_id = '.$member->id.' and products_id = '.$product->id);
             if ($cart == null)
             {
                 $cart = new Cart([
                     'products_id' => $product->id,
-                    'customers_id' => $customer->id,
+                    'members_id' => $member->id,
                     'amount' => intval($_GET['amount']??1)
                 ]);
                 $cart->insert();

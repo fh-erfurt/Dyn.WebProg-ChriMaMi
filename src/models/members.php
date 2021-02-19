@@ -11,14 +11,37 @@ namespace dwp\model;
 
 use \dwp\core\Model as M;
 
-class Customers extends \dwp\core\Model
+class Members extends \dwp\core\Model
 {
-    const TABLENAME = 'customers';
+    const TABLENAME = 'members';
 
     protected $schema = [
         'id' => [
             'type' => M::TYPE_UINTEGER,
             'validate' => [
+                'null' => false
+            ],
+        ],
+        'email' => [
+            'type' => M::TYPE_STRING,
+            'validate' => [
+                'min' => 2,
+                'max' => 255,
+                'null' => false
+            ],
+        ],
+        'password_hash' => [
+            'type' => M::TYPE_STRING,
+            'validate' => [
+                'min' => 8,
+                'max' => 255,
+                'null' => false
+            ],
+        ],
+        'roll' => [
+            'type' => M::TYPE_STRING,
+            'validate' => [
+                'values' => ['user', 'admin'],
                 'null' => false
             ],
         ],
