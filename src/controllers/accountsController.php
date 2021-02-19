@@ -11,8 +11,7 @@ namespace dwp\controller;
 
 
 use dwp\model\Addresses as Addresses;
-use dwp\model\Customers as Customers;
-use dwp\model\Accounts as Accounts;
+use dwp\model\Members as Members;
 
 class AccountsController extends \dwp\core\Controller
 {
@@ -22,7 +21,7 @@ class AccountsController extends \dwp\core\Controller
         'gender'         => isset($_POST['gender']) ? $_POST['gender'] : "",
         'firstname'      => isset($_POST['firstname']) ? $_POST['firstname'] : "",
         'lastname'       => isset($_POST['lastname']) ? $_POST['lastname'] : "",
-        'email'           => isset($_POST['email']) ? $_POST['email'] : "",
+        'email'          => isset($_POST['email']) ? $_POST['email'] : "",
         'birthday'       => isset($_POST['birthday']) ? $_POST['birthday'] : "",
         'street'         => isset($_POST['street']) ? $_POST['street'] : "",
         'houseNumber'    => isset($_POST['houseNumber']) ? $_POST['houseNumber'] : "",
@@ -47,21 +46,21 @@ class AccountsController extends \dwp\core\Controller
 
         if($allRequiredValuesSet === TRUE)
         {
-            $account = Accounts::findOne("email=".$db->quote($values['email']));
+            $account = Members::findOne("email=".$db->quote($values['email']));
             if (!isset($account))
             {
                 $accountData = array(
                     'email'         => $values['email'],
                     'password_hash'  => $values['password']
                 );
-                $account = new Accounts($accountData);
+                $account = new Members($accountData);
                 $account->insert();
             }
             else
             {
                 echo 'Account mit dieser Emailadresse existiert bereits!!!';
             }
-            $values['accounts_id'] = $account->__get('id');
+            $values['accounts_id'] = $account->id;
 
             $address = Addresses::findOne("street=".$db->quote($values['street'])
                                             ." AND house_number=".$db->quote($values['houseNumber'])
@@ -78,16 +77,16 @@ class AccountsController extends \dwp\core\Controller
                 $address = new Addresses($addressData);
                 $address->insert();
             }
-            $values['addresses_id'] = $address->__get('id');
+            $values['addresses_id'] = $address->id;
 
-           $customer = Customers::findOne("firstname=".$db->quote($values['firstname'])
+           $member = Members::findOne("firstname=".$db->quote($values['firstname'])
                                                 ." AND lastname=".$db->quote($values['lastname'])
                                                 ." AND gender=".$db->quote($values['gender'])
                                                 ." AND accounts_id=".$db->quote($values['accounts_id'])
                                                 ." AND addresses_id=".$db->quote($values['addresses_id']));
-            if (!isset($customer))
+            if (!isset($member))
             {
-                $customerData = array(
+                $memberData = array(
                     'firstname'         => $values['firstname'],
                     'lastname'          => $values['lastname'],
                     'gender'            => $values['gender'],
@@ -95,10 +94,10 @@ class AccountsController extends \dwp\core\Controller
                     'addresses_id'      => $values['addresses_id']
                 );
 
-                $customer = new Customers($customerData);
+                $customer = new Members($memberData);
                 $customer->insert();
             }
-            $values['id'] = $customer->__get('id');
+            $values['id'] = $member->id;
         }
 
         //echo '<pre>', var_dump($_POST), '</pre>';

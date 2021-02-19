@@ -13,7 +13,7 @@ use \dwp\core\Model as M;
 
 class Cart extends \dwp\core\Model
 {
-    const TABLENAME = 'customer_has_products';
+    const TABLENAME = 'member_has_products';
 
     protected $schema = [
         'id' => [
@@ -28,7 +28,7 @@ class Cart extends \dwp\core\Model
                 'null' => false
             ],
         ],
-        'customers_id' => [
+        'members_id' => [
             'type' => M::TYPE_UINTEGER,
             'validate' => [
                 'null' => false

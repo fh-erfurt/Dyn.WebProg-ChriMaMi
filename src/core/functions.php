@@ -6,7 +6,7 @@
  * @version 1.0.0
  */
 
-use dwp\model\Customers as Customers;
+use dwp\model\Members as Members;
 use dwp\model\Addresses as Addresses;
 
 // TODO: Add useful helper functions here
@@ -46,7 +46,7 @@ function getCustomer($id)
 {
     $db = $GLOBALS['db'];
     $sql = "id=" . $db->quote($id);
-    return Customers::findOne($sql);
+    return Members::findOne($sql);
 }
 
 
