@@ -6,16 +6,10 @@
         <section class="wholeCart">
             <h2>Einkaufswagen</h2>
             <hr/>
-            <!--<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>-->
+            <p>
+            Ihr Einkaufswagen ist leer, bitte besuchen Sie unseren
+            Shop um Produkte Ihrem Warenkorb hinzuzufügen.
+            </p>
             <? foreach ($cart_view as $ware) :?>
                 <section class="cartItem">
                     <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR. 'products'. DIRECTORY_SEPARATOR.$ware->filename?>" alt="<?=$ware->alt_text?>">
@@ -37,11 +31,11 @@
                         <img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'trash.png' ?> " alt="Entfernen"/>
                     </div>
                 </section>
+                <hr/>
             <? endforeach;?>
-            <hr/>
         </section>
         <aside>
-            <section>
+            <section class="checkout">
                 <h2>Summe(Anzahl der Artikel): 00,00€</h2>
                 <button class="btn">Zur Kasse gehen</button>
             </section>
