@@ -28,7 +28,9 @@
                         <div class="box" data-type="increase" id="rightBox"><a>+</a></div>
                     </div>
                     <div class="iconImg">
-                        <img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'trash.png' ?> " alt="Entfernen"/>
+                        <a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=shop&a=remove&product=<?=$ware->id?>&amount<?=$ware->amount?>">
+                            <img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'trash.png' ?> " alt="Entfernen"/>
+                        </a>
                     </div>
                 </section>
                 <hr/>

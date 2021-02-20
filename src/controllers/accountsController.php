@@ -46,21 +46,6 @@ class AccountsController extends \dwp\core\Controller
 
         if($allRequiredValuesSet === TRUE)
         {
-            $account = Members::findOne("email=".$db->quote($values['email']));
-            if (!isset($account))
-            {
-                $accountData = array(
-                    'email'         => $values['email'],
-                    'password_hash'  => $values['password']
-                );
-                $account = new Members($accountData);
-                $account->insert();
-            }
-            else
-            {
-                echo 'Account mit dieser Emailadresse existiert bereits!!!';
-            }
-            $values['accounts_id'] = $account->id;
 
             $address = Addresses::findOne("street=".$db->quote($values['street'])
                                             ." AND house_number=".$db->quote($values['houseNumber'])
@@ -79,24 +64,28 @@ class AccountsController extends \dwp\core\Controller
             }
             $values['addresses_id'] = $address->id;
 
-           $member = Members::findOne("firstname=".$db->quote($values['firstname'])
-                                                ." AND lastname=".$db->quote($values['lastname'])
-                                                ." AND gender=".$db->quote($values['gender'])
-                                                ." AND accounts_id=".$db->quote($values['accounts_id'])
-                                                ." AND addresses_id=".$db->quote($values['addresses_id']));
+            $member = Members::findOne("email=".$db->quote($values['email']));
             if (!isset($member))
             {
                 $memberData = array(
                     'firstname'         => $values['firstname'],
                     'lastname'          => $values['lastname'],
+                    'roll'              => 'user',
                     'gender'            => $values['gender'],
-                    'accounts_id'       => $values['accounts_id'],
-                    'addresses_id'      => $values['addresses_id']
+                    'addresses_id'      => $values['addresses_id'],
+                    'email'         => $values['email'],
+                    'password_hash'  => $values['password']
                 );
 
-                $customer = new Members($memberData);
-                $customer->insert();
+                $member = new Members($memberData);
+                $member->insert();
+
             }
+            else
+            {
+                echo 'Account mit dieser Emailadresse existiert bereits!!!';
+            }
+
             $values['id'] = $member->id;
         }
 
