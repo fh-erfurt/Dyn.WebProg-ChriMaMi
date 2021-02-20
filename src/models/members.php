@@ -75,12 +75,6 @@ class Members extends \dwp\core\Model
                 'null' => true
             ],
         ],
-        'accounts_id' => [
-            'type' => M::TYPE_INTEGER,
-            'validate' => [
-                'null' => false
-            ]
-        ],
         'addresses_id' => [
             'type' => M::TYPE_INTEGER,
             'validate' => [

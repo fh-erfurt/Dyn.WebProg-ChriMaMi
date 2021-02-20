@@ -56,22 +56,29 @@ class ShopController extends \dwp\core\Controller
             $member = Members::findOne('id = \''.$_SESSION['id'].'\'');
             if($member == null)
             {
-                die("Mitglied existiert nicht!");
+                if (!isset($_SESSION['tempCart']))
+                {
+                    $_SESSION['tempCart'] = [];
+                }
+                array_push($_SESSION['tempCart'], array($product->id, intval($_GET['amount']??1)));
+
             }
-            $cart = Cart::findOne('customers_id = '.$member->id.' and products_id = '.$product->id);
-            if ($cart == null)
-            {
-                $cart = new Cart([
-                    'products_id' => $product->id,
-                    'members_id' => $member->id,
-                    'amount' => intval($_GET['amount']??1)
-                ]);
-                $cart->insert();
-            }
-            else
-            {
-                $cart->amount+= intval($_GET['amount']??1);
-                $cart->update();
+            else{
+                $cart = Cart::findOne('members_id = '.$member->id.' and products_id = '.$product->id);
+                if ($cart == null)
+                {
+                    $cart = new Cart([
+                        'products_id' => $product->id,
+                        'members_id' => $member->id,
+                        'amount' => intval($_GET['amount']??1)
+                    ]);
+                    $cart->insert();
+                }
+                else
+                {
+                    $cart->amount+= intval($_GET['amount']??1);
+                    $cart->update();
+                }
             }
         }
         header("Location: index.php?c=shop&a=cart");
