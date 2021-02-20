@@ -1,6 +1,6 @@
 <link href="<?= ASSETSPATH . 'designs' . DIRECTORY_SEPARATOR . 'design-forms.css' ?>" rel="stylesheet">
 <div class="headspace">
-    <form action="" method="post" class="form_window">
+    <form action="" method="post" class="form_window" id="signUpForm">
         <div class="title"><h2>Registration</h2></div>
         <div id="personalSection">
             <label style="padding-bottom: 10px" for="gender">Geschlecht:
@@ -38,6 +38,7 @@
                 <input type="password" class="form_col_space" id="repeatPassword" name="repeatPassword"
                        value="<?= htmlspecialchars('') ?>" required>
             </label>
+            <div id="errorPassword"></div>
         </div>
 
         <div id="addressSection">
@@ -62,16 +63,84 @@
                        autocomplete="on" required>
             </label>
             <div id="submitSection" style="margin-top: 21px">
-                <input id="submit" type="submit" class="submit_button" name="signUp" value="registrieren">
+                <input id="submit" type="submit" class="submit_button" name="signUp" value="registrieren"
+                       style="cursor: pointer">
             </div>
         </div>
     </form>
 </div>
+<!--<script src="/src/assets/javascripts/validationSignUp.js"></script>
+-->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var submitBtn = document.getElementById('submit');
+        var form = document.getElementById('signUpForm');
+        var inputPassword = document.getElementById('password');
+        var repeatPassword = document.getElementById('repeatPassword');
+        let error = true;
+        console.log('Error: '+ error);
 
-<!--<script>
-    var refRedirect = document.getElementById("submitReg");
-    refRedirect.addEventListener("submit", redirectTimeOut);
-    function redirectTimeOut () {
-        window.open("index.php?c=pages&a=redirecttimeout", "_parent");
-    }
-</script>-->
+        if (inputPassword) {
+
+            inputPassword.addEventListener('keyup', function () {
+                var regex1 = /^((?=.*?[A-Z].*?)(?=.*?[a-z].*?)(?=.*?[0-9].*?)).{6,}$/m;
+                var regex2 = /^(?=.*?[A-Z].*?)(?=.*?[a-z].*?[a-z])(?=.*?[0-9].*?[0-9])(?=.*?[^\w\s].*?).{8,}$/m;
+                var regex3 = /^(?=.*?[A-Z].*?[A-Z])(?=.*?[a-z].*?[a-z])(?=.*?[0-9].*?[0-9])(?=.*?[^\w\s].*?[^\w\s]).{12,}$/m;
+                var string = this.value;
+
+
+                if (string.match(regex3)) {
+                    inputPassword.style.border = '2px solid green';
+                } else if (string.match(regex2)) {
+                    inputPassword.style.border = '2px solid yellow';
+                } else if (string.match(regex1)) {
+                    inputPassword.style.border = '2px solid orange';
+                } else {
+                    inputPassword.style.border = '2px solid red';
+                    /*return error = true;*/
+                }
+            });
+        }
+
+        if (repeatPassword) {
+            let container = document.getElementById('errorPassword');
+            repeatPassword.addEventListener('keyup', function () {
+                if (inputPassword.value === repeatPassword.value) {
+                    repeatPassword.style.border = '2px solid green';
+                    error = false;
+                    container.innerHTML = '';
+                } else {
+                    repeatPassword.style.border = '2px solid red';
+                    error = true;
+                    container.style.color = 'red';
+                    container.innerHTML = 'Ungleiche Passwörter';
+                }
+                console.log('Error: ' + error);
+            });
+        }
+
+/*        function send() {
+            if (error !== false) {
+                form.addEventListener('submit', validate);
+                alert('Bitte füllen Sie die Anmeldung vollständig aus!');
+            }
+        };*/
+
+        document.getElementById('signUpForm').onsubmit = function(event) {
+            if(error !== false) {
+                event.preventDefault()
+                alert('Bitte füllen Sie die Anmeldung vollständig aus!');
+            }
+        }
+
+
+/*
+        function validate(event) {
+            event.preventDefault();
+        }
+*/
+
+    });
+
+
+</script>
