@@ -17,7 +17,7 @@
  */
 /*---------------------------------- START GENERAL SETUP ----------------------------------*/
 :root {
-    --headsize:         144px;
+    --headsize:         6.55em;
     --headcolor:        #1960B8;
     --overheadGrey:     #2f2f2fde;
 }
@@ -27,15 +27,15 @@
     min-height:         100vh;
 }
 #content-wrap {
-    padding:            15px 0 10px;
-    max-width:          992px;
-    min-height:         497px;
+    padding:            0.9375em 0 0.625em;
+    max-width:          62em;
+    min-height:         31.0625em;
     z-index:            -1;
     background:         linear-gradient(rgba(255, 255, 255, 0.92), rgba(179, 179, 179, 0.92));
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 62em) {
     :root {
-        --headsize:         152px;
+        --headsize:         6.8em;
     }
     body {
         margin:             unset;
@@ -56,17 +56,17 @@
     }
     #content-wrap {
         display:            block;
-        padding:            15px 150px 15px;
-        max-width:          1200px;
+        padding:            0.9375em 9.375em 0.9375em;
+        max-width:          75em;
         margin-left:        auto;
         margin-right:       auto;
         margin-top:         0;
-        min-height:         519px;
+        min-height:         32.4375em;
         overflow:           hidden;
     }
     header {
         height:             var(--headsize);
-        font-size:          24px;
+        font-size:          1.5em;      /*24px*/
     }
 }
 /*----------------------------------- END GENERAL SETUP -----------------------------------*/
@@ -74,13 +74,13 @@
 /*--------------------------------- START HEAD PROPERTIES ---------------------------------*/
 header {
     height:             var(--headsize);
-    font-size:          22px;
+    font-size:          1.375em;        /*22px*/
 }
 body {
     margin:             unset;
     padding:            unset;
     font-family:        'Raleway', sans-serif;
-    font-size:          16px;
+    font-size:          1em;            /*16px*/
     background-image:   url("../images/background.jpg");
     background-size:    100% 100%;
     background-attachment: fixed;
@@ -96,27 +96,29 @@ body {
     display:            flex;
 }
 #sek-head-logo img {
-    width:              130px;
-    padding:            15px 0 15px 0;
+    width:              5.7em;
+    padding:            0.68em 0 0.68em 0;
 }
 #sek-headcontent {
-    margin-left:        57px;
+    margin-left:        2.59em;
 }
 #sek-headcontent a {
-    color:              var(--overheadGrey);
+    color:              white;
     text-decoration:    none;
 }
 #sek-headcontent h1 {
-    font-size:          20px;
-    font-family: 'ubunturegular', serif;
-    margin-top:         30px;
-    margin-bottom:      7px;
+    color:              var(--overheadGrey);
+    font-size:          0.91em;         /*20px*/
+    font-family:        'ubunturegular', serif;
+    margin-top:         1.364em;
+    margin-bottom:      0.318em;
 }
 #sek-headcontent h2 {
+    color:              var(--overheadGrey);
     display:            flex;
-    font-size:          24px;
+    font-size:          1.091em;        /*24px*/
     font-family:        'ubuntuitalic', serif;
-    margin-left:        20px;
+    margin-left:        0.833em;
     margin-top:         0;
 }
 /*---------------------------------- END HEAD PROPERTIES ----------------------------------*/
@@ -128,13 +130,13 @@ footer {
     position:           relative;
     bottom:             0;
     width:              100%;
-    height:             300px;
+    height:             18.75em;
     background:         rgba(59, 114, 179, 0.9);
     text-align:         left;
     padding:            0;
 }
 footer section {
-    width:              750px;
+    width:              46.875em;
     justify-content:    space-around;
 }
 footer ul {
@@ -248,6 +250,15 @@ nav a {
 }
 ul li a:hover + .hidden, .hidden:hover {
     display:            block;
+}
+@media screen and (max-width: 992px) {
+    .subMenuToggle:checked + .subNavigation {
+        display: block;
+        position: relative;
+    }
+    .menuToggle:checked + .navigation li {
+        display: block;
+    }
 }
 @media screen and (min-width: 992px) {
     nav {
@@ -416,13 +427,6 @@ ul li a:hover + .hidden, .hidden:hover {
     height:             70%;
 }
 @media screen and (min-width: 992px) {
-    .menuToggle:checked + .navigation li {
-        display:            block;
-    }
-    .subMenuToggle:checked + .subNavigation {
-        display:            block;
-        position:           relative;
-    }
     #respNav {
         display:            none;
     }

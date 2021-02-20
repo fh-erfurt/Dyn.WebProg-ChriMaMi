@@ -1,181 +1,147 @@
+/*========================== DESIGN-FORMS.CSS - Document IBHorsch =========================*/
 
+/*======================================= CONTENTS ========================================*/
+/*
+ 1. GENERAL
+ 2. LOGIN
+ 3. SIGNUP
+ 4. CONTACT
+ */
+/* ------------------------------------ START GENERAL ------------------------------------ */
 body
 {
-    width: 100%;
-
+    width:              100%;
 }
-
-*
-/*{
-    !*    box-sizing: border-box;*!
-    font-family: Roboto, sans-serif;
-}*/
-
 .headspace
 {
-    padding-top: 1.25em;  /*20px;*/
+    padding-top:        1.25em;  /*20px;*/
 }
-
-.login_window
-{
-    max-width: 36.25em;   /*580px;*/
-    min-width: 25em;      /*400px;*/
-    /*    height: 400px;*/
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3.125em 0 3.125em 0; /*50px 0px 50px 0px;*/
-    align-items: center;
-    flex-direction: column;
-    display: flex;
-    background: #FFFFFF;
-    border-radius: 3px;
-    border-bottom: 5px var(--headcolor) solid;
-    box-sizing: border-box;
-    filter: drop-shadow(0px 0px 10px #C4C4C4);
-}
-
-.login_window h1{
-    color: #000000;
-}
-
-.login_window_img
-{
-    position: absolute;
-    width: 8.375em;   /*134px;*/
-    height: 8.375em;   /*134px;*/
-    left: 16.3125em;    /*261px;*/
-    top: 2.125em;  /*34px;*/
-
-    /*    background: url(../logo/login_icon.png);*/
-}
-
-.form_window
-{
-    flex-wrap: wrap;
-width: 100%;  /*900px;*/
-justify-content: center;
-padding: 1.125em 0 3.125em 0; /*50px 0px 50px 0px;*/
-display: flex;
-    background: #FFFFFF;
-border-bottom: 5px var(--headcolor) solid; /*3px*/
-box-sizing: border-box;
-    filter: drop-shadow(0px 0px 10px #C4C4C4);
-}
-
-#personalSection {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    max-width: 40%;
-    justify-content: center;
-    min-width:256px;
-}
-
-#addressSection {
-    margin:10px;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    max-width: 40%;
-    justify-content: center;
-    min-width:256px;
-}
-
-.title {
-    height:50px;
-    text-align: center;
-    color: #2f2f2fde;
-    max-width: 40%;
-    min-width:80%;
-}
-
-/*.login_window_head
-{
-    position: absolute;
-    width: 135px;
-    height: 135px;
-    left: 261px;
-    top: 21px;
-
-    background: var(--headcolor);
-    border: 11px solid #FFFFFF;
-}*/
-
-/*.login_form
-{
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
-}*/
-
-.login_window > *
-{
-    margin-top: 0.75em;   /*12px;*/
-}
-
-.login_window label {
-    display: block;
-}
-
-.login_window a {
-    font-size: 14px !important;
-    text-decoration: none;
-    color: var(--headcolor);
-}
-
-
-.submit_button
-{
-    border: 0;
-    /*    font-size: large;*/
-    width: 18.75em;   /*300px;*/
-    height: 2.5em;   /*40px;*/
-    background-color: var(--headcolor);
-    color: #DDD;
-    font-weight: bold;
-}
-
-.login_check
-{
-    display: flex;
-}
-
 .form_col_space
 {
-    width: 18.75em; /*300px*/
-    height: 20px; /*25px*/
+    width:              18.75em; /*300px*/
+    height:             20px; /*25px*/
 }
-
-
-/*
-.form_col_space_small
-{
-    !*        width: 420px !*26.25em*!;*!
-    height: 20px; !*25px*!
-}
-*/
-
 .form_window label {
-    padding-top: 6px;
+    padding-top:        6px;
 }
-
 .form_window .form_col_space {
-    display: block;
+    display:            block;
 }
-
 .form_window div {
-    padding-bottom: 1.875em;   /*30px*/
+    padding-bottom:     1.875em;   /*30px*/
 }
-
 .form_window h1 {
     color: var(--headcolor);
-    padding-bottom: 1.875em;   /*30px*/
-    text-decoration: underline;
+    padding-bottom:     1.875em;   /*30px*/
+    text-decoration:    underline;
 }
-
 .form_window .form_col_numbers {
-    width: 2.5em;    /*40px*/
-    height: 20px;    /*20px*/
+    width:              2.5em;    /*40px*/
+    height:             20px;    /*20px*/
 }
+/* ------------------------------------- END GENERAL ------------------------------------- */
+
+/* ------------------------------------- START LOGIN ------------------------------------- */
+.login_window
+{
+    max-width:          36.25em;   /*580px;*/
+    min-width:          25em;      /*400px;*/
+    margin-left:        auto;
+    margin-right:       auto;
+    padding:            3.125em 0 3.125em 0; /*50px 0px 50px 0px;*/
+    align-items:        center;
+    flex-direction:     column;
+    display:            flex;
+    background:         white;
+    border-radius:      3px;
+    border-bottom:      5px var(--headcolor) solid;
+    box-sizing:         border-box;
+    filter:             drop-shadow(0px 0px 10px #C4C4C4);
+}
+.login_window h1{
+    color:              black;
+}
+.login_window_img
+{
+    position:           absolute;
+    width:              8.375em;   /*134px;*/
+    height:             8.375em;   /*134px;*/
+    left:               16.3125em;    /*261px;*/
+    top:                2.125em;  /*34px;*/
+}
+.login_window > *
+{
+    margin-top:         0.75em;   /*12px;*/
+}
+.login_window label {
+    display:            block;
+}
+.login_window a {
+    font-size:          14px !important;
+    text-decoration:    none;
+    color:              var(--headcolor);
+}
+.submit_button
+{
+    border:             0;
+    width:              18.75em;   /*300px;*/
+    height:             2.5em;   /*40px;*/
+    background-color:   var(--headcolor);
+    color:              #DDD;
+    font-weight:        bold;
+}
+.login_check
+{
+    display:            flex;
+}
+/* -------------------------------------- END LOGIN -------------------------------------- */
+
+/* ------------------------------------- START SIGNUP ------------------------------------ */
+.form_window
+{
+    flex-wrap:          wrap;
+    width:              100%;  /*900px;*/
+    justify-content:    center;
+    padding:            1.125em 0 3.125em 0; /*50px 0px 50px 0px;*/
+    display:            flex;
+    background:         white;
+    border-bottom:      5px var(--headcolor) solid; /*3px*/
+    box-sizing:         border-box;
+    filter:             drop-shadow(0px 0px 10px #C4C4C4);
+}
+#personalSection {
+    margin:             10px;
+    display:            flex;
+    flex-direction:     column;
+    height:             auto;
+    max-width:          40%;
+    justify-content:    center;
+    min-width:          256px;
+}
+#addressSection {
+    margin:             10px;
+    display:            flex;
+    flex-direction:     column;
+    height:             auto;
+    max-width:          40%;
+    justify-content:    center;
+    min-width:          256px;
+}
+.title {
+    height:             50px;
+    text-align:         center;
+    color:              #2f2f2fde;
+    max-width:          40%;
+    min-width:          80%;
+}
+/* -------------------------------------- END SIGNUP ------------------------------------- */
+
+/* ------------------------------------ START CONTACT ------------------------------------ */
+/* ------------------------------------- END CONTACT ------------------------------------- */
+
+
+
+
+
+
 
