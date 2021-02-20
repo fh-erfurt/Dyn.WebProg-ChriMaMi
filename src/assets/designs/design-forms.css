@@ -14,49 +14,49 @@ body
 }
 .headspace
 {
-    padding-top:        1.25em;  /*20px;*/
+    padding-top:        1.25em;     /
 }
 .form_col_space
 {
-    width:              18.75em; /*300px*/
-    height:             20px; /*25px*/
+    width:              18.75em;
+    height:             1.25em;
 }
 .form_window label {
-    padding-top:        6px;
+    padding-top:        0.375em;
 }
 .form_window .form_col_space {
     display:            block;
 }
 .form_window div {
-    padding-bottom:     1.875em;   /*30px*/
+    padding-bottom:     1.875em;
 }
 .form_window h1 {
     color: var(--headcolor);
-    padding-bottom:     1.875em;   /*30px*/
+    padding-bottom:     1.875em;
     text-decoration:    underline;
 }
 .form_window .form_col_numbers {
-    width:              2.5em;    /*40px*/
-    height:             20px;    /*20px*/
+    width:              2.5em;
+    height:             1.25em;
 }
 /* ------------------------------------- END GENERAL ------------------------------------- */
 
 /* ------------------------------------- START LOGIN ------------------------------------- */
 .login_window
 {
-    max-width:          36.25em;   /*580px;*/
-    min-width:          25em;      /*400px;*/
+    max-width:          36.25em;
+    min-width:          25em;
     margin-left:        auto;
     margin-right:       auto;
-    padding:            3.125em 0 3.125em 0; /*50px 0px 50px 0px;*/
+    padding:            3.125em 0 3.125em 0;
     align-items:        center;
     flex-direction:     column;
     display:            flex;
     background:         white;
-    border-radius:      3px;
-    border-bottom:      5px var(--headcolor) solid;
+    border-radius:      0.1875em;
+    border-bottom:      0.1875em var(--headcolor) solid;
     box-sizing:         border-box;
-    filter:             drop-shadow(0px 0px 10px #C4C4C4);
+    filter:             drop-shadow(0 0 0.625em #C4C4C4);
 }
 .login_window h1{
     color:              black;
@@ -64,28 +64,28 @@ body
 .login_window_img
 {
     position:           absolute;
-    width:              8.375em;   /*134px;*/
-    height:             8.375em;   /*134px;*/
-    left:               16.3125em;    /*261px;*/
-    top:                2.125em;  /*34px;*/
+    width:              8.375em;
+    height:             8.375em;
+    left:               16.3125em;
+    top:                2.125em;
 }
 .login_window > *
 {
-    margin-top:         0.75em;   /*12px;*/
+    margin-top:         0.75em;
 }
 .login_window label {
     display:            block;
 }
 .login_window a {
-    font-size:          14px !important;
+    font-size:          0.875em !important;
     text-decoration:    none;
     color:              var(--headcolor);
 }
 .submit_button
 {
     border:             0;
-    width:              18.75em;   /*300px;*/
-    height:             2.5em;   /*40px;*/
+    width:              18.75em;
+    height:             2.5em;
     background-color:   var(--headcolor);
     color:              #DDD;
     font-weight:        bold;
@@ -100,35 +100,35 @@ body
 .form_window
 {
     flex-wrap:          wrap;
-    width:              100%;  /*900px;*/
+    width:              100%;
     justify-content:    center;
-    padding:            1.125em 0 3.125em 0; /*50px 0px 50px 0px;*/
+    padding:            1.125em 0 3.125em 0;
     display:            flex;
     background:         white;
-    border-bottom:      5px var(--headcolor) solid; /*3px*/
+    border-bottom:      0.3125em var(--headcolor) solid;
     box-sizing:         border-box;
-    filter:             drop-shadow(0px 0px 10px #C4C4C4);
+    filter:             drop-shadow(0 0 0.625em #C4C4C4);
 }
 #personalSection {
-    margin:             10px;
+    margin:             0.625em;
     display:            flex;
     flex-direction:     column;
     height:             auto;
     max-width:          40%;
     justify-content:    center;
-    min-width:          256px;
+    min-width:          16em;
 }
 #addressSection {
-    margin:             10px;
+    margin:             0.625em;
     display:            flex;
     flex-direction:     column;
     height:             auto;
     max-width:          40%;
     justify-content:    center;
-    min-width:          256px;
+    min-width:          16em;
 }
 .title {
-    height:             50px;
+    height:             3.125em;
     text-align:         center;
     color:              #2f2f2fde;
     max-width:          40%;
