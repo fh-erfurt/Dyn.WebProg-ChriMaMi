@@ -73,27 +73,32 @@
 -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var submitBtn = document.getElementById('submit');
-        var form = document.getElementById('signUpForm');
+
+        var inputFirstName = document.getElementById('firstname');
+        var inputLastName = document.getElementById('lastname');
+        var inputEmail = document.getElementById('email');
+        var inputBirthDate = document.getElementById('birthday');
         var inputPassword = document.getElementById('password');
         var repeatPassword = document.getElementById('repeatPassword');
+
+
         let error = true;
-        console.log('Error: '+ error);
+        console.log('Error: ' + error);
 
         if (inputPassword) {
 
             inputPassword.addEventListener('keyup', function () {
-                var regex1 = /^((?=.*?[A-Z].*?)(?=.*?[a-z].*?)(?=.*?[0-9].*?)).{6,}$/m;
-                var regex2 = /^(?=.*?[A-Z].*?)(?=.*?[a-z].*?[a-z])(?=.*?[0-9].*?[0-9])(?=.*?[^\w\s].*?).{8,}$/m;
-                var regex3 = /^(?=.*?[A-Z].*?[A-Z])(?=.*?[a-z].*?[a-z])(?=.*?[0-9].*?[0-9])(?=.*?[^\w\s].*?[^\w\s]).{12,}$/m;
+                var regexPw1 = /^((?=.*?[A-Z].*?)(?=.*?[a-z].*?)(?=.*?[0-9].*?)).{6,}$/m;
+                var regexPw2 = /^(?=.*?[A-Z].*?)(?=.*?[a-z].*?[a-z])(?=.*?[0-9].*?[0-9])(?=.*?[^\w\s].*?).{8,}$/m;
+                var regexPw3 = /^(?=.*?[A-Z].*?[A-Z])(?=.*?[a-z].*?[a-z])(?=.*?[0-9].*?[0-9])(?=.*?[^\w\s].*?[^\w\s]).{12,}$/m;
                 var string = this.value;
 
 
-                if (string.match(regex3)) {
+                if (string.match(regexPw3)) {
                     inputPassword.style.border = '2px solid green';
-                } else if (string.match(regex2)) {
+                } else if (string.match(regexPw2)) {
                     inputPassword.style.border = '2px solid yellow';
-                } else if (string.match(regex1)) {
+                } else if (string.match(regexPw1)) {
                     inputPassword.style.border = '2px solid orange';
                 } else {
                     inputPassword.style.border = '2px solid red';
@@ -119,26 +124,33 @@
             });
         }
 
-/*        function send() {
+
+        document.getElementById('signUpForm').onsubmit = function (event) {
             if (error !== false) {
-                form.addEventListener('submit', validate);
-                alert('Bitte füllen Sie die Anmeldung vollständig aus!');
-            }
-        };*/
-
-        document.getElementById('signUpForm').onsubmit = function(event) {
-            if(error !== false) {
                 event.preventDefault()
-                alert('Bitte füllen Sie die Anmeldung vollständig aus!');
+                alert('Bitte füllen Sie die Anmeldung korrekt aus!');
             }
         }
 
+        if (inputFirstName) {
+            inputFirstName.addEventListener('keyup', function () {
+                    const regExName = /^(([a-zA-Z]{2,})+(([\-]){1})*)*$/m;
 
-/*
-        function validate(event) {
-            event.preventDefault();
+                    if (inputFirstName.value.match(regExName)) {
+                        inputFirstName.style.border = '2px solid green';
+                        error = false;
+                    } else {
+                        inputFirstName.style.border = '2px solid red';
+                    }
+                }
+            );
+
         }
-*/
+        /*
+                function validate(event) {
+                    event.preventDefault();
+                }
+        */
 
     });
 
