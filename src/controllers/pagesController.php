@@ -60,10 +60,6 @@ class PagesController extends \dwp\core\Controller
 
     }
 
-    public function actionAdministration()
-    {
-
-    }
 
     public function actionNews()
     {

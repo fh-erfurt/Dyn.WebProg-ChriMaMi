@@ -27,16 +27,17 @@
                     <!--Only for Mobile Version-->
 
                     <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=shop&a=categories">Produkte</a></li>
-                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=shop&a=cart">Warenkorb</a></li>
+<!--                    <li><a href="<?/*= $_SERVER['SCRIPT_NAME'] */?>?c=shop&a=cart">Warenkorb</a></li>-->
                     <?php
                     if (isset($_SESSION['email'])) {
+                        echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=shop&a=cart">Warenkorb</a></li>';
                         if (isset($_SESSION['email']) && $_SESSION['isAdmin'] == 1) {
 /*                            echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=administration">Administration</a></li>';*/
                             echo'<div id="respSubNav" for="subToggle">';
                             echo '<li><label for="subToggle" class="navigation"><span>Administration</span></label>';
                             echo '<input class="subMenuToggle" type="checkbox" id="subToggle">';
                             echo '<ul class="subNavigation">';
-                                echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=pages&a=administration">Verwaltung</a>';
+                                echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=administration&a=userManagement">Verwaltung</a>';
                                 echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=logout" class=\'submitLogout\'>Logout</a></li>';
                             echo '</ul></li>';
                             echo '</div>';
@@ -46,7 +47,7 @@
                             echo '<li><label for="subToggle" class="navigation"><span>Account</span></label>';
                             echo '<input class="subMenuToggle" type="checkbox" id="subToggle">';
                             echo '<ul class="subNavigation">';
-                            echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=pages&a=administration">Daten ändern</a></li>';
+                            echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=administration&a=myData">Daten ändern</a></li>';
                             echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=logout">Logout</a></li>';
                             echo '</ul></li>';
                             echo '</div>';

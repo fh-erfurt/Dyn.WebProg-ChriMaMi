@@ -18,9 +18,6 @@
         <? endif ?>
         <input class="submit_button" id="submit_login" name="submit_login" type="submit" value="anmelden">
         <span class="login_check">
-            <input id="rememberMe" name="rememberMe" type="checkbox">
-            <?= isset($_POST['rememberMe']) ? 'checked' : '' ?>
-            <label for="rememberMe">Angemeldet bleiben?</label>
         </span>
         <a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=accounts&a=signup">Noch kein Konto?</a>
     </form>

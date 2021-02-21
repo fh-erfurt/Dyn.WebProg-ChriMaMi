@@ -160,14 +160,10 @@ abstract class Model
 
         $sqlStr .= $valuesStr.' WHERE id = '.$this->values['id'].';';
 
-/*        echo $sqlStr;
-        exit(0);*/
-
         try
         {
             $stmt=$db->prepare($sqlStr);
             $stmt->execute($this->values);
-            $this->id = $db->lastInsertId();
         }
         catch(\PDOException $e)
         {

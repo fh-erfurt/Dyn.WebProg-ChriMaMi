@@ -82,6 +82,11 @@ body
     text-decoration:    none;
     color:              var(--headcolor);
 }
+.login_window a:hover {
+/*    color: var(--overheadGrey);*/
+    font-weight: bold;
+}
+
 .submit_button
 {
     border:             0;
@@ -90,6 +95,7 @@ body
     background-color:   var(--headcolor);
     color:              #DDD;
     font-weight:        bold;
+    cursor:             pointer;
 }
 .login_check
 {

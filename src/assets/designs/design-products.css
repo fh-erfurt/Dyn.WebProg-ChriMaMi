@@ -136,6 +136,10 @@
     background:         #27ae60;
     top:                0.125em;
 }
+.item .btn.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
 .categories {
     display:            flex;
     justify-content:    center;
@@ -253,6 +257,10 @@
     line-height:        1.5em;
     align-items:        end;
     user-select:        none;
+}
+.counter .box.disabled {
+    opacity: .5;
+    pointer-events: none;
 }
 #leftBox {
     margin-left: 0.5em;

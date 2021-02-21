@@ -8,40 +8,40 @@
 
 
     <main>
-        <form class="mydataFlex" name="mydata" action="">
+        <form class="mydataFlex" name="mydata" action="" method="post">
         <!--<section>-->
             <div class="leftSite">
             <label for="firstname"> Vorname:</label>
-                    <input type="text" name="firstname" id="firstname" value='<? echo $customer->firstname ?>'>
+                    <input type="text" name="firstname" id="firstname" value='<?= $customer->firstname ?>'>
 
                 <label for="lastname"> Nachname:</label>
-                    <input type="text" name="lastname" id="lastname" value='<? echo $customer->lastname ?>'>
+                    <input type="text" name="lastname" id="lastname" value='<?= $customer->lastname ?>'>
 
 
                 <label for="city"> email:</label>
                     <input type="text" name="email" id="email"
-                           value='<? echo $_SESSION['email'] ?>'>
+                           value='<?= $customer->email ?>'>
 
             <label for="phone"> Telefonnummer: </label>
-                <input type="text" name="phone" id="phone" value='<? echo $customer->phone ?>'>
+                <input type="text" name="phone" id="phone" value='<?= $customer->phone ?>'>
             </div>
             <div class="rightSite">
                     <label for="street"> Straße: </label>
-                        <input type="text" name="street" id="street" value='<? echo $address->street ?>'>
+                        <input type="text" name="street" id="street" value='<?= $address->street ?>'>
 
 
             <label for="house_number"> Nummer:</label>
-                <input type="text" name="house_number" id="house_number" value='<? echo $address->house_number ?>'>
+                <input type="text" name="house_number" id="house_number" value='<?= $address->house_number ?>'>
 
             <label for="city"> Stadt:</label>
-                <input type="text" name="city" id="city" value='<? echo $address->city ?>'>
+                <input type="text" name="city" id="city" value='<?= $address->city ?>'>
 
             <label for="zip"> zip:</label>
-                <input type="text" name="zip" id="zip" value='<? echo $address->zip ?>'>
+                <input type="text" name="zip" id="zip" value='<?= $address->zip ?>'>
             </div>
             <p>
             <div class="mydataBtn">
-            <button class="btn" type="submit" name="override" value="input_changeAccountDetails">Änderungen
+            <button class="btn" type="submit" name="update" value="input_changeAccountDetails">Änderungen
                 übernemen
             </button>
             <button class="btn" type="submit" name="contact" value="input_changeAccountPassword">Neues Passwort

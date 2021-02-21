@@ -459,7 +459,7 @@ ul li a:hover + .hidden, .hidden:hover {
     .subNavigation {
         display:            none;
         position:           absolute;
-        top:                2.1em;
+        top:                2.0em !important;
         flex-direction:     row;
     }
     #respSubNavHome li:hover > input[type="checkbox"] + .subNavigation {
