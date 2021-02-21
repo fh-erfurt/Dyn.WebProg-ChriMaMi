@@ -50,11 +50,19 @@
         <div>
             <p>Preis: <?=$product->std_price; ?>€</p>
         </div>
-        <div class="counter">
-            <div class="box" data-type="decrease" id="leftBox"><a>-</a></div>
-            <div class="box" data-type="amount"   id="centerBox"><a>0</a></div>
-            <div class="box" data-type="increase" id="rightBox"><a>+</a></div>
-        </div>
+        <? if (isset($_SESSION['id']) && $_SESSION['id'] !== null ) :?>
+            <div class="counter">
+                <div class="box" data-type="decrease" id="leftBox"><a>-</a></div>
+                <div class="box" data-type="amount"   id="centerBox"><a>0</a></div>
+                <div class="box" data-type="increase" id="rightBox"><a>+</a></div>
+            </div>
+        <? else:?>
+            <div class="counter">
+                <div class="box" data-type="decrease" id="leftBox" aria-disabled="true" style="color: gray"><a>-</a></div>
+                <div class="box" data-type="amount"   id="centerBox" aria-disabled="true" style="color: gray"><a>0</a></div>
+                <div class="box" data-type="increase" id="rightBox" aria-disabled="true" style="color: gray"><a>+</a></div>
+            </div>
+        <? endif;?>
         <div>
             <button class="btn" data-id="<?= $product->id ?>">Add to Cart</button>
         </div>
