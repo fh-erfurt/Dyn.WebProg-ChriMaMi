@@ -16,8 +16,6 @@
                     <div class="descriptionAll">
                         <p><?=$ware->p_name?></p>
                             <ul>
-<!--                                <li>Stk.-Preis: src="<?/*= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'trash.png' */?></li>
--->
                                 <li>Stk.-Preis: <?=$ware->std_price?>€</li>
                                 <li class="price">Gesamtpreis: <?=$ware->total_price?>€</li>
                             </ul>
@@ -38,7 +36,7 @@
         </section>
         <aside>
             <section class="checkout">
-                <h2>Summe(Anzahl der Artikel): 00,00€</h2>
+                <h2>Summe(Anzahl der Artikel): <?= $result ?>€</h2>
                 <button class="btn">Zur Kasse gehen</button>
             </section>
         </aside>
