@@ -1,5 +1,5 @@
 <link href="<?= ASSETSPATH . 'designs' . DIRECTORY_SEPARATOR . 'design-products.css' ?>" rel="stylesheet">
-<script src="<?= ASSETSPATH.'javascripts'.DIRECTORY_SEPARATOR.'counterForShop.js' ?>" type="text/javascript"></script>
+<script src="<?= ASSETSPATH.'javascripts'.DIRECTORY_SEPARATOR.'counterForCart.js' ?>" type="text/javascript"></script>
     <? require SHAREDPATH . "subnav.php"; ?>
 
     <section class="cartDisplay">
@@ -24,7 +24,7 @@
                     </div>
                     <div class="counter">
                         <div class="box" data-type="decrease" id="leftBox"><a>-</a></div>
-                        <div class="box" data-type="amount"   id="centerBox"><a>0</a></div>
+                        <div class="box" data-type="amount"   id="centerBox"><a><?=$ware->amount?></a></div>
                         <div class="box" data-type="increase" id="rightBox"><a>+</a></div>
                     </div>
                     <div class="iconImg">
