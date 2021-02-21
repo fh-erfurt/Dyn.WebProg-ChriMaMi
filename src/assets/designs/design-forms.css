@@ -36,7 +36,8 @@ body
     text-decoration:    underline;
 }
 .form_window .form_col_numbers {
-    width:              2.5em;
+    text-align:         center;
+    width:              2.846em;
     height:             1.25em;
 }
 /* ------------------------------------- END GENERAL ------------------------------------- */

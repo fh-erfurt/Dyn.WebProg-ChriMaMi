@@ -1,6 +1,7 @@
 <link href="<?= ASSETSPATH . 'designs' . DIRECTORY_SEPARATOR . 'design-forms.css' ?>" rel="stylesheet">
+<script src="<?= ASSETSPATH.'javascripts'.DIRECTORY_SEPARATOR.'validationSignUp.js' ?>" type="text/javascript"></script>
 <div class="headspace">
-    <form action="" method="post" class="form_window">
+    <form action="" method="post" class="form_window" id="signUpForm">
         <div class="title"><h2>Registration</h2></div>
         <div id="personalSection">
             <label style="padding-bottom: 10px" for="gender">Geschlecht:
@@ -38,6 +39,7 @@
                 <input type="password" class="form_col_space" id="repeatPassword" name="repeatPassword"
                        value="<?= htmlspecialchars('') ?>" required>
             </label>
+            <div id="errorPassword"></div>
         </div>
 
         <div id="addressSection">
@@ -62,16 +64,9 @@
                        autocomplete="on" required>
             </label>
             <div id="submitSection" style="margin-top: 21px">
-                <input id="submit" type="submit" class="submit_button" name="signUp" value="registrieren">
+                <input id="submit" type="submit" class="submit_button" name="signUp" value="registrieren"
+                       style="cursor: pointer">
             </div>
         </div>
     </form>
 </div>
-
-<!--<script>
-    var refRedirect = document.getElementById("submitReg");
-    refRedirect.addEventListener("submit", redirectTimeOut);
-    function redirectTimeOut () {
-        window.open("index.php?c=pages&a=redirecttimeout", "_parent");
-    }
-</script>-->
