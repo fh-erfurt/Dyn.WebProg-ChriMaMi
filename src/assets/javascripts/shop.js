@@ -5,16 +5,55 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('Sorry, not completed!');
             event.preventDefault()
         } else {
-            requestProducts();
             event.preventDefault()
+
+            const productsRequest = new XMLHttpRequest();
+            productsRequest.open("GET", "assets/json/products.json", true);
+
+            productsRequest.responseType = 'json';
+
+            productsRequest.onload = () => {
+                var products = productsRequest.response;
+                for (var index = 0; index < products.length; index++) {
+                    if (products[index].name.match(searchbar.value)) {
+                        console.log('Hit: '+index);
+                        console.log('Produkt : ' + products[index].name);
+                        console.log('Kategorie : ' + products[index].category);
+                        console.log('Beschreibung : ' + products[index].deascription);
+                        console.log('Price : ' + products[index].std_price);
+                    } else if(products[index].category.match(searchbar.value)) {
+                        console.log('Hit: '+index);
+                        console.log('Produkt : ' + products[index].name);
+                        console.log('Kategorie : ' + products[index].category);
+                        console.log('Beschreibung : ' + products[index].deascription);
+                        console.log('Price : ' + products[index].std_price);
+
+                    } else if (products[index].deascription.match(searchbar.value)) {
+                        console.log('Hit: '+index);
+                        console.log('Produkt : ' + products[index].name);
+                        console.log('Kategorie : ' + products[index].category);
+                        console.log('Beschreibung : ' + products[index].deascription);
+                        console.log('Price : ' + products[index].std_price);
+
+                    } else if (products[index].std_price.match(searchbar.value)) {
+                        console.log('Hit: '+index);
+                        console.log('Produkt : ' + products[index].name);
+                        console.log('Kategorie : ' + products[index].category);
+                        console.log('Beschreibung : ' + products[index].deascription);
+                        console.log('Price : ' + products[index].std_price);
+
+                    } else {
+                        console.log('No Products found');
+                    }
+
+                    /*switch()*/
+                }
+            }
+            productsRequest.send();
         }
     }
 });
 
-function requestProducts() {
-    const productsRequest = new XMLHttpRequest();
-    productsRequest.open('GET', '/src/')
-}
 
 /*
 var actionSearchbar = document.getElementById('search');

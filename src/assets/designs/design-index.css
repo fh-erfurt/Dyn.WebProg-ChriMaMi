@@ -1078,6 +1078,11 @@ article {
     flex-wrap:          wrap;
     width:              100%;
 }
+
+#administration-wraper h2 {
+    min-width: 800px;
+    text-align: center;
+}
 .mydataFlex{
     display:            flex;
     justify-content:    center;

@@ -108,9 +108,6 @@ class ShopController extends \dwp\core\Controller
         redirect("index.php?c=shop&a=cart");
     }
 
-    public function actionSearch() {
-
-    }
 
 
 }

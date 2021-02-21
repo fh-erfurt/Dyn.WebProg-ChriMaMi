@@ -6,21 +6,20 @@ if (!file_exists(ASSETSPATH . 'JSON/products.json')) {
     $allProducts = Products::find();
     foreach ($allProducts as $key => $value) {
         $jsonArray[$key] = array(
-            $allProducts[$key]->name => array(
-                'category' => $allProducts[$key]->category,
-                'deascription' => $allProducts[$key]->description,
-                'std_price' => $allProducts[$key]->std_price,
-                ''
-            )
+            'name' => $allProducts[$key]->name,
+            'category' => $allProducts[$key]->category,
+            'deascription' => $allProducts[$key]->description,
+            'std_price' => $allProducts[$key]->std_price
+
         );
     }
     $json = json_encode($jsonArray);
-    $file = file_put_contents(ASSETSPATH . 'JSON/products.json', $json);
+    $file = file_put_contents(ASSETSPATH . 'json/products.json', $json);
 } else {
-/*    echo 'Datei existiert bereits';*/
+    /*    echo 'Datei existiert bereits';*/
 }
 ?>
-<script src="<?= ASSETSPATH.'javascripts'.DIRECTORY_SEPARATOR.'shop.js' ?>" type="text/javascript"></script>
+<script src="<?= ASSETSPATH . 'javascripts' . DIRECTORY_SEPARATOR . 'shop.js' ?>" type="text/javascript"></script>
 
 <div class="secondNavigation">
     <!--    <nav class="secondNavigation">>-->
