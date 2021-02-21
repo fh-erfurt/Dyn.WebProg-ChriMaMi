@@ -77,7 +77,11 @@
         var inputFirstName = document.getElementById('firstname');
         var inputLastName = document.getElementById('lastname');
         var inputEmail = document.getElementById('email');
-        var inputBirthDate = document.getElementById('birthday');
+        var inputStreet = document.getElementById('street');
+        var inputNumber = document.getElementById('houseNumber');
+        var inputCity = document.getElementById('city');
+        var inputZip = document.getElementById('zip');
+        var inputBirthday = document.getElementById('birthday');
         var inputPassword = document.getElementById('password');
         var repeatPassword = document.getElementById('repeatPassword');
 
@@ -102,7 +106,7 @@
                     inputPassword.style.border = '2px solid orange';
                 } else {
                     inputPassword.style.border = '2px solid red';
-                    /*return error = true;*/
+                    return error = true;
                 }
             });
         }
@@ -132,25 +136,143 @@
             }
         }
 
+        var regExName = /^([a-zA-zßäöüÄÖÜ]+([\s]|[\-])*){1,}$/m;
+        var regExEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/m;
+        var regExStreetNumber = /^(([1-9]{1,2}[0-9]?)[a-z]?)$/m;
+        var regExZip = /^[0-9]{5}$/m;
+
+
         if (inputFirstName) {
             inputFirstName.addEventListener('keyup', function () {
-                    const regExName = /^(([a-zA-Z]{2,})+(([\-]){1})*)*$/m;
 
-                    if (inputFirstName.value.match(regExName)) {
+                    if (this.value.match(regExName)) {
                         inputFirstName.style.border = '2px solid green';
                         error = false;
                     } else {
+                        error = true;
                         inputFirstName.style.border = '2px solid red';
                     }
                 }
             );
 
         }
-        /*
-                function validate(event) {
-                    event.preventDefault();
+
+        if (inputLastName) {
+            inputLastName.addEventListener('keyup', function () {
+                    if (this.value.match(regExName)) {
+                        inputLastName.style.border = '2px solid green';
+                        error = false;
+                    } else {
+                        error = true;
+                        inputLastName.style.border = '2px solid red';
+                    }
                 }
-        */
+            );
+
+        }
+
+        if (inputEmail) {
+            inputEmail.addEventListener('keyup', function () {
+                    if (this.value.match(regExEmail)) {
+                        inputEmail.style.border = '2px solid green';
+                        error = false;
+                    } else {
+                        error = true;
+                        inputEmail.style.border = '2px solid red';
+                    }
+                }
+            );
+
+        }
+
+        if (inputStreet) {
+            inputStreet.addEventListener('keyup', function () {
+
+                    if (this.value.match(regExName)) {
+                        inputStreet.style.border = '2px solid green';
+                        error = false;
+                    } else {
+                        error = true;
+                        inputStreet.style.border = '2px solid red';
+                    }
+                }
+            );
+
+        }
+
+        if (inputNumber) {
+            inputNumber.addEventListener('keyup', function () {
+
+                    if (this.value.match(regExStreetNumber)) {
+                        inputNumber.style.border = '2px solid green';
+                        error = false;
+                    } else {
+                        error = true;
+                        inputNumber.style.border = '2px solid red';
+                    }
+                }
+            );
+
+        }
+
+        if (inputCity) {
+            inputCity.addEventListener('keyup', function () {
+
+                    if (this.value.match(regExName)) {
+                        inputCity.style.border = '2px solid green';
+                        error = false;
+                    } else {
+                        error = true;
+                        inputCity.style.border = '2px solid red';
+                    }
+                }
+            );
+
+        }
+
+        if (inputZip) {
+            inputZip.addEventListener('keyup', function () {
+
+                    if (this.value.match(regExZip)) {
+                        inputZip.style.border = '2px solid green';
+                        error = false;
+                    } else {
+                        error = true;
+                        inputZip.style.border = '2px solid red';
+                    }
+                }
+            );
+
+        }
+
+        inputBirthday.addEventListener('focusin', function () {
+            if(inputBirthday)
+                inputBirthday.addEventListener('keyup', function () {
+                    if(this.value < 10) {
+                        this.style.border = '2px solid red';
+                        error = true;
+                    } else {
+                        this.style.border = '2px solid green';
+                        error = false;
+                        const birthday = new Date(this.value);
+                        const currentDate = new Date();
+                        const yearInMillis = 31536000000;
+                        var ageOfCustomer = ((currentDate - birthday)/yearInMillis);
+                        if(ageOfCustomer < 18)
+                        {
+                            error = true;
+                            alert('Das Mindestalter für Bestellungen beträgt 18 Jahre');
+                            this.style.border = '2px solid red';
+                        }
+                        console.log(this.value.length);
+                    }
+
+
+                });
+        });
+
+
+
 
     });
 
