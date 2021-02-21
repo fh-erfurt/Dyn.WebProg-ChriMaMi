@@ -8,3 +8,8 @@
 /src/assets/
 *.img
 *.png
+
+/src/database
+*.sql
+*.mwb
+*.bak
