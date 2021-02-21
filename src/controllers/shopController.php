@@ -108,5 +108,9 @@ class ShopController extends \dwp\core\Controller
         header("Location: index.php?c=shop&a=cart");
     }
 
+    public function actionSearch() {
+
+    }
+
 
 }

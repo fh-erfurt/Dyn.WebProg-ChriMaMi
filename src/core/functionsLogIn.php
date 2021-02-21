@@ -14,7 +14,7 @@ function getMember($email)
 }
 
 function isAdmin($member){
-    if($member === 'admin'){
+    if($member->roll === 'admin'){
         return true;
     } else {
         return false;

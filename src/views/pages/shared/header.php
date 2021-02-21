@@ -27,9 +27,10 @@
                     <!--Only for Mobile Version-->
 
                     <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=shop&a=categories">Produkte</a></li>
-                    <li><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=shop&a=cart">Warenkorb</a></li>
+<!--                    <li><a href="<?/*= $_SERVER['SCRIPT_NAME'] */?>?c=shop&a=cart">Warenkorb</a></li>-->
                     <?php
                     if (isset($_SESSION['email'])) {
+                        echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=shop&a=cart">Warenkorb</a></li>';
                         if (isset($_SESSION['email']) && $_SESSION['isAdmin'] == 1) {
 /*                            echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=administration">Administration</a></li>';*/
                             echo'<div id="respSubNav" for="subToggle">';
