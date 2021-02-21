@@ -236,8 +236,8 @@ nav a {
     display:            block;
     width:              100%;
     height:             100%;
-    font-size:          1.3125em;
-    color:              #FFFFFF;
+    font-size:          1em;
+    color:              white;
     text-align:         center;
     background:         rgba(25, 96, 184, 0.90);
 }
@@ -1076,14 +1076,58 @@ article {
     display:            flex;
     justify-content:    center;
     flex-wrap:          wrap;
-    margin-left:        2.5%;
-    margin-right:       2.5%;
-    width:              95%;
+    width:              100%;
 }
-#administration-wraper h2 {
+.mydataFlex{
+    display:            flex;
+    justify-content:    center;
+    flex-wrap:          wrap;
+}
+.rightSite{
+    width:              40%;
+    margin-left:        5%;
+}
+.leftSite{
+    width:              40%;
+    margin-bottom:      5%;
+}
+.mydata{
     text-align:         center;
-    padding-left:       10%;
+    padding-left:       20%;
     padding-right:      20%;
+}
+.mydataBtn {
+    display:            flex;
+    align-items:        center;
+    justify-content:    center;
+    flex-wrap:          wrap;
+}
+.btn {
+    align-items:        center;
+    height:             3.75em;
+    max-width:          5em;
+    cursor:             pointer;
+    font-size:          0.9375em;
+    font-family:        'Raleway', sans-serif;
+    display:            flex;
+    justify-content:    center;
+    border:             0.1111em solid ;
+    background-color:   #1960B8;
+    color:              white;
+    padding:            0.8334em 1.7777em;
+    text-align:         center;
+    text-decoration:    none;
+    min-width:          12.7779em;
+    margin-bottom:      0.5em;
+    margin-right:       0.5em;
+    transition:         background-color 0.2s ease-out;
+    flex-direction:     row;
+}
+.btn:hover {
+    background-color:   #5aace9;
+}
+.delete .btn:hover {
+    background-color:   #ff0e0e;
 }
 .menubar {
     vertical-align:     top;
@@ -1095,11 +1139,7 @@ article {
     list-style:         none;
     border:             0.125em solid #1b63b8;
     background-color:   #1960B8;
-    border-radius:      0.625em;
-    width:              70%;
-    margin-bottom:      0.625em;
-    max-width:          50em;
-    min-width:          6.25em;
+    width:              95%;
     padding:            0 3.125em 0 3.125em;
 }
 .menubar li {
@@ -1116,6 +1156,15 @@ article {
     text-decoration:    none;
     color:              white;
 }
+#adminnav-wraper{
+    display:            flex;
+    width:              80%;
+    margin-left:        auto;
+    margin-right:       auto;
+    background-color:   #1960B8;
+    padding-left:       1.25em;
+    padding-right:      1.25em;
+}
 #administration-wraper main {
     display:            flex;
     width:              80%;
@@ -1123,33 +1172,10 @@ article {
     margin-left:        0;
     text-decoration:    none;
     list-style:         none;
-    border:             0.125em solid #1b63b8;
-    background-color:   #ddedfd;
-    border-radius:      0.625em;
+    background-color:   white;
     padding:            1.25em;
     vertical-align:     top;
-}
-#administration-wraper form {
-    padding:            1em;
-    background:         #f9f9f9;
-    border:             0.0625em solid #c1c1c1;
-    margin-top:         2rem;
-    max-width:          37.5em;
-    margin-left:        auto;
-    margin-right:       auto;
-}
-#administration-wraper form input {
-    margin-bottom:      1rem;
-    background:         #fff;
-    border:             0.0625em solid #9c9c9c;
-}
-#administration-wraper form button {
-    background:         lightgrey;
-    padding:            0.7em;
-    border:             0;
-}
-#administration-wraper form button:hover {
-    background:         gold;
+    border-bottom:      0.255em var(--headcolor) solid;
 }
 #administration-wraper label {
     text-align:         left;
