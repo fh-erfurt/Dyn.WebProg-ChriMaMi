@@ -1,3 +1,11 @@
+/*======================== DESIGN-PRODUCTS.CSS - Document IBHorsch ========================*/
+
+/*======================================= CONTENTS ========================================*/
+/*
+ 1. SUB NAVIGATION BAR
+ 2. PRODUCTS
+ 3. SHOPPING CART
+ */
 /* ------------------------------ START SUB NAVIGATION BAR ------------------------------- */
 .secondNavigation {
     font-size:          1em;
@@ -61,17 +69,14 @@
     text-decoration:    none;
     transition:         background-color 0.5s ease-out;
 }
-@media screen and (max-width:1120px) {
+@media screen and (max-width:70em) {
     #search {
-        width:          6.25em;    /*100px;*/
+        width:              6.25em;
     }
 }
-@media screen and (max-width:62em /*992px*/) {
+@media screen and (max-width:62em) {
     #search {
-        width:          17.5em;    /*280px;*/
-    }
-    .secondNavigation {
-        font-size:      14px;
+        width:              17.5em;
     }
 }
 /* ------------------------------ END SUB NAVIGATION BAR ------------------------------- */
@@ -93,7 +98,7 @@
     padding:            0.75em;
     width:              21.875em;
     height:             auto;
-    border-radius:      2px;
+    border-radius:      0.125em;
     background-color:   white;
 }
 .item img {
@@ -108,6 +113,7 @@
 .item .btn {
     background:         #5cca8e;
     color:              #fff;
+    border-color:       #2F2D2C;
     float:              right;
     font-size:          inherit;
     font-family:        'Raleway', sans-serif;
@@ -145,7 +151,7 @@
 }
 .btn {
     cursor:             pointer;
-    font-size:          15px;
+    font-size:          0.9375em;
     font-family:        'Raleway', sans-serif;
     display:            flex;
     justify-content:    center;
@@ -289,7 +295,7 @@
     display:            flex;
     margin-bottom:      0;
     width:              93%;
-    height:             130px;
+    height:             8.125em;
     justify-content:    space-between;
 }
 .cartItem .counter{
@@ -298,16 +304,16 @@
 }
 .cartItem img {
     display:            flex;
-    margin-left:        6px;
-    border:             black 1px solid;
+    margin-left:        0.375em;
+    border:             black 0.0625em solid;
     align-items:        center;
-    width:              150px;
+    width:              9.375em;
     height:             auto;
 }
 .descriptionAll {
     display:            flex;
     flex-direction:     column;
-    padding-left:       5px;
+    padding-left:       0.3125em;
     justify-content:    center;
 }
 .descriptionAll li{
@@ -315,20 +321,20 @@
 }
 .descriptionAll p{
     font-size:          2em;
-    padding-top:        3px;
-    padding-bottom:     3px;
+    padding-top:        0.1875em;
+    padding-bottom:     0.1875em;
     margin:             0;
 }
 .iconImg img {
     display:            flex;
     align-items:        center;
-    width:              32px;
-    height:             32px;
+    width:              2em;
+    height:             2em;
     border:             0;
 }
 .iconImg {
-    padding-left:       1px;
-    padding-top:        5px;
+    padding-left:       0.0625em;
+    padding-top:        0.3125em;
     display:            flex;
     align-items:        center;
 }

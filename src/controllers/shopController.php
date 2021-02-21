@@ -10,6 +10,7 @@ namespace dwp\controller;
 
 use dwp\model\CartView as CartView;
 use dwp\model\members as Members;
+use dwp\model\MembersHasProducts as MHP;
 use dwp\model\products as Products;
 use dwp\model\cart as Cart;
 
@@ -32,8 +33,16 @@ class ShopController extends \dwp\core\Controller
 
     public function actionCart()
     {
-        $cart_view = CartView::find('mem_id = \''.$_SESSION['id'].'\'');
+        $cart_view = CartView::find('members_id = \''.$_SESSION['id'].'\'');
         $this->setParam('cart_view', $cart_view);
+
+        $result = 0;
+
+        foreach ($cart_view as $item)
+        {
+            $result += $item->total_price;
+        }
+        $this->setParam('result', $result);
     }
 
     public function actionContact()
@@ -54,33 +63,48 @@ class ShopController extends \dwp\core\Controller
 
 
             $member = Members::findOne('id = \''.$_SESSION['id'].'\'');
-            if($member == null)
-            {
-                if (!isset($_SESSION['tempCart']))
-                {
-                    $_SESSION['tempCart'] = [];
-                }
-                array_push($_SESSION['tempCart'], array($product->id, intval($_GET['amount']??1)));
 
+            $cart = Cart::findOne('mem_id = '.$member->id.' and products_id = '.$product->id);
+            if ($cart == null)
+            {
+                $cart = new Cart([
+                    'products_id' => $product->id,
+                    'members_id' => $member->id,
+                    'amount' => intval($_GET['amount']??1)
+                ]);
+                $cart->insert();
             }
-            else{
-                $cart = Cart::findOne('members_id = '.$member->id.' and products_id = '.$product->id);
-                if ($cart == null)
-                {
-                    $cart = new Cart([
-                        'products_id' => $product->id,
-                        'members_id' => $member->id,
-                        'amount' => intval($_GET['amount']??1)
-                    ]);
-                    $cart->insert();
-                }
-                else
-                {
-                    $cart->amount+= intval($_GET['amount']??1);
-                    $cart->update();
-                }
+            else
+            {
+                $cart->amount+= intval($_GET['amount']??1);
+                $cart->update();
             }
         }
+
+        header("Location: index.php?c=shop&a=cart");
+    }
+
+    public function actionRemove()
+    {
+        if (isset($_GET['product']))
+        {
+            $product = Products::findOne('id = '.$_GET['product']);
+            if ($product == null)
+            {
+                die("Produkt existiert nicht!");
+            }
+
+
+
+            $member = Members::findOne('id = \''.$_SESSION['id'].'\'');
+
+            $cart = MHP::findOne('members_id = '.$member->id.' and products_id = '.$product->id);
+            if ($cart !== null)
+            {
+                $cart->destroy();
+            }
+        }
+
         header("Location: index.php?c=shop&a=cart");
     }
 
