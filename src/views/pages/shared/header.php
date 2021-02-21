@@ -37,7 +37,7 @@
                             echo '<li><label for="subToggle" class="navigation"><span>Administration</span></label>';
                             echo '<input class="subMenuToggle" type="checkbox" id="subToggle">';
                             echo '<ul class="subNavigation">';
-                                echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=pages&a=administration">Verwaltung</a>';
+                                echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=administration&a=userManagement">Verwaltung</a>';
                                 echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=logout" class=\'submitLogout\'>Logout</a></li>';
                             echo '</ul></li>';
                             echo '</div>';
@@ -47,7 +47,7 @@
                             echo '<li><label for="subToggle" class="navigation"><span>Account</span></label>';
                             echo '<input class="subMenuToggle" type="checkbox" id="subToggle">';
                             echo '<ul class="subNavigation">';
-                            echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=pages&a=administration">Daten ändern</a></li>';
+                            echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=administration&a=myData">Daten ändern</a></li>';
                             echo '<li><a href="' . $_SERVER['SCRIPT_NAME'] . '?c=accounts&a=logout">Logout</a></li>';
                             echo '</ul></li>';
                             echo '</div>';

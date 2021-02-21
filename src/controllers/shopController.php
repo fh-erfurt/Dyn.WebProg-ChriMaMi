@@ -81,7 +81,7 @@ class ShopController extends \dwp\core\Controller
             }
         }
 
-        header("Location: index.php?c=shop&a=cart");
+        redirect("index.php?c=shop&a=cart");
     }
 
     public function actionRemove()
@@ -105,7 +105,7 @@ class ShopController extends \dwp\core\Controller
             }
         }
 
-        header("Location: index.php?c=shop&a=cart");
+        redirect("index.php?c=shop&a=cart");
     }
 
     public function actionSearch() {
