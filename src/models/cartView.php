@@ -16,13 +16,13 @@ class CartView extends \dwp\core\Model
     const TABLENAME = 'cart_view';
 
     protected $schema = [
-        'id' => [
+        'products_id' => [
             'type' => M::TYPE_UINTEGER,
             'validate' => [
                 'null' => false
             ],
         ],
-        'mem_id' => [
+        'members_id' => [
             'type' => M::TYPE_UINTEGER,
             'validate' => [
                 'null' => false
