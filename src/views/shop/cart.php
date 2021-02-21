@@ -16,8 +16,8 @@
                     <div class="descriptionAll">
                         <p><?=$ware->p_name?></p>
                             <ul>
-                                <li>Stk.-Preis: <?=$ware->std_price?>€</li>
-                                <li class="price">Gesamtpreis: <?=$ware->total_price?>€</li>
+                                <li>Stk.-Preis: <?=number_format($ware->std_price)?>€</li>
+                                <li class="price">Gesamtpreis: <?=number_format($ware->total_price)?>€</li>
                             </ul>
                     </div>
                     <div class="counter">
@@ -36,7 +36,7 @@
         </section>
         <aside>
             <section class="checkout">
-                <h2>Summe(Anzahl der Artikel): <?= $result ?>€</h2>
+                <h2>Summe(Anzahl der Artikel): <?= number_format($result, 2) ?>€</h2>
                 <button class="btn">Zur Kasse gehen</button>
             </section>
         </aside>
