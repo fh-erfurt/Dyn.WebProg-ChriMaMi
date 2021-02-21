@@ -19,10 +19,8 @@ if (!file_exists(ASSETSPATH . 'JSON/products.json')) {
 } else {
 /*    echo 'Datei existiert bereits';*/
 }
-
-
-
 ?>
+<script src="<?= ASSETSPATH.'javascripts'.DIRECTORY_SEPARATOR.'shop.js' ?>" type="text/javascript"></script>
 
 <div class="secondNavigation">
     <!--    <nav class="secondNavigation">>-->
@@ -44,26 +42,5 @@ if (!file_exists(ASSETSPATH . 'JSON/products.json')) {
     </ul>
 </div>
 
-<script>
-    let actionSearchbar = document.getElementById('search');
-    window.onload = function send() {
-        actionSearchbar.addEventListener('keyup', function (event) {
-            if (event.key == Enter) {
-                event.preventDefault();
-                document.getElementById('searchSubmit').click();
-            }
-        });
-    }
 
-
-/*    let request = new XMLHttpRequest();
-
-    })*/
-
-actionSearchbar.addEventListener('keyup', function() {
-    let value = document.getElementById('search').value;
-    console.log(value);
-
-});
-</script>
 
