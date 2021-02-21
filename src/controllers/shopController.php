@@ -64,7 +64,7 @@ class ShopController extends \dwp\core\Controller
 
             $member = Members::findOne('id = \''.$_SESSION['id'].'\'');
 
-            $cart = Cart::findOne('mem_id = '.$member->id.' and products_id = '.$product->id);
+            $cart = Cart::findOne('members_id = '.$member->id.' and products_id = '.$product->id);
             if ($cart == null)
             {
                 $cart = new Cart([
@@ -98,7 +98,7 @@ class ShopController extends \dwp\core\Controller
 
             $member = Members::findOne('id = \''.$_SESSION['id'].'\'');
 
-            $cart = MHP::findOne('members_id = '.$member->id.' and products_id = '.$product->id);
+            $cart = MHP::findOne('memembers_id = '.$member->id.' and products_id = '.$product->id);
             if ($cart !== null)
             {
                 $cart->destroy();

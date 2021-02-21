@@ -1,7 +1,6 @@
-<div id="administration-wraper">
-    <? include SHAREDPATH . 'adminnav.php'; ?>
+ <? include SHAREDPATH . 'adminnav.php'; ?>
 
-            <?php
+ <?php
             switch ($_REQUEST['a'])
             {
                 case 'myorders':
@@ -13,5 +12,5 @@
                 default:
                     include VIEWSPATH. 'administration/mydata.php';
             }
-            ?>
-</div>
+ ?>
+
