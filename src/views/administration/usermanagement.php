@@ -12,7 +12,7 @@
                     <div class="lastname"><ul>Nachname</ul></div>
                     <div class="gender"><ul>(m/w/d)</ul></div>
                     <div class="role"><ul>Rolle</ul></div>
-
+                    <div class="kill"><ul></ul></div>
                 </div>
                 <div class="gray">
                     <div class="userID"><ul>8</ul></div>
@@ -21,7 +21,7 @@
                     <div class="lastname"><ul>Cley</ul></div>
                     <div class="gender"><ul>m</ul></div>
                     <div class="role"><ul>user</ul></div>
-
+                    <div><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'delete.png' ?> " alt="Entfernen"/></div>
                 </div>
                 <div class="white">
                     <div class="userID"><ul>1</ul></div>
@@ -30,7 +30,7 @@
                     <div class="lastname"><ul>Gabel</ul></div>
                     <div class="gender"><ul>m</ul></div>
                     <div class="role"><ul>admin</ul></div>
-
+                    <div><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'delete.png' ?> " alt="Entfernen"/></div>
                 </div>
                 <div class="gray">
                     <div class="userID"><ul>4</ul></div>
@@ -39,7 +39,7 @@
                     <div class="lastname"><ul>Friess</ul></div>
                     <div class="gender"><ul>m</ul></div>
                     <div class="role"><ul>user</ul></div>
-
+                    <div><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'delete.png' ?> " alt="Entfernen"/></div>
                 </div>
             </section>
         </form>
