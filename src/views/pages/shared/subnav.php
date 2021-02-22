@@ -6,9 +6,10 @@ if (!file_exists(ASSETSPATH . 'JSON/products.json')) {
     $allProducts = Products::find();
     foreach ($allProducts as $key => $value) {
         $jsonArray[$key] = array(
+            'id' => $allProducts[$key]->id,
             'name' => $allProducts[$key]->name,
             'category' => $allProducts[$key]->category,
-            'deascription' => $allProducts[$key]->description,
+            'description' => $allProducts[$key]->description,
             'std_price' => $allProducts[$key]->std_price
 
         );
@@ -19,7 +20,7 @@ if (!file_exists(ASSETSPATH . 'JSON/products.json')) {
     /*    echo 'Datei existiert bereits';*/
 }
 ?>
-<script src="<?= ASSETSPATH . 'javascripts' . DIRECTORY_SEPARATOR . 'shop.js' ?>" type="text/javascript"></script>
+
 
 <div class="secondNavigation">
     <!--    <nav class="secondNavigation">>-->
@@ -32,7 +33,7 @@ if (!file_exists(ASSETSPATH . 'JSON/products.json')) {
         </li>
         <li><label for="search">
                 <form name="searchbar" id="searchForm" method="get">
-            </label><input type="search" id="search" placeholder="  Suche"></form></li>
+            </label><input type="search" id="search" name="search" placeholder="  Suche"></form></li>
         <input id="searchSubmit" style="display:none" type="submit">
         <li>
             <div class="icon"><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=shop&a=cart"><img
