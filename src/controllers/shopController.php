@@ -36,6 +36,35 @@ class ShopController extends \dwp\core\Controller
         $cart_view = CartView::find('members_id = \''.$_SESSION['id'].'\'');
         $this->setParam('cart_view', $cart_view);
 
+        if (isset($_POST['checkout']))
+        {
+            $member = Members::findOne('id = \''.$_SESSION['id'].'\'');
+            foreach ($_POST as $key=>$amount)
+            {
+                if(strpos($key,"product-") !== false)
+                {
+                    $id = str_replace("product-", "", $key);
+
+                    $cart = Cart::findOne('members_id = '.$member->id.' and products_id = '.$id);
+                    if ($cart == null)
+                    {
+                        $cart = new Cart([
+                            'products_id' => $id,
+                            'members_id' => $member->id,
+                            'amount' => intval($amount??1)
+                        ]);
+                        $cart->insert();
+                    }
+                    else
+                    {
+                        $cart->amount = intval($amount??1);
+                        $cart->update();
+                    }
+                }
+            }
+            redirect("index.php?c=shop&a=checkout");
+        }
+
         $result = 0;
 
         foreach ($cart_view as $item)

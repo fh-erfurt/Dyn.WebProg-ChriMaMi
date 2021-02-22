@@ -6,10 +6,12 @@
         <section class="wholeCart">
             <h2>Einkaufswagen</h2>
             <hr/>
+            <? if(sizeof($cart_view) == 0):?>
             <p>
             Ihr Einkaufswagen ist leer, bitte besuchen Sie unseren
             Shop um Produkte Ihrem Warenkorb hinzuzufügen.
             </p>
+            <? endif; ?>
             <? foreach ($cart_view as $ware) :?>
                 <section class="cartItem">
                     <img src="<?= ASSETSPATH . 'images'. DIRECTORY_SEPARATOR. 'products'. DIRECTORY_SEPARATOR.$ware->filename?>" alt="<?=$ware->alt_text?>">
@@ -24,6 +26,7 @@
                         <div class="box" data-type="decrease" id="leftBox"><a>-</a></div>
                         <div class="box" data-type="amount"   id="centerBox"><a><?=$ware->amount?></a></div>
                         <div class="box" data-type="increase" id="rightBox"><a>+</a></div>
+                        <input type="hidden" name="product-<?=$ware->products_id?>" value="<?=$ware->amount?>">
                     </div>
                     <div class="iconImg">
                         <a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=shop&a=remove&product=<?=$ware->products_id?>&amount<?=$ware->amount?>">
@@ -37,7 +40,9 @@
         <aside>
             <section class="checkout">
                 <h2>Summe(Anzahl der Artikel): <?= number_format($result, 2) ?>€</h2>
-                <button class="btn" type="submit" id="checkout" value="checkout">Zur Kasse gehen</button>
+                <? if(sizeof($cart_view) > 0):?>
+                <button class="btn" type="submit" id="checkout" value="checkout" name="checkout">Zur Kasse gehen</button>
+                <? endif;?>
             </section>
         </aside>
     </section>

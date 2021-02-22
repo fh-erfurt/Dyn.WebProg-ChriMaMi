@@ -1268,18 +1268,14 @@ article {
     background:         var(--headcolor);
     float:              left;
 }
-#managementTable .white {
+#managementTable .row {
     align-items:        center;
     display:            flex;
     height:             2.2em;
     justify-content:    space-between;
     background:         white;
 }
-#managementTable .gray {
-    align-items:        center;
-    display:            flex;
-    height:             2.2em;
-    justify-content:    space-between;
+#managementTable .row:nth-child(odd) {
     background:         #D3D3D3;
 }
 #managementTable ul {

@@ -16,18 +16,19 @@
                 </div>
 
                 <? foreach ($members as $member): ?>
-                <? if ($member->id % 2 === 0): ?>
-                    <div class="gray">
-                <? else: ?>
-                    <div class="white">
-                <? endif; ?>
+                    <div class="row">
                         <div class="userID"><ul><?= $member->id ?></ul></div>
                         <div class="email"><ul><?= $member->email ?></ul></div>
                         <div class="firstname"><ul><?= $member->firstname ?></ul></div>
                         <div class="lastname"><ul><?= $member->lastname ?></ul></div>
                         <div class="gender"><ul><?= $member->gender ?></ul></div>
                         <div class="role"><ul><?= $member->roll ?></ul></div>
-                        <div><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'delete.png' ?> " alt="Entfernen"/></div>
+                        <div class="iconImg">
+                            <a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=administration&a=remove&member=<?=$member->id?>">
+                                <img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'delete.png' ?> " alt="Entfernen"/>
+                            </a>
+                        </div>
+
                     </div>
                 <? endforeach; ?>
             </section>
