@@ -1291,7 +1291,6 @@ article {
     display:            flex;
     justify-content:    center;
     margin-left:        2%;
-
 }
 .tableHeader .email {
     width:              25%;
@@ -1315,7 +1314,6 @@ article {
     display:            flex;
     justify-content:    flex-start;
 }
-
 .lastname {
     width:              15%;
     display:            flex;

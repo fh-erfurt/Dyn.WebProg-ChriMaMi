@@ -350,3 +350,41 @@
     font-weight:        700;
 }
 /* -------------------------------- END SHOPPING CART------------------------------------*/
+
+/* ---------------------------------- START CHECKOUT-------------------------------------*/
+.checkoutDisplay {
+    width: 80%;
+    padding: 10px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+.informationDisplay {
+    display:flex;
+    justify-content: center;
+}
+.informationDisplay .address {
+    margin-left: 5%;
+}
+.buttonDisplay {
+    display: flex;
+}
+.buttonDisplay .btn {
+    margin-left: 3%;
+}
+.customerInformation {
+    width: 100%;
+    border: black 1px solid;
+    margin-bottom: 20%;
+}
+.customerInformation ul {
+    margin-left: -20px;
+}
+.addressInformation {
+    width: 100%;
+    border: black 1px solid;
+}
+.addressInformation ul {
+    margin-left: -20px;
+}
+/* ----------------------------------- END CHECKOUT--------------------------------------*/

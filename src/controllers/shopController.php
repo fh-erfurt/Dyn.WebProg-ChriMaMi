@@ -49,6 +49,10 @@ class ShopController extends \dwp\core\Controller
     {
 
     }
+    public function actionCheckout()
+    {
+
+    }
 
     public function actionAdd()
     {
