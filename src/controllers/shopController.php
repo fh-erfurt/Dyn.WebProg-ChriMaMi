@@ -13,6 +13,8 @@ use dwp\model\members as Members;
 use dwp\model\MembersHasProducts as MHP;
 use dwp\model\products as Products;
 use dwp\model\cart as Cart;
+use dwp\model\orders as Orders;
+use dwp\model\ordersHasProducts as OHP;
 
 class ShopController extends \dwp\core\Controller
 {
@@ -83,6 +85,11 @@ class ShopController extends \dwp\core\Controller
         $cart_view = CartView::find('members_id = \''.$_SESSION['id'].'\'');
         $this->setParam('cart_view', $cart_view);
 
+
+        $member = getCustomer($_SESSION['id']);
+        $address = getAddress($member->addresses_id);
+
+
         $result = 0;
 
         foreach ($cart_view as $item)
@@ -90,7 +97,39 @@ class ShopController extends \dwp\core\Controller
             $result += $item->total_price;
         }
         $this->setParam('result', $result);
+        $this->setParam('member', $member);
+        $this->setParam('address', $address);
 
+
+        if (isset($_POST['id']))
+        {
+
+            $ordersData = array(
+                'status'       => 'ordered',
+                'order_date'   => date(DATE_RFC822),
+                'addresses_id' => $member->addresses_id,
+                'members_id'   => $member->id);
+            $orders = new Orders($ordersData);
+            $orders->insert();
+
+            $ohpData = array(
+                'orders_id'    => $orders->id,
+                'products_id'  => '0',
+                'amount'       => '0',
+                'price'        => '0');
+
+            foreach ($cart_view as $ware)
+            {
+                $ohpData['products_id'] = $ware->products_id;
+                $ohpData['amount'] = $ware->amount;
+                $ohpData['price'] = $ware->total_price;
+
+                $ohp = new OHP($ohpData);
+                $ohp->insert();
+            }
+
+
+        }
     }
 
     public function actionAdd()

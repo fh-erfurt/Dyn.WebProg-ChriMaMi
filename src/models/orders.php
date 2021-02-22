@@ -34,14 +34,7 @@ class Orders extends \dwp\core\Model
                 'null' => false
             ],
         ],
-        'invoice_addresses_id' => [
-            'type' => parent::TYPE_INTEGER,
-            'validate' => [
-                'min' => 1,
-                'null' => false
-            ],
-        ],
-        'delivery_addresses_id' => [
+        'addresses_id' => [
             'type' => parent::TYPE_INTEGER,
             'validate' => [
                 'min' => 1,
