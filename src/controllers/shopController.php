@@ -54,6 +54,14 @@ class ShopController extends \dwp\core\Controller
         $cart_view = CartView::find('members_id = \''.$_SESSION['id'].'\'');
         $this->setParam('cart_view', $cart_view);
 
+        $result = 0;
+
+        foreach ($cart_view as $item)
+        {
+            $result += $item->total_price;
+        }
+        $this->setParam('result', $result);
+
     }
 
     public function actionAdd()
