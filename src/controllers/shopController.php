@@ -126,9 +126,11 @@ class ShopController extends \dwp\core\Controller
 
                 $ohp = new OHP($ohpData);
                 $ohp->insert();
+                $mhp = MHP::findOne('members_id = '.$member->id.' and products_id = '.$ware->products_id);
+                $mhp->destroy();
             }
 
-
+            redirect("index.php?c=shop&a=cart");
         }
     }
 
