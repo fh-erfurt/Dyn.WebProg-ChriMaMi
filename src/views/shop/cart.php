@@ -42,6 +42,8 @@
                 <h2>Summe(Anzahl der Artikel): <?= number_format($result, 2) ?>€</h2>
                 <? if(sizeof($cart_view) > 0):?>
                 <button class="btn" type="submit" id="checkout" value="checkout" name="checkout">Zur Kasse gehen</button>
+                <? else : ?>
+                <button class="btn disabled" type="submit" value="checkout" name="checkout">Zur Kasse gehen</button>
                 <? endif;?>
             </section>
         </aside>

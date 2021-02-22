@@ -185,6 +185,12 @@
     margin:             0.5em 0 0 0.8em;
     min-width:          10em;
 }
+.checkout .btn.disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+
+
 .cartDisplay h2 {
     font-size:          1.563em;
     line-height:        1.8em;
