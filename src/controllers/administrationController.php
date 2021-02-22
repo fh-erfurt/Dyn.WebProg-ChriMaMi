@@ -17,7 +17,9 @@ class AdministrationController extends \dwp\core\Controller
         }
         else if (isset($_POST['delete']) && $_POST['delete'] === 'input_deleteAccount')
         {
-            die("remove");
+            $db = $GLOBALS['db'];
+            $member = Members::findOne('email = '.$db->quote($_POST['email']));
+            $member->destroy();
         }
         else if (isset($_POST['update']) && $_POST['update'] === 'input_changeAccountDetails')
         {
@@ -58,6 +60,7 @@ class AdministrationController extends \dwp\core\Controller
 
     public function actionUserManagement()
     {
-
+        $members = Members::find();
+        $this->setParam('members', $members);
     }
 }

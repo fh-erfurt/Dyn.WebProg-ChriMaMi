@@ -1,7 +1,7 @@
 <link href="<?= ASSETSPATH . 'designs' . DIRECTORY_SEPARATOR . 'design-products.css' ?>" rel="stylesheet">
 <script src="<?= ASSETSPATH.'javascripts'.DIRECTORY_SEPARATOR.'counterForCart.js' ?>" type="text/javascript"></script>
     <? require SHAREDPATH . "subnav.php"; ?>
-
+    <form method="post">
     <section class="cartDisplay">
         <section class="wholeCart">
             <h2>Einkaufswagen</h2>
@@ -37,7 +37,8 @@
         <aside>
             <section class="checkout">
                 <h2>Summe(Anzahl der Artikel): <?= number_format($result, 2) ?>€</h2>
-                <button class="btn">Zur Kasse gehen</button>
+                <button class="btn" type="submit" id="checkout" value="checkout">Zur Kasse gehen</button>
             </section>
         </aside>
     </section>
+    </form>
