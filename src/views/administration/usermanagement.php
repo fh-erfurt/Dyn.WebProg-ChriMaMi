@@ -14,33 +14,23 @@
                     <div class="role"><ul>Rolle</ul></div>
                     <div class="kill"><ul></ul></div>
                 </div>
-                <div class="gray">
-                    <div class="userID"><ul>8</ul></div>
-                    <div class="email"><ul>keck@gmail.de</ul></div>
-                    <div class="firstname"><ul>Karl-Erik</ul></div>
-                    <div class="lastname"><ul>Cley</ul></div>
-                    <div class="gender"><ul>m</ul></div>
-                    <div class="role"><ul>user</ul></div>
-                    <div><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'delete.png' ?> " alt="Entfernen"/></div>
-                </div>
-                <div class="white">
-                    <div class="userID"><ul>1</ul></div>
-                    <div class="email"><ul>matthias.gabel@fh-erfurt.de</ul></div>
-                    <div class="firstname"><ul>Matthias</ul></div>
-                    <div class="lastname"><ul>Gabel</ul></div>
-                    <div class="gender"><ul>m</ul></div>
-                    <div class="role"><ul>admin</ul></div>
-                    <div><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'delete.png' ?> " alt="Entfernen"/></div>
-                </div>
-                <div class="gray">
-                    <div class="userID"><ul>4</ul></div>
-                    <div class="email"><ul>kristof.friess@fh-erfurt.de</ul></div>
-                    <div class="firstname"><ul>Kristof</ul></div>
-                    <div class="lastname"><ul>Friess</ul></div>
-                    <div class="gender"><ul>m</ul></div>
-                    <div class="role"><ul>user</ul></div>
-                    <div><img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'delete.png' ?> " alt="Entfernen"/></div>
-                </div>
+
+                <? foreach ($members as $member): ?>
+                    <div class="row">
+                        <div class="userID"><ul><?= $member->id ?></ul></div>
+                        <div class="email"><ul><?= $member->email ?></ul></div>
+                        <div class="firstname"><ul><?= $member->firstname ?></ul></div>
+                        <div class="lastname"><ul><?= $member->lastname ?></ul></div>
+                        <div class="gender"><ul><?= $member->gender ?></ul></div>
+                        <div class="role"><ul><?= $member->roll ?></ul></div>
+                        <div class="iconImg">
+                            <a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=administration&a=remove&member=<?=$member->id?>">
+                                <img src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'delete.png' ?> " alt="Entfernen"/>
+                            </a>
+                        </div>
+
+                    </div>
+                <? endforeach; ?>
             </section>
         </form>
     </main>
