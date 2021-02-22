@@ -9,9 +9,11 @@
 
 namespace dwp\model;
 
-class Orders extends \dwp\core\Model
+use \dwp\core\Model as M;
+
+class OrdersHasProducts extends \dwp\core\Model
 {
-    const TABLENAME = 'orders';
+    const TABLENAME = 'orders_has_products';
 
     protected $schema = [
         'id' => [
@@ -20,31 +22,28 @@ class Orders extends \dwp\core\Model
                 'null' => false
             ],
         ],
-        'status' => [
-            'type' => parent::TYPE_STRING,
-            'validate' => [
-                'min' => 2,
-                'max' => 15,
-                'null' => false
-            ],
-        ],
-        'order_date' => [
-            'type' => parent::TYPE_DATE,
+        'orders_id' => [
+            'type' => M::TYPE_UINTEGER,
             'validate' => [
                 'null' => false
             ],
         ],
-        'addresses_id' => [
-            'type' => parent::TYPE_INTEGER,
+        'products_id' => [
+            'type' => M::TYPE_UINTEGER,
             'validate' => [
-                'min' => 1,
                 'null' => false
             ],
         ],
-        'members_id' => [
-            'type' => parent::TYPE_INTEGER,
+        'amount' => [
+            'type' => M::TYPE_UINTEGER,
             'validate' => [
-                'min' => 1,
+                'null' => false
+            ],
+        ],
+        'price' => [
+            'type' => M::TYPE_DECIMAL,
+            'validate' => [
+                'maxValue' => 99999999.99,
                 'null' => false
             ],
         ]

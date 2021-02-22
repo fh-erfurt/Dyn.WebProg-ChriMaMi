@@ -1163,7 +1163,7 @@ article {
 }
 #adminnav-wraper{
     display:            flex;
-    width:              80%;
+    width:              90%;
     margin-left:        auto;
     margin-right:       auto;
     background-color:   #1960B8;
@@ -1171,8 +1171,8 @@ article {
     padding-right:      1.25em;
 }
 #administration-wraper main {
-    display:            flex;
-    width:              80%;
+    /*display:            flex;*/
+    width:              90%;
     min-height:         70%;
     margin-left:        0;
     text-decoration:    none;
@@ -1250,3 +1250,94 @@ article {
     margin-bottom:      0;
 }
 /*-------------------------------------- END ABOUTUS --------------------------------------*/
+
+/*---------------------------------- START USERMANAGEMENT ---------------------------------*/
+#managementTable {
+    display:            flex;
+    justify-content:    space-between;
+    width:              90%;
+    margin:             auto;
+    flex-direction:     column;
+    text-align:         left;
+    padding-top:        0;
+    line-height:        1.0625em;
+    border:             black 1px solid;
+}
+#managementTable .tableHeader {
+    color:              white;
+    align-items:        center;
+    display:            flex;
+    flex-direction:     row;
+    height:             2em;
+    justify-content:    space-between;
+    background:         var(--headcolor);
+    float:              left;
+}
+#managementTable .row {
+    align-items:        center;
+    display:            flex;
+    height:             2.2em;
+    justify-content:    space-between;
+    background:         white;
+}
+#managementTable .row:nth-child(odd) {
+    background:         #D3D3D3;
+}
+#managementTable ul {
+    padding-left:       0;
+    list-style-type:    none;
+}
+.userID {
+    width:              5%;
+    display:            flex;
+    justify-content:    center;
+    margin-left:        2%;
+}
+.tableHeader .email {
+    width:              25%;
+    display:            flex;
+    justify-content:    center;
+    margin-right:       2%;
+}
+.email {
+    width:              30%;
+    display:            flex;
+    justify-content:    flex-start;
+    margin-right:       2%;
+}
+.tableHeader .firstname {
+    width:              15%;
+    display:            flex;
+    justify-content:    center;
+}
+.firstname {
+    width:              15%;
+    display:            flex;
+    justify-content:    flex-start;
+}
+.lastname {
+    width:              15%;
+    display:            flex;
+    justify-content:    flex-start;
+}
+.gender {
+    width:              10%;
+    display:            flex;
+    justify-content:    flex-start;
+}
+.role {
+    width:              7%;
+    display:            flex;
+    justify-content:    flex-start;
+}
+.kill {
+    width:              5%;
+    margin-right:       -1em;
+}
+#managementTable img {
+    width:              1.5em;
+    height:             1.5em;
+    display:            flex;
+    align-items:        center;
+}
+/*------------------------------------ END USERMANAGEMENT ---------------------------------*/

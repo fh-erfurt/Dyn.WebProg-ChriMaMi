@@ -5,6 +5,8 @@
 
 namespace dwp\controller;
 use dwp\model\Members as Members;
+use dwp\model\Orders as Orders;
+use dwp\model\OrdersHasProducts as OHP;
 use dwp\model\Addresses as Addresses;
 
 class AdministrationController extends \dwp\core\Controller
@@ -17,7 +19,9 @@ class AdministrationController extends \dwp\core\Controller
         }
         else if (isset($_POST['delete']) && $_POST['delete'] === 'input_deleteAccount')
         {
-            die("remove");
+            $db = $GLOBALS['db'];
+            $member = Members::findOne('email = '.$db->quote($_POST['email']));
+            $member->destroy();
         }
         else if (isset($_POST['update']) && $_POST['update'] === 'input_changeAccountDetails')
         {
@@ -58,6 +62,28 @@ class AdministrationController extends \dwp\core\Controller
 
     public function actionUserManagement()
     {
+        $members = Members::find();
+        $this->setParam('members', $members);
+    }
 
+    public function actionRemove()
+    {
+        if (isset($_GET['member']))
+        {
+            $member = Members::findOne('id ='.$_GET['member'] );
+            $orders = Orders::find('members_id ='.$_GET['member']);
+
+            foreach ($orders as $order)
+            {
+                $ordersHasProducts = OHP::find('orders_id = '.$order->id);
+                foreach ($ordersHasProducts as $ohp)
+                {
+                    $ohp->destroy();
+                }
+                $order->destroy();
+            }
+            $member->destroy();
+        }
+        redirect("index.php?c=administration&a=usermanagement");
     }
 }

@@ -185,6 +185,12 @@
     margin:             0.5em 0 0 0.8em;
     min-width:          10em;
 }
+.checkout .btn.disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+
+
 .cartDisplay h2 {
     font-size:          1.563em;
     line-height:        1.8em;
@@ -350,3 +356,89 @@
     font-weight:        700;
 }
 /* -------------------------------- END SHOPPING CART------------------------------------*/
+
+/* ---------------------------------- START CHECKOUT-------------------------------------*/
+.checkoutDisplay {
+    width: 80%;
+    padding: 10px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: var(--headcolor) 3px solid;
+}
+.informationDisplay {
+    display:flex;
+    justify-content: center;
+}
+.informationDisplay .address {
+    margin-left: 5%;
+}
+.buttonDisplay {
+    display: flex;
+}
+.buttonDisplay .btn {
+    margin-left: 3%;
+}
+.customerInformation {
+    width: 100%;
+    border: black 1px solid;
+    margin-bottom: 20%;
+}
+.customerInformation ul {
+    margin-left: -20px;
+}
+.addressInformation {
+    width: 100%;
+    border: black 1px solid;
+}
+.addressInformation ul {
+    margin-left: -20px;
+}
+.orderDetails {
+
+}
+.orderDetails .cartItem {
+    display:            flex;
+    margin-bottom:      0;
+    width:              100%;
+    height:             5.5em;
+    justify-content:    flex-start;
+}
+.orderDetails .cartItem .counter{
+    display:            flex;
+    align-items:        center;
+}
+.orderDetails .cartItem img {
+    display:            flex;
+    margin-left:        0.375em;
+    border:             black 0.0625em solid;
+    align-items:        center;
+    width:              7em;
+    height:             5.2em;
+}
+.orderDetails .descriptionAll {
+    display:            flex;
+    flex-direction:     column;
+    min-width: 200px;
+}
+.orderDetails .descriptionAll li{
+    list-style:         none;
+}
+.orderDetails .cartItem p{
+    min-width: 82px;
+    font-size:          1.5em;
+    margin-left:             5%;
+}
+.orderDetails .totalPrice {
+    font-weight: 700;
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.orderDetails .itemPrice {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+}
+/* ----------------------------------- END CHECKOUT--------------------------------------*/
