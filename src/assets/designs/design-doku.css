@@ -59,6 +59,7 @@ body {
     border-top: 4px solid;
     border-left: 4px solid;
     border-color: #b7b7b7;
+    line-height: 2;
 }
 
 .content h2{
