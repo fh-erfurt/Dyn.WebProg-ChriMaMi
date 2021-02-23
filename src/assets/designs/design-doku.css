@@ -4,7 +4,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 0.3fr 1.7fr 0fr 0fr;
+    grid-template-columns: 0.4fr 1.6fr 0fr 0fr;
     grid-template-rows: 0fr 0fr;
     gap: 0px 0px;
     grid-template-areas:
@@ -21,8 +21,9 @@ body {
 
 .nav { grid-area: nav;
     background-color: #18559d;
-    min-width: 150px;
-    padding: 10px 0px 0px 20px;
+    color: #e3e3e3;
+    min-width: 200px;
+    padding: 10px 30px 0px 20px;
     font-size: 20px;
 }
 
