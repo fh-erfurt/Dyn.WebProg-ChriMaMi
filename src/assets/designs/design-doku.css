@@ -1,5 +1,6 @@
 body {
     font-family: 'Raleway', sans-serif;
+    text-align: justify;
 }
 
 .grid-container {
@@ -53,7 +54,7 @@ body {
 .content { grid-area: content;
     font-family: "Arial";
     background-color: #e3e3e3;
-    padding: 20px;
+    padding: 50px;
     text-align: justify;
     border-top: 4px solid;
     border-left: 4px solid;
@@ -79,13 +80,15 @@ body {
     font-weight: bold;
 }
 
-.recherche_picture {
+.picture {
     padding: 20px;
     text-align: center;
     border: #2F2D2C 2px dashed;
     background-color: #bec7cc;
+    max-width: 100%;
 }
 
-.recherche_picture img {
-
+.picture img {
+    max-width: 950px;
+    width: 100%;
 }
