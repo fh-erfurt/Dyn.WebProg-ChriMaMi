@@ -50,8 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
             var productView = document.getElementById('productView');
             var productItemDisplay = document.getElementById('itemDisplay');
 
-            while (productItemDisplay.firstChild) {
-                productItemDisplay.removeChild(productItemDisplay.firstChild);
+            if(productItemDisplay.firstChild != null) {
+                while (productItemDisplay.firstChild) {
+                    productItemDisplay.removeChild(productItemDisplay.firstChild);
+                }
             }
 
             /* productsRequest.onload = () => {

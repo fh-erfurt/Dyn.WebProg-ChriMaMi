@@ -74,6 +74,7 @@
                 </article>
             </div>
         <?php endforeach; ?>
+    <div style="display: none">Sucher ergab keine Treffer!</div>
     <!---------------------------------------------- Test -------------------------------------------->
     <div class="item" id="productView" style="display: none">
         <article>
