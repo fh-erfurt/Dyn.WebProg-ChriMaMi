@@ -231,6 +231,12 @@
             </article>
         </section>
         <section id="database">
+            <h2>7. Datenbank</h2>
+            <hr>
+            <h3>7.1 ER Diagramm</h3>
+            <p class="picture"><img src="../../assets/images/doku/database/ER-diagramm.png" height="830" width="860"/></p>
+            <h3>7.2 Tabellenmodell</h3>
+            <h4>7.2.1 members</h4>
             <table>
                 <tbody>
                     <tr>
@@ -241,11 +247,407 @@
                         <th>Bedingung</th>
                         <th>Anmerkung</th>
                     </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>int</td>
+                        <td>-</td>
+                        <td>Ja</td>
+                        <td></td>
+                        <td>PK, AI</td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>varchar</td>
+                        <td>255</td>
+                        <td>Ja</td>
+                        <td></td>
+                        <td>PK</td>
+                    </tr>
+                    <tr>
+                        <td>password_hash</td>
+                        <td>varchar</td>
+                        <td>255</td>
+                        <td>Ja</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>roll</td>
+                        <td>varchar</td>
+                        <td>45</td>
+                        <td>Ja</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>firstname</td>
+                        <td>varchar</td>
+                        <td>255</td>
+                        <td>Ja</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>lastname</td>
+                        <td>varchar</td>
+                        <td>255</td>
+                        <td>Ja</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>gender</td>
+                        <td>char</td>
+                        <td>-</td>
+                        <td>Ja</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>phone</td>
+                        <td>varchar</td>
+                        <td>20</td>
+                        <td>Nein</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>addresses_id</td>
+                        <td>int</td>
+                        <td>-</td>
+                        <td>Ja</td>
+                        <td></td>
+                        <td>PK</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>7.2.2 adresses</h4>
+            <table>
+                <tbody>
+                <tr>
+                    <th>Attribut</th>
+                    <th>Typ</th>
+                    <th>Länge</th>
+                    <th>Notwendigkeit</th>
+                    <th>Bedingung</th>
+                    <th>Anmerkung</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td>PK, AI</td>
+                </tr>
+                <tr>
+                    <td>street</td>
+                    <td>varchar</td>
+                    <td>64</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>house number</td>
+                    <td>varchar</td>
+                    <td>10</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>city</td>
+                    <td>varchar</td>
+                    <td>64</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>zip</td>
+                    <td>varchar</td>
+                    <td>5</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+            <h4>7.2.3 orders</h4>
+            <table>
+                <tbody>
+                <tr>
+                    <th>Attribut</th>
+                    <th>Typ</th>
+                    <th>Länge</th>
+                    <th>Notwendigkeit</th>
+                    <th>Bedingung</th>
+                    <th>Anmerkung</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td>PK, AI</td>
+                </tr>
+                <tr>
+                    <td>status</td>
+                    <td>varchar</td>
+                    <td>15</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>order date</td>
+                    <td>datetime</td>
+                    <td>15</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>addresses_id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td>PK</td>
+                </tr>
+                <tr>
+                    <td>members_id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td>PK</td>
+                </tr>
+                </tbody>
+            </table>
+            <h4>7.2.4 member_has_products</h4>
+            <table>
+                <tbody>
+                <tr>
+                    <th>Attribut</th>
+                    <th>Typ</th>
+                    <th>Länge</th>
+                    <th>Notwendigkeit</th>
+                    <th>Bedingung</th>
+                    <th>Anmerkung</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td>PK, AI</td>
+                </tr>
+                <tr>
+                    <td>addresses_id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>members_id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+            <h4>7.2.5 products</h4>
+            <table>
+                <tbody>
+                <tr>
+                    <th>Attribut</th>
+                    <th>Typ</th>
+                    <th>Länge</th>
+                    <th>Notwendigkeit</th>
+                    <th>Bedingung</th>
+                    <th>Anmerkung</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>name</td>
+                    <td>varchar</td>
+                    <td>255</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>description</td>
+                    <td>varchar</td>
+                    <td>2000</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>std_price</td>
+                    <td>decimal</td>
+                    <td>10,2</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>images_id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>categories_id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+            <h4>7.2.6 orders_has_products</h4>
+            <table>
+                <tbody>
+                <tr>
+                    <th>Attribut</th>
+                    <th>Typ</th>
+                    <th>Länge</th>
+                    <th>Notwendigkeit</th>
+                    <th>Bedingung</th>
+                    <th>Anmerkung</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>orders_id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>products_id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>amount</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>price</td>
+                    <td>decimal</td>
+                    <td>10,2</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+            <h4>7.2.7 categories</h4>
+            <table>
+                <tbody>
+                <tr>
+                    <th>Attribut</th>
+                    <th>Typ</th>
+                    <th>Länge</th>
+                    <th>Notwendigkeit</th>
+                    <th>Bedingung</th>
+                    <th>Anmerkung</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>name</td>
+                    <td>varchar</td>
+                    <td>45</td>
+                    <td>Ja</td>
+                    <td>unique</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+            <h4>7.2.8 images</h4>
+            <table>
+                <tbody>
+                <tr>
+                    <th>Attribut</th>
+                    <th>Typ</th>
+                    <th>Länge</th>
+                    <th>Notwendigkeit</th>
+                    <th>Bedingung</th>
+                    <th>Anmerkung</th>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>int</td>
+                    <td>-</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>filename</td>
+                    <td>varchar</td>
+                    <td>255</td>
+                    <td>Ja</td>
+                    <td>unique</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>alt_text</td>
+                    <td>varchar</td>
+                    <td>255</td>
+                    <td>Ja</td>
+                    <td></td>
+                    <td></td>
+                </tr>
                 </tbody>
             </table>
         </section>
         <section id="roleModel">
             <h2>8. Rollenmodel</h2>
+            <hr>
             <p>Für das Projekt wurden 3 verschiedene Rollen berücksichtigt hierzu zahlen:</p>
             <ul>
                 <li>Der Gast (unangemeldeter Besucher der Seite)</li>
@@ -254,24 +656,25 @@
             </ul>
             <p>Die nachfolgenden Use-Cases sollen zur Verdeutlichung der jeweiligen Szenarien beitragen</p>
             <h3>8.1 Business Use-Case</h3>
-            <img src="../../assets/images/doku/roleModel/1.business (2).png" alt="business.png"/>
+            <p class="picture"><img src="../../assets/images/doku/roleModel/1.business (2).png" alt="business.png"/></p>
             <p> Abbildung: Business Use Case</p>
             <h3>8.2 Warenkorb verwalten</h3>
-            <img src="../../assets/images/doku/roleModel/2.cart (2).png" alt="cart.png"/>
+            <p class="picture"><img src="../../assets/images/doku/roleModel/2.cart (2).png" alt="cart.png"/></p>
             <p> Abbildung: Warenkorb verwalten</p>
             <h3>8.3 Konto verwalten</h3>
-            <img src="../../assets/images/doku/roleModel/3.konto (2).png" alt="konto.png"/>
+            <p class="picture"><img src="../../assets/images/doku/roleModel/3.konto (2).png" alt="konto.png"/></p>
             <p> Abbildung: Konto verwalten</p>
-            <img src="../../assets/images/doku/roleModel/4.create (2).png" alt="create.png"/>
+            <p class="picture"><img src="../../assets/images/doku/roleModel/4.create (2).png" alt="create.png"/></p>
             <p> Abbildung: Account erstellen</p>
-            <img src="../../assets/images/doku/roleModel/5.login (2).png" alt="login.png"/>
+            <p class="picture"><img src="../../assets/images/doku/roleModel/5.login (2).png" alt="login.png"/></p>
             <p> Abbildung: Anmelden</p>
             <h3>8.4 Accounts verwalten</h3>
-            <img src="../../assets/images/doku/roleModel/6.accounts (2).png" alt="accounts.png"/>
+            <p class="picture"><img src="../../assets/images/doku/roleModel/6.accounts (2).png" alt="accounts.png"/></p>
             <p> Abbildung: Accounts verwalten</p>
         </section>
         <section id="problems">
             <h2>9. Herausforderungen</h2>
+            <hr>
             <p>Da in unserer Zusammenarbeit verschiedene Browser zum darstellen der Website benutzt wurden, sind
                 relativ früh kleinere Unterschiede aufgetaucht die sich jedoch einfach beheben ließen indem wir die
                 Standardeinstellung der einzelnen Elemente weiter eingegrenzt hatten (benutzt wurden Chrome, Firefox
@@ -298,6 +701,7 @@
         </section>
         <section id="projectManagement">
             <h2>10. Projektmanagement Dokumentaion</h2>
+            <hr>
             <p>Es stellte sich als Vorteil heraus, eine klare Aufgabenteilung durchzuführen wodurch jeder sein
                 Fachgebiet besaß und es ihm möglich war, anschließend die jeweiligen anderen in seine Arbeit
                 einzuführen und Verständisfragen zu klären. Dadurch gelang es uns Arbeit durch eigen Expertise
