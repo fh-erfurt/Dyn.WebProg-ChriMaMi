@@ -88,9 +88,20 @@ body {
     background-color: #bec7cc;
     max-width: 100%;
 }
-
+.bigPicture {
+    padding: 20px;
+    text-align: center;
+    border: #2F2D2C 2px dashed;
+    background-color: #bec7cc;
+    max-width: 100%;
+}
 .picture img {
     max-width: 950px;
+    width: 100%;
+}
+.bigPicture img {
+    height: auto;
+    max-width: 1800px;
     width: 100%;
 }
 
