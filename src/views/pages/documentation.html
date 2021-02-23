@@ -259,6 +259,8 @@
             <p class="picture"><img src="../../assets/images/doku/database/ER-diagramm.png" height="830" width="860"/></p>
             <h3>7.2 Tabellenmodell</h3>
             <h4>7.2.1 members</h4>
+            <p>Die Tabelle members beinhaltet die Informationen aller angemeldeten Benutzer,
+                die Rolle des Benutzers, sowie einen Verweis auf die Adresse des Benutzers.</p>
             <table>
                 <tbody>
                     <tr>
@@ -343,7 +345,8 @@
                     </tr>
                 </tbody>
             </table>
-            <h4>7.2.2 adresses</h4>
+            <h4>7.2.2 addresses</h4>
+            <p>Die Tabelle "addresses" wird daür genutzt, die Adressen der verschiedenen Nutzer zu speichern.</p>
             <table>
                 <tbody>
                 <tr>
@@ -397,6 +400,7 @@
                 </tbody>
             </table>
             <h4>7.2.3 orders</h4>
+            <p>Die Tabelle "orders" beinhaltet informationen zum Bestellstatus sowie des Bestelldatums. Hintelegt sind hierfür noch die Adress- sowie Nutzer-ID des Kunden.  </p>
             <table>
                 <tbody>
                 <tr>
@@ -450,6 +454,7 @@
                 </tbody>
             </table>
             <h4>7.2.4 member_has_products</h4>
+            <p>Die Tabelle "member_has_products" fungiert als Warenkorb in unserer Datenbank und wird daher für die Zuordnung der vom Kunden ausgewählten Artikel, mittles NutzerID und ProduktID zum jeweiligen Kunden genutzt. Sie enthält außerdem die Bestellmenge des Artikel. </p>
             <table>
                 <tbody>
                 <tr>
@@ -487,6 +492,7 @@
                 </tbody>
             </table>
             <h4>7.2.5 products</h4>
+            <p>Die Tabelle "products" beinhaltet Informationen für die Produkte, sowie Verweise auf die Tabellen "images" und "categories".</p>
             <table>
                 <tbody>
                 <tr>
@@ -548,6 +554,7 @@
                 </tbody>
             </table>
             <h4>7.2.6 orders_has_products</h4>
+            <p>Die Tabelle "orders_has_products" dient als Verknüpfungstabelle zur Rechnungserstellung.</p>
             <table>
                 <tbody>
                 <tr>
@@ -601,6 +608,7 @@
                 </tbody>
             </table>
             <h4>7.2.7 categories</h4>
+            <p>Die Tabelle "categories" beinhaltet die Information zur Art des Produktes welche eine der folgenden entspricht: Wärmeschutz, Feuerschutz, Tragwerksplanung und Eingabeplanung/p>
             <table>
                 <tbody>
                 <tr>
@@ -630,6 +638,7 @@
                 </tbody>
             </table>
             <h4>7.2.8 images</h4>
+            <p>Die Tabelle "images" dient zur Zuordnung der Bilder zum jeweiligen Produkt und beinhaltet den Dateinamen des Artikels, sowie einen "alt_text" zur scriptlosen Darstellung.</p>
             <table>
                 <tbody>
                 <tr>
