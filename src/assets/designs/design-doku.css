@@ -78,3 +78,10 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+
+.recherche_picture {
+    padding: 20px;
+    text-align: center;
+    border: #2F2D2C 2px dashed;
+    background-color: #bec7cc;
+}
