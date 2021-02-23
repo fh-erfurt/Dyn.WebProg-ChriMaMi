@@ -33,7 +33,6 @@ body {
 }
 
 .nva ul {
-    padding: 1000px;
 }
 
 .nav a{
@@ -44,6 +43,10 @@ body {
 .content { grid-area: content;
     background-color: #e3e3e3;
     padding: 10px;
+    text-align: justify;
+    border-top: 4px solid;
+    border-left: 4px solid;
+    border-color: #b7b7b7;
 }
 
 .jump a{
