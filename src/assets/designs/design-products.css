@@ -419,26 +419,26 @@
 .orderDetails .descriptionAll {
     display:            flex;
     flex-direction:     column;
-    min-width: 200px;
+    min-width:          12.5em;
 }
 .orderDetails .descriptionAll li{
     list-style:         none;
 }
 .orderDetails .cartItem p{
-    min-width: 82px;
+    min-width:          4em;
     font-size:          1.5em;
-    margin-left:             5%;
+    margin-left:        5%;
 }
 .orderDetails .totalPrice {
-    font-weight: 700;
-    width:100%;
-    display: flex;
-    justify-content: flex-end;
+    font-weight:        700;
+    width:              100%;
+    display:            flex;
+    justify-content:    flex-end;
 }
 .orderDetails .itemPrice {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 100%;
+    display:            flex;
+    justify-content:    flex-end;
+    align-items:        flex-end;
+    width:              100%;
 }
 /* ----------------------------------- END CHECKOUT--------------------------------------*/
