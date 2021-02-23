@@ -3,60 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <title>Dokumentation</title>
-    <link rel="stylesheet" href="../../assets/designs/design-doku.css">
+    <link href="../../assets/designs/design-doku.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 <div class="grid-container">
-    <div class="head" id="top"><h1>Dokumentation Webprojekt IB Horsch</h1></div>
-    <div class="nav">
-        <nav>
-            <h2>Inhalt:</h2>
-            <ul id="navigation">
-                <li><a href="#einleitung">Einleitung</a></li>
-                <li><a href="#recherche">Recherche</a></li>
-                <li><a href="#seitenlayout">Seitenlayout</a></li>
-                <li><a href="#design">Design</a></li>
-                <li><a href="#seiten">Seiten</a></li>
-                <li><a href="#datenbank">Datenbank</a></li>
-                <li><a href="#rollenmodell">Rollenmodell</a></li>
-                <li><a href="#herausforderungenUndLösungen">Herausforderungen & Lösungen</a></li>
-                <li><a href="#projektmanagement">Projektmanagement</a></li>
-            </ul>
-        </nav>
-
+    <div class="head" id="top"><h1>Dokumentation Webprojekt IB Horsch</h1>
+        Ein gemeinschaftliiches Projekt von Christoph Frischmuth, Matthias Gabel und Mickey Knop
     </div>
-    <div class="content">
-        <section id="einleitung">
-            <h2>Einleitung</h2>
-            <hr>
-            <h3>1.1 Ausgangssituation</h3>
-            <article>
-                Das Ingenieurbüro der Firma IB-Horsch ist
+        <div class="nav">
+            <nav>
+                <h2>Inhalt:</h2>
+                <ul id="navigation">
+                    <li><a href="#einleitung">Einleitung</a></li>
+                    <li><a href="#kriterien">Kriterien</a></li>
+                    <li><a href="#recherche">Recherche</a></li>
+                    <li><a href="#seitenlayout">Seitenlayout</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#seiten">Seiten</a></li>
+                    <li><a href="#datenbank">Datenbank</a></li>
+                    <li><a href="#rollenmodell">Rollenmodell</a></li>
+                    <li><a href="#herausforderungenUndLösungen">Herausforderungen</a></li>
+                    <li><a href="#projektmanagement">Projektmanagement</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="content">
+            <section id="einleitung">
+                <h2>Einleitung</h2>
+                <hr>
+                <h3>1.1 Ausgangssituation</h3>
+                <article>
+                    Das Ingenieurbüro der Firma IB-Horsch ist ein mittelständisches Unternehmen, welches
+                    Dienstleistungen rund um das Thema Bauplanung- und Dienstleistung
+                    anbietet. Die Zielgruppe des Unternhmens bewegt sich in der Spanne von 20 bis 67 und betrifft vor
+                    allem private Bauherren, oder
+                    gewerbliche Bauunternehmen, welche genannte Dienstleistung auslagern und diese in Auftrag geben.
+                    Das Angebot gliedert sich in folgende Bereiche:
+                    <ul>
+                        <li>Branschutz</li>
+                        <li>Eingabeplanung</li>
+                        <li>Tragwerksplanung</li>
+                        <li>Wärmeschutz</li>
+                    </ul>
+
+                    Das Unternehmen ist sowohl in beratender als auch in ausführender Rolle tätig. Um die Reichweite des
+                    Kundenkreises zu erweitern ist eine Webseite geplant,
+                    welche das Unternehmen ausgezeichnet Repräsentiert soll. Hier sollen sich potentielle Kunden darüber
+                    hinaus über aktuelle Angebote und das Unternehmen informieren
+                    können. Ein Kontaktformular zur aufnahme von persönlichem Kontakt soll ebenfalls implementiert
+                    werden.
+                    <p>
+                        Zudem ist ein Onlineshop geplant, in welchem aktuelle Angebote und Dienstleistungen bequem von
+                        Zuhause oder Unterwegs gekauft oder gebucht werden können.
+                    </p>
+                </article>
+                <h3>1.2 Zielbestimmung</h3>
+                <article>
+                    Das umgesetzte System soll vordergründig von Gästen, aber auch von Kunden und Administratoren der Seite genutzt werden.
+                    <p>
+                        Wie bereits erwähnt ist der Zweck der Onlinepräsenz, den Gästen und Kunden einen Einblick in die Dienstleistungen des Ingenieurbüros
+                        zu vermitteln.
+                        Zudem steht im Mittelpunkt die Kommunikation zwischen interessenten und den Mitarbeitern des Büros, um vor einem Kauf einer odere mehrerer
+                        Dienstleistungen, beratend tätig zu werden.
+                    </p>
+                    <p>
+                        Der Administrator muss Accounts verwalten, d.h. löschen- und vergabe von Rechten an angemeldete Nutzer.
+                    </p>
+                    <p>
+                        Gäste sollen sich registrieren und anmelden können um Produkte und Diensleistungen zu ordern.
+                        Zudem soll ein Gast seine Daten ändern und ein neues Passwort anfordern können.
+                    </p>
+                    <p>
+                        Wichtig zu beachten ist, die Anbindung an einen Email-Server, zur Kontaktaufnahme und Passwortrücksetzung im Rahmen des Modulprojektes,
+                        aufgrund der technischen Gegebenheiten und Vorgaben Seitens der dozenten ,nicht implementiert wird.
+                    </p>
+                </article>
+                <h2>Kriterien</h2>
+                <h3>2.1.1 Muss-Kriterien</h3>
+                <article>
+                    <h4>2.2.1.1 Unterstüzung der Gäste</h4>
+                    Das System muss den Gästen die Möglichkeit bieten
+                    <ul>
+                        <li>sich über Produkte und Dienstleistungen informieren zu können</li>
+                        <li>sich für den Kauf von Dienstleistungen zu regstrieren</li>
+                        <li>über ein Kontaktformular mit dem Ingenieurbüro in Kontakt treten zu können</li>
+                    </ul>
+                    <h4>2.1.1.2 Unterstüzung der User</h4>
+                    Das System muss den Usern die Möglichkeit bieten
+                    <ul>
+                        <li>Produkte und Dienstleistungen über den Online kaufen bzw. buchen zu können</li>
+                        <li>persönliche- und Addressdaten zu bearbeiten</li>
+                        <li>das Benutzerpasswort zu ändern</li>
+                    </ul>
+                    <h4>2.1.1.3 Unterstüzung der Administratoren</h4>
+                    Das System muss den Administratoren die Möglichkeit bieten
+                    <ul>
+                        <li>Usern Adminrechte zu verleihen und zu entziehen</li>
+                        <li>User zu löschen</li>
+                    </ul>
+                    <h3>2.1.2 Soll-Kriterien</h3>
 
 
-            </article>
-            <p class="jump"><a href="#top">&uarr;&nbsp;nach oben</a></p>
-        </section>
-        <section id="team">
-            <h2>Team</h2>
-
-        </section>
-        <section id="problems">
-            <h2>8. Herausforderungen und Lösungen</h2>
-            <p>Da in unserer Zusammenarbeit verschiedene Browser zum darstellen der Website benutzt wurden, sind relativ früh kleinere Unterschiede aufgetaucht die sich jedoch einfach beheben ließen indem wir die Standardeinstellung der einzelnen Elemente weiter eingegrenzt hatten (benutzt wurden Chrome, Firefox und Microsoft Edge).</p>
-            <p>Bei einem Endgerät war es nicht möglich das Impressum zu laden (selbst bei vollständiger Funktion aller anderen Seiten). Leider konnte dieses Problem auch nach mehrmaligen durchsehen der html, sowie der css nicht identifiziert und damit auch nicht behoben werden.</p>
-            <p>Eine größere Schwierigkeit stellte die Umsetzung des responsiven Designs dar, da wir mit der Desktop Variante anfingen. Aber nach einiger Zeit und mit viel Geduld gelang uns auch dies zu unserer Zufriedenheit umzusetzen. </p>
-            <p>Das größte Problem während unseres Projekts entstand knapp nach der Hälfte der Zeit, bei der uns nach mehreren Rücksprachen mit den zuständigen Professoren klar wurde, dass unsere Seite nicht den Maßstab der Projektarbeit entspricht und wir dadurch gezwungen waren noch einmal ein Großteil unserer Ideen und Vorstellung zu verwerfen. An diesem Punkt brachen wir auch die Zusammenarbeit mit dem Inhaber der Firma IBHorsch ab, um uns vollständig auf die Umsetzung der wesentlichen Aspekte zu konzentrieren, hierunter zählte vor allem die Implementierung und den Ausbau des Shops.</p>
-            <p>Keine feste Seitenhierarchie bis beinahe zum letzten drittel des Projekts, führte zu einer gewissen Unordnung was sowohl die Benennung der Dateien und Elemente, als auch die Ordnerstruktur angeht. Doch nach festlegen der bestehenden Seiten und das Entfernen der überflüssigen Seiten war dies auch schnell in den Griff zu bekommen.</p>
-            <p>Anfängliche Probleme gab es bei der Nutzung von der main Branch als einziger Branch, da dies mehr als einmal zu Merge Konflikten führte, dies ließ sich jedoch leicht durch die Nutzung verschiedener Branches regeln. </p>
-        </section>
-        <section id="projectManagement">
-            <h2>9. Projektmanagement Dokumentaion</h2>
-            <p>Es stellte sich als Vorteil heraus, eine klare Aufgabenteilung durchzuführen wodurch jeder sein Fachgebiet besaß und es ihm möglich war, anschließend die jeweiligen anderen in seine Arbeit einzuführen und Verständisfragen zu klären. Dadurch gelang es uns Arbeit durch eigen Expertise schnell zu erledigen, sich dabei nicht gegenseitig zu behindern und dennoch ein umfassendes Wissen der gesamten Thematik zu erschließen. </p>
-            <p>Zur Aufgabenstrukturierung entschieden wir uns für Trello, da es die Möglichkeit besaß uns selbst Termine und Fristen zu setzen an die wir uns größtenteils hielten, bzw. es zu ersehen war, wenn es zu Schwierigkeiten kam. So gelang es uns, in dem Projekt einen Überblick zu behalten nicht nur was eigene Aufgaben anging, sondern auch die der Teammitglieder, um evtl. benötigete Hilfe anbieten zu können.</p>
-        </section>
-
-    </div>
+                </article>
+                <p class="jump"><a href="#top">&uarr;&nbsp;nach oben</a></p>
+            </section>
+            <section id="problems">
+                <h2>8. Herausforderungen und Lösungen</h2>
+                <p>Da in unserer Zusammenarbeit verschiedene Browser zum darstellen der Website benutzt wurden, sind
+                    relativ früh kleinere Unterschiede aufgetaucht die sich jedoch einfach beheben ließen indem wir die
+                    Standardeinstellung der einzelnen Elemente weiter eingegrenzt hatten (benutzt wurden Chrome, Firefox
+                    und Microsoft Edge).</p>
+                <p>Bei einem Endgerät war es nicht möglich das Impressum zu laden (selbst bei vollständiger Funktion
+                    aller anderen Seiten). Leider konnte dieses Problem auch nach mehrmaligen durchsehen der html, sowie
+                    der css nicht identifiziert und damit auch nicht behoben werden.</p>
+                <p>Eine größere Schwierigkeit stellte die Umsetzung des responsiven Designs dar, da wir mit der Desktop
+                    Variante anfingen. Aber nach einiger Zeit und mit viel Geduld gelang uns auch dies zu unserer
+                    Zufriedenheit umzusetzen. </p>
+                <p>Das größte Problem während unseres Projekts entstand knapp nach der Hälfte der Zeit, bei der uns nach
+                    mehreren Rücksprachen mit den zuständigen Professoren klar wurde, dass unsere Seite nicht den
+                    Maßstab der Projektarbeit entspricht und wir dadurch gezwungen waren noch einmal ein Großteil
+                    unserer Ideen und Vorstellung zu verwerfen. An diesem Punkt brachen wir auch die Zusammenarbeit mit
+                    dem Inhaber der Firma IBHorsch ab, um uns vollständig auf die Umsetzung der wesentlichen Aspekte zu
+                    konzentrieren, hierunter zählte vor allem die Implementierung und den Ausbau des Shops.</p>
+                <p>Keine feste Seitenhierarchie bis beinahe zum letzten drittel des Projekts, führte zu einer gewissen
+                    Unordnung was sowohl die Benennung der Dateien und Elemente, als auch die Ordnerstruktur angeht.
+                    Doch nach festlegen der bestehenden Seiten und das Entfernen der überflüssigen Seiten war dies auch
+                    schnell in den Griff zu bekommen.</p>
+                <p>Anfängliche Probleme gab es bei der Nutzung von der main Branch als einziger Branch, da dies mehr als
+                    einmal zu Merge Konflikten führte, dies ließ sich jedoch leicht durch die Nutzung verschiedener
+                    Branches regeln. </p>
+            </section>
+            <section id="projectManagement">
+                <h2>9. Projektmanagement Dokumentaion</h2>
+                <p>Es stellte sich als Vorteil heraus, eine klare Aufgabenteilung durchzuführen wodurch jeder sein
+                    Fachgebiet besaß und es ihm möglich war, anschließend die jeweiligen anderen in seine Arbeit
+                    einzuführen und Verständisfragen zu klären. Dadurch gelang es uns Arbeit durch eigen Expertise
+                    schnell zu erledigen, sich dabei nicht gegenseitig zu behindern und dennoch ein umfassendes Wissen
+                    der gesamten Thematik zu erschließen. </p>
+                <p>Zur Aufgabenstrukturierung entschieden wir uns für Trello, da es die Möglichkeit besaß uns selbst
+                    Termine und Fristen zu setzen an die wir uns größtenteils hielten, bzw. es zu ersehen war, wenn es
+                    zu Schwierigkeiten kam. So gelang es uns, in dem Projekt einen Überblick zu behalten nicht nur was
+                    eigene Aufgaben anging, sondern auch die der Teammitglieder, um evtl. benötigete Hilfe anbieten zu
+                    können.</p>
+            </section>
+        </div>
 </div>
 
 </body>
