@@ -13,6 +13,10 @@ function getMember($email)
     return Members::findOne($sql);
 }
 
+/**
+ * @param $member expects member object
+ * @return bool return true if the user is admin
+ */
 function isAdmin($member){
     if($member->roll === 'admin'){
         return true;
@@ -21,6 +25,11 @@ function isAdmin($member){
     }
 }
 
+/**
+ * @param $email expects email-address
+ * @param $password expects password
+ * @return bool returns true if both values ar set
+ */
 function emptyInputLogin($email, $password)
 {
     if (empty($email) || empty($password)) {
@@ -30,6 +39,12 @@ function emptyInputLogin($email, $password)
     }
     return $result;
 }
+
+/**
+ * @param $email expects email-address
+ * @param $password expects password
+ * @return false return false if the user login failed
+ */
 
 function loginUser($email, $password)
 {
@@ -46,7 +61,6 @@ function loginUser($email, $password)
             header("Location: index.php?c=pages&a=main");
         }
     }
-/*        header("Location: index.php?c=accounts&a=login&e=invalid");*/
     return false;
 }
 
