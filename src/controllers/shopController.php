@@ -146,7 +146,7 @@ class ShopController extends \dwp\core\Controller
             if ($product == null)
             {
                 // missing Error handle :(
-                die("Produkt existiert nicht!");
+                redirect('index.php?c=errors&a=error404&error=noProduct');
             }
 
 

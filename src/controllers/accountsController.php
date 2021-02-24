@@ -87,8 +87,7 @@ class AccountsController extends \dwp\core\Controller
             else
             {
                 // We forgot the Error handle :(
-                echo 'Account mit dieser Emailadresse existiert bereits!!!';
-                exit();
+                redirect('index.php?c=errors&a=error404&error=emailAlreadyExist');
             }
 
             $values['id'] = $member->id;

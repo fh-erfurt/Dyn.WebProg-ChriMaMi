@@ -28,6 +28,13 @@ class ErrorsController extends \dwp\core\Controller
                 case 'noViewPath':
                     $errorMessage = 'View konnte nicht gefunden werden.';
                     break;
+                case 'noProduct':
+                    $errorMessage = 'Produkt existiert nicht.';
+                    break;
+                case 'emailAlreadyExist':
+                    $errorMessage = 'Emailadresse existiert bereits.';
+                    break;
+
             }
         }
 
