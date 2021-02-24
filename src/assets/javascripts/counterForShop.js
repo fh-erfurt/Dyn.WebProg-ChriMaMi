@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
 function initializeItemListeners(item) {
 
     var amountBox = item.querySelector(".counter .box[data-type='amount']");
+
+    // iterates every amountBox and give every button its functionality
     item.querySelectorAll(".counter .box:not(.disabled)").forEach(function (box) {
         box.addEventListener('click', function () {
             var type = box.getAttribute("data-type");
@@ -25,6 +27,7 @@ function initializeItemListeners(item) {
         })
     })
 
+    // implement "add to cart" function
     var btn =  item.querySelector(".btn:not(.disabled)");
     if(btn) {
         btn.addEventListener('click', function () {
