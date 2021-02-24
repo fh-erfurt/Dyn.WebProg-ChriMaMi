@@ -37,8 +37,6 @@ if (!file_exists(ASSETSPATH . 'JSON/products.json')) {
     }
     $json = json_encode($jsonArray);
     $file = file_put_contents(ASSETSPATH . 'json/products.json', $json);
-} else {
-    /*    echo 'Datei existiert bereits';*/
 }
 ?>
 
@@ -61,9 +59,6 @@ if (!file_exists(ASSETSPATH . 'JSON/products.json')) {
                             src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'checkoutCart.png' ?>"/></a></div>
         </li>
     </ul>
-
-    src/assets/images/products/item8.jpg
-
 </div>
 
 

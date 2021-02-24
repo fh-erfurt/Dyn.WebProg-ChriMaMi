@@ -141,7 +141,6 @@ document.addEventListener('DOMContentLoaded', function () {
                                 data_id.setAttribute('data-id', searchResults[i].id);
                             }
                             var prodPicPath = 'assets/images/products/'+searchResults[i].picture;
-                            console.log('Pfad'+prodPicPath);
                             newProduct.querySelector('#productPic').setAttribute('src', prodPicPath)
                             initializeItemListeners(newProduct);
                             productItemDisplay.appendChild(newProduct);
