@@ -466,6 +466,7 @@ ul li a:hover + .hidden, .hidden:hover {
         display:            block;
         background-color:   inherit;
         border-bottom:      0.2em var(--headcolor) solid;
+        box-shadow:         6px 8px 16px 0px rgba(0,0,0,0.2);
     }
     #respSubNav li:hover > input[type="checkbox"] + .subNavigation {
         display:            block;
@@ -473,6 +474,7 @@ ul li a:hover + .hidden, .hidden:hover {
         border-bottom:      0.3125em var(--headcolor) solid;
         border-bottom-left-radius: 0.125em;
         border-bottom-right-radius: 0.125em;
+        box-shadow:         4px 8px 16px 0px rgba(0,0,0,0.2);
     }
 }
 /*--------------------------------- END MAIN MENU DROPDOWN --------------------------------*/

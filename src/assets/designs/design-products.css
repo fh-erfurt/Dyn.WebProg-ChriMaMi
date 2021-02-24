@@ -393,6 +393,7 @@
 }
 .buttonDisplay {
     display:            flex;
+    justify-content:    center;
 }
 .buttonDisplay .btn {
     margin-left:        3%;
