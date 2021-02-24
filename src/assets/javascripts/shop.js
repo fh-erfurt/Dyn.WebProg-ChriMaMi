@@ -133,7 +133,12 @@ document.addEventListener('DOMContentLoaded', function () {
                             newProduct.querySelector('#productCat').innerHTML = searchResults[i].category;
                             newProduct.querySelector('#productDescription').innerHTML = searchResults[i].description;
                             newProduct.querySelector('#productPrice').innerHTML = searchResults[i].std_price;
-                            newProduct.querySelector('#buttonEnabled').setAttribute('data-id', searchResults[i].id);
+                            var data_id = newProduct.querySelector('#buttonEnabled');
+                            if(data_id){
+                                console.log(data_id);
+                                data_id.setAttribute('data-id', searchResults[i].id);
+                            }
+/*                            newProduct.querySelector('#buttonEnabled').setAttribute('data-id', searchResults[i].id);*/
                             initializeItemListeners(newProduct);
                             productItemDisplay.appendChild(newProduct);
                         }

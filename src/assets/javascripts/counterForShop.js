@@ -25,12 +25,16 @@ function initializeItemListeners(item) {
         })
     })
 
-    item.querySelector(".btn:not(.disabled)").addEventListener('click', function () {
-        var amount = parseInt(amountBox.textContent);
-        var id = this.getAttribute('data-id');
-        if (amount == 0) {
-            return;
-        }
-        window.location = "index.php?c=shop&a=add&product=" + id + "&amount=" + amount;
-    })
+    var btn =  item.querySelector(".btn:not(.disabled)");
+    if(btn) {
+        btn.addEventListener('click', function () {
+            var amount = parseInt(amountBox.textContent);
+            var id = this.getAttribute('data-id');
+            if (amount == 0) {
+                return;
+            }
+            window.location = "index.php?c=shop&a=add&product=" + id + "&amount=" + amount;
+        })
+    }
+
 }
