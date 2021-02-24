@@ -27,7 +27,8 @@ body {
 }
 
 
-.nav { grid-area: nav;
+.nav {
+    grid-area: nav;
     background-color: #18559d;
     color: #e3e3e3;
     min-width: 230px;
@@ -35,7 +36,9 @@ body {
     font-size: 20px;
     line-height: 31px;
 }
-
+.fixedPosition {
+    position: fixed;
+}
 .nav ul li {
     list-style: decimal;
     color: #e3e3e3;
