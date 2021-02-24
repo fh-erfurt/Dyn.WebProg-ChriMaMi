@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('searchForm').onsubmit = function (event) {
         var searchbar = document.getElementById('search');
         if (searchbar.value == "") {
-            console.log('Sorry, not completed!');
             event.preventDefault()
         } else {
             event.preventDefault()
@@ -39,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 getString = getString.substring(0, getString.length - 1);
                 //encode string for url
                 getString = encodeURI(getString);
-                console.log(getString);
                 return getString;
             }
 
@@ -50,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const productsRequest = new XMLHttpRequest();
             productsRequest.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
+                if (this.readyState === 4 && this.status === 200) {
 
 
                     /**
@@ -125,8 +123,6 @@ document.addEventListener('DOMContentLoaded', function () {
                             } else {
                                 searchNoHits.style.display = 'none';
                             }
-
-                            /*window.location = 'index.php?c=shop&a=categories&search';*/
                         }
                     }
                 }
