@@ -97,7 +97,7 @@ class ShopController extends \dwp\core\Controller
         $this->setParam('result', $result);
 
 
-        $member = getMember($_SESSION['id']);
+        $member = getCustomer($_SESSION['id']);
         $address = getAddress($member->addresses_id);
 
         $this->setParam('member', $member);

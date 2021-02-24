@@ -1,5 +1,18 @@
 <?php
 
+use dwp\model\Members as Members;
+
+/**
+ * @param $email expects an email-address from user as string
+ * @return mixed|null return Account by email
+ */
+function getCustomer($email)
+{
+    $db = $GLOBALS['db'];
+    $sql = "email=" . $db->quote($email);
+    return Members::findOne($sql);
+}
+
 /**
  * @param $member expects member object
  * @return bool return true if the user is admin
@@ -35,7 +48,7 @@ function emptyInputLogin($email, $password)
 
 function loginUser($email, $password)
 {
-    $member = getMember($email);
+    $member = getCustomer($email);
     if (isset($member)) {
         $isAdmin = isAdmin($member);
         $password_hashed = $member->password_hash;
