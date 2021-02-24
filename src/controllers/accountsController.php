@@ -133,5 +133,6 @@ class AccountsController extends \dwp\core\Controller
     public function actionLogout()
     {
         session_destroy();
+        redirect('index.php?c=pages&a=main');
     }
 }
