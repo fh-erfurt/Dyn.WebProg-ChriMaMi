@@ -62,11 +62,12 @@ if (!is_dir(ASSETSPATH . 'JSON')) {
                 <form name="searchbar" id="searchForm" method="get">
             </label><input type="search" id="search" name="search" placeholder="  Suche"></form></li>
         <input id="searchSubmit" style="display:none" type="submit">
-
+        <?php if(isset($_SESSION['email'])): ?>
         <li>
             <div class="icon"><a href="<?= $_SERVER['SCRIPT_NAME'] ?>?c=shop&a=cart"><img
                             src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'checkoutCart.png' ?>"/></a></div>
         </li>
+        <?php endif; ?>
     </ul>
 </div>
 
