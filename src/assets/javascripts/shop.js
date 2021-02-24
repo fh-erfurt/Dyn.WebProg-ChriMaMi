@@ -1,6 +1,7 @@
 /**
  * @author Christoph Frischmuth
  * @copyright Christoph Frischmuth, Matthias Gabel, Mickey Knop
+ * @team ChriMaMi
  * @function ajax-request to a JSON-File, matching values with inputs, generate shop items from requested JSON-File
  */
 
