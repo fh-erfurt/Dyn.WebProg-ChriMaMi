@@ -1,6 +1,5 @@
 <link href="<?= ASSETSPATH . 'designs' . DIRECTORY_SEPARATOR . 'design-products.css' ?>" rel="stylesheet">
-
-
+<script src="<?= ASSETSPATH . 'javascripts' . DIRECTORY_SEPARATOR . 'cart.js' ?>"></script>
 <section class="checkoutDisplay">
     <form method="post">
         <div class="approvedBox">
@@ -41,11 +40,13 @@
                 </div>
             </div>
         </div>
+
         <div class="buttonDisplay">
             <input type="hidden" name="id" id="id" value="<?=$member->id?>">
             <button class="btn" type="submit">Kostenpflichtig bestellen</button>
-            <a href="index.php?c=administration&a=myData"><button class="btn">Daten ändern</button></a>
+            <button class="btn" id="changeData">Daten Ändern</button>
+            <button class="btn" id="printView">Druckansicht</button>
         </div>
     </form>
-
 </section>
+
