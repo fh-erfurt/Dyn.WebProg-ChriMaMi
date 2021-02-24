@@ -2,8 +2,8 @@
     <? require_once SHAREDPATH . 'adminnav.php'; ?>
 
     <?
-    $member = getMember($_SESSION['id']);
-    $address = getAddress($member->addresses_id);
+    $customer = getCustomer($_SESSION['id']);
+    $address = getAddress($customer->addresses_id);
     ?>
 
 
@@ -12,18 +12,18 @@
         <!--<section>-->
             <div class="leftSite">
             <label for="firstname"> Vorname:</label>
-                    <input type="text" name="firstname" id="firstname" value='<?= $member->firstname ?>'>
+                    <input type="text" name="firstname" id="firstname" value='<?= $customer->firstname ?>'>
 
                 <label for="lastname"> Nachname:</label>
-                    <input type="text" name="lastname" id="lastname" value='<?= $member->lastname ?>'>
+                    <input type="text" name="lastname" id="lastname" value='<?= $customer->lastname ?>'>
 
 
                 <label for="city"> email:</label>
                     <input type="text" name="email" id="email"
-                           value='<?= $member->email ?>'>
+                           value='<?= $customer->email ?>'>
 
             <label for="phone"> Telefonnummer: </label>
-                <input type="text" name="phone" id="phone" value='<?= $member->phone ?>'>
+                <input type="text" name="phone" id="phone" value='<?= $customer->phone ?>'>
             </div>
             <div class="rightSite">
                     <label for="street"> Straße: </label>
