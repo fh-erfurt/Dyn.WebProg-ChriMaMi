@@ -26,7 +26,7 @@
         <div class="informationDisplay">
             <div>
                 <h2>Ihre Empfängerdaten</h2>
-                <div class="customerInformation">
+                <div class="memberInformation">
                     <ul>Vorname: <?= $member->firstname ?></ul>
                     <ul>Nachname: <?= $member->lastname ?></ul>
                     <ul>Email: <?= $member->email ?></ul>
@@ -44,7 +44,8 @@
         <div class="buttonDisplay">
             <input type="hidden" name="id" id="id" value="<?=$member->id?>">
             <button class="btn" type="submit">Kostenpflichtig bestellen</button>
-            <button class="btn">Daten ändern</button>
+            <a href="index.php?c=administration&a=myData"><button class="btn">Daten ändern</button></a>
         </div>
     </form>
+
 </section>

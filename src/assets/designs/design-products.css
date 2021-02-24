@@ -355,44 +355,56 @@
 .price {
     font-weight:        700;
 }
+#productName {
+    font-weight:        bold;
+}
+
+#noResults {
+    display:            none;
+    width:              auto;
+    border:             none;
+    text-align:         center;
+    font-weight:        bold;
+}
 /* -------------------------------- END SHOPPING CART------------------------------------*/
 
 /* ---------------------------------- START CHECKOUT-------------------------------------*/
 .checkoutDisplay {
-    width: 80%;
-    padding: 10px;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: var(--headcolor) 3px solid;
+    width:              80%;
+    padding:            10px;
+    background-color:   white;
+    margin-left:        auto;
+    margin-right:       auto;
+    border-bottom:      var(--headcolor) 3px solid;
+    filter:             drop-shadow(0 0 0.625em #C4C4C4);
 }
 .informationDisplay {
-    display:flex;
-    justify-content: center;
+    display:            flex;
+    justify-content:    center;
 }
 .informationDisplay .address {
-    margin-left: 5%;
+    margin-left:        5%;
 }
 .buttonDisplay {
-    display: flex;
+    display:            flex;
 }
 .buttonDisplay .btn {
-    margin-left: 3%;
+    margin-left:        3%;
 }
-.customerInformation {
-    width: 100%;
-    border: black 1px solid;
-    margin-bottom: 20%;
+.memberInformation {
+    width:              100%;
+    border:             black 1px solid;
+    margin-bottom:      20%;
 }
-.customerInformation ul {
-    margin-left: -20px;
+.memberInformation ul {
+    margin-left:        -20px;
 }
 .addressInformation {
-    width: 100%;
-    border: black 1px solid;
+    width:              100%;
+    border:             black 1px solid;
 }
 .addressInformation ul {
-    margin-left: -20px;
+    margin-left:        -20px;
 }
 .orderDetails {
 

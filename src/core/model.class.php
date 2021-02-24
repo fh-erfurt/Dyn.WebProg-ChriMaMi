@@ -25,6 +25,9 @@ abstract class Model
     private $values = [
     ];
 
+    /**
+     * @return |null return tablename
+     */
     public static function tablename()
     {
         $class = get_called_class();
@@ -109,6 +112,9 @@ abstract class Model
         }
     }
 
+    /**
+     * insert values into db
+     */
     public function insert()
     {
         // Implement insert
@@ -140,6 +146,9 @@ abstract class Model
         }
     }
 
+    /**
+     * update values in db
+     */
     public function update()
     {
         // Implement update
@@ -171,6 +180,9 @@ abstract class Model
         }
     }
 
+    /**
+     * remove values from db
+     */
     public function destroy()
     {
         $db = $GLOBALS['db'];
@@ -188,6 +200,10 @@ abstract class Model
         }
     }
 
+    /**
+     * @param string $whereStr
+     * @return array return an array of data sets
+     */
     public static function find($whereStr = '1')
     {
         $db = $GLOBALS['db'];
@@ -210,7 +226,10 @@ abstract class Model
         return $results;
     }
 
-
+    /**
+     * @param string $whereStr
+     * @return mixed|null return on single dataset
+     */
     public static function findOne($whereStr = '1')
     {
         $results = self::find($whereStr);

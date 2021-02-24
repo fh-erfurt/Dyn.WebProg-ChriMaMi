@@ -8,10 +8,17 @@
         case 'signup':
             $reason = ' Ihre Anmeldung';
             $link = $_SERVER['SCRIPT_NAME']."?c=accounts&a=login";
+            $timeOutDuration = 3000;
+            break;
+        case 'checkout':
+            $reason = 'Ihren Einkauf, wir setzen uns umgehend mit Ihnen in Verbindung, um mit Ihnen alle Details zur Ihrer Bestellung zu klären';
+            $link = $_SERVER['SCRIPT_NAME']."?c=pages&a=main";
+            $timeOutDuration = 12000;
             break;
         default:
             $reason = ' Ihr Interesse';
-            $link = $_SERVER['SCRIPT_NAME']."php?c=accounts&a=main";
+            $link = $_SERVER['SCRIPT_NAME']."?c=pages&a=main";
+            $timeOutDuration = 3000;
             break;
     };
 ?>
@@ -19,7 +26,7 @@
         <script>
             setTimeout(function (){
                 window.location.href = '<? echo $link ?>';
-            }, 3000);
+            }, <? echo $timeOutDuration ?>);
         </script>
         <p id="messageReason">Danke für <? echo $reason ?>, Sie werden in Kürze weitergeleitet...
         <noscript>

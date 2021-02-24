@@ -97,7 +97,7 @@ class ShopController extends \dwp\core\Controller
         $this->setParam('result', $result);
 
 
-        $member = getCustomer($_SESSION['id']);
+        $member = getMember($_SESSION['id']);
         $address = getAddress($member->addresses_id);
 
         $this->setParam('member', $member);
@@ -109,7 +109,7 @@ class ShopController extends \dwp\core\Controller
 
             $ordersData = array(
                 'status'       => 'ordered',
-                'order_date'   => date(DATE_RFC822),
+                'order_date'   => date("Y-m-d H:i:s"),
                 'addresses_id' => $member->addresses_id,
                 'members_id'   => $member->id);
             $orders = new Orders($ordersData);
@@ -134,7 +134,7 @@ class ShopController extends \dwp\core\Controller
                 $mhp->destroy();
             }
 
-            redirect("index.php?c=shop&a=cart");
+            redirect("index.php?c=pages&a=redirecttimeout&o=checkout");
         }
     }
 
@@ -146,7 +146,7 @@ class ShopController extends \dwp\core\Controller
             if ($product == null)
             {
                 // missing Error handle :(
-                die("Produkt existiert nicht!");
+                redirect('index.php?c=errors&a=error404&error=noProduct');
             }
 
 
