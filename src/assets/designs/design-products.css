@@ -390,12 +390,12 @@
 .buttonDisplay .btn {
     margin-left: 3%;
 }
-.customerInformation {
+.memberInformation {
     width: 100%;
     border: black 1px solid;
     margin-bottom: 20%;
 }
-.customerInformation ul {
+.memberInformation ul {
     margin-left: -20px;
 }
 .addressInformation {

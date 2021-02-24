@@ -1,18 +1,5 @@
 <?php
 
-use dwp\model\Members as Members;
-
-/**
- * @param $email expects an email-address from user as string
- * @return mixed|null return Account by email
- */
-function getMember($email)
-{
-    $db = $GLOBALS['db'];
-    $sql = "email=" . $db->quote($email);
-    return Members::findOne($sql);
-}
-
 /**
  * @param $member expects member object
  * @return bool return true if the user is admin

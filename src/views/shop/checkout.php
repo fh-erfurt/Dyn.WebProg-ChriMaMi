@@ -26,7 +26,7 @@
         <div class="informationDisplay">
             <div>
                 <h2>Ihre Empfängerdaten</h2>
-                <div class="customerInformation">
+                <div class="memberInformation">
                     <ul>Vorname: <?= $member->firstname ?></ul>
                     <ul>Nachname: <?= $member->lastname ?></ul>
                     <ul>Email: <?= $member->email ?></ul>
