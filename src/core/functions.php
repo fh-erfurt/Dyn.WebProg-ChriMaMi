@@ -36,12 +36,19 @@ function localDateTimeString($lang, $date)
     return $result;
 }
 
+/**
+ * @param $url url
+ */
 function redirect($url)
 {
     header('Location: '.$url);
     exit(0);
 }
 
+/**
+ * @param $id member id
+ * @return mixed|null return member or null
+ */
 function getCustomer($id)
 {
     $db = $GLOBALS['db'];
@@ -49,7 +56,10 @@ function getCustomer($id)
     return Members::findOne($sql);
 }
 
-
+/**
+ * @param $addressid address id
+ * @return mixed|null return an address or null
+ */
 function getAddress($addressid)
 {
     $db = $GLOBALS['db'];
