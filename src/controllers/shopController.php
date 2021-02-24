@@ -97,7 +97,7 @@ class ShopController extends \dwp\core\Controller
         $this->setParam('result', $result);
 
 
-        $member = getCustomer($_SESSION['id']);
+        $member = getMember($_SESSION['id']);
         $address = getAddress($member->addresses_id);
 
         $this->setParam('member', $member);
@@ -109,7 +109,7 @@ class ShopController extends \dwp\core\Controller
 
             $ordersData = array(
                 'status'       => 'ordered',
-                'order_date'   => date(DATE_RFC822),
+                'order_date'   => date("Y-m-d H:i:s"),
                 'addresses_id' => $member->addresses_id,
                 'members_id'   => $member->id);
             $orders = new Orders($ordersData);
