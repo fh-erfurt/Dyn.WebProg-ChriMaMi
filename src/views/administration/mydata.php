@@ -2,7 +2,7 @@
     <? require_once SHAREDPATH . 'adminnav.php'; ?>
 
     <?
-    $customer = getCustomer($_SESSION['id']);
+    $customer = getMember($_SESSION['id']);
     $address = getAddress($customer->addresses_id);
     ?>
 
