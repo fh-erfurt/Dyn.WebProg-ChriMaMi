@@ -14,8 +14,8 @@ if (!file_exists(ASSETSPATH . 'JSON/products.json')) {
             'alt_text' => $allProducts[$key]->alt_text,
             'category' => $allProducts[$key]->category
         );
-        echo var_dump([$key]['category']);
-        exit();
+/*        echo var_dump($jsonArray[$key]['category']);
+        exit();*/
 
         switch ($jsonArray[$key]['category']) {
             case "fire_protection":
@@ -61,6 +61,9 @@ if (!file_exists(ASSETSPATH . 'JSON/products.json')) {
                             src="<?= ASSETSPATH . 'icons' . DIRECTORY_SEPARATOR . 'checkoutCart.png' ?>"/></a></div>
         </li>
     </ul>
+
+    src/assets/images/products/item8.jpg
+
 </div>
 
 

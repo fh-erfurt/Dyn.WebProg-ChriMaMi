@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
             var productView = document.getElementById('productView');
             var productItemDisplay = document.getElementById('itemDisplay');
 
+
+
             if(productItemDisplay.firstChild != null) {
                 while (productItemDisplay.firstChild) {
                     productItemDisplay.removeChild(productItemDisplay.firstChild);
@@ -130,15 +132,17 @@ document.addEventListener('DOMContentLoaded', function () {
                             newProduct.style.display = 'block';
                             console.log(searchResults.length);
                             newProduct.querySelector('#productName').innerHTML = searchResults[i].name;
-                            newProduct.querySelector('#productCat').innerHTML = searchResults[i].category;
+                            newProduct.querySelector('#productCat').innerHTML = 'Kategorie: ' + searchResults[i].category;
                             newProduct.querySelector('#productDescription').innerHTML = searchResults[i].description;
-                            newProduct.querySelector('#productPrice').innerHTML = searchResults[i].std_price;
+                            newProduct.querySelector('#productPrice').innerHTML = 'Preis: ' + searchResults[i].std_price + '€';
                             var data_id = newProduct.querySelector('#buttonEnabled');
                             if(data_id){
                                 console.log(data_id);
                                 data_id.setAttribute('data-id', searchResults[i].id);
                             }
-/*                            newProduct.querySelector('#buttonEnabled').setAttribute('data-id', searchResults[i].id);*/
+                            var prodPicPath = 'assets/images/products/'+searchResults[i].picture;
+                            console.log('Pfad'+prodPicPath);
+                            newProduct.querySelector('#productPic').setAttribute('src', prodPicPath)
                             initializeItemListeners(newProduct);
                             productItemDisplay.appendChild(newProduct);
                         }

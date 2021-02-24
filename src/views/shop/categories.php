@@ -79,19 +79,17 @@
 <!---------------------------------------------- Test -------------------------------------------->
 <div class="item" id="productView" style="display: none">
     <article>
-        <img src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'products' . DIRECTORY_SEPARATOR . $product->filename ?>"
+        <img id="productPic" src="<?= ASSETSPATH . 'images' . DIRECTORY_SEPARATOR . 'products' . DIRECTORY_SEPARATOR . $product->filename ?>"
              width=200" height="100" alt="item">
         <div id="productName"></div>
-        <br>
         <div id="productDescription"></div>
         <div>
-            <p>Kategorie:</p>
-            <div id="productCat"></div>
-
+            <p id="productCat">Kategorie:</p>
         </div>
         <div>
-            <p>Preis:
-            <div id="productPrice">€</p>
+            <p id="productPrice">
+
+            </p>
             </div>
             <? if (isset($_SESSION['id']) && $_SESSION['id'] !== null) : ?>
                 <div class="counter">
