@@ -44,7 +44,8 @@
         <div class="buttonDisplay">
             <input type="hidden" name="id" id="id" value="<?=$member->id?>">
             <button class="btn" type="submit">Kostenpflichtig bestellen</button>
-            <button class="btn">Daten ändern</button>
+            <a href="index.php?c=administration&a=myData"><button class="btn">Daten ändern</button></a>
         </div>
     </form>
+
 </section>
