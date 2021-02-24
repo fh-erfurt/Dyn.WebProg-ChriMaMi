@@ -20,12 +20,13 @@ class ShopController extends \dwp\core\Controller
 {
     public function actionCategories()
     {
+        // load only chosen category
         if (isset($_GET['cat']))
         {
             $products = Products::find('category = \''.$_GET['cat'].'\'');
             $this->setParam('products', $products);
-
         }
+        // load all
         else
         {
             $products = Products::find();
@@ -43,10 +44,12 @@ class ShopController extends \dwp\core\Controller
             $member = Members::findOne('id = \''.$_SESSION['id'].'\'');
             foreach ($_POST as $key=>$amount)
             {
+                //check if item is product
                 if(strpos($key,"product-") !== false)
                 {
                     $id = str_replace("product-", "", $key);
 
+                    //update cart
                     $cart = Cart::findOne('members_id = '.$member->id.' and products_id = '.$id);
                     if ($cart == null)
                     {
@@ -67,8 +70,9 @@ class ShopController extends \dwp\core\Controller
             redirect("index.php?c=shop&a=checkout");
         }
 
-        $result = 0;
 
+        // set param for total cart_price
+        $result = 0;
         foreach ($cart_view as $item)
         {
             $result += $item->total_price;
@@ -78,25 +82,24 @@ class ShopController extends \dwp\core\Controller
 
     public function actionContact()
     {
-
+        // todo: implement email-server later
     }
     public function actionCheckout()
     {
         $cart_view = CartView::find('members_id = \''.$_SESSION['id'].'\'');
         $this->setParam('cart_view', $cart_view);
-
-
-        $member = getCustomer($_SESSION['id']);
-        $address = getAddress($member->addresses_id);
-
-
+        // set total order price
         $result = 0;
-
         foreach ($cart_view as $item)
         {
             $result += $item->total_price;
         }
         $this->setParam('result', $result);
+
+
+        $member = getCustomer($_SESSION['id']);
+        $address = getAddress($member->addresses_id);
+
         $this->setParam('member', $member);
         $this->setParam('address', $address);
 
@@ -118,11 +121,12 @@ class ShopController extends \dwp\core\Controller
                 'amount'       => '0',
                 'price'        => '0');
 
+            // set Order has Products values and erase the cart
             foreach ($cart_view as $ware)
             {
                 $ohpData['products_id'] = $ware->products_id;
-                $ohpData['amount'] = $ware->amount;
-                $ohpData['price'] = $ware->total_price;
+                $ohpData['amount']      = $ware->amount;
+                $ohpData['price']       = $ware->total_price;
 
                 $ohp = new OHP($ohpData);
                 $ohp->insert();
@@ -141,6 +145,7 @@ class ShopController extends \dwp\core\Controller
             $product = Products::findOne('id = '.$_GET['product']);
             if ($product == null)
             {
+                // missing Error handle :(
                 die("Produkt existiert nicht!");
             }
 
@@ -148,6 +153,7 @@ class ShopController extends \dwp\core\Controller
 
             $member = Members::findOne('id = \''.$_SESSION['id'].'\'');
 
+            // set or update cart
             $cart = Cart::findOne('members_id = '.$member->id.' and products_id = '.$product->id);
             if ($cart == null)
             {
@@ -182,6 +188,7 @@ class ShopController extends \dwp\core\Controller
 
             $member = Members::findOne('id = \''.$_SESSION['id'].'\'');
 
+            //remove cart ware from cart
             $cart = MHP::findOne('members_id = '.$member->id.' and products_id = '.$product->id);
             if ($cart !== null)
             {

@@ -17,6 +17,7 @@ class AccountsController extends \dwp\core\Controller
 {
     public function actionSignup()
     {
+        //handle post values
         $values = array(
         'gender'         => isset($_POST['gender']) ? $_POST['gender'] : "",
         'firstname'      => isset($_POST['firstname']) ? $_POST['firstname'] : "",
@@ -34,7 +35,7 @@ class AccountsController extends \dwp\core\Controller
         );
         $db = $GLOBALS['db'];
 
-
+        //verify every value is set
         $allRequiredValuesSet = TRUE;
         foreach ($values as $key => $value)
         {
@@ -47,6 +48,7 @@ class AccountsController extends \dwp\core\Controller
         if($allRequiredValuesSet === TRUE)
         {
 
+            //set Address
             $address = Addresses::findOne("street=".$db->quote($values['street'])
                                             ." AND house_number=".$db->quote($values['houseNumber'])
                                             ." AND city=".$db->quote($values['city'])
@@ -64,6 +66,7 @@ class AccountsController extends \dwp\core\Controller
             }
             $values['addresses_id'] = $address->id;
 
+            //set Member
             $member = Members::findOne("email=".$db->quote($values['email']));
             if (!isset($member))
             {
@@ -83,17 +86,13 @@ class AccountsController extends \dwp\core\Controller
             }
             else
             {
+                // We forgot the Error handle :(
                 echo 'Account mit dieser Emailadresse existiert bereits!!!';
+                exit();
             }
 
             $values['id'] = $member->id;
         }
-
-        //echo '<pre>', var_dump($_POST), '</pre>';
-
-        //$address = \dwp\model\Address::findOne("street=".$db->quote($street)." AND houseNumber=".$db->quote($houseNumber). " AND city=".$db->quote($city)." AND zip=".$db->quote($zip));
-        //echo '<pre>', var_dump($account), '</pre>';
-        //echo '<pre>', var_dump($address), '</pre>';
 
         if (isset($_POST['signUp'])) {
             redirect("index.php?c=pages&a=redirecttimeout&o=signup");
@@ -118,7 +117,6 @@ class AccountsController extends \dwp\core\Controller
 
             if (emptyInputLogin($email, $password)) {
                 $errMsg = 'invalid';
-                /*header("Location: index.php?c=accounts&a=login&e=invalid");*/
             }
             else {
                 if (loginUser($email, $password) === false)
