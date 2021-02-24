@@ -31,7 +31,7 @@ class ErrorsController extends \dwp\core\Controller
             }
         }
 
-        // though the error message variable to the view, so we can show it to our customers
+        // though the error message variable to the view, so we can show it to our members
         $this->setParam('errorMessage', $errorMessage);
     }
 }

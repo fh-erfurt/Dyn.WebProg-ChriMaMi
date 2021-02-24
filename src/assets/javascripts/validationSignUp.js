@@ -192,8 +192,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     const birthday = new Date(this.value);
                     const currentDate = new Date();
                     const yearInMillis = 31536000000;
-                    var ageOfCustomer = ((currentDate - birthday)/yearInMillis);
-                    if(ageOfCustomer < 18)
+                    var ageOfMember = ((currentDate - birthday)/yearInMillis);
+                    if(ageOfMember < 18)
                     {
                         errorArray[9] = true;
                         alert('Das Mindestalter für Bestellungen beträgt 18 Jahre');

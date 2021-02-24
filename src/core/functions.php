@@ -49,7 +49,7 @@ function redirect($url)
  * @param $id member id
  * @return mixed|null return member or null
  */
-function getCustomer($id)
+function getMember($id)
 {
     $db = $GLOBALS['db'];
     $sql = "id=" . $db->quote($id);
