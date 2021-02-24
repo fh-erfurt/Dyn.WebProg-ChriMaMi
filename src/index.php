@@ -21,79 +21,7 @@ foreach (glob(MODELSPATH . '*.php') as $modelfiles) {
     require_once $modelfiles;
 }
 
-//echo var_dump(\dwp\model\Addresses::find());
-
-/*$values1 = ['id' => 10, 'email' => 'newmagil@home.de', 'passwordHash' => 'test'];
-$accounts = new \dwp\model\Accounts($values1);
-$accounts->insert();*/
-
-/*$values2 = ['id' => 10, 'email' => 'update@home.de', 'passwordHash' => '123456'];
-$accounts = new \dwp\model\Accounts($values2);
-$accounts->update();*/
-
-/*$values3 = ['id' => 10, 'email' => 'update@home.de', 'passwordHash' => '123456'];
-$accounts = new \dwp\model\Accounts($values3);
-$accounts->destroy();
-
-
-echo '<pre>', var_dump($accounts), '</pre>';
-
-$accounts = null;
-exit(0);*/
-
-/*//New Update-Tests w. INT, DATE, etc
-$value4 = ['id' => 5, 'street' => "Nordstraße", 'house_number' => 12, 'city' => "Erfurt", 'zip' => 99089, 'name' => "Frau Mustermann"];
-$address = new \dwp\model\Addresses($value4);
-$address->update();
-
-echo '<pre>', var_dump($address), '</pre>';
-
-$account = null;
-exit(0);*/
-
-/*$value11 = ['name' => "Item 6", 'description' => "TestTestTest", 'category' => "Eingabeplanung", 'std_price' => 400.00, 'images_id' => 5];
-$product = new \dwp\model\products($value11);
-$product->insert();*/
-
-/*$value12 = ['id' => 5, 'name' => "Item 5", 'description' => "TestTestTest", 'category' => "Eingabeplanung", 'std_price' => 800.00, 'images_id' => 5];
-$product = new \dwp\model\products($value12);
-$product->update();*/
-
-/*$value13 = ['id' => 6, 'name' => "Item 6", 'description' => "TestTestTest", 'category' => "Eingabeplanung", 'std_price' => 500.00, 'images_id' => 6];
-$product = new \dwp\model\products($value13);
-$product->destroy();*/
-
-/*echo '<pre>', var_dump($product), '</pre>';
-$account = null;
-exit(0);*/
-
-/*
-//example for DB query
-$result=null;
-try{
-    // escaped database param
-    $escapedReceiver=$db->quote('Hannes');
-    // Execute the SQL Statement and fetch data
-    $result=$db->query('SELECT * FROM customers WHERE firstname = '.$escapedReceiver)->fetchAll();
-}
-catch(\PDOException$e) {
-    die( 'Query Error: '.$e->getMessage() );
-}
-
-echo "<pre>", var_dump($result), "</pre>";
-exit(0);
-*/
 require_once 'core/functionsLogIn.php';
-
-/*getAccount('christoph.frischmuth@fh-erfurt.de');*/
-/*isAdmin(getAccount('christoph.frischmuth@fh-erfurt.de'));*/
-//functions_should_return_boolean; Saskia(false), Christoph(true);
-/*var_dump(isAdmin(getAccount('saskia.wohlers@fh-erfurt.de')));*/
-/*var_dump(isAdmin(getAccount('christoph.frischmuth@fh-erfurt.de')));*/
-/*loginUser('christoph.frischmuth@fh-erfurt.de', "wonderland15");
-var_dump($_SESSION);
-echo
-exit();*/
 
 
 // start session to handle login

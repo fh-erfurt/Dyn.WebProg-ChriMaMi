@@ -21,6 +21,7 @@ $db = null;
 
 try
 {
+    // Connection to DB
     $db = new PDO($dns, $user, $pw, $options);
 }
 catch (PDOException $e)

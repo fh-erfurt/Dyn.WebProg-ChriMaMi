@@ -15,23 +15,6 @@ class PagesController extends \dwp\core\Controller
     public function actionIndex()
     {
 
-        /*        if($this->loggedIn())
-                {
-                    // TODO: Retrieve account which is logged in
-
-                    // TODO: Set the correct name of the current user here
-                    $this->setParam('name', 'unkown');
-
-                    // TODO: retrieve and set the marks of the current user
-                    $this->setParam('marks', []);
-
-                }
-                else
-                {
-                    header('Location: index.php?c=pages&a=login');
-                    exit(0);
-                }*/
-
     }
 
     public function actionMain()
@@ -80,17 +63,17 @@ class PagesController extends \dwp\core\Controller
             'description' => isset($_POST['description']) ? $_POST['description'] : ""
         );
 
+        // todo: implement mail-server later
 
-        /*        $reciever = 'ibhorsch@web.de';
+        /*      $reciever = 'ibhorsch@web.de';
                 $betreff = $values->reason;
                 $nachricht = $values->description;
                 $header = array(
                     'From' => 'webmaster@ibhorsch.de',
                     'x-mailer' => 'PHP/' . phpversion()
                 );
-
                 mail($reciever, $betreff, $nachricht, $header);*/
-        /** Für das verwenden existiert noch kein SMTP-Server, dieser Folgt später */
+
         if (isset($_POST['send'])) {
             redirect("index.php?c=pages&a=redirecttimeout&o=mail");
         }

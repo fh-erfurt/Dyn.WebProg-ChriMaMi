@@ -15,14 +15,31 @@ class AdministrationController extends \dwp\core\Controller
     {
         if (isset($_POST['contact']) && $_POST['contact'] === 'input_changeAccountPassword')
         {
+            // todo: implement an mail-server request
             die("password");
         }
         else if (isset($_POST['delete']) && $_POST['delete'] === 'input_deleteAccount')
         {
             $db = $GLOBALS['db'];
             $member = Members::findOne('email = '.$db->quote($_POST['email']));
+
+            $orders = Orders::find('members_id ='.$_SESSION['id']);
+
+            //delete depending data from member
+            foreach ($orders as $order)
+            {
+                $ordersHasProducts = OHP::find('orders_id = '.$order->id);
+                foreach ($ordersHasProducts as $ohp)
+                {
+                    $ohp->destroy();
+                }
+                $order->destroy();
+            }
             $member->destroy();
+            session_destroy();
+            redirect('index.php?c=pages&a=main');
         }
+
         else if (isset($_POST['update']) && $_POST['update'] === 'input_changeAccountDetails')
         {
             $db = $GLOBALS['db'];
@@ -57,7 +74,7 @@ class AdministrationController extends \dwp\core\Controller
 
     public function actionMyOrders()
     {
-
+            // todo: implement later
     }
 
     public function actionUserManagement()
@@ -73,6 +90,7 @@ class AdministrationController extends \dwp\core\Controller
             $member = Members::findOne('id ='.$_GET['member'] );
             $orders = Orders::find('members_id ='.$_GET['member']);
 
+            //delete depending data from member
             foreach ($orders as $order)
             {
                 $ordersHasProducts = OHP::find('orders_id = '.$order->id);
