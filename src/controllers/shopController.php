@@ -134,7 +134,7 @@ class ShopController extends \dwp\core\Controller
                 $mhp->destroy();
             }
 
-            redirect("index.php?c=shop&a=cart");
+            redirect("index.php?c=pages&a=redirecttimeout&o=checkout");
         }
     }
 
