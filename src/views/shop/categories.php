@@ -112,5 +112,8 @@
             <? endif; ?>
     </article>
 </div>
+<div class="item" id="noResults">
+        Ihre Suchanfrage liefert keine Ergebnisse
+</div>
 
 

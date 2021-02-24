@@ -356,7 +356,15 @@
     font-weight:        700;
 }
 #productName {
-    font-weight: bold;
+    font-weight:        bold;
+}
+
+#noResults {
+    display:            none;
+    width:              auto;
+    border:             none;
+    text-align:         center;
+    font-weight:        bold;
 }
 /* -------------------------------- END SHOPPING CART------------------------------------*/
 

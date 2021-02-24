@@ -43,12 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
              * Suchfunktion für Produkte
              */
 
-            var productName = document.getElementById('productName');
-            var productDescription = document.getElementById('productDescription');
-            var productCat = document.getElementById('productCat');
-            var productPrice = document.getElementById('productPrice');
             var productView = document.getElementById('productView');
             var productItemDisplay = document.getElementById('itemDisplay');
+            var searchNoHits = document.getElementById('noResults');
 
 
 
@@ -102,20 +99,16 @@ document.addEventListener('DOMContentLoaded', function () {
             productsRequest.onload = () => {
                 var products = productsRequest.response;
                 for (var index = 0; index < products.length; index++) {
-                    if (products[index].name.match(searchbar.value)) {
-                        console.log('Hit: ' + index);
+                    if (products[index].name.toUpperCase().match(searchbar.value.toUpperCase())) {
                         searchResults[index] = products[index];
 
-                    } else if (products[index].category.match(searchbar.value)) {
-                        console.log('Hit: ' + index);
+                    } else if (products[index].category.toUpperCase().match(searchbar.value.toUpperCase())) {
                         searchResults[index] = products[index];
 
-                    } else if (products[index].description.match(searchbar.value)) {
-                        console.log('Hit: ' + index);
+                    } else if (products[index].description.toUpperCase().match(searchbar.value.toUpperCase())) {
                         searchResults[index] = products[index];
 
-                    } else if (products[index].std_price.match(searchbar.value)) {
-                        console.log('Hit: ' + index);
+                    } else if (products[index].std_price.toUpperCase().match(searchbar.value.toUpperCase())) {
                         searchResults[index] = products[index];
                     } else {
                         console.log('No Products found');
@@ -130,14 +123,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         if (searchResults[i] !== undefined) {
                             var newProduct = productView.cloneNode(true);
                             newProduct.style.display = 'block';
-                            console.log(searchResults.length);
                             newProduct.querySelector('#productName').innerHTML = searchResults[i].name;
                             newProduct.querySelector('#productCat').innerHTML = 'Kategorie: ' + searchResults[i].category;
                             newProduct.querySelector('#productDescription').innerHTML = searchResults[i].description;
                             newProduct.querySelector('#productPrice').innerHTML = 'Preis: ' + searchResults[i].std_price + '€';
                             var data_id = newProduct.querySelector('#buttonEnabled');
                             if(data_id){
-                                console.log(data_id);
                                 data_id.setAttribute('data-id', searchResults[i].id);
                             }
                             var prodPicPath = 'assets/images/products/'+searchResults[i].picture;
@@ -146,6 +137,10 @@ document.addEventListener('DOMContentLoaded', function () {
                             productItemDisplay.appendChild(newProduct);
                         }
                     }
+                    if(searchResults.length === 0){
+                        searchNoHits.style.display = 'block';
+                    }
+
                     /*window.location = 'index.php?c=shop&a=categories&search';*/
                 }
                 console.log(searchResults.length);

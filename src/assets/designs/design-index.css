@@ -33,6 +33,8 @@
     z-index:            -1;
     background:         linear-gradient(rgba(255, 255, 255, 0.92), rgba(179, 179, 179, 0.92));
 }
+
+
 @media screen and (min-width: 62em) {
     :root {
         --headsize:         6.8em;
