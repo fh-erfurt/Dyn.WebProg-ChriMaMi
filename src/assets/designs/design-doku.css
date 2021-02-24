@@ -111,9 +111,6 @@ table {
     width: 70%;
     max-width: 1500px;
     margin: 15px 0 50px;
-}
-
-table {
     display: table;
     border-collapse: separate;
     box-sizing: border-box;
@@ -139,12 +136,24 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
     background-color: #c4c4c4;
 }
-tr {
+.timeTable tr {
     display: table-row;
-    vertical-align: inherit;
+    vertical-align: baseline;
     border-color: inherit;
 }
-td {
+.timeTable td {
     display: table-cell;
-    vertical-align: inherit;
+    vertical-align: baseline;
+
+}
+.timeTable table{
+    vertical-align: top;
+}
+.timeTable th {
+    width: 0;
+}
+.timeTable ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: start;
 }
