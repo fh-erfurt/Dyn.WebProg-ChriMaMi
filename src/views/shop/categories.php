@@ -109,7 +109,7 @@
                     <div class="box disabled" data-type="increase" id="rightBox"><a>+</a></div>
                 </div>
                 <div>
-                    <button class="btn disabled" data-id="<?= $product->id ?>">Add to Cart</button>
+                    <button class="btn disabled" data-id="">Add to Cart</button>
                 </div>
             <? endif; ?>
     </article>
