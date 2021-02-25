@@ -39,6 +39,7 @@
                 <input type="password" class="form_col_space" id="repeatPassword" name="repeatPassword"
                        value="<?= htmlspecialchars('') ?>" required>
             </label>
+            <div>Mindestens 6 Zeichen<br> 1 Großbuchstabe, 1 Ziffer</div>
             <div id="errorPassword"></div>
         </div>
 
