@@ -35,5 +35,10 @@ Wenn man einen User zum Admin ändern möchte, muss man dieses in der DB tun.
 
 ###/assets
 In /assets finden Sie folgende Dateien:
+* design Dateien (css)
+* skript Dateien (js)
+* diverse Bilder/Icons/Logos (png, jpg)
+* JSON Dateien (json)
+* Font Dateien 
 
- 
+ ###/config
