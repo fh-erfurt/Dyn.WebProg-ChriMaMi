@@ -7,7 +7,7 @@ Das Repository ist über folgenden Link erreichbar: https://github.com/fh-erfurt
 
 ## Webseite
 
-Um die Webseite in Betrieb zu nehmen müssen folgende Punkte abgearbeitet werden.
+Um die Webseite in Betrieb zu nehmen, müssen folgende Punkte abgearbeitet werden.
 
 1. Kopieren Sie die den "**Dyn.WebProg-ChriMaMi**"-Ordner in das htcdocs Verzeichnes der XAMPP-Anwendung
 2. Importieren Sie die SQL-Datei "**Dyn.WebProg-ChriMaMi/src/database/HORSCH_DB.sql**" in Ihren MySQL-Server
