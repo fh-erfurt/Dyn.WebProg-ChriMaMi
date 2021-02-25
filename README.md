@@ -42,3 +42,16 @@ In /assets finden Sie folgende Dateien:
 * Font Dateien 
 
  ###/config
+ In /config finden Sie folgende Dateien:
+ * configurations-Datei der Datenbank (database.php)
+ * init-Datei zum initialisieren der Pfade (init.php)
+ 
+ ###/controllers
+ * accountsController (Signup, Login)
+ * administrationController (MyData, MyOrder, UserManagement, Remove)
+ * errorsController (Error404)
+ * pagesController (Index, Main, Products, Imprint, SignUp, AboutUs, News, RedirectTimeOut, Contact)
+ * sharedController (AdminNav, Footer, Header, SubNav)
+ * shopController (Categories, Cart, Contact, Checkout, Add, Remove)
+ 
+ ###/
