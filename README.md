@@ -54,4 +54,15 @@ In /assets finden Sie folgende Dateien:
  * sharedController (AdminNav, Footer, Header, SubNav)
  * shopController (Categories, Cart, Contact, Checkout, Add, Remove)
  
- ###/
+ ###/core
+ * Basisklasse Controller (controller.class.php)
+ * Basisfunktionen (functions.php)
+ * Basisfunktionen Login (functionsLogIn.php)
+ * JSON-Verwaltung (jsonMapping.php)
+ * Basisklasse Model (model.class.php)
+ 
+ ###/data
+ * Spicherplatz für sessions
+ 
+ ###/database
+ 
