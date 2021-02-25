@@ -1,11 +1,11 @@
 # Dyn.WebProg-ChriMaMi
 Willkommen im Projekt von Christoph Frischmuth, Matthias Gabel und Mickey Knop!
 
-##Repository
+## Repository
 
 Das Repiository ist über folgenden Link erreichbar: https://github.com/fh-erfurt/Dyn.WebProg-ChriMaMi
 
-##Webseite
+## Webseite
 
 Um die Webseite in Betrieb zu nehmen müssen folgende Punkte abgearbeitet werden.
 
@@ -31,22 +31,23 @@ Der User kann seine eigene Daten ändern.
 Bei Bedarf können weitere Nutzer registriert werden. Diese werden standardmäßig als User angelegt.
 Wenn man einen User zum Admin ändern möchte, muss man dieses in der DB tun.
 
-##Ordnerstruktur
+## Ordnerstruktur
 
-###/assets
-In /assets finden Sie folgende Dateien:
+### /assets
+In /assets finden Sie folgendes:
 * design Dateien (css)
 * skript Dateien (js)
 * diverse Bilder/Icons/Logos (png, jpg)
 * JSON Dateien (json)
 * Font Dateien 
 
- ###/config
- In /config finden Sie folgende Dateien:
+ ### /config
+ In /config finden Sie folgendes:
  * configurations-Datei der Datenbank (database.php)
  * init-Datei zum initialisieren der Pfade (init.php)
  
- ###/controllers
+ ### /controllers
+ In /controllers finden Sie folgendes:
  * accountsController (Signup, Login)
  * administrationController (MyData, MyOrder, UserManagement, Remove)
  * errorsController (Error404)
@@ -54,15 +55,31 @@ In /assets finden Sie folgende Dateien:
  * sharedController (AdminNav, Footer, Header, SubNav)
  * shopController (Categories, Cart, Contact, Checkout, Add, Remove)
  
- ###/core
+ ### /core
+ In /core finden Sie folgendes:
  * Basisklasse Controller (controller.class.php)
  * Basisfunktionen (functions.php)
  * Basisfunktionen Login (functionsLogIn.php)
  * JSON-Verwaltung (jsonMapping.php)
  * Basisklasse Model (model.class.php)
  
- ###/data
+ ### /data
+ In /data finden Sie folgendes:
  * Spicherplatz für sessions
  
- ###/database
+ ### /database
+ In /database finden Sie folgendes:
+ * Init-Datei der Datenbank (HORSCH_DB.sql)
+ * diverse SQL-Dateien zum Initialisieren der DB
+ * MySqlWorkbench-Datei zum modellieren der DB (HORSCH_DB.mwb)
+ * Abbild des ER Diagramms
+ 
+ ### /models
+ In /models finden Sie folgendes:
+ * diverse Dateien der verschiedenen Models.
+ 
+ ### /views
+ In /views finden Sie folgendes:
+ * die jeweiligen Unterordner, die die jeweiligen Views beinhalten.
+ 
  
