@@ -1073,6 +1073,35 @@ article {
         margin-left:        0;
     }
 }
+.documentation .btn {
+    margin-top:         2em;
+    margin-left:        auto;
+    margin-right:       auto;
+    text-align:         center;
+    text-decoration:    none;
+    max-width:          5em;
+    cursor:             pointer;
+    font-size:          0.9375em;
+    font-family:        'Raleway', sans-serif;
+    display:            flex;
+    justify-content:    center;
+    border:             0.1111em solid ;
+    background-color:   #1960B8;
+    color:              white;
+    padding:            0.8334em 1.7777em;
+    min-width:          12.7779em;
+    transition:         background-color 0.2s ease-out;
+    flex-direction:     row;
+}
+.documentation a{
+    text-decoration:    none;
+}
+@media screen and (min-width: 62em) {
+    .documentation .btn {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 /*-------------------------------------- END IMPRINT --------------------------------------*/
 
 /*--------------------------------- START ADMINISTRATION ----------------------------------*/
