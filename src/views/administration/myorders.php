@@ -3,7 +3,7 @@
 
     <main>
         <section>
-            <p> Here is your Order</p>
+            <p>Under Construction</p>
         </section>
     </main>
 </div>
