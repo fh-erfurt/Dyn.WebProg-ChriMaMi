@@ -114,5 +114,5 @@
     </div>
 </section>
 <section class="documentation">
-    <button class="btn">Zur Dokumentation</button>
+    <a href="documentation.html"><button class="btn">Zur Dokumentation</button></a>
 </section>
