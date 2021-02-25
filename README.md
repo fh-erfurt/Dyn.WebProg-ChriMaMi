@@ -34,7 +34,7 @@ Wenn man einen User zum Admin ändern möchte, muss man dieses in der DB tun.
 ##Ordnerstruktur
 
 ###/assets
-In /assets finden Sie folgende Dateien:
+In /assets finden Sie folgendes:
 * design Dateien (css)
 * skript Dateien (js)
 * diverse Bilder/Icons/Logos (png, jpg)
@@ -42,11 +42,12 @@ In /assets finden Sie folgende Dateien:
 * Font Dateien 
 
  ###/config
- In /config finden Sie folgende Dateien:
+ In /config finden Sie folgendes:
  * configurations-Datei der Datenbank (database.php)
  * init-Datei zum initialisieren der Pfade (init.php)
  
  ###/controllers
+ In /controllers finden Sie folgendes:
  * accountsController (Signup, Login)
  * administrationController (MyData, MyOrder, UserManagement, Remove)
  * errorsController (Error404)
@@ -55,6 +56,7 @@ In /assets finden Sie folgende Dateien:
  * shopController (Categories, Cart, Contact, Checkout, Add, Remove)
  
  ###/core
+ In /core finden Sie folgendes:
  * Basisklasse Controller (controller.class.php)
  * Basisfunktionen (functions.php)
  * Basisfunktionen Login (functionsLogIn.php)
@@ -62,7 +64,22 @@ In /assets finden Sie folgende Dateien:
  * Basisklasse Model (model.class.php)
  
  ###/data
+ In /data finden Sie folgendes:
  * Spicherplatz für sessions
  
  ###/database
+ In /database finden Sie folgendes:
+ * Init-Datei der Datenbank (HORSCH_DB.sql)
+ * diverse SQL-Dateien zum Initialisieren der DB
+ * MySqlWorkbench-Datei zum modellieren der DB (HORSCH_DB.mwb)
+ * Abbild des ER Diagramms
+ 
+ ###/models
+ In /models finden Sie folgendes:
+ * diverse Dateien der verschiedenen Models.
+ 
+ ###/views
+ In /views finden Sie folgendes:
+ * die jeweiligen Unterordner, die die jeweiligen Views beinhalten.
+ 
  
