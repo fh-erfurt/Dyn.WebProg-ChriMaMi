@@ -3,7 +3,7 @@ Willkommen im Projekt von Christoph Frischmuth, Matthias Gabel und Mickey Knop!
 
 ## Repository
 
-Das Repiository ist über folgenden Link erreichbar: https://github.com/fh-erfurt/Dyn.WebProg-ChriMaMi
+Das Repository ist über folgenden Link erreichbar: https://github.com/fh-erfurt/Dyn.WebProg-ChriMaMi
 
 ## Webseite
 
