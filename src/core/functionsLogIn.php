@@ -1,4 +1,9 @@
 <?php
+/**
+ * @copyright Matthias Gabel, Mickey Knop, Christoph Frischmuth
+ * @class another useful functions to handle important login and database operations
+ */
+
 
 use dwp\model\Members as Members;
 

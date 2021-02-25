@@ -13,6 +13,14 @@ class AdministrationController extends \dwp\core\Controller
 {
     public function actionMyData()
     {
+
+        $customer = getMember($_SESSION['id']);
+        $address = getAddress($customer->addresses_id);
+
+        $this->setParam('customer', $customer);
+        $this->setParam('address', $address);
+
+
         if (isset($_POST['contact']) && $_POST['contact'] === 'input_changeAccountPassword')
         {
             // todo: implement an mail-server request

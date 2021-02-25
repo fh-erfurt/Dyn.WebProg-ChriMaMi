@@ -170,6 +170,12 @@
     margin-right:       0.5em;
     transition:         background-color 0.2s ease-out;
 }
+
+.btn a {
+    color: inherit;
+    text-decoration:    none;
+}
+
 .btn:focus {
     background-color:   #1196ee;
     border:             none;
@@ -387,6 +393,7 @@
 }
 .buttonDisplay {
     display:            flex;
+    justify-content:    center;
 }
 .buttonDisplay .btn {
     margin-left:        3%;

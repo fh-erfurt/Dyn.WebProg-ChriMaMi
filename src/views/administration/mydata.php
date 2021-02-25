@@ -1,10 +1,6 @@
 <div id="administration-wraper">
     <? require_once SHAREDPATH . 'adminnav.php'; ?>
 
-    <?
-    $customer = getCustomer($_SESSION['id']);
-    $address = getAddress($customer->addresses_id);
-    ?>
 
 
     <main>

@@ -1,9 +1,8 @@
 <?php
 
 /**
- * @author Matthias Gabel<matthias.gabel@fh-erfurt.de>
- * @copyright Since 2021 by Matthias Gabel
- * @version 1.0.0
+ * @copyright Matthias Gabel, Mickey Knop, Christoph Frischmuth
+ * @functions another useful functions to handle important operations
  */
 
 use dwp\model\Members as Members;
