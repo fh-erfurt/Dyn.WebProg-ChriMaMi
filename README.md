@@ -11,7 +11,7 @@ Um die Webseite in Betrieb zu nehmen, müssen folgende Punkte abgearbeitet werde
 
 1. Kopieren Sie die den "**Dyn.WebProg-ChriMaMi**"-Ordner in das htcdocs Verzeichnes der XAMPP-Anwendung
 2. Importieren Sie die SQL-Datei "**Dyn.WebProg-ChriMaMi/src/database/HORSCH_DB.sql**" in Ihren MySQL-Server
-    (Es sollten nun 83 Abfragen ausgeführt worden sein. Die DB ist somit auch gleich befüllt.)
+    (Es sollten nun 83 Abfragen ausgeführt worden sein. Die DB ist somit auch gleich mit Testdaten befüllt.)
 3. Starten Sie die Webseite in Ihrem Localhost in dem Sie in dem Projektordner auf das **src**-Verzeichnis klicken
     
 Um die Webseite zu testen stehen Ihnen folgende Nutzer zur Verfügung
